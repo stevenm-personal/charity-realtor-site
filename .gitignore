@@ -1,6 +1,5 @@
 # dependencies
 node_modules/
-.pnpm-store/
 
 # Astro build output and cache
 dist/

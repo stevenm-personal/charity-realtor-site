@@ -11,5 +11,5 @@
 
 - Put pages in `src/pages/`, shared layouts in `src/layouts/`, and global styles in `src/styles/`.
 - Build responsive, accessible interfaces with semantic HTML and visible keyboard focus states.
-- Run `pnpm build` after project changes and fix project-related build errors.
+- Run `npm run build` after project changes and fix project-related build errors.
 - Do not commit or push unless the user explicitly asks.

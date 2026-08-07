@@ -5,14 +5,14 @@ Static Astro website for Charity Menefee Real Estate.
 ## Local development
 
 ```sh
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 ## Production build
 
 ```sh
-pnpm build
+npm run build
 ```
 
 The generated static site is written to `dist/`.
