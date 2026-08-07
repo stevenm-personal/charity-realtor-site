@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# Astro build output and cache
+dist/
+.astro/
+
+# local environment files
+.env
+.env.*
+!.env.example
+
+# operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

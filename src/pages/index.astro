@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Charity Menefee Real Estate"
+  description="Thoughtful real estate guidance for buying and selling with confidence."
+>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Charity Menefee Real Estate home">
+      <span class="brand-mark" aria-hidden="true">CM</span>
+      <span>Charity Menefee <small>Real Estate</small></span>
+    </a>
+    <a class="header-link" href="#contact">Let's talk</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Your next move, made clear</p>
+        <h1 id="hero-title">Real estate guidance that feels personal.</h1>
+        <p class="intro">
+          Whether you're finding the right home or preparing to sell, get local insight,
+          honest advice, and a steady partner from first conversation to closing.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="#contact">Start a conversation</a>
+          <a class="button button-secondary" href="#services">How I can help</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="A simpler real estate experience">
+        <p class="card-number">01</p>
+        <h2>Listen first.</h2>
+        <p>Your priorities shape the plan—not the other way around.</p>
+        <div class="card-detail">
+          <span>Clear communication</span>
+          <span>Confident decisions</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div>
+        <p class="eyebrow">How I can help</p>
+        <h2 id="services-title">A grounded approach to every move.</h2>
+      </div>
+      <div class="service-grid">
+        <article>
+          <span aria-hidden="true">01</span>
+          <h3>Buying</h3>
+          <p>Define what matters, understand the market, and write a strong offer with confidence.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">02</span>
+          <h3>Selling</h3>
+          <p>Prepare, position, and market your home with a clear strategy built around your goals.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">03</span>
+          <h3>Planning</h3>
+          <p>Not ready yet? Make sense of timing, options, and next steps without any pressure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Begin here</p>
+      <h2 id="contact-title">Tell me what your next move looks like.</h2>
+      <p>A short conversation is the easiest way to get clarity on what comes next.</p>
+      <a class="button button-light" href="mailto:hello@example.com">hello@example.com</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {new Date().getFullYear()} Charity Menefee Real Estate</p>
+    <p>Real guidance. Thoughtful service.</p>
+  </footer>
+</BaseLayout>
