@@ -1,8 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import bricktownLogo from '../assets/branding/bricktown-logo.png';
-import realtorLogo from '../assets/branding/realtor-logo.jpg';
-
 const currentPath = Astro.url.pathname;
 const isCurrent = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
 
@@ -25,10 +21,6 @@ const communityLinks = [
         <span class="brand-monogram" aria-hidden="true">CM</span>
         <span class="brand-name">Charity Menefee<small>Wichita-area Realtor</small></span>
       </a>
-      <div class="header-affiliations" aria-label="Realtor and Bricktown ICT Realty affiliations">
-        <Image src={realtorLogo} alt="Realtor" width={34} height={34} />
-        <Image src={bricktownLogo} alt="Bricktown ICT Realty" width={34} height={34} />
-      </div>
     </div>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
