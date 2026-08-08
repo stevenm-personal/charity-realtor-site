@@ -4,6 +4,7 @@ import CallToAction from '../components/CallToAction.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
 ---
 
 <BaseLayout
@@ -11,6 +12,7 @@ import Hero from '../components/Hero.astro';
   description="Real estate guidance for buyers and sellers in Wichita, Valley Center, and nearby communities."
 >
   <Header />
+  <ScrollReveal />
 
   <main>
     <Hero />
@@ -29,7 +31,7 @@ import Hero from '../components/Hero.astro';
 
     <section class="services-section" id="services" aria-labelledby="services-title">
       <div class="shell">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal="up">
           <div>
             <p class="eyebrow">Ways to work together</p>
             <h2 id="services-title">Support for wherever you are in the process.</h2>
@@ -39,20 +41,20 @@ import Hero from '../components/Hero.astro';
           </p>
         </div>
 
-        <div class="service-grid">
-          <article>
+        <div class="service-grid reveal-stagger">
+          <article data-reveal="up">
             <span class="service-number" aria-hidden="true">01</span>
             <h3>Buying a home</h3>
             <p>Clarify your priorities, explore available homes, and move through each decision with context.</p>
             <a href="#contact">Talk about buying <span aria-hidden="true">→</span></a>
           </article>
-          <article>
+          <article data-reveal="up">
             <span class="service-number" aria-hidden="true">02</span>
             <h3>Selling a home</h3>
             <p>Build a thoughtful plan for preparing, presenting, and bringing your home to market.</p>
             <a href="#contact">Talk about selling <span aria-hidden="true">→</span></a>
           </article>
-          <article>
+          <article data-reveal="up">
             <span class="service-number" aria-hidden="true">03</span>
             <h3>Planning ahead</h3>
             <p>Explore timing and next steps before you are ready to make a move, without added pressure.</p>
@@ -63,10 +65,15 @@ import Hero from '../components/Hero.astro';
     </section>
 
     <section class="areas-section shell" id="areas" aria-labelledby="areas-title">
-      <div class="area-visual" role="img" aria-label="Placeholder for Wichita and Valley Center community photography">
+      <div
+        class="area-visual"
+        role="img"
+        aria-label="Placeholder for Wichita and Valley Center community photography"
+        data-reveal="scale"
+      >
         <span>Future community photography</span>
       </div>
-      <div class="area-copy">
+      <div class="area-copy" data-reveal="up">
         <p class="eyebrow">Close to home</p>
         <h2 id="areas-title">Serving Wichita, Valley Center, and the communities nearby.</h2>
         <p>
