@@ -8,6 +8,7 @@
 
     const initializeReveals = () => {
       const elements = document.querySelectorAll('[data-reveal]');
+      const parallaxElements = document.querySelectorAll('[data-parallax]');
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -24,6 +25,53 @@
       );
 
       elements.forEach((element) => observer.observe(element));
+
+      if (parallaxElements.length === 0) return;
+
+      const activeParallaxElements = new Set();
+      let frameRequested = false;
+
+      const updateParallax = () => {
+        activeParallaxElements.forEach((element) => {
+          const frame = element.parentElement;
+          if (!frame) return;
+
+          const bounds = frame.getBoundingClientRect();
+          const viewportCenter = window.innerHeight / 2;
+          const elementCenter = bounds.top + bounds.height / 2;
+          const progress = (elementCenter - viewportCenter) / window.innerHeight;
+          const offset = Math.max(-32, Math.min(32, progress * -52));
+
+          element.style.setProperty('--parallax-y', `${offset}px`);
+        });
+
+        frameRequested = false;
+      };
+
+      const requestParallaxUpdate = () => {
+        if (frameRequested) return;
+        frameRequested = true;
+        window.requestAnimationFrame(updateParallax);
+      };
+
+      const parallaxObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              activeParallaxElements.add(entry.target);
+            } else {
+              activeParallaxElements.delete(entry.target);
+            }
+          });
+
+          requestParallaxUpdate();
+        },
+        { rootMargin: '20% 0px' },
+      );
+
+      parallaxElements.forEach((element) => parallaxObserver.observe(element));
+      window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+      window.addEventListener('resize', requestParallaxUpdate, { passive: true });
     };
 
     if (document.readyState === 'loading') {

@@ -19,11 +19,11 @@ import ScrollReveal from '../components/ScrollReveal.astro';
 
     <section class="intro-section shell" aria-labelledby="intro-title">
       <p class="section-number" aria-hidden="true">01</p>
-      <div>
+      <div data-reveal="left">
         <p class="eyebrow">Guidance that starts with you</p>
         <h2 id="intro-title">Your plans deserve attention, clarity, and care.</h2>
       </div>
-      <p class="section-copy">
+      <p class="section-copy reveal-delay-1" data-reveal="right">
         Every move begins with a different set of questions. Charity helps you sort through
         the details, understand your options, and take the next step at a pace that feels right.
       </p>
@@ -31,12 +31,12 @@ import ScrollReveal from '../components/ScrollReveal.astro';
 
     <section class="services-section" id="services" aria-labelledby="services-title">
       <div class="shell">
-        <div class="section-heading" data-reveal="up">
-          <div>
+        <div class="section-heading">
+          <div data-reveal="left">
             <p class="eyebrow">Ways to work together</p>
             <h2 id="services-title">Support for wherever you are in the process.</h2>
           </div>
-          <p>
+          <p class="reveal-delay-1" data-reveal="right">
             Practical, one-on-one guidance designed around your goals—not a one-size-fits-all process.
           </p>
         </div>
@@ -69,11 +69,11 @@ import ScrollReveal from '../components/ScrollReveal.astro';
         class="area-visual"
         role="img"
         aria-label="Placeholder for Wichita and Valley Center community photography"
-        data-reveal="scale"
+        data-reveal="left-scale"
       >
         <span>Future community photography</span>
       </div>
-      <div class="area-copy" data-reveal="up">
+      <div class="area-copy reveal-delay-1" data-reveal="right">
         <p class="eyebrow">Close to home</p>
         <h2 id="areas-title">Serving Wichita, Valley Center, and the communities nearby.</h2>
         <p>
@@ -89,10 +89,15 @@ import ScrollReveal from '../components/ScrollReveal.astro';
     </section>
 
     <section class="about-section shell" id="about" aria-labelledby="about-title">
-      <div class="portrait-placeholder" role="img" aria-label="Placeholder for a future portrait of Charity Menefee">
+      <div
+        class="portrait-placeholder"
+        role="img"
+        aria-label="Placeholder for a future portrait of Charity Menefee"
+        data-reveal="scale"
+      >
         <span>Future portrait</span>
       </div>
-      <div class="about-copy">
+      <div class="about-copy reveal-delay-1" data-reveal="layer-right">
         <p class="eyebrow">Meet Charity</p>
         <h2 id="about-title">Real estate should feel clear and personal.</h2>
         <p>
