@@ -638,35 +638,36 @@ p {
 
 .meet-grid {
   display: grid;
-  gap: var(--space-7);
+  gap: var(--space-6);
 }
 
 .meet-image-wrap {
   position: relative;
+  justify-self: center;
+  width: min(100%, 21rem);
 }
 
-.meet-image-wrap picture,
+.meet-image-wrap picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
 .meet-image-wrap img {
   width: 100%;
-}
-
-.meet-image-wrap img {
-  height: clamp(15.5rem, 62vw, 19rem);
+  height: 100%;
   object-fit: cover;
-  object-position: 48% 42%;
+  object-position: 50% center;
 }
 
 .image-caption {
-  position: absolute;
-  right: var(--space-4);
-  bottom: var(--space-4);
-  margin: 0;
-  padding: var(--space-2) var(--space-3);
-  color: var(--color-text-on-dark);
-  background: var(--color-image-overlay-deep);
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
   font-size: 0.64rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -1643,21 +1644,23 @@ textarea:focus-visible {
   }
 
   .meet-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.85fr);
-    gap: 0;
+    grid-template-columns: minmax(16rem, 0.68fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  .meet-image-wrap {
+    justify-self: end;
+    width: min(100%, 24rem);
   }
 
   .meet-copy {
     position: relative;
     z-index: 1;
-    margin-left: -3rem;
-    padding: clamp(2rem, 5vw, 4.5rem);
+    margin-left: 0;
+    padding: clamp(2rem, 4vw, 3.5rem);
     background: var(--color-surface-translucent);
     box-shadow: var(--shadow-layered);
-  }
-
-  .meet-image-wrap img {
-    height: clamp(19rem, 26vw, 23rem);
   }
 
   .split-heading,
