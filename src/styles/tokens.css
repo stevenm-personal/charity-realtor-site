@@ -10,8 +10,10 @@
   --color-primary: #6f7d65;
   --color-primary-hover: #5d6a55;
   --color-accent: #c69a45;
+  --color-accent-soft: #eee0c2;
   --color-secondary: #b69b7d;
   --color-border: #ddd0bf;
+  --color-border-strong: #c7b59f;
   --color-footer: var(--color-text);
   --color-button-primary: var(--color-text);
   --color-button-primary-hover: #3b3935;
@@ -25,6 +27,12 @@
   --color-surface-translucent: rgba(252, 250, 246, 0.96);
   --color-placeholder-overlay: rgba(41, 40, 37, 0.26);
   --color-placeholder-overlay-strong: rgba(41, 40, 37, 0.3);
+  --color-image-overlay: rgba(41, 40, 37, 0.52);
+  --color-image-overlay-soft: rgba(41, 40, 37, 0.18);
+  --color-image-overlay-deep: rgba(41, 40, 37, 0.76);
+  --color-sage-soft: #e2e6de;
+  --color-field: #ece2d3;
+  --color-status: #8c6a2f;
   --color-placeholder-start: var(--color-secondary);
   --color-placeholder-end: var(--color-primary);
 
@@ -40,6 +48,7 @@
   --space-9: 7rem;
   --width-content: 73.75rem;
   --width-reading: 42rem;
+  --width-narrow: 34rem;
   --header-height: 4.75rem;
 
   /* Shape and depth */
@@ -49,6 +58,7 @@
   --radius-pill: 999px;
   --shadow-soft: 0 1rem 3rem rgba(41, 40, 37, 0.08);
   --shadow-layered: 0 2rem 5rem rgba(41, 40, 37, 0.12);
+  --shadow-header: 0 0.75rem 2rem rgba(41, 40, 37, 0.1);
 
   /* Motion */
   --motion-duration-fast: 160ms;

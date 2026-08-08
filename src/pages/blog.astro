@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CallToAction from '../components/CallToAction.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<BaseLayout
+  title="Real Estate Notes and Local Guides | Charity Menefee"
+  description="The future home for useful buying, selling, acreage, and Wichita-area articles from Charity Menefee."
+>
+  <PageHero
+    eyebrow="The journal"
+    title="Useful notes for real decisions."
+    intro="This will be a growing collection of practical buying, selling, land, and Wichita-area information—written to help, not to fill a search-results page."
+  />
+
+  <section class="section-space" aria-labelledby="blog-status-title">
+    <div class="shell empty-editorial" data-reveal="scale-up">
+      <span class="status-label">Articles in preparation</span>
+      <div>
+        <h2 id="blog-status-title">The shelves are being built before the library opens.</h2>
+        <p>No articles have been published yet. The blog architecture is ready for future Markdown or MDX content, but this page will not pretend placeholder headlines are finished advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-sage" aria-labelledby="blog-topics-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Planned coverage</p><h2 id="blog-topics-title">A practical mix of home and place.</h2></div><p data-reveal="right">Future articles will be added only when there is something useful and accurate to say.</p></div>
+      <div class="topic-grid reveal-stagger">
+        <article data-reveal="up"><span>01</span><h3>Buying</h3><p>Preparation, process questions, property considerations, and ways to compare options.</p></article>
+        <article data-reveal="up"><span>02</span><h3>Selling</h3><p>Thoughtful preparation, presentation, and the decisions that come before a listing.</p></article>
+        <article data-reveal="up"><span>03</span><h3>Land & acreage</h3><p>Practical considerations and questions to investigate with qualified professionals.</p></article>
+        <article data-reveal="up"><span>04</span><h3>Local context</h3><p>Verified Wichita-area information and community resources for real visitors.</p></article>
+      </div>
+    </div>
+  </section>
+  <CallToAction />
+</BaseLayout>

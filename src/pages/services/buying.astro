@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<BaseLayout
+  title="Buying a Home in the Wichita Area | Charity Menefee"
+  description="A patient, practical approach to buying a home in Wichita and nearby south-central Kansas communities."
+>
+  <PageHero
+    eyebrow="Buying"
+    title="Make the next decision with a clearer picture."
+    intro="From the first questions to the details near closing, Charity helps you understand the process, compare your options, and move at a pace that feels manageable."
+  />
+
+  <section class="section-space" aria-labelledby="buying-help-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left"><p class="eyebrow">Where we begin</p><h2 id="buying-help-title">Start with what matters in your everyday life.</h2></div>
+      <div class="prose" data-reveal="right">
+        <p>A useful home search begins before the listings. Charity helps you sort priorities, talk through timing, and understand how location, home type, condition, and budget affect the choices in front of you.</p>
+        <p>You can ask basic questions, change your mind, and take time to learn. The process should give you more clarity—not more pressure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="buying-process-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">A practical rhythm</p><h2 id="buying-process-title">Support through the moving pieces.</h2></div><p data-reveal="right">Every purchase is different, but these conversations form a useful starting framework.</p></div>
+      <ol class="step-grid reveal-stagger">
+        <li data-reveal="up"><span>01</span><h3>Get oriented</h3><p>Talk through goals, general timing, priorities, and the questions you already have.</p></li>
+        <li data-reveal="up"><span>02</span><h3>Explore thoughtfully</h3><p>Review homes and communities with context instead of treating every listing as interchangeable.</p></li>
+        <li data-reveal="up"><span>03</span><h3>Work through details</h3><p>Keep the steps, decisions, and next actions clear as a purchase moves forward.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <aside class="shell service-note" data-reveal="scale-up">
+    <p class="eyebrow">Still early?</p>
+    <h2>You do not need to be ready to tour homes before starting a conversation.</h2>
+    <p>Early questions about the process, timing, and communities are welcome.</p>
+  </aside>
+  <CallToAction title="Want to talk through buying?" />
+</BaseLayout>

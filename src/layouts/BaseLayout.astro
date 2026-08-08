@@ -1,12 +1,16 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
 
 interface Props {
   title: string;
   description: string;
+  pageClass?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, pageClass = 'page-interior' } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,7 +23,13 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class={pageClass}>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <Header />
+    <ScrollReveal />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

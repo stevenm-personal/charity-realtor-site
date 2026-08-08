@@ -1,0 +1,61 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CallToAction from '../components/CallToAction.astro';
+import PageHero from '../components/PageHero.astro';
+import charityPortrait from '../assets/charity/charity-headshot-2.jpg';
+import charityHomePhoto from '../assets/charity/charity-headshot-3.jpg';
+---
+
+<BaseLayout
+  title="About Charity Menefee | Wichita Area Realtor"
+  description="Meet Charity Menefee, a patient and approachable Wichita-area Realtor with deep Kansas roots and a low-pressure way of working."
+>
+  <PageHero
+    eyebrow="About Charity"
+    title="A real person to call when real estate gets complicated."
+    intro="Charity brings Kansas roots, a calm presence, and a practical way of explaining the process to people buying, selling, or considering land around Wichita."
+  />
+
+  <section class="about-story section-space" aria-labelledby="about-story-title">
+    <div class="shell about-story-grid">
+      <div class="about-portrait-wrap" data-reveal="left-scale">
+        <Picture src={charityPortrait} formats={['avif', 'webp']} widths={[480, 720, 960]} sizes="(min-width: 48rem) 42vw, 100vw" alt="Portrait of Charity Menefee in a warm home interior" />
+        <span>Charity Menefee</span>
+      </div>
+      <div class="about-story-copy prose" data-reveal="right">
+        <p class="eyebrow">Kansas, then and now</p>
+        <h2 id="about-story-title">Rooted in a small town. At home in the Wichita area.</h2>
+        <p>Charity grew up in a small town in northwest Kansas. That background gave her an appreciation for places that have their own rhythm, for straightforward conversations, and for the value of knowing the area around you.</p>
+        <p>Today, she serves people across the Wichita-area market. Her style is patient and easy-going: listen closely, explain the details, and leave room for people to make decisions without being pushed.</p>
+        <blockquote>“You should feel comfortable asking questions and moving at your own pace.”</blockquote>
+        <p class="fine-print">This statement reflects Charity's working philosophy; it is not a client testimonial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-approach section-space section-surface" aria-labelledby="about-approach-title">
+    <div class="shell about-approach-grid">
+      <div class="about-approach-copy" data-reveal="left">
+        <p class="eyebrow">Beyond the transaction</p>
+        <h2 id="about-approach-title">Grounded, curious, and happiest when life has a little breathing room.</h2>
+        <p>Outside of real estate, Charity values time with family, camping, and life with her Shih Tzu, Charlie. Those details belong here because they reflect the person clients actually meet—not because this needs to become a personal scrapbook.</p>
+        <p>Her own experience buying acreage also gives her personal insight into how many practical questions can come with a rural property. She brings that perspective to the conversation while relying on appropriate specialists for property-specific expertise.</p>
+      </div>
+      <Picture class="about-home-photo" src={charityHomePhoto} formats={['avif', 'webp']} widths={[480, 720, 1080]} sizes="(min-width: 48rem) 48vw, 100vw" alt="Charity Menefee seated comfortably in a warm home interior" data-reveal="right" />
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="working-style-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Working together</p><h2 id="working-style-title">What the conversation can feel like.</h2></div><p data-reveal="right">Calm does not mean passive. It means giving the right details attention while keeping the process human.</p></div>
+      <div class="feature-list reveal-stagger">
+        <article data-reveal="up"><span>Listen</span><h3>Your plans come first</h3><p>Start with the questions, constraints, and hopes that are actually shaping your move.</p></article>
+        <article data-reveal="up"><span>Explain</span><h3>No need to know the jargon</h3><p>Work through unfamiliar steps in plain language and ask what you need to ask.</p></article>
+        <article data-reveal="up"><span>Proceed</span><h3>Move with intention</h3><p>Take the next step because it makes sense, not because someone manufactured urgency.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction title="Would Charity's approach feel right for you?" />
+</BaseLayout>

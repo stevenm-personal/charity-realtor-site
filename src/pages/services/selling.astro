@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<BaseLayout
+  title="Selling a Home in the Wichita Area | Charity Menefee"
+  description="Thoughtful guidance for preparing and selling a home in Wichita and nearby communities."
+>
+  <PageHero
+    eyebrow="Selling"
+    title="A thoughtful plan before the sign goes up."
+    intro="Charity helps you understand the decisions ahead, prepare with purpose, and bring your home to market through a process that stays clear and personal."
+  />
+
+  <section class="section-space" aria-labelledby="selling-plan-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left"><p class="eyebrow">Before listing</p><h2 id="selling-plan-title">Focus effort where it can be useful.</h2></div>
+      <div class="prose" data-reveal="right">
+        <p>Preparing to sell can lead to a long list of possible projects. Charity helps you step back, consider the home as it is, and organize the work into a practical plan.</p>
+        <p>The conversation includes your timing, the presentation of the property, and the questions you want answered before moving ahead. No exaggerated promises—just a clear path through the preparation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-sage" aria-labelledby="selling-support-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">What support can include</p><h2 id="selling-support-title">A steady process from preparation onward.</h2></div><p data-reveal="right">Specific recommendations depend on the property and current circumstances; the framework begins here.</p></div>
+      <div class="feature-list reveal-stagger">
+        <article data-reveal="up"><span>Prepare</span><h3>See the home clearly</h3><p>Talk through condition, presentation, and which next steps deserve attention.</p></article>
+        <article data-reveal="up"><span>Present</span><h3>Build a coherent launch</h3><p>Organize the details needed to introduce the property clearly to the market.</p></article>
+        <article data-reveal="up"><span>Navigate</span><h3>Keep decisions understandable</h3><p>Work through questions and next actions as the sale progresses.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction title="Considering a sale, even if the timing is uncertain?" />
+</BaseLayout>

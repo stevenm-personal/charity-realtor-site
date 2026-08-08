@@ -21,6 +21,15 @@
 - Run `npm run build` after project changes and fix project-related build errors.
 - Do not commit or push unless the user explicitly asks.
 
+## Content integrity and Fair Housing
+
+- Never invent testimonials, transaction statistics, awards, rankings, credentials, license details, brokerage disclosures, phone numbers, email addresses, social links, MLS data, market data, school claims, crime claims, demographics, or commute times.
+- Use verified repository content or clearly labeled development placeholders when information is unavailable.
+- Write community content for real visitors first. Each location page must contain genuinely useful, place-specific information rather than duplicated city-name substitutions.
+- Do not describe communities with protected-class or demographic proxies, including claims such as safe, family-friendly, ideal for retirees, perfect for young professionals, Christian, or affluent.
+- Keep community descriptions factual and avoid steering language. Do not make unsupported claims about schools, crime, demographics, or who belongs in an area.
+- Do not present personal experience as a specialized professional credential unless that credential is verified.
+
 ## Mobile-first responsive design
 
 - Treat mobile responsiveness as a first-class requirement for every page and component.

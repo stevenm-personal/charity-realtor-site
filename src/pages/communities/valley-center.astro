@@ -1,0 +1,59 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import welcomePhoto from '../../assets/communities/valley-center/Valley_Center_Welcome_Sign.jpg';
+import recPhoto from '../../assets/communities/valley-center/Valley_Center_Recreation_Center.jpg';
+import towerPhoto from '../../assets/communities/valley-center/Valley_Center_Water_Tower.jpg';
+---
+
+<BaseLayout
+  title="Valley Center, Kansas Community Guide | Charity Menefee"
+  description="A useful introduction to Valley Center, Kansas, with real local imagery and real estate guidance from Charity Menefee."
+>
+  <PageHero
+    eyebrow="Community guide · Valley Center"
+    title="A distinct community just north of Wichita."
+    intro="Valley Center maintains its own municipal identity while remaining connected to the wider Wichita area—a setting Charity knows as part of the local market she serves."
+    image={welcomePhoto}
+    imageAlt="The Discover Valley Center welcome sign with prairie landscaping"
+  />
+
+  <section class="section-space" aria-labelledby="valley-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left"><p class="eyebrow">Getting oriented</p><h2 id="valley-overview-title">Local identity with Wichita nearby.</h2></div>
+      <div class="prose" data-reveal="right">
+        <p>Valley Center is located north of Wichita and functions as its own city within the surrounding metropolitan area. Its housing context includes established areas as well as residential growth, with rural land also part of the broader landscape around the community.</p>
+        <p>When looking here, it helps to consider the specific property, access routes, home style, lot, and day-to-day destinations that matter to you. Charity can help organize those factors without making assumptions about what should feel right.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-sage" aria-labelledby="valley-place-title">
+    <div class="shell photo-story-grid photo-story-reverse">
+      <div class="photo-story-copy" data-reveal="right">
+        <p class="eyebrow">Community landmarks</p>
+        <h2 id="valley-place-title">A place with recognizable local touchpoints.</h2>
+        <p>The Valley Center water tower and recreation center are visible parts of the community landscape. They help tell a more specific story than a generic location page ever could.</p>
+      </div>
+      <Picture class="photo-story-main" src={recPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1440]} sizes="(min-width: 48rem) 52vw, 100vw" alt="Valley Center Recreation Center on a winter evening" data-reveal="left" />
+      <Picture class="photo-story-secondary" src={towerPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 48rem) 34vw, 90vw" alt="Valley Center water tower rising above trees under a bright blue sky" data-reveal="scale-up" />
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="valley-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Planning a search</p><h2 id="valley-search-title">Look beyond the city name to the individual property.</h2></div><p data-reveal="right">Property conditions and services vary, especially as searches extend toward acreage. Verify the facts that apply to each address.</p></div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">What kind of lot, home, and maintenance level fit your plans?</li>
+        <li data-reveal="up">Which routes and regular destinations should shape the search area?</li>
+        <li data-reveal="up">Does a property have utilities or site conditions that need closer investigation?</li>
+        <li data-reveal="up">Which local public resources should you review directly before deciding?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages"><span>Explore another area</span><a href="/communities/wichita/">Wichita <i aria-hidden="true">→</i></a></nav>
+  <CallToAction title="Have questions about Valley Center?" />
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import riverPhoto from '../../assets/communities/wichita/Wichita_River.jpg';
+import downtownPhoto from '../../assets/communities/wichita/Wichita_Downtown.jpg';
+import keeperPhoto from '../../assets/communities/wichita/Wichita_Keeper.jpg';
+---
+
+<BaseLayout
+  title="Wichita, Kansas Community Guide | Charity Menefee"
+  description="A grounded introduction to Wichita, Kansas, with local imagery and practical real estate guidance from Charity Menefee."
+>
+  <PageHero
+    eyebrow="Community guide · Wichita"
+    title="A city with many ways to feel at home."
+    intro="Wichita brings together established neighborhoods, newer residential areas, a recognizable riverfront, and the everyday conveniences of the region's largest city."
+    image={riverPhoto}
+    imageAlt="Wide view of the Arkansas River and the downtown Wichita skyline at sunset"
+  />
+
+  <section class="section-space" aria-labelledby="wichita-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left"><p class="eyebrow">Getting oriented</p><h2 id="wichita-overview-title">One city, a wide range of settings.</h2></div>
+      <div class="prose" data-reveal="right">
+        <p>Wichita is the central city of south-central Kansas. Its housing includes homes in long-established areas, infill near central districts, and newer construction toward the city's edges. The details can vary considerably from one part of the city to another.</p>
+        <p>A useful search starts with the routines that matter to you: the parts of town you visit, the type of home you want to maintain, the amount of space you need, and the routes you expect to use. Charity can help turn those preferences into a practical search.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-surface" aria-labelledby="wichita-place-title">
+    <div class="shell photo-story-grid">
+      <div class="photo-story-copy" data-reveal="left">
+        <p class="eyebrow">A sense of place</p>
+        <h2 id="wichita-place-title">The river is part of Wichita's visual center.</h2>
+        <p>Downtown, the Arkansas River, and the Keeper of the Plains create a recognizable civic landscape. Beyond that center, the city unfolds through distinct districts, neighborhood streets, parks, commercial corridors, and residential areas.</p>
+      </div>
+      <Picture class="photo-story-main" src={keeperPhoto} formats={['avif', 'webp']} widths={[480, 720, 960]} sizes="(min-width: 48rem) 52vw, 100vw" alt="The Keeper of the Plains and cable-stayed bridge in Wichita at dusk" data-reveal="right" />
+      <Picture class="photo-story-secondary" src={downtownPhoto} formats={['avif', 'webp']} widths={[400, 640, 800]} sizes="(min-width: 48rem) 30vw, 90vw" alt="Downtown Wichita beside the Arkansas River in warm evening light" data-reveal="scale-up" />
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="wichita-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Planning a search</p><h2 id="wichita-search-title">Useful questions before choosing a part of town.</h2></div><p data-reveal="right">These are practical starting points—not a substitute for your own research or property-specific investigation.</p></div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">Which parts of Wichita fit the places you visit most often?</li>
+        <li data-reveal="up">Do you prefer an older home, newer construction, or something in between?</li>
+        <li data-reveal="up">How much yard and ongoing maintenance feel realistic?</li>
+        <li data-reveal="up">Which property details need closer review once a home stands out?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages"><span>Next community</span><a href="/communities/valley-center/">Valley Center <i aria-hidden="true">→</i></a></nav>
+  <CallToAction title="Thinking about a move within Wichita?" />
+</BaseLayout>

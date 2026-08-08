@@ -1,19 +1,119 @@
-<header class="site-header">
+---
+import { Image } from 'astro:assets';
+import bricktownLogo from '../assets/branding/bricktown-logo.png';
+import realtorLogo from '../assets/branding/realtor-logo.jpg';
+
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+
+const communityLinks = [
+  { label: 'Wichita', href: '/communities/wichita/' },
+  { label: 'Valley Center', href: '/communities/valley-center/' },
+  { label: 'Andover', href: '/communities/#community-andover' },
+  { label: 'Derby', href: '/communities/#community-derby' },
+  { label: 'Maize', href: '/communities/#community-maize' },
+  { label: 'Park City', href: '/communities/#community-park-city' },
+  { label: 'Goddard', href: '/communities/#community-goddard' },
+  { label: 'Newton', href: '/communities/#community-newton' },
+];
+---
+
+<header class="site-header" data-site-header>
   <div class="shell header-inner">
-    <a class="brand" href="/" aria-label="Charity Menefee Real Estate home">
-      <span class="brand-mark" aria-hidden="true">CM</span>
-      <span class="brand-name">
-        Charity Menefee
-        <small>Real Estate</small>
-      </span>
-    </a>
+    <div class="header-branding">
+      <a class="brand" href="/" aria-label="Charity Menefee Real Estate home">
+        <span class="brand-monogram" aria-hidden="true">CM</span>
+        <span class="brand-name">Charity Menefee<small>Wichita-area Realtor</small></span>
+      </a>
+      <div class="header-affiliations" aria-label="Realtor and Bricktown ICT Realty affiliations">
+        <Image src={realtorLogo} alt="Realtor" width={34} height={34} />
+        <Image src={bricktownLogo} alt="Bricktown ICT Realty" width={34} height={34} />
+      </div>
+    </div>
 
-    <nav class="primary-nav" aria-label="Primary navigation">
-      <a href="#services">Services</a>
-      <a href="#areas">Areas</a>
-      <a href="#about">About</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="nav-panel" id="primary-navigation" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="/" aria-current={isCurrent('/') ? 'page' : undefined}>Home</a></li>
+        <li class="nav-group">
+          <div class="nav-parent">
+            <a href="/services/" aria-current={isCurrent('/services/') ? 'page' : undefined}>Services</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show Services links">
+              <span aria-hidden="true">+</span>
+            </button>
+          </div>
+          <ul class="submenu">
+            <li><a href="/services/buying/">Buying</a></li>
+            <li><a href="/services/selling/">Selling</a></li>
+            <li><a href="/services/land-acreage/">Land &amp; Acreage</a></li>
+          </ul>
+        </li>
+        <li class="nav-group nav-group-wide">
+          <div class="nav-parent">
+            <a href="/communities/" aria-current={isCurrent('/communities/') ? 'page' : undefined}>Communities</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show Communities links">
+              <span aria-hidden="true">+</span>
+            </button>
+          </div>
+          <ul class="submenu">
+            {communityLinks.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+          </ul>
+        </li>
+        <li><a href="/about/" aria-current={isCurrent('/about/') ? 'page' : undefined}>About</a></li>
+        <li><a href="/blog/" aria-current={isCurrent('/blog/') ? 'page' : undefined}>Blog</a></li>
+        <li><a href="/contact/" aria-current={isCurrent('/contact/') ? 'page' : undefined}>Contact</a></li>
+      </ul>
     </nav>
-
-    <a class="header-cta" href="#contact">Let's talk</a>
   </div>
 </header>
+
+<script>
+  const initializeHeader = () => {
+    const header = document.querySelector('[data-site-header]');
+    if (!(header instanceof HTMLElement) || header.dataset.ready === 'true') return;
+    header.dataset.ready = 'true';
+
+    const menuButton = header.querySelector('.menu-toggle');
+    const panel = header.querySelector('.nav-panel');
+    const submenuButtons = header.querySelectorAll('.submenu-toggle');
+
+    const closeMenu = () => {
+      header.classList.remove('menu-open');
+      menuButton?.setAttribute('aria-expanded', 'false');
+      submenuButtons.forEach((button) => {
+        button.setAttribute('aria-expanded', 'false');
+        button.closest('.nav-group')?.classList.remove('submenu-open');
+      });
+    };
+
+    menuButton?.addEventListener('click', () => {
+      const open = header.classList.toggle('menu-open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      if (open) panel?.querySelector('a')?.focus();
+    });
+
+    submenuButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const group = button.closest('.nav-group');
+        const open = group?.classList.toggle('submenu-open') ?? false;
+        button.setAttribute('aria-expanded', String(open));
+      });
+    });
+
+    header.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  };
+
+  document.addEventListener('astro:page-load', initializeHeader);
+  initializeHeader();
+</script>

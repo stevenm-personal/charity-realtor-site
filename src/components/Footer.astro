@@ -1,19 +1,57 @@
 ---
+import { Image } from 'astro:assets';
+import charityBanner from '../assets/branding/Charity_Menefee_Bricktown_Banner.webp';
+import curtisCrewLogo from '../assets/branding/curtis-crew-logo.png';
+import realtorLogo from '../assets/branding/realtor-logo.jpg';
+
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <div class="shell footer-inner">
-    <div>
-      <a class="footer-brand" href="/">Charity Menefee</a>
-      <p>Real estate guidance for Wichita, Valley Center, and nearby communities.</p>
+  <div class="shell footer-main">
+    <div class="footer-intro">
+      <a href="/" class="footer-brand" aria-label="Charity Menefee home">
+        <Image src={charityBanner} alt="Charity Menefee, Bricktown ICT Realty" width={320} />
+      </a>
+      <p>Patient, personal real estate guidance for Wichita and the communities nearby.</p>
+      <a class="footer-conversation" href="/contact/">Start a conversation <span aria-hidden="true">→</span></a>
     </div>
-    <nav aria-label="Footer navigation">
-      <a href="#services">Services</a>
-      <a href="#areas">Areas</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+
+    <nav class="footer-nav" aria-label="Services navigation">
+      <h2>Services</h2>
+      <a href="/services/buying/">Buying</a>
+      <a href="/services/selling/">Selling</a>
+      <a href="/services/land-acreage/">Land &amp; Acreage</a>
+      <a href="/services/">All services</a>
     </nav>
-    <p class="copyright">&copy; {year} Charity Menefee Real Estate</p>
+
+    <nav class="footer-nav" aria-label="Community navigation">
+      <h2>Communities</h2>
+      <a href="/communities/wichita/">Wichita</a>
+      <a href="/communities/valley-center/">Valley Center</a>
+      <a href="/communities/">Explore all areas</a>
+    </nav>
+
+    <nav class="footer-nav" aria-label="Site navigation">
+      <h2>More</h2>
+      <a href="/about/">About Charity</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/disclaimer/">Disclaimer</a>
+    </nav>
+  </div>
+
+  <div class="shell footer-affiliations">
+    <div class="affiliation-logos" aria-label="Professional affiliations">
+      <Image src={realtorLogo} alt="Realtor" width={54} height={54} />
+      <Image src={curtisCrewLogo} alt="Curtis Crew Real Estate" width={54} height={54} />
+    </div>
+    <p class="contact-placeholder"><strong>Contact details:</strong> verified phone and email information will be added before launch.</p>
+  </div>
+
+  <div class="shell footer-legal">
+    <p>&copy; {year} Charity Menefee. All rights reserved.</p>
+    <p>Equal housing opportunity. This development site is not yet accepting form submissions.</p>
   </div>
 </footer>

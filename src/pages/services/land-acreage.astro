@@ -1,0 +1,57 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import acreagePhoto from '../../assets/shared/kansas/kansas-land-aerial.png';
+import prairiePhoto from '../../assets/shared/kansas/kansas-land-prairie.jpg';
+---
+
+<BaseLayout
+  title="Land and Acreage in South-Central Kansas | Charity Menefee"
+  description="Grounded real estate guidance for people considering land and acreage around Wichita and south-central Kansas."
+>
+  <PageHero
+    eyebrow="Land & acreage"
+    title="More room comes with more questions."
+    intro="If you are considering rural property, Charity can help you organize the practical considerations, explore possibilities, and understand which questions need answers."
+    image={acreagePhoto}
+    imageAlt="Kansas acreage seen from above, with fields, trees, homes, and rural roads"
+  />
+
+  <section class="section-space" aria-labelledby="acreage-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left"><p class="eyebrow">A personal point of reference</p><h2 id="acreage-title">Charity understands why the details matter.</h2></div>
+      <div class="prose" data-reveal="right">
+        <p>Charity has personal experience purchasing acreage and working through the practical considerations involved in establishing a home on rural property. That experience informs the questions she brings to the conversation without being presented as a specialized credential.</p>
+        <p>Every property is different. The work begins by identifying what you hope the land will support and which property-specific facts need to be investigated with the appropriate professionals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="land-feature" aria-labelledby="land-questions-title">
+    <Picture
+      class="land-feature-image"
+      src={prairiePhoto}
+      formats={['avif', 'webp']}
+      widths={[640, 960, 1440, 1920]}
+      sizes="100vw"
+      alt="Kansas prairie and open land at sunset"
+    />
+    <div class="shell land-feature-inner">
+      <div class="land-feature-card" data-reveal="layer-right">
+        <p class="eyebrow eyebrow-light">Questions worth organizing</p>
+        <h2 id="land-questions-title">Start with the way you want to use the property.</h2>
+        <ul>
+          <li>How much land feels useful and manageable?</li>
+          <li>What existing improvements are present?</li>
+          <li>Which utilities, access, and site conditions need verification?</li>
+          <li>Which inspections or specialized professionals may be appropriate?</li>
+        </ul>
+        <p class="fine-print">These are conversation starters, not property-specific technical advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction title="Curious whether land or acreage fits your plans?" />
+</BaseLayout>

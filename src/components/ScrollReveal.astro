@@ -8,7 +8,9 @@
 
     const initializeReveals = () => {
       const elements = document.querySelectorAll('[data-reveal]');
-      const parallaxElements = document.querySelectorAll('[data-parallax]');
+      const parallaxElements = window.matchMedia('(min-width: 48rem)').matches
+        ? document.querySelectorAll('[data-parallax]')
+        : [];
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {

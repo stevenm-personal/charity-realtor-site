@@ -1,0 +1,35 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  tone?: 'light' | 'image';
+}
+
+const { eyebrow, title, intro, image, imageAlt = '', tone = image ? 'image' : 'light' } = Astro.props;
+---
+
+<section class:list={['page-hero', `page-hero-${tone}`, { 'page-hero-has-image': image }]}>
+  {image && (
+    <Picture
+      class="page-hero-image"
+      src={image}
+      formats={['avif', 'webp']}
+      widths={[640, 960, 1280, 1680]}
+      sizes="100vw"
+      alt={imageAlt}
+      loading="eager"
+      fetchpriority="high"
+    />
+  )}
+  <div class="shell page-hero-content" data-reveal="hero-copy">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="page-hero-intro">{intro}</p>
+  </div>
+</section>

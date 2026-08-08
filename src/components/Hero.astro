@@ -1,30 +1,35 @@
-<section class="hero shell" aria-labelledby="hero-title">
-  <div class="hero-copy" data-reveal="hero-copy">
-    <p class="eyebrow">Wichita-area real estate</p>
-    <h1 id="hero-title">A thoughtful approach to your next move.</h1>
-    <p class="hero-intro">
-      Personal real estate guidance for buyers and sellers in Wichita, Valley Center,
-      and nearby communities.
-    </p>
-    <div class="button-row">
-      <a class="button button-primary" href="#contact">Start a conversation</a>
-      <a class="text-link" href="#services">Explore services <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
+---
+import { Picture } from 'astro:assets';
+import heroImage from '../assets/homepage/hero.png';
+---
 
-  <div class="hero-visual-frame" data-reveal="hero-visual">
-    <div
-      class="hero-visual"
-      role="img"
-      aria-label="Placeholder for a welcoming Wichita-area home photograph"
-      data-parallax
-    >
-      <span>Future property photography</span>
-    </div>
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero-media" data-parallax>
+    <Picture
+      class="home-hero-image"
+      src={heroImage}
+      formats={['avif', 'webp']}
+      widths={[640, 960, 1280, 1680]}
+      sizes="100vw"
+      alt="A welcoming home overlooking open Kansas fields at sunset"
+      loading="eager"
+      fetchpriority="high"
+    />
   </div>
-
-  <div class="hero-note reveal-delay-2" aria-label="Service area" data-reveal="up">
-    <span>Serving</span>
-    <strong>Wichita · Valley Center · Nearby communities</strong>
+  <div class="home-hero-overlay" aria-hidden="true"></div>
+  <div class="shell home-hero-content">
+    <div class="home-hero-copy" data-reveal="hero-copy">
+      <p class="eyebrow eyebrow-light">Wichita area · South-central Kansas</p>
+      <h1 id="home-hero-title">Local guidance for a move that feels like yours.</h1>
+      <p>
+        Charity helps people buy, sell, and explore land throughout the Wichita area with patient,
+        low-pressure guidance and a clear sense of what comes next.
+      </p>
+      <div class="button-row">
+        <a class="button button-light" href="/contact/">Start a Conversation</a>
+        <a class="button button-ghost-light" href="/communities/">Explore Communities</a>
+      </div>
+    </div>
+    <p class="hero-signature" data-reveal="right">Kansas is home. Let’s find the place that works for you.</p>
   </div>
 </section>
