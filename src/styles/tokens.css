@@ -1,0 +1,60 @@
+:root {
+  color-scheme: light;
+
+  /* Prairie Warmth color roles */
+  --color-background: #f6f0e6;
+  --color-surface: #fcfaf6;
+  --color-soft-white: #fffdfc;
+  --color-text: #292825;
+  --color-text-muted: #66635d;
+  --color-primary: #6f7d65;
+  --color-primary-hover: #5d6a55;
+  --color-accent: #c69a45;
+  --color-secondary: #b69b7d;
+  --color-border: #ddd0bf;
+  --color-footer: var(--color-text);
+  --color-button-primary: var(--color-text);
+  --color-button-primary-hover: #3b3935;
+  --color-button-primary-text: var(--color-soft-white);
+  --color-text-on-dark: var(--color-soft-white);
+  --color-text-on-dark-muted: rgba(255, 253, 252, 0.72);
+  --color-text-on-dark-subtle: rgba(255, 253, 252, 0.55);
+  --color-text-on-image: rgba(255, 253, 252, 0.86);
+  --color-border-on-image: rgba(255, 253, 252, 0.38);
+  --color-header-background: rgba(252, 250, 246, 0.94);
+  --color-surface-translucent: rgba(252, 250, 246, 0.96);
+  --color-placeholder-overlay: rgba(41, 40, 37, 0.26);
+  --color-placeholder-overlay-strong: rgba(41, 40, 37, 0.3);
+  --color-placeholder-start: var(--color-secondary);
+  --color-placeholder-end: var(--color-primary);
+
+  /* Layout and spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --width-content: 73.75rem;
+  --width-reading: 42rem;
+  --header-height: 4.75rem;
+
+  /* Shape and depth */
+  --radius-small: 0.25rem;
+  --radius-medium: 0.5rem;
+  --radius-large: 0.75rem;
+  --radius-pill: 999px;
+  --shadow-soft: 0 1rem 3rem rgba(41, 40, 37, 0.08);
+  --shadow-layered: 0 2rem 5rem rgba(41, 40, 37, 0.12);
+
+  /* Motion */
+  --motion-duration-fast: 160ms;
+  --motion-duration-medium: 820ms;
+  --motion-duration-slow: 1050ms;
+  --motion-duration-hero: 1200ms;
+  --motion-ease-standard: ease-out;
+  --motion-ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+}

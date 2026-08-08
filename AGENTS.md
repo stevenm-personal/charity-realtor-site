@@ -1,5 +1,12 @@
 # Project rules for Codex
 
+## Brand authority
+
+- Read and follow `BRAND.md` before making visual, interaction, typography, color, photography, or brand decisions.
+- Treat `BRAND.md` as the authoritative design reference unless the user explicitly approves a change.
+- Use semantic variables from `src/styles/tokens.css` instead of hard-coding repeated visual values in components.
+- Update shared design decisions centrally in `src/styles/tokens.css` when appropriate, without over-engineering the token system.
+
 ## Architecture
 
 - Keep this site on Astro with static output.
@@ -13,6 +20,22 @@
 - Build responsive, accessible interfaces with semantic HTML and visible keyboard focus states.
 - Run `npm run build` after project changes and fix project-related build errors.
 - Do not commit or push unless the user explicitly asks.
+
+## Mobile-first responsive design
+
+- Treat mobile responsiveness as a first-class requirement for every page and component.
+- Design mobile layouts first, then progressively enhance them for tablet, laptop, and desktop widths.
+- Do not build desktop layouts first and treat mobile as a cleanup phase.
+- Implement responsive behavior while each component is being built instead of deferring it until the end.
+- Provide navigation with a clear, accessible mobile pattern and comfortably sized controls.
+- Scale typography, spacing, buttons, cards, images, forms, and content density appropriately across viewport sizes.
+- Keep touch targets comfortably sized and spaced for mobile use; aim for at least `44px` by `44px` where practical.
+- Prevent horizontal scrolling at normal viewport widths, including when using layered layouts or animated transforms.
+- Keep hero sections readable, balanced, and visually strong on small screens.
+- Use responsive sizing and Astro image optimization for large photographic assets where appropriate.
+- Ensure scroll animations and interactive effects do not compromise usability, scrolling, or performance on mobile.
+- Continue respecting `prefers-reduced-motion` for every animated or interactive effect.
+- Before considering substantial page or component work complete, verify it at representative phone, tablet, laptop, and desktop widths.
 
 ## Images and media
 
