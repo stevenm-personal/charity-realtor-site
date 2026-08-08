@@ -195,7 +195,6 @@ p {
 }
 
 .section-heading h2,
-.value-heading h2,
 .meet-copy h2,
 .journal-intro h2,
 .editorial-grid h2,
@@ -214,7 +213,6 @@ p {
 .section-heading > p,
 .section-heading > div > p:last-child,
 .split-heading > div:last-child > p,
-.value-copy,
 .meet-copy > p,
 .journal-intro > p,
 .planned-community-intro > p,
@@ -629,40 +627,6 @@ p {
   color: var(--color-text-on-image);
 }
 
-/* Homepage story */
-.value-section {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.value-grid {
-  display: grid;
-  gap: var(--space-7);
-}
-
-.value-copy {
-  max-width: var(--width-reading);
-  margin-bottom: 0;
-  font-size: 1.04rem;
-}
-
-.value-points {
-  display: grid;
-  border-top: 1px solid var(--color-border);
-}
-
-.value-points p {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: var(--space-4);
-  margin: 0;
-  padding-block: var(--space-4);
-  border-bottom: 1px solid var(--color-border);
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.value-points span,
 .card-number {
   color: var(--color-accent);
   font-size: 0.7rem;
@@ -1676,25 +1640,6 @@ textarea:focus-visible {
   .hero-signature {
     max-width: 14rem;
     margin: 0;
-  }
-
-  .value-grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.7fr);
-    align-items: end;
-  }
-
-  .value-points {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .value-points p {
-    padding-inline: var(--space-5);
-    border-right: 1px solid var(--color-border);
-  }
-
-  .value-points p:last-child {
-    border-right: 0;
   }
 
   .meet-grid {
