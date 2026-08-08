@@ -651,9 +651,9 @@ p {
 }
 
 .meet-image-wrap img {
-  min-height: 25rem;
+  height: clamp(15.5rem, 62vw, 19rem);
   object-fit: cover;
-  object-position: 48% center;
+  object-position: 48% 42%;
 }
 
 .image-caption {
@@ -1657,7 +1657,7 @@ textarea:focus-visible {
   }
 
   .meet-image-wrap img {
-    min-height: 38rem;
+    height: clamp(19rem, 26vw, 23rem);
   }
 
   .split-heading,
