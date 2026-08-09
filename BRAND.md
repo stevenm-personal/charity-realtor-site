@@ -1,6 +1,6 @@
 # Prairie Warmth brand system
 
-`BRAND.md` is the authoritative visual and brand reference for Charity Menefee Real Estate. Future design work must follow this direction unless the user explicitly approves a change.
+`BRAND.md` is the authoritative visual, editorial, and brand reference for Charity Menefee Real Estate. Future design and copy work must follow this direction unless the user explicitly approves a change.
 
 ## Brand idea
 
@@ -18,6 +18,29 @@ Charity Menefee is the primary brand. The experience should feel personal rather
 - Clear and useful rather than sales-heavy.
 
 Avoid sterile futuristic language, artificial exclusivity, aggressive conversion copy, exaggerated claims, and generic corporate phrasing.
+
+## Editorial voice and point of view
+
+This is Charity Menefee's personal Realtor brand website. Copy should sound as though visitors are hearing from Charity directly when the subject is her experience, approach, services, opinions, or assistance.
+
+- Prefer first-person singular (`I`, `me`, and `my`) for Charity's own role and perspective. Avoid third-person phrases such as "Charity can help" and generic corporate `we` language.
+- Do not make the site sound as though a brokerage or corporate organization is describing Charity as one of its agents.
+- Do not force first person into every page or paragraph. Choose the point of view that best serves the content.
+- Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Ordinary personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as an unnamed corporate narrator.
+- Prioritize usefulness first and conversion second. Do not insert a Realtor sales pitch into every informational section.
+- Keep the tone warm, local, conversational, grounded, patient, and low-pressure. Avoid generic marketing language and artificial urgency.
+
+Use these page-specific conventions:
+
+- **Homepage:** Speak primarily to the visitor using `you`, with selective first-person language when describing Charity's role or approach.
+- **About:** Use first person so the page feels as though Charity is naturally telling her own story.
+- **Buying, Selling, and Land & Acreage:** Lead with useful information addressed to the visitor. Use first person when Charity's involvement or approach is relevant.
+- **Community pages:** Keep the main body informational and editorial. Describe verified details about the community, properties, geography, amenities, and access directly and neutrally; do not repeatedly sell Charity's services. One restrained first-person invitation near the end is appropriate.
+- **Blog:** Informational articles may use a neutral editorial voice. Personal observations or firsthand experience may naturally use first person.
+- **Contact:** A conversational first-person voice is appropriate.
+- **Legal and disclosure content:** Use the appropriate neutral or formal voice.
+
+All copy must continue to follow Fair Housing requirements. Do not introduce demographic assumptions, steering language, protected-class references, or proxies for protected classes.
 
 ## Visual principles
 

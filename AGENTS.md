@@ -2,8 +2,8 @@
 
 ## Brand authority
 
-- Read and follow `BRAND.md` before making visual, interaction, typography, color, photography, or brand decisions.
-- Treat `BRAND.md` as the authoritative design reference unless the user explicitly approves a change.
+- Read and follow `BRAND.md` before making visual, interaction, typography, color, photography, editorial-voice, or brand decisions.
+- Treat `BRAND.md` as the authoritative design and editorial reference unless the user explicitly approves a change.
 - Use semantic variables from `src/styles/tokens.css` instead of hard-coding repeated visual values in components.
 - Update shared design decisions centrally in `src/styles/tokens.css` when appropriate, without over-engineering the token system.
 
@@ -29,6 +29,21 @@
 - Do not describe communities with protected-class or demographic proxies, including claims such as safe, family-friendly, ideal for retirees, perfect for young professionals, Christian, or affluent.
 - Keep community descriptions factual and avoid steering language. Do not make unsupported claims about schools, crime, demographics, or who belongs in an area.
 - Do not present personal experience as a specialized professional credential unless that credential is verified.
+
+## Editorial voice and point of view
+
+- Treat the site as Charity Menefee's personal Realtor brand, not as brokerage or corporate copy describing one of its agents.
+- When discussing Charity's experience, approach, services, opinions, or assistance, prefer first-person singular (`I`, `me`, and `my`) over third-person phrases such as "Charity can help" or generic corporate `we` language.
+- Do not force first person into every page. Match the point of view to the content and follow the page-specific guidance in `BRAND.md`.
+- On the homepage, address the visitor primarily as `you`, using first person selectively for Charity's role and approach.
+- Write the About page in Charity's natural first-person voice.
+- On Buying, Selling, and Land & Acreage pages, lead with useful visitor-focused information and use first person when Charity's involvement is relevant.
+- Keep community-page body copy neutral, factual, and informational. Do not repeat service pitches through the guide; limit personal selling language to one restrained first-person invitation near the end when appropriate.
+- Use a neutral editorial voice for informational blog content, allowing first person for genuine personal observations or firsthand experience.
+- Use a conversational first-person voice on Contact and an appropriate neutral or formal voice for legal and disclosure content.
+- Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as a generic corporate narrator.
+- Prioritize usefulness before conversion, avoid generic Realtor marketing language, and do not add a sales pitch to every informational section.
+- Continue following every Fair Housing guardrail above; never introduce demographic assumptions, steering, protected-class language, or protected-class proxies while editing voice.
 
 ## Mobile-first responsive design
 
