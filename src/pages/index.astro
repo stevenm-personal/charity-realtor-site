@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCards from '../components/ServiceCards.astro';
-import charityPhoto from '../assets/charity/charity-headshot-1.jpg';
+import charityPhoto from '../assets/charity/charity-headshot-sitting-cropped.jpg';
 import wichitaPhoto from '../assets/communities/wichita/Wichita_Downtown.jpg';
 import valleyCenterPhoto from '../assets/communities/valley-center/Valley_Center_Welcome_Sign.jpg';
 import prairiePhoto from '../assets/shared/kansas/kansas-land-prairie.jpg';
@@ -24,9 +24,10 @@ import prairiePhoto from '../assets/shared/kansas/kansas-land-prairie.jpg';
           class="meet-image"
           src={charityPhoto}
           formats={['avif', 'webp']}
-          widths={[480, 720, 960]}
-          sizes="(min-width: 48rem) 24rem, 21rem"
-          alt="Charity Menefee standing in a warm, welcoming kitchen"
+          widths={[288, 336, 384, 480, 576, 672, 736]}
+          sizes="(min-width: 48rem) 24rem, (min-width: 23rem) 21rem, calc(100vw - 2rem)"
+          quality={90}
+          alt="Charity Menefee seated in a warm home interior"
         />
         <p class="image-caption">Charity Menefee · Wichita-area Realtor</p>
       </div>
