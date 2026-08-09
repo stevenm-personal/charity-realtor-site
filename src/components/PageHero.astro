@@ -14,7 +14,7 @@ interface Props {
 const { eyebrow, title, intro, image, imageAlt = '', tone = image ? 'image' : 'light' } = Astro.props;
 ---
 
-<section class:list={['page-hero', `page-hero-${tone}`, { 'page-hero-has-image': image }]}>
+<section class:list={['page-hero', { 'page-hero-light': tone === 'light', 'page-hero-has-image': image }]}>
   {image && (
     <Picture
       class="page-hero-image"
