@@ -3,9 +3,8 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import welcomePhoto from '../../assets/communities/valley-center/Valley_Center_Welcome_Sign.jpg';
-import recPhoto from '../../assets/communities/valley-center/Valley_Center_Recreation_Center.jpg';
-import towerPhoto from '../../assets/communities/valley-center/Valley_Center_Water_Tower.jpg';
+import recPhoto from '../../assets/communities/valley-center/valley-center-rec-center.jpg';
+import towerPhoto from '../../assets/communities/valley-center/valley-center-water-tower.jpg';
 ---
 
 <BaseLayout
@@ -14,13 +13,13 @@ import towerPhoto from '../../assets/communities/valley-center/Valley_Center_Wat
 >
   <PageHero
     eyebrow="Community guide · Valley Center"
-    title="A distinct community just north of Wichita."
+    title="Small-town life, with Wichita close by."
     intro="Valley Center maintains its own municipal identity while remaining connected to the wider Wichita area."
-    image={welcomePhoto}
-    imageAlt="The Discover Valley Center welcome sign with prairie landscaping"
+    image={towerPhoto}
+    imageAlt="The Valley Center water tower above trees beneath a wide Kansas sky"
     variant="community"
-    imagePosition="center bottom"
-    imagePositionMobile="38% center"
+    imagePosition="30% center"
+    imagePositionMobile="43% center"
   />
 
   <section class="section-space" aria-labelledby="valley-overview-title">
