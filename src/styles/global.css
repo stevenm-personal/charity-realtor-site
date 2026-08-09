@@ -647,11 +647,6 @@ p {
   max-width: 33rem;
 }
 
-.card-number {
-  color: var(--color-accent);
-  font-size: 0.7rem;
-}
-
 .meet-section {
   background: var(--color-surface);
 }

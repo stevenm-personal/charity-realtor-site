@@ -1,19 +1,16 @@
 ---
 const services = [
   {
-    number: '01',
     title: 'Buying',
     description: 'Clarify what matters, compare homes with useful context, and move through each decision at a comfortable pace.',
     href: '/services/buying/',
   },
   {
-    number: '02',
     title: 'Selling',
     description: 'Build a practical plan for preparing, presenting, and bringing your home to market with clear next steps.',
     href: '/services/selling/',
   },
   {
-    number: '03',
     title: 'Land & Acreage',
     description: 'Think through rural-property possibilities and the practical questions that come with land and acreage.',
     href: '/services/land-acreage/',
@@ -24,7 +21,6 @@ const services = [
 <div class="service-card-grid reveal-stagger">
   {services.map((service) => (
     <article class="service-card" data-reveal="up">
-      <span class="card-number" aria-hidden="true">{service.number}</span>
       <div>
         <h3>{service.title}</h3>
         <p>{service.description}</p>
