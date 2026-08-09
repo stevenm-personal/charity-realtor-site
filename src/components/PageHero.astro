@@ -9,12 +9,42 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   tone?: 'light' | 'image';
+  variant?: 'default' | 'community';
+  imagePosition?: string;
+  imagePositionMobile?: string;
 }
 
-const { eyebrow, title, intro, image, imageAlt = '', tone = image ? 'image' : 'light' } = Astro.props;
+const {
+  eyebrow,
+  title,
+  intro,
+  image,
+  imageAlt = '',
+  tone = image ? 'image' : 'light',
+  variant = 'default',
+  imagePosition = 'center center',
+  imagePositionMobile = imagePosition,
+} = Astro.props;
+
+const heroStyle: Record<string, string> | undefined = image
+  ? {
+      '--page-hero-image-position': imagePosition,
+      '--page-hero-image-position-mobile': imagePositionMobile,
+    }
+  : undefined;
 ---
 
-<section class:list={['page-hero', { 'page-hero-light': tone === 'light', 'page-hero-has-image': image }]}>
+<section
+  class:list={[
+    'page-hero',
+    {
+      'page-hero-light': tone === 'light',
+      'page-hero-has-image': image,
+      'page-hero-community': variant === 'community',
+    },
+  ]}
+  style={heroStyle}
+>
   {image && (
     <Picture
       class="page-hero-image"
@@ -28,8 +58,10 @@ const { eyebrow, title, intro, image, imageAlt = '', tone = image ? 'image' : 'l
     />
   )}
   <div class="shell page-hero-content" data-reveal="hero-copy">
-    <p class="eyebrow">{eyebrow}</p>
-    <h1>{title}</h1>
-    <p class="page-hero-intro">{intro}</p>
+    <div class="page-hero-copy">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="page-hero-intro">{intro}</p>
+    </div>
   </div>
 </section>

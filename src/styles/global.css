@@ -601,6 +601,7 @@ p {
 .page-hero > img,
 .page-hero-image {
   object-fit: cover;
+  object-position: var(--page-hero-image-position-mobile, center center);
 }
 
 .page-hero-content {
@@ -625,6 +626,25 @@ p {
 
 .page-hero-has-image .page-hero-intro {
   color: var(--color-text-on-image);
+}
+
+.page-hero-community::after {
+  background:
+    linear-gradient(0deg, var(--color-image-overlay-deep) 0%, var(--color-image-overlay) 48%, transparent 88%),
+    linear-gradient(90deg, var(--color-image-overlay-deep) 0%, var(--color-image-overlay-soft) 72%, transparent 100%);
+}
+
+.page-hero-community .page-hero-copy {
+  max-width: 36rem;
+}
+
+.page-hero-community .page-hero-content h1 {
+  max-width: 10.5ch;
+  font-size: clamp(2.875rem, 12vw, 4.25rem);
+}
+
+.page-hero-community .page-hero-intro {
+  max-width: 33rem;
 }
 
 .card-number {
@@ -1647,6 +1667,22 @@ textarea:focus-visible {
     grid-template-columns: minmax(16rem, 0.68fr) minmax(0, 1fr);
     align-items: center;
     gap: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  .page-hero picture img,
+  .page-hero > img,
+  .page-hero-image {
+    object-position: var(--page-hero-image-position, center center);
+  }
+
+  .page-hero-community::after {
+    background:
+      linear-gradient(90deg, var(--color-image-overlay-deep) 0%, var(--color-image-overlay) 34%, var(--color-image-overlay-soft) 52%, transparent 72%),
+      linear-gradient(0deg, var(--color-image-overlay) 0%, transparent 48%);
+  }
+
+  .page-hero-community .page-hero-content h1 {
+    font-size: clamp(4.5rem, 7vw, 5.75rem);
   }
 
   .meet-image-wrap {
