@@ -1506,7 +1506,7 @@ p {
 }
 
 .site-footer {
-  padding-block: var(--space-7) var(--space-5);
+  padding-block: var(--space-6) var(--space-4);
   color: var(--color-text-on-dark);
   background: var(--color-footer);
 }
@@ -1517,6 +1517,9 @@ p {
 }
 
 .footer-intro {
+  display: grid;
+  align-content: start;
+  gap: var(--space-5);
   max-width: 24rem;
 }
 
@@ -1569,10 +1572,13 @@ p {
 }
 
 .footer-legal {
-  display: grid;
-  gap: var(--space-2);
-  margin-top: var(--space-6);
-  padding-top: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
   border-top: 1px solid var(--color-border-on-image);
 }
 
@@ -1580,19 +1586,26 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-3);
-  margin-top: var(--space-5);
+  gap: var(--space-2);
 }
 
-.affiliation-logos .affiliation-logo {
+.affiliation-logo {
   display: block;
   flex: 0 0 auto;
-  width: auto;
-  height: 3.5rem;
-  padding: 0.25rem;
-  border-radius: var(--radius-small);
-  background: var(--color-soft-white);
+  height: auto;
   object-fit: contain;
+}
+
+.affiliation-logo-bricktown {
+  width: 7.25rem;
+}
+
+.affiliation-logo-curtis {
+  width: 7.125rem;
+}
+
+.affiliation-logo-realtor {
+  width: 7rem;
 }
 
 .footer-legal p {
@@ -1880,26 +1893,24 @@ textarea:focus-visible {
     grid-template-columns: 0.45fr 1fr;
   }
 
-  .footer-main {
-    grid-template-columns: minmax(15rem, 0.9fr) minmax(0, 1.65fr);
-    gap: clamp(3rem, 8vw, 7rem);
-  }
-
   .footer-nav-groups {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .footer-legal {
-    grid-template-columns: 1fr auto;
-    align-items: end;
+  .affiliation-logos {
+    gap: var(--space-2);
   }
 
-  .footer-legal p:last-child {
-    text-align: right;
+  .affiliation-logo-bricktown {
+    width: 7.5rem;
   }
 
-  .affiliation-logos .affiliation-logo {
-    height: 4rem;
+  .affiliation-logo-curtis {
+    width: 7.375rem;
+  }
+
+  .affiliation-logo-realtor {
+    width: 7.25rem;
   }
 
 }
@@ -1993,6 +2004,21 @@ textarea:focus-visible {
 }
 
 @media (min-width: 78rem) {
+  .footer-main {
+    grid-template-columns: minmax(24rem, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .footer-intro {
+    max-width: none;
+  }
+
+  .affiliation-logos {
+    width: max-content;
+    gap: var(--space-2);
+  }
+
   .community-collage {
     grid-template-columns: 1.15fr 0.85fr 0.66fr;
     grid-template-rows: repeat(2, minmax(14rem, 1fr));
