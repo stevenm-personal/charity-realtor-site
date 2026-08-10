@@ -1,12 +1,12 @@
-# Prairie Warmth brand system
+# Kansas Dusk experimental brand system
 
-`BRAND.md` is the authoritative visual, editorial, and brand reference for Charity Menefee Real Estate. Future design and copy work must follow this direction unless the user explicitly approves a change.
+`BRAND.md` is the authoritative visual, editorial, and brand reference for Charity Menefee Real Estate. Kansas Dusk is the current experimental visual direction on this branch. Future design and copy work must follow it unless the user explicitly approves a change.
 
 ## Brand idea
 
-Prairie Warmth combines traditional hospitality with contemporary web craft. The site should feel warm, welcoming, local, approachable, and distinctly Kansas without leaning on rustic styling, country themes, or regional clichés.
+Kansas Dusk keeps the personal hospitality and grounded Kansas character of Prairie Warmth, then adds the richer contrast of late-evening prairie light. The site should feel warm, sophisticated, welcoming, local, and slightly dramatic without leaning on western styling, rustic farmhouse cues, or regional clichés.
 
-Charity Menefee is the primary brand. The experience should feel personal rather than corporate, patient rather than urgent, and polished without resembling a Silicon Valley product site or generic luxury-real-estate template.
+Charity Menefee remains the primary brand. The experience should feel personal rather than corporate, patient rather than urgent, and polished without becoming luxurious, pretentious, overly feminine, or reminiscent of a technology company.
 
 ## Personality and communication
 
@@ -44,14 +44,16 @@ All copy must continue to follow Fair Housing requirements. Do not introduce dem
 
 ## Visual principles
 
-- Prefer warm cream and off-white backgrounds over stark white.
-- Prefer warm charcoal over pure black.
-- Use prairie gold as an accent, not as a dominant yellow field.
-- Use muted sage selectively as an earthy primary or supporting color.
+- Prefer parchment, warm cream, and soft ivory backgrounds over stark white.
+- Prefer deep espresso and warm charcoal over pure black.
+- Use sunset copper as a focused accent for emphasis, links, and active states rather than flooding the site with orange.
+- Use prairie olive selectively as an earthy primary and supporting color.
+- Balance muted clay, warm earth, prairie grass, and evening-neutral tones so they support the existing photography rather than tinting or competing with it.
 - Balance traditional warmth with contemporary composition and interaction.
 - Use generous breathing room, readable content widths, and soft visual layering.
 - Avoid generic luxury-real-estate aesthetics, excessive glass effects, and tech-product dashboard styling.
-- Avoid farmhouse shorthand and repeated wheat, sunflower, barn, or rustic motifs.
+- Avoid western, cowboy, farmhouse, wheat, sunflower, barn, and other rustic shorthand.
+- Keep the overall experience light and welcoming; Kansas Dusk is not a dark-mode theme.
 
 ## Responsive and mobile-first design
 
@@ -75,24 +77,30 @@ Responsive design is a first-class brand requirement, not a finishing pass.
 
 The palette lives in `src/styles/tokens.css`. Components must use semantic variables rather than copying hex values or naming variables after literal colors.
 
-| Role | Token | Initial value |
+| Role | Token | Kansas Dusk value |
 | --- | --- | --- |
-| Page background | `--color-background` | `#F6F0E6` |
-| Elevated surface | `--color-surface` | `#FCFAF6` |
-| Main text and dark sections | `--color-text` | `#292825` |
-| Earthy primary/support | `--color-primary` | `#6F7D65` |
-| Highlight and focus accent | `--color-accent` | `#C69A45` |
-| Secondary neutral | `--color-secondary` | `#B69B7D` |
-| Borders and subtle fills | `--color-border` | `#DDD0BF` |
-| Soft text on dark surfaces | `--color-soft-white` | `#FFFDFC` |
+| Prairie parchment background | `--color-background` | `#F2E7D8` |
+| Evening ivory surface | `--color-surface` | `#FBF5EB` |
+| Dusk espresso text and dark sections | `--color-text` | `#30241F` |
+| Prairie olive primary/support | `--color-primary` | `#68705A` |
+| Sunset copper accent on light surfaces | `--color-accent` | `#984A36` |
+| Copper glow accent on dark surfaces | `--color-accent-on-dark` | `#FFF0E7` |
+| Weathered taupe secondary neutral | `--color-secondary` | `#B08F78` |
+| Warm sand borders and subtle fills | `--color-border` | `#D8C2AD` |
+| Soft evening ivory text | `--color-soft-white` | `#FFF9F2` |
+| Olive mist supporting surface | `--color-sage-soft` | `#DDE0D2` |
+| Clay wash supporting surface | `--color-accent-soft` | `#ECD3C7` |
 
-The palette is an initial direction and is intentionally easy to revise. It should not be treated as permanently locked. Revise the semantic token values centrally when the visual direction evolves; do not scatter replacement colors through components.
+The Kansas Dusk palette is an experiment and is intentionally easy to revise or compare with Prairie Warmth. It should not be treated as permanently locked. Revise semantic token values centrally when the visual direction evolves; do not scatter replacement colors through components.
 
 ## Typography
 
-Typography is not finalized. The desired personality is friendly, soft, highly readable, and slightly characterful. Avoid futuristic, highly geometric, clinical, or overly formal type choices.
+Kansas Dusk retains the original Prairie Warmth typography treatment from the main branch:
 
-The current project uses system sans-serif text with Georgia for display headings. Treat that as a practical interim choice, not a permanent brand decision. Do not add fonts until typography is reviewed intentionally.
+- Display text uses Georgia with Times New Roman as its fallback.
+- Body copy, navigation, labels, and controls use Inter with the original system UI fallback stack.
+
+The exact main-branch stacks are defined through `--font-display` and `--font-body` in `src/styles/tokens.css`. Do not hard-code substitute font stacks in individual components. This preserves Prairie Warmth's friendly, soft, readable, and slightly characterful typography while Kansas Dusk supplies the experimental color treatment.
 
 ## Photography and imagery
 

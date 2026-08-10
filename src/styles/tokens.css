@@ -1,40 +1,45 @@
 :root {
   color-scheme: light;
 
-  /* Prairie Warmth color roles */
-  --color-background: #f6f0e6;
-  --color-surface: #fcfaf6;
-  --color-soft-white: #fffdfc;
-  --color-text: #292825;
-  --color-text-muted: #66635d;
-  --color-primary: #6f7d65;
-  --color-primary-hover: #5d6a55;
-  --color-accent: #c69a45;
-  --color-accent-soft: #eee0c2;
-  --color-secondary: #b69b7d;
-  --color-border: #ddd0bf;
-  --color-border-strong: #c7b59f;
+  /* Kansas Dusk color roles */
+  --color-background: #f2e7d8;
+  --color-surface: #fbf5eb;
+  --color-soft-white: #fff9f2;
+  --color-text: #30241f;
+  --color-text-muted: #6b584f;
+  --color-primary: #68705a;
+  --color-primary-hover: #555d49;
+  --color-accent: #984a36;
+  --color-accent-on-dark: #fff0e7;
+  --color-accent-soft: #ecd3c7;
+  --color-secondary: #b08f78;
+  --color-border: #d8c2ad;
+  --color-border-strong: #b99b84;
   --color-footer: var(--color-text);
   --color-button-primary: var(--color-text);
-  --color-button-primary-hover: #3b3935;
+  --color-button-primary-hover: #47342d;
   --color-button-primary-text: var(--color-soft-white);
   --color-text-on-dark: var(--color-soft-white);
-  --color-text-on-dark-muted: rgba(255, 253, 252, 0.72);
-  --color-text-on-dark-subtle: rgba(255, 253, 252, 0.55);
-  --color-text-on-image: rgba(255, 253, 252, 0.86);
-  --color-border-on-image: rgba(255, 253, 252, 0.38);
-  --color-header-background: rgba(252, 250, 246, 0.94);
-  --color-surface-translucent: rgba(252, 250, 246, 0.96);
-  --color-placeholder-overlay: rgba(41, 40, 37, 0.26);
-  --color-placeholder-overlay-strong: rgba(41, 40, 37, 0.3);
-  --color-image-overlay: rgba(41, 40, 37, 0.52);
-  --color-image-overlay-soft: rgba(41, 40, 37, 0.18);
-  --color-image-overlay-deep: rgba(41, 40, 37, 0.76);
-  --color-sage-soft: #e2e6de;
-  --color-field: #ece2d3;
-  --color-status: #8c6a2f;
+  --color-text-on-dark-muted: rgba(255, 249, 242, 0.74);
+  --color-text-on-dark-subtle: rgba(255, 249, 242, 0.58);
+  --color-text-on-image: rgba(255, 249, 242, 0.9);
+  --color-border-on-image: rgba(255, 249, 242, 0.4);
+  --color-header-background: rgba(251, 245, 235, 0.94);
+  --color-surface-translucent: rgba(251, 245, 235, 0.96);
+  --color-placeholder-overlay: rgba(48, 36, 31, 0.26);
+  --color-placeholder-overlay-strong: rgba(48, 36, 31, 0.32);
+  --color-image-overlay: rgba(48, 36, 31, 0.54);
+  --color-image-overlay-soft: rgba(48, 36, 31, 0.2);
+  --color-image-overlay-deep: rgba(48, 36, 31, 0.78);
+  --color-sage-soft: #dde0d2;
+  --color-field: #e8d7c4;
+  --color-status: #854331;
   --color-placeholder-start: var(--color-secondary);
   --color-placeholder-end: var(--color-primary);
+
+  /* Typography */
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
 
   /* Layout and spacing */
   --space-1: 0.25rem;
@@ -56,9 +61,9 @@
   --radius-medium: 0.5rem;
   --radius-large: 0.75rem;
   --radius-pill: 999px;
-  --shadow-soft: 0 1rem 3rem rgba(41, 40, 37, 0.08);
-  --shadow-layered: 0 2rem 5rem rgba(41, 40, 37, 0.12);
-  --shadow-header: 0 0.75rem 2rem rgba(41, 40, 37, 0.1);
+  --shadow-soft: 0 1rem 3rem rgba(48, 36, 31, 0.09);
+  --shadow-layered: 0 2rem 5rem rgba(48, 36, 31, 0.14);
+  --shadow-header: 0 0.75rem 2rem rgba(48, 36, 31, 0.11);
 
   /* Motion */
   --motion-duration-fast: 160ms;
