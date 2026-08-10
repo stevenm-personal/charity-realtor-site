@@ -95,12 +95,12 @@ The Kansas Dusk palette is an experiment and is intentionally easy to revise or 
 
 ## Typography
 
-Kansas Dusk uses a native, download-free pairing so the theme remains fast and private by default:
+Kansas Dusk retains the original Prairie Warmth typography treatment from the main branch:
 
-- Display text uses Constantia with Palatino and Georgia fallbacks. Its calligraphic serif shapes preserve the editorial warmth of the site while feeling more grounded and dusk-toned than the Prairie Warmth Georgia treatment.
-- Body copy, navigation, labels, and controls use Candara with Aptos, Segoe UI, and system fallbacks. The humanist forms remain friendly and highly readable without feeling geometric or corporate.
+- Display text uses Georgia with Times New Roman as its fallback.
+- Body copy, navigation, labels, and controls use Inter with the original system UI fallback stack.
 
-The pairing is defined through `--font-display` and `--font-body` in `src/styles/tokens.css`. Do not hard-code font stacks in individual components. Typography remains open to intentional review; avoid futuristic, clinical, wedding-like, or formal luxury type choices.
+The exact main-branch stacks are defined through `--font-display` and `--font-body` in `src/styles/tokens.css`. Do not hard-code substitute font stacks in individual components. This preserves Prairie Warmth's friendly, soft, readable, and slightly characterful typography while Kansas Dusk supplies the experimental color treatment.
 
 ## Photography and imagery
 
