@@ -11,6 +11,7 @@ import keeperPhoto from '../../assets/communities/wichita/Wichita_Keeper.jpg';
 <BaseLayout
   title="Wichita, Kansas Community Guide | Charity Menefee"
   description="A grounded introduction to Wichita, Kansas, with local imagery and practical real estate guidance from Charity Menefee."
+  pageClass="page-interior page-wichita"
 >
   <PageHero
     eyebrow="Community guide · Wichita"
@@ -19,8 +20,8 @@ import keeperPhoto from '../../assets/communities/wichita/Wichita_Keeper.jpg';
     image={riverPhoto}
     imageAlt="Wide view of the Arkansas River and the downtown Wichita skyline at sunset"
     variant="community"
-    imagePosition="center 54%"
-    imagePositionMobile="58% center"
+    imagePosition="center 58%"
+    imagePositionMobile="58% 55%"
   />
 
   <section class="section-space" aria-labelledby="wichita-overview-title">
@@ -37,11 +38,26 @@ import keeperPhoto from '../../assets/communities/wichita/Wichita_Keeper.jpg';
     <div class="shell photo-story-grid">
       <div class="photo-story-copy" data-reveal="left">
         <p class="eyebrow">A sense of place</p>
-        <h2 id="wichita-place-title">The river is part of Wichita's visual center.</h2>
-        <p>Downtown, the Arkansas River, and the Keeper of the Plains create a recognizable civic landscape. Beyond that center, the city unfolds through distinct districts, neighborhood streets, parks, commercial corridors, and residential areas.</p>
+        <h2 id="wichita-place-title">The Keeper anchors Wichita's riverfront.</h2>
+        <p>The Keeper of the Plains is a recognizable part of Wichita's riverfront. Together with the Arkansas River and downtown skyline, it gives the city center a distinct sense of place. Beyond that center, Wichita unfolds through neighborhood streets, parks, commercial corridors, and residential areas.</p>
       </div>
-      <Picture class="photo-story-main" src={keeperPhoto} formats={['avif', 'webp']} widths={[480, 720, 960]} sizes="(min-width: 48rem) 52vw, 100vw" alt="The Keeper of the Plains and cable-stayed bridge in Wichita at dusk" data-reveal="right" />
-      <Picture class="photo-story-secondary" src={downtownPhoto} formats={['avif', 'webp']} widths={[400, 640, 800]} sizes="(min-width: 48rem) 30vw, 90vw" alt="Downtown Wichita beside the Arkansas River in warm evening light" data-reveal="scale-up" />
+      <div class="photo-story-main photo-story-keeper" data-reveal="right">
+        <Picture src={keeperPhoto} formats={['avif', 'webp']} widths={[480, 720, 960, 1280]} sizes="(min-width: 48rem) 62vw, 100vw" alt="The Keeper of the Plains and cable-stayed bridge in Wichita at dusk" />
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-sage" aria-labelledby="wichita-growth-title">
+    <div class="shell photo-story-grid photo-story-reverse">
+      <div class="photo-story-copy" data-reveal="right">
+        <p class="eyebrow">Newer options</p>
+        <h2 id="wichita-growth-title">New homes are part of the picture.</h2>
+        <p>Wichita continues to grow in several directions, with new-home communities adding options alongside the city's established neighborhoods. Developments such as Estancia, Southern Ridge, Brookfield, and Fontana are a few examples of where newer construction is taking shape around the city.</p>
+        <p>If a newer home or building from the ground up is something you're considering, it's worth comparing the location, lot, builder, neighborhood plans, taxes, and long-term costs just as carefully as the house itself.</p>
+      </div>
+      <div class="photo-story-main" data-reveal="left">
+        <Picture src={downtownPhoto} formats={['avif', 'webp']} widths={[480, 720, 960, 1280]} sizes="(min-width: 48rem) 62vw, 100vw" alt="Downtown Wichita beside the Arkansas River in warm evening light" />
+      </div>
     </div>
   </section>
 
