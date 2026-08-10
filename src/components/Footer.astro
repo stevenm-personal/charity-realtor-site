@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import bricktownLogo from '../assets/branding/bricktown-logo.png';
 import curtisCrewLogo from '../assets/branding/curtis-crew-logo.png';
 import realtorLogo from '../assets/branding/realtor-logo.jpg';
 
@@ -17,8 +18,9 @@ const year = new Date().getFullYear();
       <!-- Add verified telephone and email links here when they are confirmed. -->
 
       <div class="affiliation-logos" aria-label="Professional affiliations">
-        <Image src={realtorLogo} alt="REALTOR® logo" width={42} height={42} />
-        <Image src={curtisCrewLogo} alt="Curtis Crew Real Estate logo" width={42} height={42} />
+        <Image class="affiliation-logo affiliation-logo-realtor" src={realtorLogo} alt="REALTOR® logo" />
+        <Image class="affiliation-logo" src={curtisCrewLogo} alt="Curtis Crew Real Estate logo" />
+        <Image class="affiliation-logo affiliation-logo-bricktown" src={bricktownLogo} alt="Bricktown ICT Realty logo" />
       </div>
     </div>
 

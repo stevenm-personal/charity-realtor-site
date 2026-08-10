@@ -1578,14 +1578,18 @@ p {
 
 .affiliation-logos {
   display: flex;
-  gap: var(--space-2);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
   margin-top: var(--space-5);
 }
 
-.affiliation-logos img {
-  width: 2.625rem;
-  height: 2.625rem;
-  padding: 0.2rem;
+.affiliation-logos .affiliation-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: 3.5rem;
+  padding: 0.25rem;
   border-radius: var(--radius-small);
   background: var(--color-soft-white);
   object-fit: contain;
@@ -1893,6 +1897,11 @@ textarea:focus-visible {
   .footer-legal p:last-child {
     text-align: right;
   }
+
+  .affiliation-logos .affiliation-logo {
+    height: 4rem;
+  }
+
 }
 
 @media (min-width: 67rem) {
