@@ -1947,7 +1947,7 @@ textarea:focus-visible {
   }
 
   .featured-community:first-child {
-    grid-column: span 2;
+    grid-column: auto;
   }
 
   .featured-community:last-child:nth-child(odd) {
