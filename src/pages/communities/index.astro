@@ -10,10 +10,7 @@ import andoverPhoto from '../../assets/communities/andover/andover-central-park-
 import derbyPhoto from '../../assets/communities/derby/derby-high-park-facebookhighpark.jpg';
 import goddardPhoto from '../../assets/communities/goddard/goddard-lake-afton-observatory-redit.jpg';
 import newtonPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
-
-const plannedCommunities = [
-  { name: 'Park City', slug: 'park-city', direction: 'North of Wichita' },
-];
+import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-hero-kansastourism.jpg';
 ---
 
 <BaseLayout
@@ -31,7 +28,7 @@ const plannedCommunities = [
   <section class="section-space" aria-labelledby="featured-communities-title">
     <div class="shell">
       <div class="section-heading split-heading">
-        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Explore Wichita and six nearby communities.</h2></div>
+        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Explore Wichita and seven nearby communities.</h2></div>
         <p data-reveal="right">Each completed guide uses real local photography and distinct content. Additional pages will be built with the same care as verified information and imagery are gathered.</p>
       </div>
       <div class="featured-community-grid">
@@ -63,26 +60,10 @@ const plannedCommunities = [
           <Picture src={newtonPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1280]} sizes="(min-width: 67rem) 66vw, (min-width: 48rem) 100vw, 100vw" alt="Newton Station and fountain surrounded by flowers in Newton, Kansas" />
           <span><small>Explore the guide</small>Newton <i aria-hidden="true">→</i></span>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-space section-surface" aria-labelledby="more-communities-title">
-    <div class="shell planned-community-layout">
-      <div class="planned-community-intro" data-reveal="left">
-        <p class="eyebrow">More nearby places</p>
-        <h2 id="more-communities-title">Local guides in planning.</h2>
-        <p>These communities are part of the site plan, but their dedicated pages are intentionally not being filled with generic copy. For now, their local guides remain in planning.</p>
-        <a class="button button-primary" href="/contact/">Ask about an area</a>
-      </div>
-      <div class="planned-community-list reveal-stagger">
-        {plannedCommunities.map((community) => (
-          <article id={`community-${community.slug}`} data-reveal="up">
-            <span>{community.direction}</span>
-            <h3>{community.name}</h3>
-            <p>Dedicated local guide in planning.</p>
-          </article>
-        ))}
+        <a class="featured-community" href="/communities/park-city/" data-reveal="right">
+          <Picture src={parkCityPhoto} formats={['avif', 'webp']} widths={[480, 720, 960]} sizes="(min-width: 67rem) 33vw, (min-width: 48rem) 50vw, 100vw" alt="Colorful Park City sign outside a civic building" />
+          <span><small>Explore the guide</small>Park City <i aria-hidden="true">→</i></span>
+        </a>
       </div>
     </div>
   </section>

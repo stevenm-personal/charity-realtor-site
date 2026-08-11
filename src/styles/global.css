@@ -819,6 +819,50 @@ p {
   line-height: 1;
 }
 
+.page-park-city .park-city-venue-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page-park-city .park-city-venue-card {
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.page-park-city .park-city-venue-card picture {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.page-park-city .park-city-venue-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-park-city .park-city-venue-speedway img {
+  object-position: center 62%;
+}
+
+.page-park-city .park-city-venue-card figcaption {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.page-park-city .park-city-venue-card figcaption strong {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 5vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
 .meet-section {
   background: var(--color-surface);
 }
@@ -1955,6 +1999,11 @@ textarea:focus-visible {
   .page-newton .newton-sand-creek-grid {
     grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
     gap: clamp(3rem, 7vw, 6rem);
+  }
+
+  .page-park-city .park-city-venue-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
   }
 
   .photo-story-secondary {

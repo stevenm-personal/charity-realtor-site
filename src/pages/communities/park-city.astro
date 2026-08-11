@@ -1,0 +1,168 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import heroPhoto from '../../assets/communities/park-city/park-city-sign-hero-kansastourism.jpg';
+import arenaPhoto from '../../assets/communities/park-city/park-city-hartman-arena-travelks.png';
+import casinoPhoto from '../../assets/communities/park-city/park-city-crosswinds-casino-travelks.jpg';
+import gilleysPhoto from '../../assets/communities/park-city/park-city-gilleys-travelks.jpg';
+import speedwayPhoto from '../../assets/communities/park-city/park-city-81-speedway-travelks.jpg';
+---
+
+<BaseLayout
+  title="Park City, Kansas Community Guide | Charity Menefee"
+  description="A practical introduction to Park City, Kansas, including its location north of Wichita, housing development, event venues, parks, and property considerations."
+  pageClass="page-interior page-park-city"
+>
+  <PageHero
+    eyebrow="Community guide · Park City"
+    title="Room to live. Places to go."
+    intro="Park City is an incorporated community immediately north of Wichita, with residential areas, newer development, and a visible collection of entertainment and event venues."
+    image={heroPhoto}
+    imageAlt="Colorful Park City sign outside a civic building under a dramatic sky"
+    variant="community"
+    imagePosition="center center"
+    imagePositionMobile="36% center"
+  />
+
+  <section class="section-space" aria-labelledby="park-city-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Getting oriented</p>
+        <h2 id="park-city-overview-title">An independent city along the north side of the metro.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Park City is immediately north of Wichita along I-135. It is its own incorporated city, established in 1980, rather than simply a northern part of Wichita.</p>
+        <p>Residential neighborhoods make up much of the community, while major venues along the I-135 and Broadway side give Park City an event and entertainment presence that is particularly visible across the Wichita area.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="park-city-housing-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Homes and subdivisions</p>
+        <h2 id="park-city-housing-title">Established areas and newer development create different choices.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Park City's housing includes established residential areas and continued newer development. The City's housing pages describe eight active subdivisions and identify Cambridge Valley, Park Centre, Ironstone Community, and Prairie Hills 4th among the development examples.</p>
+        <p>Those names provide broad context rather than confirming that a particular home or lot is currently available. Compare the age and construction of the home, the lot, neighborhood pattern, included improvements, restrictions, and other property-specific costs.</p>
+        <p>Location within Park City can also affect how directly a property connects to I-135, Broadway, and other north Wichita routes. The roads you would actually use are more informative than a generalized description of access.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-sage" aria-labelledby="park-city-entertainment-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Entertainment and events</p>
+          <h2 id="park-city-entertainment-title">A cluster of venues gives Park City a livelier public side.</h2>
+        </div>
+        <div class="prose" data-reveal="right">
+          <p>Heartland Credit Union Arena provides a visible regional event venue. CrossWinds Casino, Gilley's, and 81 Speedway add other forms of entertainment and make this side of Park City recognizable well beyond its residential streets.</p>
+          <p>These destinations are part of the city's identity, especially near the I-135 and Broadway corridors. They are useful location context rather than a complete guide to events or attractions.</p>
+        </div>
+      </div>
+      <div class="park-city-venue-grid reveal-stagger">
+        <figure class="park-city-venue-card" data-reveal="left-scale">
+          <Picture
+            src={arenaPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="Box office entrance at Heartland Credit Union Arena in Park City"
+          />
+          <figcaption><strong>Heartland Credit Union Arena</strong><span>A regional event venue and a recognizable Park City destination.</span></figcaption>
+        </figure>
+        <figure class="park-city-venue-card" data-reveal="right-scale">
+          <Picture
+            src={casinoPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="CrossWinds Casino exterior in Park City at dusk"
+          />
+          <figcaption><strong>CrossWinds Casino</strong><span>Part of the entertainment presence along Park City's major north-side corridors.</span></figcaption>
+        </figure>
+        <figure class="park-city-venue-card" data-reveal="left-scale">
+          <Picture
+            src={gilleysPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="Illuminated Gilley's sign at night in Park City"
+          />
+          <figcaption><strong>Gilley's</strong><span>A visible entertainment venue near Park City's other destination uses.</span></figcaption>
+        </figure>
+        <figure class="park-city-venue-card park-city-venue-speedway" data-reveal="right-scale">
+          <Picture
+            src={speedwayPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="Race cars and spectators at 81 Speedway in Park City"
+          />
+          <figcaption><strong>81 Speedway</strong><span>A motorsports venue that adds another distinct event setting to the city.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="park-city-parks-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Parks and everyday recreation</p>
+        <h2 id="park-city-parks-title">Municipal parks provide a quieter part of daily life.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Park City's Parks Department maintains more than 67 acres of park land across the community. Osage Trail Park includes a pond, picnic shelter, and walking path, while Prairie Wind Park includes playgrounds and a walking path that extends through Poston Park and Habiger Park.</p>
+        <p>Other municipal spaces include Hap McLean Park, Jardine Memorial Park, Primrose Park, and Senior Center Park. Together, the park system adds everyday walking, recreation, and gathering spaces beyond the city's larger destination venues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="park-city-practical-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Practical things to consider</p>
+        <h2 id="park-city-practical-title">The specific location can shape how the property functions.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Start by deciding whether you want to compare an established residential area, a newer subdivision, or both. Then confirm the home's age, lot characteristics, neighborhood pattern, and any property-specific development details.</p>
+        <p>It is also useful to consider whether the address is closer to the entertainment and event corridors or farther inside a residential area. Review its connections to I-135, Broadway, and the roads you expect to use, along with HOA requirements, restrictions, or other costs where they apply.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="park-city-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Useful questions</p>
+          <h2 id="park-city-search-title">What should you compare when looking in Park City?</h2>
+        </div>
+        <p data-reveal="right">The most useful answers come from the individual property, its development, and the routes around it.</p>
+      </div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">Would you rather compare an established neighborhood, newer development, or both?</li>
+        <li data-reveal="up">How does this location connect to I-135, Broadway, and the destinations you use most?</li>
+        <li data-reveal="up">Would you prefer to be closer to Park City's entertainment and event side or farther from it?</li>
+        <li data-reveal="up">Are HOA requirements, restrictions, or other development details tied to this property?</li>
+        <li data-reveal="up">Which lot characteristics or included improvements need closer review?</li>
+        <li data-reveal="up">How does this part of Park City compare with the nearby areas you are also considering?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages">
+    <span>Keep exploring</span>
+    <a href="/communities/">All communities <i aria-hidden="true">→</i></a>
+  </nav>
+  <CallToAction
+    title="Have questions about a property in Park City?"
+    copy="If you have questions about a property in Park City, I'm happy to help you compare the details and decide what deserves a closer look."
+    buttonLabel="Contact Me"
+  />
+</BaseLayout>
