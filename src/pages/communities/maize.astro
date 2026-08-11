@@ -1,0 +1,113 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import amphitheaterHero from '../../assets/communities/maize/clair-donnelly-amphitheater-city-of-maize.jpg';
+import amphitheaterWide from '../../assets/communities/maize/clair-donnelly-amphitheater.jpg';
+---
+
+<BaseLayout
+  title="Maize, Kansas Community Guide | Charity Menefee"
+  description="A practical introduction to Maize, Kansas, including its northwest Wichita setting, residential growth, local landmarks, and property considerations."
+  pageClass="page-interior page-maize"
+>
+  <PageHero
+    eyebrow="Community guide · Maize"
+    title="Close to Wichita, with an identity of its own."
+    intro="Maize is an independent and growing city on the northwest edge of Wichita, with its own civic identity and close connections to the wider metro."
+    image={amphitheaterHero}
+    imageAlt="Clair Donnelly Amphitheater and the Maize water tower during an evening community event"
+    variant="community"
+    imagePosition="center 48%"
+    imagePositionMobile="68% center"
+  />
+
+  <section class="section-space" aria-labelledby="maize-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Getting oriented</p>
+        <h2 id="maize-overview-title">A separate city that meets northwest Wichita closely.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Maize is an incorporated city on the northwest side of the Wichita metro. K-96 is a useful geographic and access reference for understanding this part of the area, but the municipal boundary is not always visually obvious from the road.</p>
+        <p>In everyday driving, the transition between Maize and northwest Wichita can feel subtle. Roads, neighborhoods, shopping, and other destinations connect the area closely, while Maize still maintains its own city identity and local civic spaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="maize-housing-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Housing in a growing city</p>
+        <h2 id="maize-housing-title">Residential growth is part of Maize's recent story.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>City development records through 2024 identify residential additions including The Coves, The Heights at Maize, Eagle View Estates, and Addis Woods. These names provide broad context for how newer development has contributed to the city's growth, but they do not indicate current construction, available lots, or homes for sale.</p>
+        <p>Maize is also planning around continued change, including neighborhoods and housing, mobility, community identity, amenities, and community design. For any particular property, compare the lot, restrictions, and long-term costs carefully. HOA requirements or special assessments may apply in some developments, so those details should be verified for the specific address rather than assumed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-sage" aria-labelledby="maize-character-title">
+    <div class="shell photo-story-grid">
+      <div class="photo-story-copy" data-reveal="left">
+        <p class="eyebrow">Local character</p>
+        <h2 id="maize-character-title">City Park gives Maize a recognizable gathering place.</h2>
+        <p>The Clair Donnelly Amphitheater in Maize City Park is used for concerts, performances, and community events. Together with the civic area around Academy Avenue and the Academy Arts District, it provides a visible expression of Maize's identity beyond its residential growth and close geographic connection to Wichita.</p>
+      </div>
+      <div class="photo-story-main" data-reveal="right">
+        <Picture
+          src={amphitheaterWide}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 960, 1280, 1600]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="Clair Donnelly Amphitheater in Maize City Park during an evening performance"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="maize-practical-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Practical things to know</p>
+        <h2 id="maize-practical-title">The address deserves a closer look.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Because Maize meets northwest Wichita so closely, confirm whether a property is actually inside Maize city limits and which municipal details apply to that address. A familiar road name or a nearby destination does not always answer that question.</p>
+        <p>It also helps to compare established properties with newer construction, review the routes you would use most often, and verify any property-specific HOA obligations, special assessments, lot conditions, costs, or restrictions that may affect the decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="maize-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Useful questions</p>
+          <h2 id="maize-search-title">What should you verify when looking in Maize?</h2>
+        </div>
+        <p data-reveal="right">These questions help separate broad community context from the details that can vary from one address or development to another.</p>
+      </div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">Is this property inside Maize city limits, and which municipal services and requirements apply?</li>
+        <li data-reveal="up">Is the home in an established area or a newer development, and which property details need closer review?</li>
+        <li data-reveal="up">Are there HOA requirements or special assessments for this specific property?</li>
+        <li data-reveal="up">Which access routes would you actually use for work, errands, and other regular destinations?</li>
+        <li data-reveal="up">For new construction, what is included with the lot and home, and which costs or restrictions still need verification?</li>
+        <li data-reveal="up">How do the lot, upkeep, and long-term costs compare with the other properties you are considering?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages">
+    <span>Keep exploring</span>
+    <a href="/communities/">All communities <i aria-hidden="true">→</i></a>
+  </nav>
+  <CallToAction
+    title="Have questions about a property in Maize?"
+    copy="If you have questions about a property in Maize, I'm happy to help you work through the details and decide what needs a closer look."
+    buttonLabel="Contact Me"
+  />
+</BaseLayout>

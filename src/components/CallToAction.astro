@@ -3,12 +3,14 @@ interface Props {
   eyebrow?: string;
   title?: string;
   copy?: string;
+  buttonLabel?: string;
 }
 
 const {
   eyebrow = 'When you are ready',
   title = 'Thinking about your next move?',
   copy = 'Bring your questions, even if your plans are still taking shape. I’ll help you sort through the possibilities without adding pressure.',
+  buttonLabel = 'Start a Conversation',
 } = Astro.props;
 ---
 
@@ -20,7 +22,7 @@ const {
     </div>
     <div class="closing-cta-copy" data-reveal="right">
       <p>{copy}</p>
-      <a class="button button-light" href="/contact/">Start a Conversation <span aria-hidden="true">→</span></a>
+      <a class="button button-light" href="/contact/">{buttonLabel} <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>

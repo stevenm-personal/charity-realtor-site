@@ -5,11 +5,11 @@ import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
 import wichitaPhoto from '../../assets/communities/wichita/Wichita_River.jpg';
 import valleyCenterPhoto from '../../assets/communities/valley-center/valley-center-water-tower.jpg';
+import maizePhoto from '../../assets/communities/maize/clair-donnelly-amphitheater-city-of-maize.jpg';
 
 const plannedCommunities = [
   { name: 'Andover', slug: 'andover', direction: 'East of Wichita' },
   { name: 'Derby', slug: 'derby', direction: 'South of Wichita' },
-  { name: 'Maize', slug: 'maize', direction: 'Northwest of Wichita' },
   { name: 'Park City', slug: 'park-city', direction: 'North of Wichita' },
   { name: 'Goddard', slug: 'goddard', direction: 'West of Wichita' },
   { name: 'Newton', slug: 'newton', direction: 'North of the Wichita area' },
@@ -31,8 +31,8 @@ const plannedCommunities = [
   <section class="section-space" aria-labelledby="featured-communities-title">
     <div class="shell">
       <div class="section-heading split-heading">
-        <div data-reveal="left"><p class="eyebrow">First local guides</p><h2 id="featured-communities-title">Begin with Wichita and Valley Center.</h2></div>
-        <p data-reveal="right">These first two pages use real local photography and distinct content. Additional guides will be built with the same care as verified information and imagery are gathered.</p>
+        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Begin with Wichita, Valley Center, and Maize.</h2></div>
+        <p data-reveal="right">Each completed guide uses real local photography and distinct content. Additional pages will be built with the same care as verified information and imagery are gathered.</p>
       </div>
       <div class="featured-community-grid">
         <a class="featured-community" href="/communities/wichita/" data-reveal="left-scale">
@@ -42,6 +42,10 @@ const plannedCommunities = [
         <a class="featured-community" href="/communities/valley-center/" data-reveal="right">
           <Picture src={valleyCenterPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 48rem) 45vw, 100vw" alt="The Valley Center water tower beyond a green tree line" />
           <span><small>Explore the guide</small>Valley Center <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="featured-community" href="/communities/maize/" data-reveal="right">
+          <Picture src={maizePhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 48rem) 45vw, 100vw" alt="Clair Donnelly Amphitheater and the Maize water tower during an evening event" />
+          <span><small>Explore the guide</small>Maize <i aria-hidden="true">→</i></span>
         </a>
       </div>
     </div>
