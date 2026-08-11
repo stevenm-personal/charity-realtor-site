@@ -7,9 +7,9 @@ import wichitaPhoto from '../../assets/communities/wichita/Wichita_River.jpg';
 import valleyCenterPhoto from '../../assets/communities/valley-center/valley-center-water-tower.jpg';
 import maizePhoto from '../../assets/communities/maize/clair-donnelly-amphitheater-city-of-maize.jpg';
 import andoverPhoto from '../../assets/communities/andover/andover-central-park-derby-informer.webp';
+import derbyPhoto from '../../assets/communities/derby/derby-high-park-facebookhighpark.jpg';
 
 const plannedCommunities = [
-  { name: 'Derby', slug: 'derby', direction: 'South of Wichita' },
   { name: 'Park City', slug: 'park-city', direction: 'North of Wichita' },
   { name: 'Goddard', slug: 'goddard', direction: 'West of Wichita' },
   { name: 'Newton', slug: 'newton', direction: 'North of the Wichita area' },
@@ -31,7 +31,7 @@ const plannedCommunities = [
   <section class="section-space" aria-labelledby="featured-communities-title">
     <div class="shell">
       <div class="section-heading split-heading">
-        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Begin with Wichita, Valley Center, Maize, and Andover.</h2></div>
+        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Begin with Wichita, Valley Center, Maize, Andover, and Derby.</h2></div>
         <p data-reveal="right">Each completed guide uses real local photography and distinct content. Additional pages will be built with the same care as verified information and imagery are gathered.</p>
       </div>
       <div class="featured-community-grid">
@@ -50,6 +50,10 @@ const plannedCommunities = [
         <a class="featured-community" href="/communities/andover/" data-reveal="right">
           <Picture src={andoverPhoto} formats={['avif', 'webp']} widths={[480, 720, 940]} sizes="(min-width: 48rem) 50vw, 100vw" alt="An outdoor community event beside Lake George in Andover Central Park" />
           <span><small>Explore the guide</small>Andover <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="featured-community" href="/communities/derby/" data-reveal="right">
+          <Picture src={derbyPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 64rem) 33vw, (min-width: 48rem) 50vw, 100vw" alt="Playground and recreation space at High Park in Derby" />
+          <span><small>Explore the guide</small>Derby <i aria-hidden="true">→</i></span>
         </a>
       </div>
     </div>

@@ -1,0 +1,115 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import riverviewPhoto from '../../assets/communities/derby/derby-canoes-travelks.jpg';
+import highParkPhoto from '../../assets/communities/derby/derby-high-park-facebookhighpark.jpg';
+---
+
+<BaseLayout
+  title="Derby, Kansas Community Guide | Charity Menefee"
+  description="A practical introduction to Derby, Kansas, including its location south of Wichita, housing growth, local parks, and property considerations."
+  pageClass="page-interior page-derby"
+>
+  <PageHero
+    eyebrow="Community guide · Derby"
+    title="A growing city just south of Wichita."
+    intro="Derby is closely connected to the Wichita metro while functioning as a substantial city with established neighborhoods, newer growth, commercial corridors, parks, and civic spaces of its own."
+    image={riverviewPhoto}
+    imageAlt="Kayakers entering the Arkansas River at Warren Riverview Park in Derby"
+    variant="community"
+    imagePosition="center 52%"
+    imagePositionMobile="45% center"
+  />
+
+  <section class="section-space" aria-labelledby="derby-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Getting oriented</p>
+        <h2 id="derby-overview-title">A city of its own immediately south of Wichita.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Derby is an incorporated city in Sedgwick County, directly south of Wichita. K-15 is an important north and south connection between the two cities, while Rock Road is another major corridor through Derby.</p>
+        <p>The physical connection to the larger Wichita metro is close, but Derby functions as a substantial city in its own right. Residential areas, commercial corridors, parks, recreation, and civic spaces extend across the community rather than centering on a single edge near Wichita.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="derby-housing-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Housing and continued growth</p>
+        <h2 id="derby-housing-title">Different periods of growth shape Derby's housing.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Derby includes established residential areas alongside continued newer development. The Oaks is a significant established development with multiple housing areas, while recent city infrastructure records associate residential activity with areas such as Spring Ridge and Sky Ridge.</p>
+        <p>These names provide broad housing context rather than confirming current construction, available lots, or homes for sale. For newer construction or a planned development, verify the specific lot, included improvements, restrictions, and other costs. HOA requirements or special assessments may apply to some properties, but they should never be assumed without reviewing the individual address.</p>
+        <p>Derby has grown substantially over several decades. The City's Vision Derby 2040 comprehensive plan addresses continued growth through topics including land use, transportation, housing, and community development, keeping long-term change part of the broader city conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-sage" aria-labelledby="derby-parks-title">
+    <div class="shell photo-story-grid">
+      <div class="photo-story-copy" data-reveal="left">
+        <p class="eyebrow">Local character</p>
+        <h2 id="derby-parks-title">Major parks create distinct local reference points.</h2>
+        <p>High Park on Derby's east side includes recreation areas, a fishing pond, an amphitheater, trails, and event space. Its scale and range of uses make it a recognizable part of the city's park system.</p>
+        <p>Warren Riverview Park provides a different setting along the Arkansas River on Derby's west side. River access and recreation space connect that edge of the city directly to the landscape, offering a clear contrast with Derby's more developed corridors.</p>
+      </div>
+      <div class="photo-story-main" data-reveal="right">
+        <Picture
+          src={highParkPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 960, 1280, 1600]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="Playground and recreation space at High Park in Derby"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="derby-practical-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Practical things to know</p>
+        <h2 id="derby-practical-title">Start with the home, then look at the routes around it.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Compare whether an established neighborhood or newer development fits the property characteristics you want to maintain. The home's age, materials, lot, included improvements, and restrictions can matter more than a broad label about the surrounding area.</p>
+        <p>It is also useful to confirm the property's municipal location and consider how it connects to K-15, Rock Road, and the other roads you expect to use. Review HOA obligations or special assessments where applicable, along with any property-specific costs that need closer verification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="derby-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Useful questions</p>
+          <h2 id="derby-search-title">What deserves a closer look when searching in Derby?</h2>
+        </div>
+        <p data-reveal="right">The answers depend on the individual home, lot, and development. These questions provide a practical place to begin.</p>
+      </div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">Would you rather compare an established neighborhood, newer development, or both?</li>
+        <li data-reveal="up">Are HOA requirements or special assessments connected to this specific property?</li>
+        <li data-reveal="up">Which major roads would you actually use from this location?</li>
+        <li data-reveal="up">What maintenance considerations come with the home's age, materials, and current condition?</li>
+        <li data-reveal="up">For new construction, what is included and which additional costs or restrictions need verification?</li>
+        <li data-reveal="up">Which lot characteristics could affect use, drainage, upkeep, or future plans?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages">
+    <span>Keep exploring</span>
+    <a href="/communities/">All communities <i aria-hidden="true">→</i></a>
+  </nav>
+  <CallToAction
+    title="Have questions about a property in Derby?"
+    copy="If you have questions about a property in Derby, I'm happy to help you work through the details and decide what needs a closer look."
+    buttonLabel="Contact Me"
+  />
+</BaseLayout>
