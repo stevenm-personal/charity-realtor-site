@@ -3,8 +3,10 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import recPhoto from '../../assets/communities/valley-center/valley-center-rec-center.jpg';
 import towerPhoto from '../../assets/communities/valley-center/valley-center-water-tower.jpg';
+import recExteriorPhoto from '../../assets/communities/valley-center/valley-center-rec-center-outside-summer-cityvcfacebook.jpg';
+import recPoolPhoto from '../../assets/communities/valley-center/valley-center-rec-center-inside-pool-cityvcfacebook.jpg';
+import valleyPointPhoto from '../../assets/communities/valley-center/valley-center-valley-point-golf-course-fb.jpg';
 ---
 
 <BaseLayout
@@ -46,51 +48,58 @@ import towerPhoto from '../../assets/communities/valley-center/valley-center-wat
     </div>
   </section>
 
-  <section class="valley-landmarks section-space section-sage" aria-labelledby="valley-landmarks-title">
+  <section class="valley-recreation section-space section-sage" aria-labelledby="valley-recreation-title">
     <div class="shell">
       <div class="section-heading split-heading">
         <div data-reveal="left">
-          <p class="eyebrow">Landmarks and local character</p>
-          <h2 id="valley-landmarks-title">Local reference points make Valley Center recognizable.</h2>
+          <p class="eyebrow">Recreation and local character</p>
+          <h2 id="valley-recreation-title">Recreation has a visible place in the community.</h2>
         </div>
-        <p data-reveal="right">The Recreation Center and water tower are more than generic scenery. They are visible markers of Valley Center's identity.</p>
+        <p data-reveal="right">The Valley Rec Center and Valley Point Golf Course are distinct local reference points, each showing a different side of recreation in Valley Center.</p>
       </div>
 
-      <div class="valley-landmark-grid reveal-stagger">
-        <article class="valley-landmark-card" data-reveal="left-scale">
-          <div class="valley-landmark-media valley-landmark-rec">
-            <Picture
-              src={recPhoto}
-              formats={['avif', 'webp']}
-              widths={[480, 720, 960, 1280]}
-              sizes="(min-width: 48rem) 48vw, 100vw"
-              alt="Valley Center Recreation Center on a winter evening"
-            />
-          </div>
-          <div class="valley-landmark-copy">
-            <p class="eyebrow">A civic landmark</p>
-            <h3>The Valley Center Recreation Center</h3>
-            <p>The bold Valley Rec Center facade is an immediately recognizable local feature. As a named community facility, it gives the city a specific visual reference point instead of interchangeable location imagery.</p>
-          </div>
-        </article>
+      <article class="valley-recreation-feature">
+        <div class="valley-recreation-main" data-reveal="left-scale">
+          <Picture
+            src={recExteriorPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280, 1440]}
+            sizes="(min-width: 48rem) 62vw, 100vw"
+            alt="Illuminated Valley Center Recreation Center exterior at night"
+          />
+        </div>
+        <div class="valley-recreation-copy" data-reveal="right">
+          <p class="eyebrow">A civic landmark</p>
+          <h3>The Valley Center Recreation Center</h3>
+          <p>The bold Valley Rec Center facade is an immediately recognizable local feature. The indoor pool shows another part of the municipal recreation space behind that exterior, connecting a familiar landmark with the facility itself.</p>
+        </div>
+        <div class="valley-recreation-secondary" data-reveal="right-scale">
+          <Picture
+            src={recPoolPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280]}
+            sizes="(min-width: 48rem) 38vw, 100vw"
+            alt="Indoor pools at the Valley Center Recreation Center"
+          />
+        </div>
+      </article>
 
-        <article class="valley-landmark-card" data-reveal="right">
-          <div class="valley-landmark-media valley-landmark-tower">
-            <Picture
-              src={towerPhoto}
-              formats={['avif', 'webp']}
-              widths={[480, 720, 960, 1280]}
-              sizes="(min-width: 48rem) 48vw, 100vw"
-              alt="Valley Center water tower above the trees beneath a bright Kansas sky"
-            />
-          </div>
-          <div class="valley-landmark-copy">
-            <p class="eyebrow">On the skyline</p>
-            <h3>The Valley Center water tower</h3>
-            <p>Rising above the tree line, the painted water tower is a straightforward local marker. It helps make Valley Center visually identifiable and reinforces the community's own sense of place north of Wichita.</p>
-          </div>
-        </article>
-      </div>
+      <article class="valley-golf-feature">
+        <div class="valley-golf-copy" data-reveal="left">
+          <p class="eyebrow">Another local reference point</p>
+          <h3>Valley Point Golf Course</h3>
+          <p>Valley Point Golf Course adds a different visual edge to the community. Its fairways, trees, and pond sit within the broader Valley Center landscape, making the course another recognizable local feature without defining the city as a whole.</p>
+        </div>
+        <div class="valley-golf-media" data-reveal="right-scale">
+          <Picture
+            src={valleyPointPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280, 1600]}
+            sizes="(min-width: 48rem) 62vw, 100vw"
+            alt="Aerial view of Valley Point Golf Course, its pond, and surrounding fields"
+          />
+        </div>
+      </article>
     </div>
   </section>
 
