@@ -1796,7 +1796,8 @@ textarea:focus-visible {
   }
 
   .footer-nav a:hover,
-  .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-panel a:hover,
+  .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list > li > a:hover,
+  .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-parent > a:hover,
   .service-card:nth-child(3) .arrow-link:hover,
   .communities-home .arrow-link:hover {
     color: var(--color-accent-on-dark);
@@ -2215,6 +2216,12 @@ textarea:focus-visible {
     min-height: 2.5rem;
     padding-inline: var(--space-3);
     font-size: 0.74rem;
+  }
+
+  .submenu a:hover,
+  .submenu a:focus-visible {
+    color: var(--color-text);
+    background: var(--color-accent-soft);
   }
 }
 
