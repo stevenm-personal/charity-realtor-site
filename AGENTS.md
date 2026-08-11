@@ -4,8 +4,15 @@
 
 - Read and follow `BRAND.md` before making visual, interaction, typography, color, photography, editorial-voice, or brand decisions.
 - Treat `BRAND.md` as the authoritative design and editorial reference unless the user explicitly approves a change.
+- Before creating or substantially editing any page under `src/pages/communities/`, read and follow `COMMUNITY_PAGES.md` in addition to `BRAND.md` and all rules in this file.
 - Use semantic variables from `src/styles/tokens.css` instead of hard-coding repeated visual values in components.
 - Update shared design decisions centrally in `src/styles/tokens.css` when appropriate, without over-engineering the token system.
+
+## SEO authority
+
+- Before creating a new page, substantially changing page content, editing metadata, writing or editing a blog post, creating or substantially editing a community page, or preparing the site for launch, read and follow `SEO.md`.
+- Community-page work must follow both `SEO.md` and `COMMUNITY_PAGES.md` in addition to `BRAND.md` and all rules in this file.
+- Preserve development `noindex` behavior unless the user explicitly authorizes a dedicated production-launch indexing change.
 
 ## Architecture
 
