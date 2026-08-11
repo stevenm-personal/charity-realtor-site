@@ -749,6 +749,46 @@ p {
   color: var(--color-text-muted);
 }
 
+.page-newton .newton-business-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page-newton .newton-business-card {
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.page-newton .newton-business-card picture {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.page-newton .newton-business-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-newton .newton-business-card figcaption {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.page-newton .newton-business-card figcaption strong {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
 .meet-section {
   background: var(--color-surface);
 }
@@ -1877,6 +1917,11 @@ textarea:focus-visible {
     align-items: stretch;
   }
 
+  .page-newton .newton-business-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
   .photo-story-secondary {
     width: 112%;
     margin-bottom: -4rem;
@@ -1951,7 +1996,7 @@ textarea:focus-visible {
   }
 
   .featured-community:last-child:nth-child(odd) {
-    grid-column: auto;
+    grid-column: span 2;
   }
 
   .menu-toggle {

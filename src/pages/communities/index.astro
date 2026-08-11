@@ -9,10 +9,10 @@ import maizePhoto from '../../assets/communities/maize/clair-donnelly-amphitheat
 import andoverPhoto from '../../assets/communities/andover/andover-central-park-derby-informer.webp';
 import derbyPhoto from '../../assets/communities/derby/derby-high-park-facebookhighpark.jpg';
 import goddardPhoto from '../../assets/communities/goddard/goddard-lake-afton-observatory-redit.jpg';
+import newtonPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
 
 const plannedCommunities = [
   { name: 'Park City', slug: 'park-city', direction: 'North of Wichita' },
-  { name: 'Newton', slug: 'newton', direction: 'North of the Wichita area' },
 ];
 ---
 
@@ -31,7 +31,7 @@ const plannedCommunities = [
   <section class="section-space" aria-labelledby="featured-communities-title">
     <div class="shell">
       <div class="section-heading split-heading">
-        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Explore Wichita and five nearby communities.</h2></div>
+        <div data-reveal="left"><p class="eyebrow">Local guides</p><h2 id="featured-communities-title">Explore Wichita and six nearby communities.</h2></div>
         <p data-reveal="right">Each completed guide uses real local photography and distinct content. Additional pages will be built with the same care as verified information and imagery are gathered.</p>
       </div>
       <div class="featured-community-grid">
@@ -58,6 +58,10 @@ const plannedCommunities = [
         <a class="featured-community" href="/communities/goddard/" data-reveal="right">
           <Picture src={goddardPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1280]} sizes="(min-width: 67rem) 33vw, (min-width: 48rem) 50vw, 100vw" alt="Lake Afton Observatory beneath a star-filled Kansas sky near Goddard" />
           <span><small>Explore the guide</small>Goddard <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="featured-community featured-community-newton" href="/communities/newton/" data-reveal="right">
+          <Picture src={newtonPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1280]} sizes="(min-width: 67rem) 66vw, (min-width: 48rem) 100vw, 100vw" alt="Newton Station and fountain surrounded by flowers in Newton, Kansas" />
+          <span><small>Explore the guide</small>Newton <i aria-hidden="true">→</i></span>
         </a>
       </div>
     </div>

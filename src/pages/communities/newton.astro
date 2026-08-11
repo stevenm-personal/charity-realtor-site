@@ -1,0 +1,147 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import heroPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
+import backAlleyPhoto from '../../assets/communities/newton/newton-back-alley-pizza-whee.png';
+import twistedBookstorePhoto from '../../assets/communities/newton/newton-twisted-bookstore-facebook.jpg';
+---
+
+<BaseLayout
+  title="Newton, Kansas Community Guide | Charity Menefee"
+  description="A practical introduction to Newton, Kansas, including its railroad history, downtown businesses, historic housing, newer development, and property considerations."
+  pageClass="page-interior page-newton"
+>
+  <PageHero
+    eyebrow="Community guide · Newton"
+    title="Historic roots. Local character. Room to grow."
+    intro="Newton is a historic Kansas city with a recognizable downtown, deep railroad roots, and housing that reflects several distinct chapters of the community's growth."
+    image={heroPhoto}
+    imageAlt="Newton Station and its fountain surrounded by flowers in Newton, Kansas"
+    variant="community"
+    imagePosition="center 46%"
+    imagePositionMobile="52% center"
+  />
+
+  <section class="section-space" aria-labelledby="newton-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Getting oriented</p>
+        <h2 id="newton-overview-title">A Harvey County city with a distinct identity of its own.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Newton is the county seat of Harvey County, north of Wichita in south-central Kansas. I-135 provides a major north and south connection, while US-50 is another important corridor through the area.</p>
+        <p>The city was established around railroad and cattle-trail activity. That history still shapes Newton's physical character, from the station and rail corridor to the historic buildings and street pattern around downtown.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="newton-housing-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Homes from different chapters</p>
+        <h2 id="newton-housing-title">Property age and neighborhood pattern can vary considerably.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Older housing is a meaningful part of Newton's residential landscape. The McKinley Residential District spans more than 12 blocks and includes 142 properties, with examples of Victorian-era, Queen Anne, Bungalow, Tudor Revival, and Colonial Revival architecture. The variety matters more than the labels: older homes can bring different materials, systems, maintenance needs, and preservation considerations.</p>
+        <p>Newer residential growth has taken shape particularly on the city's south side. Spring Lake, Stone Creek, Autumn Glen, and Sand Creek Station are examples identified in local development context. In 2025, the City recorded 81 new housing unit starts and approved infrastructure intended to open 71 additional lots in the Sand Creek Station Addition.</p>
+        <p>Those figures describe a point in Newton's growth, not current inventory or availability. A property-specific review remains important whether the home is in an established neighborhood or a newer development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-sage" aria-labelledby="newton-downtown-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Downtown and local businesses</p>
+          <h2 id="newton-downtown-title">Main Street still reads as a local commercial district.</h2>
+        </div>
+        <div class="prose" data-reveal="right">
+          <p>Newton's downtown participates in Kansas Main Street and has been an accredited Main Street program since 2022. Independent shops, restaurants, galleries, and other businesses give the historic district an active identity beyond its architecture.</p>
+          <p>Anderson's Book &amp; Office Supply has operated in Newton since 1892 and is identified by Choose Newton as the city's oldest continuously operating store. Prairy Market &amp; Deli, Carriage Factory Art Gallery, Gallery Mostaza, Newton Et Cetera Shop, and Faith &amp; Life Bookstore are other examples of the local-business presence downtown.</p>
+        </div>
+      </div>
+      <div class="newton-business-grid reveal-stagger">
+        <figure class="newton-business-card" data-reveal="left-scale">
+          <Picture
+            src={backAlleyPhoto}
+            formats={['avif', 'webp']}
+            widths={[420, 640, 860, 1080]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="Back Alley Pizza storefront in downtown Newton"
+          />
+          <figcaption><strong>Back Alley Pizza</strong><span>An identifiable independent business in Newton's downtown district.</span></figcaption>
+        </figure>
+        <figure class="newton-business-card" data-reveal="right-scale">
+          <Picture
+            src={twistedBookstorePhoto}
+            formats={['avif', 'webp']}
+            widths={[420, 640, 860, 1080]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="Twisted Bookstore storefront in downtown Newton"
+          />
+          <figcaption><strong>Twisted Bookstore</strong><span>Another clearly recognizable local storefront along Newton's downtown streets.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="newton-sand-creek-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Sand Creek Station</p>
+        <h2 id="newton-sand-creek-title">Golf history and newer development meet on the south side.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Sand Creek Station is a public golf course in Newton. It hosted the 2024 U.S. Adaptive Open Championship and the final U.S. Amateur Public Links Championship in 2014, giving this part of the city a distinctive place in national golf history.</p>
+        <p>The surrounding Sand Creek Station area also includes residential development. For someone considering a property there, the course and the housing are related parts of the setting, but the specific lot, restrictions, included improvements, and other costs still need to be evaluated individually.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="newton-practical-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Practical property considerations</p>
+        <h2 id="newton-practical-title">The details depend on the specific address.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Some Newton properties are within historic districts or are individually listed historic properties. Certain permits affecting an applicable property or district may require preservation review, so confirm the property's status and the requirements connected to the work you are considering.</p>
+        <p>FEMA flood-hazard areas are mapped along portions of Sand Creek and Slate Creek. That does not characterize Newton as a whole, but it does make the flood-zone status of an individual property worth verifying.</p>
+        <p>For newer properties, check whether HOA requirements or special assessments apply, along with lot characteristics, restrictions, included improvements, and other development-related costs. These conditions should never be assumed across an entire neighborhood or city.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="newton-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Useful questions</p>
+          <h2 id="newton-search-title">What deserves a closer look when searching in Newton?</h2>
+        </div>
+        <p data-reveal="right">Newton's range of property ages and development patterns makes a focused review more useful than broad assumptions about the city.</p>
+      </div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">Would the character and considerations of an older home fit what you want, or would you rather compare newer construction?</li>
+        <li data-reveal="up">Is this property within a historic district, and are there preservation requirements to understand?</li>
+        <li data-reveal="up">Does the specific property fall within a mapped flood-hazard area?</li>
+        <li data-reveal="up">Are HOA requirements or special assessments tied to this address?</li>
+        <li data-reveal="up">How does this location connect to I-135, US-50, and the other roads you would actually use?</li>
+        <li data-reveal="up">What maintenance considerations come with the age, materials, and construction of this home?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages">
+    <span>Keep exploring</span>
+    <a href="/communities/">All communities <i aria-hidden="true">→</i></a>
+  </nav>
+  <CallToAction
+    title="Have questions about a property in Newton?"
+    copy="If you have questions about a property in Newton, I'm happy to help you work through the details and decide what needs a closer look."
+    buttonLabel="Contact Me"
+  />
+</BaseLayout>
