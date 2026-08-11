@@ -6,6 +6,7 @@ import PageHero from '../../components/PageHero.astro';
 import heroPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
 import backAlleyPhoto from '../../assets/communities/newton/newton-back-alley-pizza-whee.png';
 import twistedBookstorePhoto from '../../assets/communities/newton/newton-twisted-bookstore-facebook.jpg';
+import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-station_golfcourseindustry.webp';
 ---
 
 <BaseLayout
@@ -89,14 +90,23 @@ import twistedBookstorePhoto from '../../assets/communities/newton/newton-twiste
   </section>
 
   <section class="section-space" aria-labelledby="newton-sand-creek-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
+    <div class="shell newton-sand-creek-grid">
+      <div class="newton-sand-creek-media" data-reveal="left-scale">
+        <Picture
+          src={sandCreekPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 948]}
+          sizes="(min-width: 48rem) 58vw, 100vw"
+          alt="Fairways and greens at Sand Creek Station Golf Course in Newton"
+        />
+      </div>
+      <div class="newton-sand-creek-copy" data-reveal="right">
         <p class="eyebrow">Sand Creek Station</p>
         <h2 id="newton-sand-creek-title">Golf history and newer development meet on the south side.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>Sand Creek Station is a public golf course in Newton. It hosted the 2024 U.S. Adaptive Open Championship and the final U.S. Amateur Public Links Championship in 2014, giving this part of the city a distinctive place in national golf history.</p>
-        <p>The surrounding Sand Creek Station area also includes residential development. For someone considering a property there, the course and the housing are related parts of the setting, but the specific lot, restrictions, included improvements, and other costs still need to be evaluated individually.</p>
+        <div class="prose">
+          <p>Sand Creek Station is a public golf course in Newton. It hosted the 2024 U.S. Adaptive Open Championship and the final U.S. Amateur Public Links Championship in 2014, giving this part of the city a distinctive place in national golf history.</p>
+          <p>The surrounding Sand Creek Station area also includes residential development. For someone considering a property there, the course and the housing are related parts of the setting, but the specific lot, restrictions, included improvements, and other costs still need to be evaluated individually.</p>
+        </div>
       </div>
     </div>
   </section>
