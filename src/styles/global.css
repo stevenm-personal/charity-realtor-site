@@ -678,6 +678,62 @@ p {
   object-position: 44% center;
 }
 
+.page-valley-center .valley-landmark-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page-valley-center .valley-landmark-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.page-valley-center .valley-landmark-media,
+.page-valley-center .valley-landmark-media picture,
+.page-valley-center .valley-landmark-media img {
+  width: 100%;
+  height: 100%;
+}
+
+.page-valley-center .valley-landmark-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.page-valley-center .valley-landmark-media img {
+  object-fit: cover;
+}
+
+.page-valley-center .valley-landmark-rec img {
+  object-position: center 58%;
+}
+
+.page-valley-center .valley-landmark-tower img {
+  object-position: 52% center;
+}
+
+.page-valley-center .valley-landmark-copy {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.page-valley-center .valley-landmark-copy .eyebrow {
+  margin-bottom: var(--space-3);
+}
+
+.page-valley-center .valley-landmark-copy h3 {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 400;
+}
+
+.page-valley-center .valley-landmark-copy p:last-child {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
 .meet-section {
   background: var(--color-surface);
 }
@@ -1791,6 +1847,11 @@ textarea:focus-visible {
 
   .page-wichita .photo-story-main {
     grid-row: 1;
+  }
+
+  .page-valley-center .valley-landmark-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
   }
 
   .photo-story-secondary {

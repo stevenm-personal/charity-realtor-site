@@ -10,6 +10,7 @@ import towerPhoto from '../../assets/communities/valley-center/valley-center-wat
 <BaseLayout
   title="Valley Center, Kansas Community Guide | Charity Menefee"
   description="A useful introduction to Valley Center, Kansas, with real local imagery and real estate guidance from Charity Menefee."
+  pageClass="page-interior page-valley-center"
 >
   <PageHero
     eyebrow="Community guide · Valley Center"
@@ -24,34 +25,96 @@ import towerPhoto from '../../assets/communities/valley-center/valley-center-wat
 
   <section class="section-space" aria-labelledby="valley-overview-title">
     <div class="shell editorial-grid">
-      <div data-reveal="left"><p class="eyebrow">Getting oriented</p><h2 id="valley-overview-title">Local identity with Wichita nearby.</h2></div>
+      <div data-reveal="left"><p class="eyebrow">Getting oriented</p><h2 id="valley-overview-title">A small city with its own pace.</h2></div>
       <div class="prose" data-reveal="right">
-        <p>Valley Center is located north of Wichita and functions as its own city within the surrounding metropolitan area. Its housing context includes established areas as well as residential growth, with rural land also part of the broader landscape around the community.</p>
-        <p>When looking here, it helps to consider the specific property, access routes, home style, lot, and day-to-day destinations that matter to you. Looking at those factors together can make the search more practical without assuming what should feel right for you.</p>
+        <p>Valley Center sits north of Wichita and maintains its own municipal identity. It offers a smaller-city setting with ties to the broader Wichita area, so the community can feel distinct without feeling disconnected.</p>
+        <p>That balance is often the starting point for a search here. It helps to compare the setting you want with the routes, destinations, lot, and home type that will shape everyday life.</p>
       </div>
     </div>
   </section>
 
-  <section class="photo-story section-space section-sage" aria-labelledby="valley-place-title">
-    <div class="shell photo-story-grid photo-story-reverse">
-      <div class="photo-story-copy" data-reveal="right">
-        <p class="eyebrow">Community landmarks</p>
-        <h2 id="valley-place-title">A place with recognizable local touchpoints.</h2>
-        <p>The Valley Center water tower and recreation center are visible parts of the community landscape. They help tell a more specific story than a generic location page ever could.</p>
+  <section class="section-space section-surface" aria-labelledby="valley-growth-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Growth and housing</p>
+        <h2 id="valley-growth-title">Newer neighborhoods are adding to the housing picture.</h2>
       </div>
-      <Picture class="photo-story-main" src={recPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1440]} sizes="(min-width: 48rem) 52vw, 100vw" alt="Valley Center Recreation Center on a winter evening" data-reveal="left" />
-      <Picture class="photo-story-secondary" src={towerPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 48rem) 34vw, 90vw" alt="Valley Center water tower rising above trees under a bright blue sky" data-reveal="scale-up" />
+      <div class="prose" data-reveal="right">
+        <p>Valley Center includes established residential areas while newer and growing neighborhoods add another option for people comparing homes in the community. Amber Ridge, Ceterra, and Arbor Valley are examples of where that newer growth is part of the local conversation.</p>
+        <p>Those names are useful starting points, not substitutes for property-specific research. When comparing established homes with newer construction, look closely at the lot, home condition, neighborhood plans, taxes, possible HOA or special-assessment details, and the long-term upkeep that comes with the property. Development status and availability can change, so current details should always be verified.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section-space" aria-labelledby="valley-search-title">
+  <section class="valley-landmarks section-space section-sage" aria-labelledby="valley-landmarks-title">
     <div class="shell">
-      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Planning a search</p><h2 id="valley-search-title">Look beyond the city name to the individual property.</h2></div><p data-reveal="right">Property conditions and services vary, especially as searches extend toward acreage. Verify the facts that apply to each address.</p></div>
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Landmarks and local character</p>
+          <h2 id="valley-landmarks-title">Local reference points make Valley Center recognizable.</h2>
+        </div>
+        <p data-reveal="right">The Recreation Center and water tower are more than generic scenery. They are visible markers of Valley Center's identity.</p>
+      </div>
+
+      <div class="valley-landmark-grid reveal-stagger">
+        <article class="valley-landmark-card" data-reveal="left-scale">
+          <div class="valley-landmark-media valley-landmark-rec">
+            <Picture
+              src={recPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 48vw, 100vw"
+              alt="Valley Center Recreation Center on a winter evening"
+            />
+          </div>
+          <div class="valley-landmark-copy">
+            <p class="eyebrow">A civic landmark</p>
+            <h3>The Valley Center Recreation Center</h3>
+            <p>The bold Valley Rec Center facade is an immediately recognizable local feature. As a named community facility, it gives the city a specific visual reference point instead of interchangeable location imagery.</p>
+          </div>
+        </article>
+
+        <article class="valley-landmark-card" data-reveal="right">
+          <div class="valley-landmark-media valley-landmark-tower">
+            <Picture
+              src={towerPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 48vw, 100vw"
+              alt="Valley Center water tower above the trees beneath a bright Kansas sky"
+            />
+          </div>
+          <div class="valley-landmark-copy">
+            <p class="eyebrow">On the skyline</p>
+            <h3>The Valley Center water tower</h3>
+            <p>Rising above the tree line, the painted water tower is a straightforward local marker. It helps make Valley Center visually identifiable and reinforces the community's own sense of place north of Wichita.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="valley-fit-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Practical fit</p>
+        <h2 id="valley-fit-title">Compare the setting, not just the address.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Valley Center may be worth a closer look if you are drawn to a quieter small-town environment, want to consider properties with a little more breathing room, or want convenient access to Wichita while living outside the city itself.</p>
+        <p>The fit still comes down to the individual property and your normal routines. Compare city-limit boundaries, road access, home type, lot needs, and the places you expect to visit regularly. That keeps the decision grounded in practical details rather than broad assumptions about the community.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="valley-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Useful questions</p><h2 id="valley-search-title">What should you verify before narrowing the search?</h2></div><p data-reveal="right">The answers can vary by address, especially near city-limit and rural-edge areas. Treat these as starting points for property-specific research.</p></div>
       <ul class="question-grid reveal-stagger">
-        <li data-reveal="up">What kind of lot, home, and maintenance level fit your plans?</li>
-        <li data-reveal="up">Which routes and regular destinations should shape the search area?</li>
-        <li data-reveal="up">Does a property have utilities or site conditions that need closer investigation?</li>
-        <li data-reveal="up">Which local public resources should you review directly before deciding?</li>
+        <li data-reveal="up">Is the property inside Valley Center city limits or near the rural edge, and which services apply to that address?</li>
+        <li data-reveal="up">Which route into Wichita and other regular destinations best fits your normal week?</li>
+        <li data-reveal="up">Are you comparing an established area with a newer neighborhood such as Amber Ridge, Ceterra, or Arbor Valley?</li>
+        <li data-reveal="up">Which lot, utility, HOA, special-assessment, or maintenance details need closer verification?</li>
       </ul>
     </div>
   </section>
