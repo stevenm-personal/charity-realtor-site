@@ -1,0 +1,115 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageHero from '../../components/PageHero.astro';
+import amphitheaterPhoto from '../../assets/communities/andover/andover-captiol-federal-ampitheater-LK-Architecture.jpg';
+import centralParkPhoto from '../../assets/communities/andover/andover-central-park-derby-informer.webp';
+---
+
+<BaseLayout
+  title="Andover, Kansas Community Guide | Charity Menefee"
+  description="A practical introduction to Andover, Kansas, including its location east of Wichita, residential growth, Central Park, and property considerations."
+  pageClass="page-interior page-andover"
+>
+  <PageHero
+    eyebrow="Community guide · Andover"
+    title="A growing city just east of Wichita."
+    intro="Andover is an independent city with close physical connections to the Wichita metro and its own parks, neighborhoods, civic center, and community identity."
+    image={amphitheaterPhoto}
+    imageAlt="Capitol Federal Amphitheater in Andover Central Park"
+    variant="community"
+    imagePosition="center 48%"
+    imagePositionMobile="58% center"
+  />
+
+  <section class="section-space" aria-labelledby="andover-overview-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Getting oriented</p>
+        <h2 id="andover-overview-title">A separate city at Wichita's eastern edge.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Andover is an incorporated city in western Butler County, directly east of Wichita. US-54/400, commonly called Kellogg, runs through Andover and is one of the main connections between the two cities.</p>
+        <p>That proximity makes Andover part of the wider Wichita-area landscape, but it is not a Wichita neighborhood. It has its own municipal government, city center, parks, residential areas, and local identity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="andover-housing-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Housing and residential growth</p>
+        <h2 id="andover-housing-title">Established neighborhoods and newer development share the map.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>Andover includes established residential areas as well as substantial newer development. City development information and planning records identify Cornerstone, Prairie Creek, Heritage Commons, and Vista Ridge as examples of how residential growth has continued to shape the city.</p>
+        <p>Those names are broad reference points rather than statements about current inventory, construction, or available lots. When comparing an established home with newer construction, review the specific lot, property age, included features, restrictions, and long-term costs. HOA requirements or special assessments may apply in some developments, so they should be verified for the individual property.</p>
+        <p>Growth also brings continued investment in transportation and development infrastructure. The details and schedules of individual projects can change, so the evergreen takeaway is that Andover is actively planning around expansion rather than standing still.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-sage" aria-labelledby="andover-park-title">
+    <div class="shell photo-story-grid">
+      <div class="photo-story-copy" data-reveal="left">
+        <p class="eyebrow">A local center</p>
+        <h2 id="andover-park-title">Central Park brings civic space and recreation together.</h2>
+        <p>Andover Central Park is a major civic and recreation area within the city. Lake George and Capitol Federal Amphitheater are both located there, giving concerts, performances, events, and other community activities a recognizable local setting. The amphitheater opened in 2018.</p>
+        <p>Outdoor connections extend beyond the park. The Redbud Trail runs through the Andover area and connects west toward the larger trail system extending into Wichita. It accommodates walking, running, and bicycling, and 13th Street Sports Park connects directly to the trail.</p>
+      </div>
+      <div class="photo-story-main" data-reveal="right">
+        <Picture
+          src={centralParkPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 940]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="An outdoor community event beside Lake George in Andover Central Park"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="andover-practical-title">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Practical things to consider</p>
+        <h2 id="andover-practical-title">Compare the property and its connections.</h2>
+      </div>
+      <div class="prose" data-reveal="right">
+        <p>For a particular address, confirm whether the property is inside Andover city limits and which municipal details apply. Then compare its relationship to US-54/400 and the other roads and destinations you expect to use regularly.</p>
+        <p>The home's age, lot characteristics, maintenance needs, and development type also deserve attention. For newer construction, verify what is included, which restrictions apply, and whether there are property-specific HOA obligations, special assessments, or other costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space section-surface" aria-labelledby="andover-search-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Useful questions</p>
+          <h2 id="andover-search-title">What should you verify when looking in Andover?</h2>
+        </div>
+        <p data-reveal="right">These questions help connect the broader Andover picture to the details that can vary by address, neighborhood, and property type.</p>
+      </div>
+      <ul class="question-grid reveal-stagger">
+        <li data-reveal="up">Is this property inside Andover city limits, and which municipal services or requirements apply?</li>
+        <li data-reveal="up">Is the home in an established neighborhood or a newer development?</li>
+        <li data-reveal="up">Are there HOA requirements or special assessments for this specific property?</li>
+        <li data-reveal="up">How does the location relate to US-54/400 and the routes you would use most often?</li>
+        <li data-reveal="up">For newer construction, which lot details, included features, restrictions, and costs need verification?</li>
+        <li data-reveal="up">What maintenance considerations come with the age, materials, and type of this particular home?</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="shell next-community" aria-label="Community pages">
+    <span>Keep exploring</span>
+    <a href="/communities/">All communities <i aria-hidden="true">→</i></a>
+  </nav>
+  <CallToAction
+    title="Have questions about a property in Andover?"
+    copy="If you have questions about a property in Andover, I'm happy to help you work through the details and decide what needs a closer look."
+    buttonLabel="Contact Me"
+  />
+</BaseLayout>
