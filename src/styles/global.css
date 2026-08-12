@@ -1617,10 +1617,17 @@ p {
   font-weight: 750;
 }
 
-.contact-form label span {
+.contact-form-required-note {
+  margin: 0 0 var(--space-4);
   color: var(--color-text-muted);
-  font-size: 0.68rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.contact-form-required-note span,
+.contact-form-required-marker {
+  color: var(--color-accent);
+  font-weight: 800;
 }
 
 .contact-form input,

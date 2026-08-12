@@ -28,16 +28,18 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
       </div>
 
       <form class="contact-form" action="/api/contact" method="post" aria-describedby="form-feedback" data-contact-form>
-        <label for="name">Name</label>
+        <p class="contact-form-required-note"><span aria-hidden="true">*</span> Required fields</p>
+
+        <label for="name">Name <span class="contact-form-required-marker" aria-hidden="true">*</span></label>
         <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required />
 
-        <label for="email">Email</label>
+        <label for="email">Email <span class="contact-form-required-marker" aria-hidden="true">*</span></label>
         <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
 
-        <label for="phone">Phone <span>Optional</span></label>
+        <label for="phone">Phone</label>
         <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
 
-        <label for="message">Message</label>
+        <label for="message">Message <span class="contact-form-required-marker" aria-hidden="true">*</span></label>
         <textarea id="message" name="message" rows="6" minlength="3" maxlength="5000" required></textarea>
 
         <div class="contact-honeypot" aria-hidden="true">
