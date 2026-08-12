@@ -50,6 +50,7 @@
 - Use a conversational first-person voice on Contact and an appropriate neutral or formal voice for legal and disclosure content.
 - Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as a generic corporate narrator.
 - Prioritize usefulness before conversion, avoid generic Realtor marketing language, and do not add a sales pitch to every informational section.
+- Use natural contractions in visible site copy whenever they sound conversational and appropriate. Avoid unnecessarily formal constructions such as `do not`, `I will`, and `you are` when `don't`, `I'll`, and `you're` would sound more natural. Do not force contractions where they would be awkward, emphatic, legal, or otherwise inappropriate.
 - Continue following every Fair Housing guardrail above; never introduce demographic assumptions, steering, protected-class language, or protected-class proxies while editing voice.
 
 ## Mobile-first responsive design

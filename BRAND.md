@@ -29,6 +29,7 @@ This is Charity Menefee's personal Realtor brand website. Copy should sound as t
 - Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Ordinary personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as an unnamed corporate narrator.
 - Prioritize usefulness first and conversion second. Do not insert a Realtor sales pitch into every informational section.
 - Keep the tone warm, local, conversational, grounded, patient, and low-pressure. Avoid generic marketing language and artificial urgency.
+- Use natural contractions in visible site copy whenever they sound conversational and appropriate. Avoid unnecessarily formal constructions such as `do not`, `I will`, and `you are` when `don't`, `I'll`, and `you're` would sound more natural. Do not force contractions where they would be awkward, emphatic, legal, or otherwise inappropriate.
 
 Use these page-specific conventions:
 
