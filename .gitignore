@@ -12,6 +12,8 @@ dist/
 .env
 .env.*
 !.env.example
+.dev.vars
+.dev.vars.*
 
 # operating system and editor files
 .DS_Store

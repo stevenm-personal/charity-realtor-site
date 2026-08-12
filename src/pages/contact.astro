@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
 ---
 
 <BaseLayout
@@ -25,22 +27,126 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </address>
       </div>
 
-      <form class="contact-form" aria-describedby="form-status">
-        <p id="form-status" class="form-status"><strong>Preview only:</strong> this form isn't connected to a delivery service yet and can't send a message.</p>
+      <form class="contact-form" action="/api/contact" method="post" aria-describedby="form-status form-feedback" data-contact-form>
+        <p id="form-status" class="form-status"><strong>Development setup:</strong> the form code is ready, but Turnstile and email delivery still need to be configured and tested in Cloudflare before this notice can be removed.</p>
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" />
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required />
 
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" />
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
 
         <label for="phone">Phone <span>Optional</span></label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel" />
+        <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6"></textarea>
+        <textarea id="message" name="message" rows="6" minlength="10" maxlength="5000" required></textarea>
 
-        <button class="button button-primary" type="button" aria-describedby="form-status">Send Message</button>
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        {turnstileSiteKey && (
+          <div
+            class="cf-turnstile turnstile-widget"
+            data-sitekey={turnstileSiteKey}
+            data-action="contact"
+            data-theme="light"
+            data-size="flexible"
+          ></div>
+        )}
+
+        <p id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+
+        <button class="button button-primary" type="submit" disabled={!turnstileSiteKey}>Send Message</button>
       </form>
     </div>
   </section>
+
+  {turnstileSiteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+  <script>
+    import { CONTACT_MESSAGES, getContactOutcome } from '../scripts/contact-form-state.js';
+
+    const form = document.querySelector('[data-contact-form]');
+
+    if (form instanceof HTMLFormElement) {
+      const submitButton = form.querySelector('button[type="submit"]');
+      const feedback = form.querySelector('#form-feedback');
+      const turnstileWidget = form.querySelector('.turnstile-widget');
+
+      const resetTurnstile = () => {
+        if (turnstileWidget && window.turnstile) {
+          window.turnstile.reset(turnstileWidget);
+        }
+      };
+
+      const showFailure = (verificationFailed = false) => {
+        if (!(feedback instanceof HTMLElement)) return;
+
+        feedback.dataset.state = 'error';
+
+        if (verificationFailed) {
+          feedback.textContent = CONTACT_MESSAGES.verification;
+          return;
+        }
+
+        const emailLink = document.createElement('a');
+        emailLink.href = 'mailto:charity@curtiscrewict.com';
+        emailLink.textContent = 'charity@curtiscrewict.com';
+        feedback.replaceChildren(
+          document.createTextNode('Something went wrong sending your message. Please try again, or email me at '),
+          emailLink,
+          document.createTextNode('.'),
+        );
+      };
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!(submitButton instanceof HTMLButtonElement) || !(feedback instanceof HTMLElement)) return;
+
+        const formData = new FormData(form);
+        const turnstileToken = formData.get('cf-turnstile-response');
+
+        if (typeof turnstileToken !== 'string' || !turnstileToken) {
+          showFailure(true);
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        feedback.dataset.state = 'sending';
+        feedback.textContent = CONTACT_MESSAGES.sending;
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' },
+          });
+          const result = await response.json().catch(() => null);
+
+          const outcome = getContactOutcome(response.ok, result);
+
+          if (outcome !== 'success') {
+            showFailure(outcome === 'verification');
+            resetTurnstile();
+            return;
+          }
+
+          form.reset();
+          resetTurnstile();
+          feedback.dataset.state = 'success';
+          feedback.textContent = CONTACT_MESSAGES.success;
+        } catch {
+          showFailure();
+          resetTurnstile();
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Message';
+        }
+      });
+    }
+  </script>
 </BaseLayout>

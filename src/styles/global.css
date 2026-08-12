@@ -1663,8 +1663,50 @@ p {
   resize: vertical;
 }
 
+.contact-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.turnstile-widget {
+  width: 100%;
+  margin-bottom: var(--space-5);
+}
+
+.form-feedback {
+  min-height: 1.6em;
+  margin: 0 0 var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.form-feedback:empty {
+  margin-bottom: 0;
+}
+
+.form-feedback[data-state="success"] {
+  color: var(--color-primary-hover);
+}
+
+.form-feedback[data-state="error"] {
+  color: var(--color-status);
+}
+
+.form-feedback a {
+  font-weight: 700;
+}
+
 .contact-form .button {
   width: 100%;
+}
+
+.contact-form .button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+  transform: none;
 }
 
 .legal-placeholder {
