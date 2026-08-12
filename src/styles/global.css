@@ -1544,6 +1544,33 @@ p {
   align-self: start;
 }
 
+.contact-section {
+  padding-block: clamp(2.5rem, 6vw, 5.5rem);
+  background: linear-gradient(145deg, var(--color-background), var(--color-surface));
+}
+
+.page-contact .contact-grid {
+  gap: var(--space-6);
+}
+
+.page-contact .contact-intro {
+  max-width: 36rem;
+}
+
+.page-contact .contact-intro h1 {
+  max-width: 11ch;
+  margin-bottom: var(--space-5);
+  font-size: clamp(3rem, 11vw, 5.75rem);
+  line-height: 0.96;
+}
+
+.page-contact .contact-intro > p:last-child {
+  max-width: 34rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+  font-size: clamp(0.95rem, 2vw, 1.08rem);
+}
+
 .development-note,
 .form-status {
   margin-top: var(--space-6);
@@ -1568,6 +1595,10 @@ p {
 
 .contact-form .form-status {
   margin: 0 0 var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-muted);
+  background: var(--color-background);
+  font-size: 0.72rem;
 }
 
 .contact-form label {
@@ -2082,11 +2113,16 @@ textarea:focus-visible {
   }
 
   .about-story-grid,
-  .about-approach-grid,
-  .contact-grid {
+  .about-approach-grid {
     grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1fr);
     gap: clamp(3rem, 8vw, 7rem);
     align-items: center;
+  }
+
+  .page-contact .contact-grid {
+    grid-template-columns: minmax(18rem, 0.78fr) minmax(24rem, 1.22fr);
+    align-items: start;
+    gap: clamp(3rem, 7vw, 6rem);
   }
 
   .about-approach-grid {
