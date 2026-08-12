@@ -27,8 +27,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
         </address>
       </div>
 
-      <form class="contact-form" action="/api/contact" method="post" aria-describedby="form-status form-feedback" data-contact-form>
-        <p id="form-status" class="form-status"><strong>Development setup:</strong> the form code is ready, but Turnstile and email delivery still need to be configured and tested in Cloudflare before this notice can be removed.</p>
+      <form class="contact-form" action="/api/contact" method="post" aria-describedby="form-feedback" data-contact-form>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required />
 
@@ -39,7 +38,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
         <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" minlength="10" maxlength="5000" required></textarea>
+        <textarea id="message" name="message" rows="6" minlength="3" maxlength="5000" required></textarea>
 
         <div class="contact-honeypot" aria-hidden="true">
           <label for="website">Leave this field empty</label>

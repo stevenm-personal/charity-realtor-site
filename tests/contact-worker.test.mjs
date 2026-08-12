@@ -66,6 +66,25 @@ test('rejects a malformed email', async () => {
   assert.equal(response.status, 400);
 });
 
+test('accepts a message at the three-character minimum', async () => {
+  const response = await handleRequest(
+    contactRequest({ ...validFields, message: 'Hi!' }),
+    testEnv(),
+    { verifyTurnstile: passesTurnstile },
+  );
+  assert.equal(contactConfig.limits.message.min, 3);
+  assert.equal(response.status, 200);
+});
+
+test('rejects a message shorter than three characters', async () => {
+  const response = await handleRequest(
+    contactRequest({ ...validFields, message: 'Hi' }),
+    testEnv(),
+    { verifyTurnstile: passesTurnstile },
+  );
+  assert.equal(response.status, 400);
+});
+
 test('rejects oversized input', async () => {
   const response = await handleRequest(
     contactRequest({ ...validFields, message: 'x'.repeat(contactConfig.limits.message.max + 1) }),

@@ -1603,34 +1603,12 @@ p {
   overflow-wrap: anywhere;
 }
 
-.development-note,
-.form-status {
-  margin-top: var(--space-6);
-  padding: var(--space-4);
-  border-left: 3px solid var(--color-accent);
-  background: var(--color-accent-soft);
-  font-size: 0.78rem;
-}
-
-.development-note p,
-.form-status {
-  margin-bottom: 0;
-}
-
 .contact-form {
   display: grid;
   padding: clamp(1.5rem, 5vw, 3.5rem);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: var(--shadow-soft);
-}
-
-.contact-form .form-status {
-  margin: 0 0 var(--space-6);
-  padding: var(--space-3) var(--space-4);
-  color: var(--color-text-muted);
-  background: var(--color-background);
-  font-size: 0.72rem;
 }
 
 .contact-form label {

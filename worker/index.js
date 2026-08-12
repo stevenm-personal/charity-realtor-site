@@ -7,7 +7,7 @@ const limits = {
   name: { min: 1, max: 100 },
   email: { min: 3, max: 254 },
   phone: { min: 0, max: 40 },
-  message: { min: 10, max: 5000 },
+  message: { min: 3, max: 5000 },
   turnstile: { min: 1, max: 2048 },
 };
 
