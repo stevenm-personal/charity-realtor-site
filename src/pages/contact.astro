@@ -56,9 +56,17 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
           ></div>
         )}
 
-        <p id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
-
         <button class="button button-primary" type="submit" disabled={!turnstileSiteKey}>Send Message</button>
+
+        <div
+          id="form-feedback"
+          class="form-feedback"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          tabindex="-1"
+          hidden
+        ></div>
       </form>
     </div>
   </section>
@@ -84,6 +92,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
       const showFailure = (verificationFailed = false) => {
         if (!(feedback instanceof HTMLElement)) return;
 
+        feedback.hidden = false;
         feedback.dataset.state = 'error';
 
         if (verificationFailed) {
@@ -101,6 +110,31 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
         );
       };
 
+      const showSuccess = () => {
+        if (!(feedback instanceof HTMLElement)) return;
+
+        const icon = document.createElement('span');
+        icon.className = 'form-feedback-icon';
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '✓';
+
+        const copy = document.createElement('span');
+        copy.className = 'form-feedback-copy';
+
+        const heading = document.createElement('strong');
+        heading.className = 'form-feedback-heading';
+        heading.textContent = CONTACT_MESSAGES.successHeading;
+
+        const message = document.createElement('span');
+        message.textContent = CONTACT_MESSAGES.success;
+
+        copy.append(heading, message);
+        feedback.hidden = false;
+        feedback.dataset.state = 'success';
+        feedback.replaceChildren(icon, copy);
+        feedback.focus({ preventScroll: true });
+      };
+
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
@@ -116,6 +150,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
 
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
+        feedback.hidden = false;
         feedback.dataset.state = 'sending';
         feedback.textContent = CONTACT_MESSAGES.sending;
 
@@ -137,8 +172,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
 
           form.reset();
           resetTurnstile();
-          feedback.dataset.state = 'success';
-          feedback.textContent = CONTACT_MESSAGES.success;
+          showSuccess();
         } catch {
           showFailure();
           resetTurnstile();
