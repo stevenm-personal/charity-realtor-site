@@ -1046,30 +1046,6 @@ p {
   text-transform: uppercase;
 }
 
-.community-tile-text {
-  min-height: 15rem;
-  background: var(--color-secondary);
-}
-
-.community-tile-derby {
-  color: var(--color-text);
-  background: var(--color-accent-soft);
-}
-
-.community-tile-text::after {
-  display: none;
-}
-
-.tile-coordinate {
-  position: absolute;
-  top: var(--space-5);
-  right: var(--space-5);
-  color: currentColor;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-}
-
 .journal-preview {
   background: var(--color-surface);
 }
@@ -2424,9 +2400,6 @@ textarea:focus-visible {
     grid-row: 2;
   }
 
-  .community-tile-text {
-    min-height: auto;
-  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

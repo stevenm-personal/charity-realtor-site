@@ -5,6 +5,8 @@ import CallToAction from '../components/CallToAction.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCards from '../components/ServiceCards.astro';
 import charityPhoto from '../assets/charity/charity-headshot-sitting-cropped.jpg';
+import andoverPhoto from '../assets/communities/andover/andover-captiol-federal-ampitheater-LK-Architecture.jpg';
+import derbyPhoto from '../assets/communities/derby/derby-canoes-travelks.jpg';
 import wichitaPhoto from '../assets/communities/wichita/Wichita_Downtown.jpg';
 import valleyCenterPhoto from '../assets/communities/valley-center/valley-center-water-tower.jpg';
 ---
@@ -100,13 +102,27 @@ import valleyCenterPhoto from '../assets/communities/valley-center/valley-center
           />
           <span class="community-tile-copy"><small>North of Wichita · a distinct local identity</small>Valley Center</span>
         </a>
-        <a class="community-tile community-tile-text community-tile-andover" href="/communities/#community-andover" data-reveal="up">
-          <span class="tile-coordinate" aria-hidden="true">NE</span>
-          <span class="community-tile-copy"><small>Community page in planning</small>Andover</span>
+        <a class="community-tile community-tile-andover" href="/communities/andover/" data-reveal="up">
+          <Picture
+            src={andoverPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960]}
+            sizes="(min-width: 67rem) 22vw, (min-width: 48rem) 50vw, 100vw"
+            style="object-position: 58% center;"
+            alt="Capitol Federal Amphitheater in Andover Central Park"
+          />
+          <span class="community-tile-copy"><small>Explore the guide</small>Andover</span>
         </a>
-        <a class="community-tile community-tile-text community-tile-derby" href="/communities/#community-derby" data-reveal="up">
-          <span class="tile-coordinate" aria-hidden="true">SE</span>
-          <span class="community-tile-copy"><small>Community page in planning</small>Derby</span>
+        <a class="community-tile community-tile-derby" href="/communities/derby/" data-reveal="up">
+          <Picture
+            src={derbyPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960]}
+            sizes="(min-width: 67rem) 22vw, (min-width: 48rem) 50vw, 100vw"
+            style="object-position: 58% center;"
+            alt="Kayakers entering the Arkansas River at Warren Riverview Park in Derby"
+          />
+          <span class="community-tile-copy"><small>Explore the guide</small>Derby</span>
         </a>
       </div>
     </div>
