@@ -1766,7 +1766,7 @@ p {
 .footer-intro {
   display: grid;
   align-content: start;
-  gap: var(--space-5);
+  gap: 0;
   max-width: 24rem;
 }
 
@@ -1792,7 +1792,8 @@ p {
 
 .footer-contact {
   display: grid;
-  gap: var(--space-1);
+  gap: 0.375rem;
+  margin-top: var(--space-4);
   font-style: normal;
 }
 
@@ -1800,9 +1801,9 @@ p {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  min-height: 2.75rem;
   color: var(--color-text-on-dark-muted);
   font-size: 0.8rem;
+  line-height: 1.35;
   overflow-wrap: anywhere;
   text-decoration: none;
 }
@@ -1855,6 +1856,7 @@ p {
   flex-wrap: nowrap;
   align-items: center;
   gap: 0.375rem;
+  margin-top: var(--space-5);
 }
 
 .affiliation-logo {
