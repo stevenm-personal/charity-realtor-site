@@ -9,7 +9,7 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   tone?: 'light' | 'image';
-  variant?: 'default' | 'community';
+  variant?: 'default' | 'community' | 'about';
   imagePosition?: string;
   imagePositionMobile?: string;
 }
@@ -32,6 +32,8 @@ const heroStyle: Record<string, string> | undefined = image
       '--page-hero-image-position-mobile': imagePositionMobile,
     }
   : undefined;
+
+const isAboutHero = variant === 'about' && image;
 ---
 
 <section
@@ -39,29 +41,57 @@ const heroStyle: Record<string, string> | undefined = image
     'page-hero',
     {
       'page-hero-light': tone === 'light',
-      'page-hero-has-image': image,
+      'page-hero-has-image': image && tone === 'image',
       'page-hero-community': variant === 'community',
+      'page-hero-about': variant === 'about',
     },
   ]}
   style={heroStyle}
 >
-  {image && (
-    <Picture
-      class="page-hero-image"
-      src={image}
-      formats={['avif', 'webp']}
-      widths={[640, 960, 1280, 1680]}
-      sizes="100vw"
-      alt={imageAlt}
-      loading="eager"
-      fetchpriority="high"
-    />
-  )}
-  <div class="shell page-hero-content" data-reveal="hero-copy">
-    <div class="page-hero-copy">
-      <p class="eyebrow">{eyebrow}</p>
-      <h1>{title}</h1>
-      <p class="page-hero-intro">{intro}</p>
+  {isAboutHero ? (
+    <div class="shell page-hero-about-grid">
+      <div class="page-hero-content" data-reveal="hero-copy">
+        <div class="page-hero-copy">
+          <p class="eyebrow">{eyebrow}</p>
+          <h1>{title}</h1>
+          <p class="page-hero-intro">{intro}</p>
+        </div>
+      </div>
+      <div class="page-hero-about-media" data-reveal="right-scale">
+        <Picture
+          class="page-hero-about-image"
+          src={image}
+          formats={['avif', 'webp']}
+          widths={[384, 480, 615]}
+          sizes="(min-width: 48rem) 38vw, calc(100vw - 2rem)"
+          quality={90}
+          alt={imageAlt}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
     </div>
-  </div>
+  ) : (
+    <>
+      {image && (
+        <Picture
+          class="page-hero-image"
+          src={image}
+          formats={['avif', 'webp']}
+          widths={[640, 960, 1280, 1680]}
+          sizes="100vw"
+          alt={imageAlt}
+          loading="eager"
+          fetchpriority="high"
+        />
+      )}
+      <div class="shell page-hero-content" data-reveal="hero-copy">
+        <div class="page-hero-copy">
+          <p class="eyebrow">{eyebrow}</p>
+          <h1>{title}</h1>
+          <p class="page-hero-intro">{intro}</p>
+        </div>
+      </div>
+    </>
+  )}
 </section>

@@ -13,19 +13,21 @@ import charityHomePhoto from '../assets/charity/charity-headshot-sitting.jpg';
 >
   <PageHero
     eyebrow="About Charity"
-    title="A real person to call when real estate gets complicated."
-    intro="I was raised in Sharon Springs and have called Valley Center home for the past 20 years. I bring a calm, grounded, no-pressure approach to working with buyers and sellers."
+    title="Kansas Roots. Local Knowledge."
+    intro="I grew up in Sharon Springs, Kansas, and have called Valley Center home for more than 20 years. Living here has given me a perspective on the area that goes beyond listings and market data."
+    image={charityPortrait}
+    imageAlt="Portrait of Charity Menefee in a warm home interior"
+    tone="light"
+    variant="about"
   />
 
   <section class="about-story section-space" aria-labelledby="about-story-title">
-    <div class="shell about-story-grid">
-      <div class="about-portrait-wrap" data-reveal="left-scale">
-        <Picture src={charityPortrait} formats={['avif', 'webp']} widths={[480, 720, 960]} sizes="(min-width: 48rem) 42vw, 100vw" alt="Portrait of Charity Menefee in a warm home interior" />
-        <span>Charity Menefee</span>
-      </div>
-      <div class="about-story-copy prose" data-reveal="right">
+    <div class="shell editorial-grid">
+      <div data-reveal="left">
         <p class="eyebrow">Small Town Roots</p>
         <h2 id="about-story-title">Small-town roots shaped a steady, grounded approach.</h2>
+      </div>
+      <div class="about-story-copy prose" data-reveal="right">
         <p>I grew up in Sharon Springs, Kansas, in the kind of small farm town where everybody knows everybody. My graduating class had just 20 people, and that experience shaped a lot about who I am: steady, grounded, and easy-going.</p>
         <p>I don’t believe in rushing big decisions or talking people into something that isn’t right for them. I’m a calm, no-pressure person by nature, and that carries over into how I work with buyers and sellers.</p>
       </div>
