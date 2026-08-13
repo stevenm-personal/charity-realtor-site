@@ -8,101 +8,131 @@ import PageHero from '../../components/PageHero.astro';
   title="Buying a Home in the Wichita Area | Charity Menefee"
   description="A patient, practical approach to buying a home in Wichita and nearby south-central Kansas communities."
 >
-  <PageHero
-    eyebrow="Buying"
-    title="Make the next decision with a clearer picture."
-    intro="From the first questions to the details near closing, I'll help you understand the process, compare your options, and move at a pace that feels manageable."
-  />
+  <div class="buying-page">
+    <PageHero
+      eyebrow="Buying roadmap"
+      title="A clearer path from first questions to closing."
+      intro="Buying a home involves a lot of decisions, but you don't have to think about all of them at once. Here's how the process typically unfolds and where I'll help along the way."
+    />
 
-  <section class="section-space" aria-labelledby="buying-finances-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">Before serious shopping</p>
-        <h2 id="buying-finances-title">Start with a range that works in real life.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>Talking with a lender early can clarify loan options and establish a realistic price range before you spend time touring homes. A preapproval can also help when you're ready to make an offer, but it isn't a reason to shop at the highest amount you could technically borrow.</p>
-        <p>Think about the full monthly housing picture, including the loan payment, property taxes, homeowners insurance, possible association dues, utilities, and ongoing upkeep. A lender can answer financing questions, while your own budget should leave room for the rest of your life.</p>
-      </div>
-    </div>
-  </section>
+    <section class="buying-roadmap-section" aria-label="Home-buying roadmap">
+      <ol class="shell buying-roadmap">
+        <li class="buying-stage" data-reveal="up">
+          <span class="buying-stage-number" aria-hidden="true">01</span>
+          <article class="buying-stage-body" aria-labelledby="buying-step-one-title">
+            <div class="buying-stage-heading">
+              <p class="eyebrow">Before serious home shopping</p>
+              <h2 id="buying-step-one-title">Get financially ready.</h2>
+              <p>A lender can clarify loan options and a realistic range before serious touring. The highest possible approval doesn't have to become your shopping target.</p>
+            </div>
+            <div class="buying-stage-details">
+              <p class="buying-list-intro">Consider the full monthly housing picture:</p>
+              <ul class="buying-checklist">
+                <li>Purchase price and expected loan payment</li>
+                <li>Property taxes and homeowners insurance</li>
+                <li>Association dues when they apply</li>
+                <li>Utilities, upkeep, and room in your budget</li>
+              </ul>
+              <p class="buying-stage-note">I can keep the search aligned with your range while your lender handles financing advice.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space section-surface" aria-labelledby="buying-help-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">Where to begin</p>
-        <h2 id="buying-help-title">Start with what matters in your everyday life.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>A useful home search begins before the listings. I'll help you sort must-haves from preferences and talk through location, lot or property type, home size, age, condition, and how much updating you're willing to take on.</p>
-        <p>Around Wichita, that may mean comparing an established city neighborhood with newer suburban construction, a smaller nearby community, or acreage beyond denser areas. The <a href="/communities/">community guides</a> can help you get oriented without turning location into a simple checklist.</p>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage buying-stage-priorities" data-reveal="up">
+          <span class="buying-stage-number" aria-hidden="true">02</span>
+          <article class="buying-stage-body" aria-labelledby="buying-step-two-title">
+            <div class="buying-stage-heading">
+              <p class="eyebrow">Before the listings take over</p>
+              <h2 id="buying-step-two-title">Figure out what matters most.</h2>
+              <p>A focused search starts with how you want to live and the tradeoffs you can accept. I'll help separate must-haves from preferences.</p>
+            </div>
+            <div class="buying-stage-details">
+              <ul class="buying-checklist buying-checklist-priorities">
+                <li>Location and commute</li>
+                <li>Home size and layout</li>
+                <li>Lot, neighborhood, or acreage</li>
+                <li>Age, condition, and maintenance</li>
+                <li>Willingness to make updates</li>
+              </ul>
+              <p class="buying-stage-note">Around Wichita, that may mean comparing established neighborhoods, newer suburbs, nearby communities, or land. The <a href="/communities/">community guides</a> can help you get oriented.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space" aria-labelledby="buying-tour-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">At the property</p>
-        <h2 id="buying-tour-title">Look beyond the listing photos.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>Photos can introduce a home, but an in-person visit gives you a better sense of the layout, room relationships, natural light, surrounding property, and how the location feels from the street. It also gives us a chance to notice visible condition concerns or signs of deferred maintenance that deserve more attention.</p>
-        <p>I can help you keep track of what you see and identify follow-up questions. A licensed inspector and other qualified professionals, not a showing, are the right sources for evaluating the home's systems and condition.</p>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage buying-stage-tour" data-reveal="up">
+          <span class="buying-stage-number" aria-hidden="true">03</span>
+          <article class="buying-stage-body" aria-labelledby="buying-step-three-title">
+            <div class="buying-stage-heading">
+              <p class="eyebrow">Once serious showings begin</p>
+              <h2 id="buying-step-three-title">Tour homes with a critical eye.</h2>
+              <p>In-person visits show how the layout, lot, condition, and surroundings work together beyond the listing photos.</p>
+            </div>
+            <div class="buying-stage-details buying-tour-callout">
+              <p class="buying-list-intro">Look beyond the listing photos:</p>
+              <ul class="buying-checklist">
+                <li>How the layout feels from room to room</li>
+                <li>Visible maintenance or condition concerns</li>
+                <li>Lot characteristics and neighboring properties</li>
+                <li>Items that deserve professional follow-up</li>
+              </ul>
+              <p class="buying-stage-note">I'll track observations and follow-up questions. Qualified professionals should evaluate the home's systems and condition.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space section-sage" aria-labelledby="buying-offer-title">
-    <div class="shell">
-      <div class="section-heading split-heading">
-        <div data-reveal="left">
-          <p class="eyebrow">Making an offer</p>
-          <h2 id="buying-offer-title">The price is only one part of the proposal.</h2>
-        </div>
-        <p data-reveal="right">A useful offer reflects the property, your financing, your priorities, and the terms you're prepared to follow through on.</p>
-      </div>
-      <div class="feature-list reveal-stagger">
-        <article data-reveal="up">
-          <span>Terms</span>
-          <h3>See the pieces together</h3>
-          <p>Price, financing, timing, contingencies, and other requested terms can all affect how an offer works. I'll explain the available choices and the tradeoffs that come with them.</p>
-        </article>
-        <article data-reveal="up">
-          <span>Due diligence</span>
-          <h3>Keep investigating</h3>
-          <p>An accepted offer doesn't mean it's time to stop asking questions. Inspections and other property-specific evaluations may help you understand condition, repairs, or specialized concerns.</p>
-        </article>
-        <article data-reveal="up">
-          <span>Decision</span>
-          <h3>Choose terms you can support</h3>
-          <p>The strongest choice isn't always the most aggressive one. My role is to help you compare practical options, understand the documents, and avoid manufactured urgency.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage buying-stage-offer" data-reveal="up">
+          <span class="buying-stage-number" aria-hidden="true">04</span>
+          <article class="buying-stage-body" aria-labelledby="buying-step-four-title">
+            <div class="buying-stage-heading">
+              <p class="eyebrow">When the right property appears</p>
+              <h2 id="buying-step-four-title">Make an offer and do the homework.</h2>
+              <p>An offer combines price, financing, timing, contingencies, and other terms. I'll explain the tradeoffs behind each choice.</p>
+            </div>
+            <div class="buying-stage-details">
+              <div class="buying-decision-grid">
+                <section aria-labelledby="buying-offer-terms-title">
+                  <h3 id="buying-offer-terms-title">Offer terms</h3>
+                  <p>Look at the proposal as a whole, not only the headline price.</p>
+                </section>
+                <section aria-labelledby="buying-inspections-title">
+                  <h3 id="buying-inspections-title">Inspections</h3>
+                  <p>An accepted offer doesn't end the investigation. Qualified professionals may need to evaluate the property.</p>
+                </section>
+                <section aria-labelledby="buying-decisions-title">
+                  <h3 id="buying-decisions-title">Decisions</h3>
+                  <p>Use new information to make practical choices without manufactured urgency.</p>
+                </section>
+              </div>
+              <p class="buying-stage-note">Specific document, legal, or financial questions should go to the appropriate professionals.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space" aria-labelledby="buying-closing-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">After acceptance</p>
-        <h2 id="buying-closing-title">Several pieces still have to come together.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>Your lender may be completing loan approval and coordinating an appraisal. Title and closing professionals work through their portions of the transaction, while inspection findings or other contract items may still require decisions.</p>
-        <p>Near closing, the final walkthrough is an opportunity to see the property again and confirm its expected condition before ownership transfers. I'll keep the deadlines and responsibilities organized, coordinate with the people involved, and help you know which item needs your attention.</p>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage buying-stage-closing" data-reveal="up">
+          <span class="buying-stage-number" aria-hidden="true">05</span>
+          <article class="buying-stage-body" aria-labelledby="buying-step-five-title">
+            <div class="buying-stage-heading">
+              <p class="eyebrow">After acceptance</p>
+              <h2 id="buying-step-five-title">Get from contract to closing.</h2>
+              <p>The path can vary, but several pieces may still need to come together.</p>
+            </div>
+            <div class="buying-stage-details">
+              <ul class="buying-checklist buying-checklist-closing">
+                <li>Lender coordination and appraisal, when applicable</li>
+                <li>Title and closing work</li>
+                <li>Contract items and final walkthrough</li>
+                <li>Closing and transfer of ownership</li>
+              </ul>
+              <p class="buying-stage-note">I'll organize deadlines, coordinate with the people involved, and make sure you know which item needs attention.</p>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </section>
 
-  <aside class="shell service-note" data-reveal="scale-up">
-    <p class="eyebrow">Still early?</p>
-    <h2>You don't need to be ready to tour homes before starting a conversation.</h2>
-    <p>Early questions about financing conversations, timing, property types, and communities are welcome.</p>
-  </aside>
-
-  <CallToAction
-    title="Want to talk through buying?"
-    copy="Tell me where you are right now, from comparing areas to considering a particular home. I'll help you identify the decisions that deserve attention."
-  />
+    <CallToAction
+      title="Where are you in the process?"
+      copy="Not sure where to start, or already looking at a particular home? Tell me what you're considering, and I'll help you figure out the next step."
+    />
+  </div>
 </BaseLayout>
