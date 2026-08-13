@@ -1544,68 +1544,148 @@ p {
   }
 }
 
-.land-feature {
-  position: relative;
-  display: grid;
-  min-height: 44rem;
-  overflow: hidden;
-  align-items: end;
+/* Land and acreage evaluation roadmap */
+.land-roadmap-page .page-hero {
+  min-height: clamp(29rem, 62svh, 37rem);
 }
 
-.land-feature picture,
-.land-feature > img,
-.land-feature-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+.land-roadmap-page .page-hero-content h1 {
+  max-width: 9ch;
+  font-size: clamp(3rem, 9.5vw, 6.1rem);
 }
 
-.land-feature picture img,
-.land-feature > img,
-.land-feature-image {
-  height: 100%;
-  object-fit: cover;
+.land-stage {
+  padding-block: clamp(1.75rem, 5vw, 3.25rem);
 }
 
-.land-feature::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, var(--color-image-overlay-deep), var(--color-image-overlay-soft));
-  content: "";
+.land-stage .land-stage-details {
+  margin-top: var(--space-4);
 }
 
-.land-feature-inner {
-  position: relative;
-  z-index: 1;
-  padding-block: var(--space-7);
+.land-stage .buying-stage-note {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
 }
 
-.land-feature-card {
-  max-width: 41rem;
-  margin-left: auto;
-  padding: clamp(1.5rem, 5vw, 3.5rem);
-  color: var(--color-text-on-dark);
-  background: var(--color-image-overlay-deep);
+.land-stage-services .land-stage-body {
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
 }
 
-.land-feature-card h2 {
-  margin-bottom: var(--space-5);
-  font-size: clamp(2.35rem, 7vw, 4.25rem);
-  line-height: 1;
-}
-
-.land-feature-card ul {
+.land-service-grid {
   display: grid;
   gap: var(--space-3);
-  margin: var(--space-5) 0;
-  padding-left: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.land-service-grid li {
+  min-width: 0;
+  padding: var(--space-4);
+  border-top: 2px solid var(--color-primary);
+  background: var(--color-sage-soft);
+}
+
+.land-service-grid li:nth-child(even) {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.land-service-grid span {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.land-service-grid small {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.land-stage-paper .land-stage-body {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-on-dark);
+  background: var(--color-footer);
+  box-shadow: var(--shadow-layered);
+}
+
+.land-stage-paper .eyebrow {
+  color: var(--color-accent-on-dark);
+}
+
+.land-stage-paper .land-stage-heading h2,
+.land-stage-paper .land-paper-grid h3 {
+  color: var(--color-text-on-dark);
+}
+
+.land-stage-paper .land-stage-heading > p:last-child,
+.land-stage-paper .land-stage-details p {
   color: var(--color-text-on-dark-muted);
 }
 
-.land-feature-card .fine-print {
+.land-paper-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.land-paper-grid section {
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--color-accent);
+}
+
+.land-paper-grid h3 {
+  margin-bottom: var(--space-2);
+  font-size: 1.35rem;
+}
+
+.land-paper-grid p {
   margin-bottom: 0;
-  color: var(--color-text-on-dark-subtle);
+  font-size: 0.92rem;
+}
+
+.land-stage-paper .buying-stage-note {
+  border-color: var(--color-border-on-image);
+}
+
+.land-stage-site .land-stage-body {
+  border-color: var(--color-primary);
+  background: var(--color-sage-soft);
+}
+
+.land-site-grid {
+  gap: var(--space-4);
+}
+
+.land-site-grid section {
+  padding: var(--space-4);
+  border-top-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.land-site-grid section:nth-child(2) {
+  border-top-color: var(--color-accent);
+}
+
+.land-stage-final .land-stage-body {
+  border-top-color: var(--color-primary);
+}
+
+@media (min-width: 36rem) {
+  .land-plan-list,
+  .land-service-grid,
+  .land-professional-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Communities */
@@ -2474,6 +2554,35 @@ textarea:focus-visible {
 
   .selling-stage-offers .selling-decision-grid {
     gap: var(--space-4);
+  }
+
+  .land-stage-paper .land-stage-body {
+    display: block;
+  }
+
+  .land-stage-paper .land-stage-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.75fr);
+    gap: 0 clamp(2rem, 6vw, 5rem);
+    align-items: end;
+  }
+
+  .land-stage-paper .land-stage-heading .eyebrow,
+  .land-stage-paper .land-stage-heading h2 {
+    grid-column: 1;
+  }
+
+  .land-stage-paper .land-stage-heading > p:last-child {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+
+  .land-stage-paper .land-stage-details {
+    margin-top: var(--space-6);
+  }
+
+  .land-paper-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .split-heading,

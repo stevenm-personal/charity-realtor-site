@@ -1,131 +1,151 @@
 ---
-import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import acreagePhoto from '../../assets/shared/kansas/kansas-land-aerial.png';
-import prairiePhoto from '../../assets/shared/kansas/kansas-land-prairie.jpg';
 ---
 
 <BaseLayout
   title="Land and Acreage in South-Central Kansas | Charity Menefee"
   description="Grounded real estate guidance for people considering land and acreage around Wichita and south-central Kansas."
 >
-  <PageHero
-    eyebrow="Land & acreage"
-    title="More room comes with more questions."
-    intro="If you're considering rural property, I can help you organize the practical considerations, explore possibilities, and identify which facts need verification."
-    image={acreagePhoto}
-    imageAlt="Kansas acreage seen from above, with fields, trees, homes, and rural roads"
-  />
-
-  <section class="section-space" aria-labelledby="acreage-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">A personal point of reference</p>
-        <h2 id="acreage-title">I understand why the details matter.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>My own purchase of approximately 10 acres gave me firsthand experience with the additional practical considerations that can come with more land. It taught me to slow down, look beyond the house, and ask which property-specific facts still need answers.</p>
-        <p>That experience informs the questions I bring to the conversation, but I don't present it as a specialized credential. Surveyors, title professionals, attorneys, inspectors, utility providers, and other qualified specialists may need to address subjects within their expertise.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="land-feature" aria-labelledby="land-use-title">
-    <Picture
-      class="land-feature-image"
-      src={prairiePhoto}
-      formats={['avif', 'webp']}
-      widths={[640, 960, 1440, 1920]}
-      sizes="100vw"
-      alt="Kansas prairie and open land at sunset"
+  <div class="buying-page land-roadmap-page">
+    <PageHero
+      eyebrow="Land & acreage roadmap"
+      title="More land means more questions."
+      intro="Land and acreage can raise questions you may not encounter in a typical neighborhood purchase. I have personal experience buying land and building on acreage, so I know firsthand how quickly the questions can go beyond the house itself."
     />
-    <div class="shell land-feature-inner">
-      <div class="land-feature-card" data-reveal="layer-right">
-        <p class="eyebrow eyebrow-light">Begin with intended use</p>
-        <h2 id="land-use-title">Start with what you want the property to support.</h2>
-        <ul>
-          <li>Live there as it is, or build and add structures later?</li>
-          <li>Keep animals, use the land recreationally, or simply have more space?</li>
-          <li>How much acreage and ongoing maintenance feel manageable?</li>
-          <li>Which uses or improvements need approval or professional review?</li>
-        </ul>
-        <p class="fine-print">Intended uses and building plans should be verified for the specific property with the appropriate authorities and professionals.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section-space" aria-labelledby="land-access-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">Access and utilities</p>
-        <h2 id="land-access-title">Availability should be confirmed, not assumed.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>Road type, legal and physical access, driveway placement, and recorded easements can affect how a property functions. Marketing remarks aren't a substitute for title information or legal interpretation, so title or legal professionals may need to clarify access rights and recorded documents.</p>
-        <p>Utility questions can include electricity, natural gas or propane, the water source, septic or sewer service, and internet availability. The important step is confirming what reaches the property, where connections are located, and what it may take to serve your intended homesite or improvements.</p>
-      </div>
-    </div>
-  </section>
+    <section class="buying-roadmap-section land-roadmap-section" aria-label="Land and acreage evaluation roadmap">
+      <ol class="shell buying-roadmap land-roadmap">
+        <li class="buying-stage land-stage land-stage-plan" data-reveal="up">
+          <span class="buying-stage-number land-stage-number" aria-hidden="true">01</span>
+          <article class="buying-stage-body land-stage-body" aria-labelledby="land-step-one-title">
+            <div class="buying-stage-heading land-stage-heading">
+              <p class="eyebrow">The property has to fit the plan</p>
+              <h2 id="land-step-one-title">Start with what you want to do.</h2>
+              <p>Intended use shapes almost every question that follows. Before getting attached to a property, decide what you need the land to support now and later.</p>
+            </div>
+            <div class="buying-stage-details land-stage-details">
+              <p class="buying-list-intro">Think about the practical plan:</p>
+              <ul class="buying-checklist land-plan-list">
+                <li>Living in the existing home or building</li>
+                <li>Adding a shop or another structure</li>
+                <li>Keeping animals or using the land recreationally</li>
+                <li>Maintenance, privacy, and usable space</li>
+                <li>Utilities or services your plans depend on</li>
+                <li>Future improvements that matter to you</li>
+              </ul>
+              <p class="buying-stage-note">A plan is a starting point, not proof that a use is allowed. Property-specific rules and approvals still need verification.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space section-surface" aria-labelledby="land-water-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">Water and wastewater</p>
-        <h2 id="land-water-title">Well and septic systems bring their own due diligence.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>A property served by a well or septic system raises different questions than one connected to city services. Buyers may need to learn the location, condition, capacity, maintenance history, and suitability of existing systems or a proposed site.</p>
-        <p>Those answers should come from qualified inspectors, contractors, local authorities, or other appropriate specialists. I can help identify which information is missing and keep those evaluations connected to the larger purchase.</p>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage land-stage land-stage-services" data-reveal="up">
+          <span class="buying-stage-number land-stage-number" aria-hidden="true">02</span>
+          <article class="buying-stage-body land-stage-body" aria-labelledby="land-step-two-title">
+            <div class="buying-stage-heading land-stage-heading">
+              <p class="eyebrow">What reaches the property matters</p>
+              <h2 id="land-step-two-title">Understand access and utilities.</h2>
+              <p>Around Wichita and nearby communities, acreage may sit outside municipal services. Nearby lines or roads don't automatically confirm access, availability, or extension cost.</p>
+            </div>
+            <div class="buying-stage-details land-stage-details">
+              <ul class="land-service-grid">
+                <li><span>Road</span><small>Surface, maintenance, and approach</small></li>
+                <li><span>Access</span><small>Driveway, legal access, and easements</small></li>
+                <li><span>Power</span><small>Availability and connection needs</small></li>
+                <li><span>Water</span><small>Public source, rural system, or well</small></li>
+                <li><span>Wastewater</span><small>Sewer availability or septic system</small></li>
+                <li><span>Internet</span><small>Service confirmed for the address</small></li>
+              </ul>
+              <p class="buying-stage-note">Utility providers can confirm service details. Title or legal professionals may need to clarify recorded access rights and easements.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space section-sage" aria-labelledby="land-boundaries-title">
-    <div class="shell">
-      <div class="section-heading split-heading">
-        <div data-reveal="left">
-          <p class="eyebrow">Boundaries and use</p>
-          <h2 id="land-boundaries-title">The listing description is a starting point.</h2>
-        </div>
-        <p data-reveal="right">Acreage, boundaries, restrictions, and permitted uses deserve property-specific verification before they become part of your plan.</p>
-      </div>
-      <div class="feature-list reveal-stagger">
-        <article data-reveal="up">
-          <span>Boundaries</span>
-          <h3>Know what is being conveyed</h3>
-          <p>Marketing acreage shouldn't be treated as a survey. Recorded information, title work, and a survey when appropriate can help establish the legal description and physical boundaries.</p>
-        </article>
-        <article data-reveal="up">
-          <span>Restrictions</span>
-          <h3>Check the intended use</h3>
-          <p>Zoning, deed restrictions, covenants, association rules, and building requirements can vary by property. Plans for animals, additional structures, or future construction need direct verification.</p>
-        </article>
-        <article data-reveal="up">
-          <span>Site conditions</span>
-          <h3>Account for the whole property</h3>
-          <p>Outbuildings, fences, driveways, drainage, ponds, trees, terrain, and maintenance can matter as much as the house. Qualified professionals should evaluate condition or technical concerns.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage land-stage land-stage-paper" data-reveal="up">
+          <span class="buying-stage-number land-stage-number" aria-hidden="true">03</span>
+          <article class="buying-stage-body land-stage-body" aria-labelledby="land-step-three-title">
+            <div class="buying-stage-heading land-stage-heading">
+              <p class="eyebrow">Boundaries, restrictions, and details on paper</p>
+              <h2 id="land-step-three-title">Know what you're actually buying.</h2>
+              <p>The listing description is a starting point. Marketing acreage and remarks aren't substitutes for property-specific records and verification.</p>
+            </div>
+            <div class="buying-stage-details land-stage-details">
+              <div class="land-paper-grid">
+                <section aria-labelledby="land-boundaries-title">
+                  <h3 id="land-boundaries-title">Where does it end?</h3>
+                  <p>Compare advertised acreage with recorded information, boundaries, and a survey when appropriate.</p>
+                </section>
+                <section aria-labelledby="land-title-title">
+                  <h3 id="land-title-title">What comes with it?</h3>
+                  <p>Review title information, easements, and what the property legally includes.</p>
+                </section>
+                <section aria-labelledby="land-use-title">
+                  <h3 id="land-use-title">What can I do there?</h3>
+                  <p>Verify zoning, deed restrictions, covenants, association rules, and building requirements.</p>
+                </section>
+              </div>
+              <p class="buying-stage-note">Local authorities and qualified title, survey, or legal professionals should answer questions within their expertise.</p>
+            </div>
+          </article>
+        </li>
 
-  <section class="section-space" aria-labelledby="land-purchase-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">Bringing it together</p>
-        <h2 id="land-purchase-title">Acreage isn't simply a house with a bigger yard.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>The home, land, access, services, improvements, and future plans all need to make sense together. Some answers may be simple, while others require records, estimates, inspections, or professional advice before you can judge the property clearly.</p>
-        <p>If the property includes a home, the broader <a href="/services/buying/">home-buying process</a> still applies. I'll help keep the additional acreage items visible so an appealing view or extra space doesn't push important facts into the background.</p>
-      </div>
-    </div>
-  </section>
+        <li class="buying-stage buying-stage-offer land-stage land-stage-site" data-reveal="up">
+          <span class="buying-stage-number land-stage-number" aria-hidden="true">04</span>
+          <article class="buying-stage-body land-stage-body" aria-labelledby="land-step-four-title">
+            <div class="buying-stage-heading land-stage-heading">
+              <p class="eyebrow">The property deserves a closer look</p>
+              <h2 id="land-step-four-title">Look at the land, not just the house.</h2>
+              <p>On an acreage property, some of the most important questions may be outside the front door.</p>
+            </div>
+            <div class="buying-stage-details land-stage-details">
+              <div class="buying-decision-grid land-site-grid">
+                <section aria-labelledby="land-look-title">
+                  <h3 id="land-look-title">Look</h3>
+                  <p>Notice drainage, terrain, ponds, trees, fences, outbuildings, and driveways.</p>
+                </section>
+                <section aria-labelledby="land-ask-title">
+                  <h3 id="land-ask-title">Ask</h3>
+                  <p>Learn what is known about wells, septic systems, improvements, and ongoing maintenance.</p>
+                </section>
+                <section aria-labelledby="land-verify-title">
+                  <h3 id="land-verify-title">Verify</h3>
+                  <p>Use qualified professionals for specialized systems, structures, and technical site conditions.</p>
+                </section>
+              </div>
+              <p class="buying-stage-note">I'll help keep observations and follow-up questions organized, but I don't inspect, certify, or evaluate technical conditions.</p>
+            </div>
+          </article>
+        </li>
 
-  <CallToAction
-    title="Have questions about a particular acreage property?"
-    copy="Send me the listing or tell me what you're hoping the land can support. I'll help you organize the access, utility, and property-specific items that need a closer look."
-  />
+        <li class="buying-stage buying-stage-closing land-stage land-stage-final" data-reveal="up">
+          <span class="buying-stage-number land-stage-number" aria-hidden="true">05</span>
+          <article class="buying-stage-body land-stage-body" aria-labelledby="land-step-five-title">
+            <div class="buying-stage-heading land-stage-heading">
+              <p class="eyebrow">Know what still needs verification</p>
+              <h2 id="land-step-five-title">Bring the answers together.</h2>
+              <p>Different properties call for different sources. Before moving forward, identify what is confirmed, what remains unknown, and who can provide each answer.</p>
+            </div>
+            <div class="buying-stage-details land-stage-details">
+              <p class="buying-list-intro">Depending on the property, that may involve:</p>
+              <ul class="buying-checklist land-professional-list">
+                <li>Lender and title company</li>
+                <li>Surveyor and inspector</li>
+                <li>Well or septic professionals</li>
+                <li>Utility providers</li>
+                <li>Local planning or government staff</li>
+                <li>Other property-specific specialists</li>
+              </ul>
+              <p class="buying-stage-note">I'll help identify the questions, track what still needs an answer, and coordinate the transaction. If the property includes a home, the broader <a href="/services/buying/">home-buying process</a> still applies.</p>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <CallToAction
+      title="Looking at land or acreage?"
+      copy="Already have questions about access, utilities, or what comes with the property? Send me the listing or tell me what you're considering, and I'll help start with the questions that matter."
+    />
+  </div>
 </BaseLayout>
