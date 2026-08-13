@@ -390,7 +390,10 @@ Keep the two environments conceptually separate.
 
 - Uses the `workers.dev` preview URL.
 - Preserves `noindex` and `nofollow` controls.
-- May retain clearly labeled placeholders where verified information is missing.
+- Currently retains launch placeholders for the Privacy and Disclaimer pages.
+- May have an empty Blog until genuinely useful articles are ready.
+- Does not yet have an approved analytics implementation.
+- Uses the temporary contact-form delivery configuration documented in `README.md`.
 - Must not emit production canonical URLs or structured business claims prematurely.
 - Should not be submitted for indexing.
 
@@ -402,6 +405,8 @@ Keep the two environments conceptually separate.
 - Provides a verified sitemap and appropriate robots behavior.
 - Uses only accurate structured data.
 - Displays consistent, verified business and contact information.
-- Removes development placeholders before launch.
+- Replaces the Privacy and Disclaimer placeholders with reviewed launch content.
+- Uses the approved production contact-form destination and configuration documented in `README.md`.
+- Documents any selected analytics accurately in the Privacy Policy.
 
 Do not automatically enable production SEO behavior during routine development tasks. Treat the transition as a dedicated technical SEO and launch pass.

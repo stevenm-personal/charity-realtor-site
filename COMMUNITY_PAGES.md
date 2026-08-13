@@ -17,6 +17,21 @@ Their purpose is to:
 
 Each page should feel as though it was written specifically for that city. It must not resemble a generic Realtor SEO page in which only the city name has been changed.
 
+## Current guide set
+
+The original eight community guides are built:
+
+- Wichita.
+- Valley Center.
+- Maize.
+- Andover.
+- Derby.
+- Goddard.
+- Newton.
+- Park City.
+
+Treat these as active community guides, not planned-page placeholders. Any future guide should meet the same locality, verification, editorial, design, and Fair Housing standards before it is added.
+
 ## Structural philosophy
 
 Use a consistent backbone across community pages so the site feels cohesive, but do not force every community into an identical, rigid template.
@@ -185,7 +200,7 @@ This section should demonstrate thoughtful real estate guidance without becoming
 
 End with one restrained, first-person call to action after the page has provided useful information.
 
-Use first person when referring to Charity's assistance. Do not write third-person phrases such as "Charity can help." Do not repeat Realtor pitches throughout the body.
+Use first person when referring to Charity's assistance. Use the `Contact Me` default from `BRAND.md` unless the page has a genuinely contextual reason for different wording. Do not write third-person phrases such as "Charity can help." Do not repeat Realtor pitches throughout the body.
 
 ## Voice and point of view
 
@@ -309,4 +324,3 @@ Before considering a community page complete, ask:
 6. Are there any Fair Housing or steering concerns?
 7. Are all current facts verified?
 8. Does the page create clear opportunities for deeper future blog content without trying to contain all of it?
-

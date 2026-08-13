@@ -11,7 +11,7 @@ Charity Menefee remains the primary brand. The experience should feel personal r
 ## Personality and communication
 
 - Warm, welcoming, and easy-going.
-- Patient, helpful, and low-pressure.
+- Patient, helpful, and never pushy.
 - Local and familiar without becoming folksy or overly casual.
 - Personal and human, with Charity at the center of the relationship.
 - Visually impressive, but calm and grounded after moments of interaction.
@@ -28,8 +28,10 @@ This is Charity Menefee's personal Realtor brand website. Copy should sound as t
 - Do not force first person into every page or paragraph. Choose the point of view that best serves the content.
 - Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Ordinary personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as an unnamed corporate narrator.
 - Prioritize usefulness first and conversion second. Do not insert a Realtor sales pitch into every informational section.
-- Keep the tone warm, local, conversational, grounded, patient, and low-pressure. Avoid generic marketing language and artificial urgency.
+- Keep the tone warm, local, conversational, grounded, patient, and approachable. Avoid generic marketing language and artificial urgency.
 - Use natural contractions in visible site copy whenever they sound conversational and appropriate. Avoid unnecessarily formal constructions such as `do not`, `I will`, and `you are` when `don't`, `I'll`, and `you're` would sound more natural. Do not force contractions where they would be awkward, emphatic, legal, or otherwise inappropriate.
+
+Low-pressure service is a brand behavior, not a catchphrase. Let the site's calm, patient, straightforward tone show that Charity helps people understand their options and does not manufacture urgency. Avoid repeatedly using `no pressure`, `low pressure`, `without pressure`, `without adding pressure`, or similar wording across pages. A small number of intentional uses may remain where the idea is especially important, such as the homepage or About page.
 
 Use these page-specific conventions:
 
@@ -42,6 +44,10 @@ Use these page-specific conventions:
 - **Legal and disclosure content:** Use the appropriate neutral or formal voice.
 
 All copy must continue to follow Fair Housing requirements. Do not introduce demographic assumptions, steering language, protected-class references, or proxies for protected classes.
+
+## Calls to action
+
+Use `Contact Me` as the default primary visitor-facing CTA. A different CTA is appropriate only when the page context calls for a more specific action and the wording remains clear, natural, and useful.
 
 ## Visual principles
 

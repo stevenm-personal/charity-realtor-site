@@ -17,7 +17,10 @@
 ## Architecture
 
 - Keep this site on Astro with static output.
-- Do not add React, Tailwind, a CMS, a database, or Cloudflare runtime code.
+- Use npm, keep GitHub as the source of truth, and deploy the static build through Cloudflare Workers Static Assets.
+- Keep all non-API routes statically rendered and served from `dist/`.
+- The existing narrowly scoped Cloudflare Worker for `POST /api/contact` is an explicitly approved architectural exception. Do not expand the site into a general Worker application or add new runtime/server-side behavior without a concrete, approved need.
+- Do not add React, Tailwind, a CMS, a database, or another runtime framework.
 - Prefer Astro components and plain CSS. Add client-side JavaScript only when a feature truly requires it.
 - Keep dependencies minimal and explain why any new dependency is needed.
 
@@ -50,6 +53,8 @@
 - Use a conversational first-person voice on Contact and an appropriate neutral or formal voice for legal and disclosure content.
 - Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as a generic corporate narrator.
 - Prioritize usefulness before conversion, avoid generic Realtor marketing language, and do not add a sales pitch to every informational section.
+- Treat low-pressure service as a brand behavior, not a catchphrase. Communicate it through calm, patient, straightforward copy instead of repeatedly saying `no pressure`, `low pressure`, `without pressure`, or similar phrases.
+- Use `Contact Me` as the default primary visitor-facing CTA unless a page has a genuinely contextual reason to use different wording.
 - Use natural contractions in visible site copy whenever they sound conversational and appropriate. Avoid unnecessarily formal constructions such as `do not`, `I will`, and `you are` when `don't`, `I'll`, and `you're` would sound more natural. Do not force contractions where they would be awkward, emphatic, legal, or otherwise inappropriate.
 - Continue following every Fair Housing guardrail above; never introduce demographic assumptions, steering, protected-class language, or protected-class proxies while editing voice.
 
@@ -72,9 +77,10 @@
 ## Images and media
 
 - Prefer `src/assets/` for normal website photography so Astro can process and optimize it.
-- Store Charity headshots, brokerage and Realtor logos, and team or brand graphics in `src/assets/branding/`.
+- Store brokerage and Realtor logos, team graphics, and other true brand assets in `src/assets/branding/`.
+- Store Charity portraits and headshots in `src/assets/charity/`.
 - Store homepage hero and homepage-specific photography in `src/assets/homepage/`.
-- Store location photography in `src/assets/locations/<city>/`, using the matching city folder.
+- Store community photography in `src/assets/communities/<city>/`, using the matching city folder.
 - Store each blog post's featured and inline images in `src/assets/blog/<post-slug>/`.
 - Store images reused across multiple pages in `src/assets/shared/`.
 - Use `public/images/static/` only for assets that must be served unchanged and do not need Astro image optimization.
