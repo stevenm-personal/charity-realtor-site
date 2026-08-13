@@ -1,6 +1,11 @@
 ---
 const currentPath = Astro.url.pathname;
-const isCurrent = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+const normalizePath = (path: string) => path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`;
+const normalizedCurrentPath = normalizePath(currentPath);
+const isCurrentPage = (href: string) => normalizedCurrentPath === normalizePath(href);
+const isCurrentSection = (href: string) => href === '/'
+  ? normalizedCurrentPath === '/'
+  : normalizedCurrentPath.startsWith(normalizePath(href));
 
 const communityLinks = [
   { label: 'Wichita', href: '/communities/wichita/' },
@@ -30,34 +35,34 @@ const communityLinks = [
 
     <nav class="nav-panel" id="primary-navigation" aria-label="Primary navigation">
       <ul class="nav-list">
-        <li><a href="/" aria-current={isCurrent('/') ? 'page' : undefined}>Home</a></li>
+        <li><a href="/" aria-current={isCurrentPage('/') ? 'page' : undefined} data-current-section={isCurrentSection('/') ? 'true' : undefined}>Home</a></li>
         <li class="nav-group">
           <div class="nav-parent">
-            <a href="/services/" aria-current={isCurrent('/services/') ? 'page' : undefined}>Services</a>
-            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show Services links">
+            <a href="/services/" aria-current={isCurrentPage('/services/') ? 'page' : undefined} data-current-section={isCurrentSection('/services/') ? 'true' : undefined}>Services</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="services-submenu" aria-label="Show Services links">
               <span aria-hidden="true">+</span>
             </button>
           </div>
-          <ul class="submenu">
-            <li><a href="/services/buying/">Buying</a></li>
-            <li><a href="/services/selling/">Selling</a></li>
-            <li><a href="/services/land-acreage/">Land &amp; Acreage</a></li>
+          <ul class="submenu" id="services-submenu">
+            <li><a href="/services/buying/" aria-current={isCurrentPage('/services/buying/') ? 'page' : undefined}>Buying</a></li>
+            <li><a href="/services/selling/" aria-current={isCurrentPage('/services/selling/') ? 'page' : undefined}>Selling</a></li>
+            <li><a href="/services/land-acreage/" aria-current={isCurrentPage('/services/land-acreage/') ? 'page' : undefined}>Land &amp; Acreage</a></li>
           </ul>
         </li>
         <li class="nav-group nav-group-wide">
           <div class="nav-parent">
-            <a href="/communities/" aria-current={isCurrent('/communities/') ? 'page' : undefined}>Communities</a>
-            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show Communities links">
+            <a href="/communities/" aria-current={isCurrentPage('/communities/') ? 'page' : undefined} data-current-section={isCurrentSection('/communities/') ? 'true' : undefined}>Communities</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="communities-submenu" aria-label="Show Communities links">
               <span aria-hidden="true">+</span>
             </button>
           </div>
-          <ul class="submenu">
-            {communityLinks.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+          <ul class="submenu" id="communities-submenu">
+            {communityLinks.map((item) => <li><a href={item.href} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>{item.label}</a></li>)}
           </ul>
         </li>
-        <li><a href="/about/" aria-current={isCurrent('/about/') ? 'page' : undefined}>About</a></li>
-        <li><a href="/blog/" aria-current={isCurrent('/blog/') ? 'page' : undefined}>Blog</a></li>
-        <li><a href="/contact/" aria-current={isCurrent('/contact/') ? 'page' : undefined}>Contact</a></li>
+        <li><a href="/about/" aria-current={isCurrentPage('/about/') ? 'page' : undefined} data-current-section={isCurrentSection('/about/') ? 'true' : undefined}>About</a></li>
+        <li><a href="/blog/" aria-current={isCurrentPage('/blog/') ? 'page' : undefined} data-current-section={isCurrentSection('/blog/') ? 'true' : undefined}>Blog</a></li>
+        <li><a href="/contact/" aria-current={isCurrentPage('/contact/') ? 'page' : undefined} data-current-section={isCurrentSection('/contact/') ? 'true' : undefined}>Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -72,33 +77,114 @@ const communityLinks = [
     const menuButton = header.querySelector('.menu-toggle');
     const panel = header.querySelector('.nav-panel');
     const submenuButtons = header.querySelectorAll('.submenu-toggle');
+    const navGroups = header.querySelectorAll('.nav-group');
 
-    const closeMenu = () => {
-      header.classList.remove('menu-open');
-      menuButton?.setAttribute('aria-expanded', 'false');
+    if (!(menuButton instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+
+    const isDesktopNavigation = () => window.matchMedia('(min-width: 67rem)').matches;
+
+    const closeSubmenus = () => {
       submenuButtons.forEach((button) => {
         button.setAttribute('aria-expanded', 'false');
         button.closest('.nav-group')?.classList.remove('submenu-open');
       });
     };
 
-    menuButton?.addEventListener('click', () => {
-      const open = header.classList.toggle('menu-open');
-      menuButton.setAttribute('aria-expanded', String(open));
-      if (open) panel?.querySelector('a')?.focus();
+    const closeMenu = (returnFocus = false) => {
+      header.classList.remove('menu-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      closeSubmenus();
+      if (returnFocus) menuButton.focus({ preventScroll: true });
+    };
+
+    const dismissDesktopSubmenu = (group: Element) => {
+      const submenu = group.querySelector('.submenu');
+      const toggle = group.querySelector('.submenu-toggle');
+      if (!(submenu instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) return;
+
+      closeSubmenus();
+      submenu.hidden = true;
+      toggle.focus({ preventScroll: true });
+    };
+
+    menuButton.addEventListener('click', () => {
+      if (header.classList.contains('menu-open')) {
+        closeMenu();
+        return;
+      }
+
+      header.classList.add('menu-open');
+      menuButton.setAttribute('aria-expanded', 'true');
+      panel.querySelector('a')?.focus();
     });
 
     submenuButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const group = button.closest('.nav-group');
+        if (isDesktopNavigation() && group?.classList.contains('submenu-open')) {
+          dismissDesktopSubmenu(group);
+          return;
+        }
+
+        group?.querySelector('.submenu')?.removeAttribute('hidden');
         const open = group?.classList.toggle('submenu-open') ?? false;
-        button.setAttribute('aria-expanded', String(open));
+        const visuallyOpen = open || (isDesktopNavigation() && Boolean(group?.matches(':hover, :focus-within')));
+        button.setAttribute('aria-expanded', String(visuallyOpen));
       });
     });
 
-    header.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    navGroups.forEach((group) => {
+      const submenu = group.querySelector('.submenu');
+      const toggle = group.querySelector('.submenu-toggle');
+
+      group.addEventListener('focusin', () => {
+        if (isDesktopNavigation() && !submenu?.hasAttribute('hidden')) {
+          toggle?.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      group.addEventListener('focusout', (event) => {
+        const nextTarget = event.relatedTarget;
+        if (!(nextTarget instanceof Node) || !group.contains(nextTarget)) {
+          submenu?.removeAttribute('hidden');
+          if (isDesktopNavigation() && !group.matches(':hover') && !group.classList.contains('submenu-open')) {
+            toggle?.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
+      group.addEventListener('mouseenter', () => {
+        if (isDesktopNavigation() && !submenu?.hasAttribute('hidden')) {
+          toggle?.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      group.addEventListener('mouseleave', () => {
+        if (isDesktopNavigation() && !group.contains(document.activeElement) && !group.classList.contains('submenu-open')) {
+          toggle?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    header.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => closeMenu()));
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeMenu();
+      if (event.key !== 'Escape') return;
+
+      if (header.classList.contains('menu-open')) {
+        event.preventDefault();
+        closeMenu(true);
+        return;
+      }
+
+      const activeElement = document.activeElement;
+      const focusedGroup = activeElement instanceof Element ? activeElement.closest('.nav-group') : null;
+      const openGroup = focusedGroup
+        ?? Array.from(navGroups).find((group) => group.classList.contains('submenu-open') || group.matches(':hover'));
+
+      if (openGroup instanceof HTMLElement) {
+        event.preventDefault();
+        dismissDesktopSubmenu(openGroup);
+      }
     });
 
     const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
