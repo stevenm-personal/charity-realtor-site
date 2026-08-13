@@ -3,6 +3,9 @@ const RECIPIENT_EMAIL = 'stevenm621844@yahoo.com';
 const SENDER_EMAIL = 'website@charitymenefee.com';
 const MAX_REQUEST_BYTES = 20000;
 const EXPECTED_TURNSTILE_ACTION = 'contact';
+const PUSHOVER_ENDPOINT = 'https://api.pushover.net/1/messages.json';
+const PUSHOVER_TITLE = 'New website lead';
+const PUSHOVER_MESSAGE = 'A new contact form message was received. Check your email for the details.';
 const ALLOWED_TURNSTILE_HOSTNAMES = new Set([
   'charity-realtor-site.chalkjhawk79.workers.dev',
   'charitymenefee.com',
@@ -87,6 +90,41 @@ async function verifyTurnstile(token, secret, remoteIp, fetchImpl = fetch) {
   }
 }
 
+async function sendPushoverNotification(env, fetchImpl = fetch) {
+  const token = typeof env.PUSHOVER_APP_TOKEN === 'string' ? env.PUSHOVER_APP_TOKEN.trim() : '';
+  const user = typeof env.PUSHOVER_USER_KEY === 'string' ? env.PUSHOVER_USER_KEY.trim() : '';
+
+  if (!token || !user) {
+    console.warn('Pushover notification skipped: configuration unavailable');
+    return;
+  }
+
+  try {
+    const response = await fetchImpl(PUSHOVER_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        token,
+        user,
+        title: PUSHOVER_TITLE,
+        message: PUSHOVER_MESSAGE,
+      }),
+    });
+
+    if (!response.ok) {
+      console.error('Pushover notification failed');
+      return;
+    }
+
+    const result = await response.json();
+    if (result?.status !== 1) {
+      console.error('Pushover notification failed');
+    }
+  } catch {
+    console.error('Pushover notification failed');
+  }
+}
+
 function buildEmail(submission) {
   return {
     to: RECIPIENT_EMAIL,
@@ -107,7 +145,7 @@ function buildEmail(submission) {
   };
 }
 
-export async function handleRequest(request, env, dependencies = {}) {
+export async function handleRequest(request, env, dependencies = {}, ctx) {
   const url = new URL(request.url);
 
   if (url.pathname !== CONTACT_PATH) {
@@ -188,16 +226,36 @@ export async function handleRequest(request, env, dependencies = {}) {
 
   try {
     await env.EMAIL.send(buildEmail(submission));
-    return jsonResponse({ success: true });
   } catch {
     console.error('Contact form email delivery error');
     return jsonResponse({ success: false, error: 'server' }, 500);
   }
+
+  const pushoverNotifier = dependencies.sendPushoverNotification ?? sendPushoverNotification;
+  const pushoverPromise = Promise.resolve()
+    .then(() => pushoverNotifier(env, dependencies.pushoverFetch))
+    .catch(() => console.error('Pushover notification failed'));
+  let pushoverScheduled = false;
+
+  if (ctx?.waitUntil) {
+    try {
+      ctx.waitUntil(pushoverPromise);
+      pushoverScheduled = true;
+    } catch {
+      console.error('Pushover notification failed');
+    }
+  }
+
+  if (!pushoverScheduled) {
+    await pushoverPromise;
+  }
+
+  return jsonResponse({ success: true });
 }
 
 export default {
-  fetch(request, env) {
-    return handleRequest(request, env);
+  fetch(request, env, ctx) {
+    return handleRequest(request, env, {}, ctx);
   },
 };
 

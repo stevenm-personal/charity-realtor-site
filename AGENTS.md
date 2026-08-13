@@ -20,6 +20,7 @@
 - Use npm, keep GitHub as the source of truth, and deploy the static build through Cloudflare Workers Static Assets.
 - Keep all non-API routes statically rendered and served from `dist/`.
 - The existing narrowly scoped Cloudflare Worker for `POST /api/contact` is an explicitly approved architectural exception. Do not expand the site into a general Worker application or add new runtime/server-side behavior without a concrete, approved need.
+- The Contact Worker may send an optional generic Pushover alert only after lead email delivery succeeds. Keep it non-critical through background execution, and never include visitor-submitted data in the alert.
 - Do not add React, Tailwind, a CMS, a database, or another runtime framework.
 - Prefer Astro components and plain CSS. Add client-side JavaScript only when a feature truly requires it.
 - Keep dependencies minimal and explain why any new dependency is needed.

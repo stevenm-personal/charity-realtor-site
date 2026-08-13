@@ -40,9 +40,12 @@ Visitor Contact form
 -> server-side validation
 -> Cloudflare email binding
 -> verified destination email
+-> optional generic Pushover alert scheduled in the background
 ```
 
-The form requires Name, Email, and Message. Phone is optional. Message length is limited to 3 through 5000 characters. The Worker normalizes and validates the submission, checks a hidden honeypot, and verifies the Turnstile token, `contact` action, and approved site hostname through server-side Siteverify before sending one plain-text notification. The visitor's validated email becomes Reply-To. The sender and recipient remain fixed server-side, and the Cloudflare binding restricts the permitted destination and sender.
+The form requires Name, Email, and Message. Phone is optional. Message length is limited to 3 through 5000 characters. The Worker normalizes and validates the submission, checks a hidden honeypot, and verifies the Turnstile token, `contact` action, and approved site hostname through server-side Siteverify before sending one plain-text email. The visitor's validated email becomes Reply-To. The sender and recipient remain fixed server-side, and the Cloudflare binding restricts the permitted destination and sender.
+
+After the email succeeds, the Worker uses `ctx.waitUntil()` to schedule an optional Pushover lead alert. Configure `PUSHOVER_APP_TOKEN` and `PUSHOVER_USER_KEY` as private Worker runtime secrets. The user key may identify an individual account or a Pushover Delivery Group. Pushover receives only the generic notification `New website lead` with the message `A new contact form message was received. Check your email for the details.` Visitor-submitted names, email addresses, phone numbers, messages, IP addresses, and verification data are not sent to Pushover. Missing Pushover configuration or a notification failure does not change a successful Contact submission because the email remains the authoritative lead record.
 
 The client provides sending, success, verification-error, and delivery-error states. A confirmed successful submission displays `Message sent!`. Turnstile uses Managed mode with `interaction-only` appearance. The earlier Contact-page development warning was intentionally removed after the deployed development site completed a successful end-to-end email-delivery test.
 
