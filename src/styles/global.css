@@ -2654,17 +2654,12 @@ textarea:focus-visible {
     align-items: stretch;
   }
 
-  .featured-community:first-child {
-    grid-row: auto;
+  .featured-community-primary {
     min-height: 34rem;
   }
 
-  .featured-community:not(:first-child) {
+  .featured-community:not(.featured-community-primary) {
     min-height: 30rem;
-  }
-
-  .featured-community:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
   }
 
   .planned-community-layout {
@@ -2853,15 +2848,16 @@ textarea:focus-visible {
 
 @media (min-width: 67rem) {
   .featured-community-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .featured-community:first-child {
-    grid-column: auto;
+  .featured-community-primary {
+    grid-column: span 3;
   }
 
-  .featured-community:last-child:nth-child(odd) {
+  .featured-community:not(.featured-community-primary) {
     grid-column: span 2;
+    min-height: 28rem;
   }
 
   .menu-toggle {
