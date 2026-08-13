@@ -434,11 +434,22 @@ p {
   font-size: 1.4rem;
 }
 
-.submenu-toggle span {
+.nav-section-toggle {
+  display: flex;
+  width: 100%;
+  min-height: 3.4rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  text-align: left;
+}
+
+.submenu-toggle > [aria-hidden="true"] {
   transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
-.submenu-open .submenu-toggle span {
+.submenu-open .submenu-toggle > [aria-hidden="true"] {
   transform: rotate(45deg);
 }
 
@@ -468,12 +479,14 @@ p {
 }
 
 .nav-list a[aria-current="page"],
-.nav-list a[data-current-section="true"] {
+.nav-list a[data-current-section="true"],
+.nav-section-toggle[data-current-section="true"] {
   color: var(--color-accent);
 }
 
 .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list a[aria-current="page"],
-.page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list a[data-current-section="true"] {
+.page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list a[data-current-section="true"],
+.page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-section-toggle[data-current-section="true"] {
   color: var(--color-accent-on-dark);
 }
 
@@ -2347,6 +2360,7 @@ textarea:focus-visible {
 
   .footer-nav a:hover,
   .nav-panel a:hover,
+  .nav-section-toggle:hover,
   .arrow-link:hover {
     color: var(--color-accent);
   }
@@ -2355,6 +2369,7 @@ textarea:focus-visible {
   .footer-contact a:hover,
   .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list > li > a:hover,
   .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-parent > a:hover,
+  .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-section-toggle:hover,
   .service-card:nth-child(3) .arrow-link:hover,
   .communities-home .arrow-link:hover {
     color: var(--color-accent-on-dark);
@@ -2900,6 +2915,16 @@ textarea:focus-visible {
 
   .nav-parent {
     display: flex;
+  }
+
+  .nav-section-toggle {
+    width: auto;
+    gap: 0.2rem;
+    justify-content: flex-start;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 750;
+    letter-spacing: 0.015em;
   }
 
   .submenu-toggle {
