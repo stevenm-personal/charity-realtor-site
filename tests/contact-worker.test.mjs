@@ -23,7 +23,11 @@ function testEnv(send = async () => ({ messageId: 'test-message' })) {
   return { TURNSTILE_SECRET: 'test-only', EMAIL: { send } };
 }
 
-const passesTurnstile = async () => ({ success: true });
+const passesTurnstile = async () => ({
+  success: true,
+  action: contactConfig.turnstile.action,
+  hostname: 'charity-realtor-site.chalkjhawk79.workers.dev',
+});
 
 test('accepts a valid submission and sends only to the fixed recipient', async () => {
   let sentMessage;
@@ -96,15 +100,20 @@ test('rejects oversized input', async () => {
 
 test('safely accepts a populated honeypot without sending email', async () => {
   let sent = false;
+  let verified = false;
   const response = await handleRequest(
     contactRequest({ ...validFields, website: 'https://spam.example' }),
     testEnv(async () => {
       sent = true;
     }),
-    { verifyTurnstile: passesTurnstile },
+    { verifyTurnstile: async () => {
+      verified = true;
+      return passesTurnstile();
+    } },
   );
   assert.equal(response.status, 200);
   assert.equal(sent, false);
+  assert.equal(verified, false);
 });
 
 test('rejects a missing Turnstile token', async () => {
@@ -127,6 +136,47 @@ test('rejects an invalid Turnstile token without sending email', async () => {
   assert.equal(response.status, 403);
   assert.equal(sent, false);
 });
+
+test('accepts the approved production Turnstile hostname', async () => {
+  let sent = false;
+  const response = await handleRequest(
+    contactRequest(),
+    testEnv(async () => {
+      sent = true;
+      return { messageId: 'test-message' };
+    }),
+    { verifyTurnstile: async () => ({
+      success: true,
+      action: contactConfig.turnstile.action,
+      hostname: 'charitymenefee.com',
+    }) },
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal(sent, true);
+});
+
+for (const [name, result] of [
+  ['an incorrect action', { success: true, action: 'login', hostname: 'charitymenefee.com' }],
+  ['a missing action', { success: true, hostname: 'charitymenefee.com' }],
+  ['an incorrect hostname', { success: true, action: 'contact', hostname: 'example.com' }],
+  ['a missing hostname', { success: true, action: 'contact' }],
+]) {
+  test(`rejects ${name} without sending email`, async () => {
+    let sent = false;
+    const response = await handleRequest(
+      contactRequest(),
+      testEnv(async () => {
+        sent = true;
+      }),
+      { verifyTurnstile: async () => result },
+    );
+
+    assert.equal(response.status, 403);
+    assert.deepEqual(await response.json(), { success: false, error: 'verification' });
+    assert.equal(sent, false);
+  });
+}
 
 test('returns a server error when Turnstile verification is unavailable', async () => {
   const response = await handleRequest(

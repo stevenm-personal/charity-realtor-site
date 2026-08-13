@@ -2,6 +2,11 @@ const CONTACT_PATH = '/api/contact';
 const RECIPIENT_EMAIL = 'stevenm621844@yahoo.com';
 const SENDER_EMAIL = 'website@charitymenefee.com';
 const MAX_REQUEST_BYTES = 20000;
+const EXPECTED_TURNSTILE_ACTION = 'contact';
+const ALLOWED_TURNSTILE_HOSTNAMES = new Set([
+  'charity-realtor-site.chalkjhawk79.workers.dev',
+  'charitymenefee.com',
+]);
 
 const limits = {
   name: { min: 1, max: 100 },
@@ -166,6 +171,16 @@ export async function handleRequest(request, env, dependencies = {}) {
     return jsonResponse({ success: false, error: 'verification' }, 403);
   }
 
+  if (turnstileResult.action !== EXPECTED_TURNSTILE_ACTION) {
+    console.warn('Contact form Turnstile action mismatch');
+    return jsonResponse({ success: false, error: 'verification' }, 403);
+  }
+
+  if (!ALLOWED_TURNSTILE_HOSTNAMES.has(turnstileResult.hostname)) {
+    console.warn('Contact form Turnstile hostname mismatch');
+    return jsonResponse({ success: false, error: 'verification' }, 403);
+  }
+
   if (!env.EMAIL?.send) {
     console.error('Contact form email binding unavailable');
     return jsonResponse({ success: false, error: 'server' }, 500);
@@ -190,5 +205,9 @@ export const contactConfig = {
   path: CONTACT_PATH,
   recipient: RECIPIENT_EMAIL,
   sender: SENDER_EMAIL,
+  turnstile: {
+    action: EXPECTED_TURNSTILE_ACTION,
+    allowedHostnames: [...ALLOWED_TURNSTILE_HOSTNAMES],
+  },
   limits,
 };

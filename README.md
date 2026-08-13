@@ -42,7 +42,7 @@ Visitor Contact form
 -> verified destination email
 ```
 
-The form requires Name, Email, and Message. Phone is optional. Message length is limited to 3 through 5000 characters. The Worker normalizes and validates the submission, checks a hidden honeypot, verifies Turnstile through server-side Siteverify, and sends one plain-text notification. The visitor's validated email becomes Reply-To. The sender and recipient remain fixed server-side, and the Cloudflare binding restricts the permitted destination and sender.
+The form requires Name, Email, and Message. Phone is optional. Message length is limited to 3 through 5000 characters. The Worker normalizes and validates the submission, checks a hidden honeypot, and verifies the Turnstile token, `contact` action, and approved site hostname through server-side Siteverify before sending one plain-text notification. The visitor's validated email becomes Reply-To. The sender and recipient remain fixed server-side, and the Cloudflare binding restricts the permitted destination and sender.
 
 The client provides sending, success, verification-error, and delivery-error states. A confirmed successful submission displays `Message sent!`. Turnstile uses Managed mode with `interaction-only` appearance. The earlier Contact-page development warning was intentionally removed after the deployed development site completed a successful end-to-end email-delivery test.
 
