@@ -434,17 +434,6 @@ p {
   font-size: 1.4rem;
 }
 
-.nav-section-toggle {
-  display: flex;
-  width: 100%;
-  min-height: 3.4rem;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-display);
-  font-size: 1.28rem;
-  text-align: left;
-}
-
 .submenu-toggle > [aria-hidden="true"] {
   transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
@@ -479,14 +468,12 @@ p {
 }
 
 .nav-list a[aria-current="page"],
-.nav-list a[data-current-section="true"],
-.nav-section-toggle[data-current-section="true"] {
+.nav-list a[data-current-section="true"] {
   color: var(--color-accent);
 }
 
 .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list a[aria-current="page"],
-.page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list a[data-current-section="true"],
-.page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-section-toggle[data-current-section="true"] {
+.page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list a[data-current-section="true"] {
   color: var(--color-accent-on-dark);
 }
 
@@ -1044,6 +1031,176 @@ p {
 
 .service-card:nth-child(3) .arrow-link {
   border-color: var(--color-border-on-image);
+}
+
+/* Services routing page */
+.services-router-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3.25rem, 8vw, 5rem);
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(135deg, var(--color-background), var(--color-surface));
+}
+
+.services-router-hero::after {
+  position: absolute;
+  right: -11rem;
+  bottom: -16rem;
+  width: 28rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.services-router-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.services-router-hero h1 {
+  max-width: 14ch;
+  margin-bottom: var(--space-5);
+  font-size: clamp(3.25rem, 10vw, 5.6rem);
+  line-height: 0.96;
+}
+
+.services-router-hero-inner > p:last-child {
+  max-width: 41rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+}
+
+.services-router-options {
+  padding-block: clamp(3rem, 7vw, 5rem);
+  background: var(--color-surface);
+}
+
+.services-router-heading {
+  max-width: 43rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.services-router-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(2.15rem, 6vw, 3.5rem);
+  line-height: 1;
+}
+
+.service-route-list {
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.service-route {
+  position: relative;
+  display: grid;
+  min-height: 10rem;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: var(--space-3) var(--space-4);
+  align-items: start;
+  padding: var(--space-6) var(--space-3);
+  border-bottom: 1px solid var(--color-border-strong);
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-ease-standard),
+    box-shadow var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.service-route-number {
+  grid-row: 1 / span 3;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: 2.45rem;
+  line-height: 0.9;
+}
+
+.service-route h3 {
+  margin-bottom: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 7vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.service-route p {
+  max-width: 38rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+.service-route-action {
+  justify-self: start;
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid currentColor;
+  color: var(--color-accent);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.service-route-action span {
+  display: inline-block;
+  transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.services-router-approach {
+  padding-block: clamp(3.75rem, 8vw, 6rem);
+  background: var(--color-sage-soft);
+}
+
+.services-router-approach-inner {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.services-router-approach h2 {
+  max-width: 14ch;
+  margin-bottom: 0;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  line-height: 1;
+}
+
+.services-router-approach-inner > p {
+  max-width: 39rem;
+  margin-bottom: 0;
+  align-self: end;
+  color: var(--color-text-muted);
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+}
+
+.services-router-cta {
+  color: var(--color-text-on-dark);
+  background: var(--color-primary);
+}
+
+.services-router-cta-inner {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: clamp(3.75rem, 8vw, 5.5rem);
+}
+
+.services-router-cta h2 {
+  max-width: 13ch;
+  margin-bottom: 0;
+  font-size: clamp(2.35rem, 8vw, 4.25rem);
+  line-height: 1;
+}
+
+.services-router-cta-copy {
+  align-self: end;
+}
+
+.services-router-cta-copy p {
+  max-width: 32rem;
+  color: var(--color-text-on-dark-muted);
+}
+
+.services-router-cta-copy .button {
+  margin-top: var(--space-2);
 }
 
 .communities-home {
@@ -2358,9 +2515,17 @@ textarea:focus-visible {
     transform: translateX(0.2rem);
   }
 
+  .service-route:hover {
+    background: var(--color-accent-soft);
+    box-shadow: inset 0.2rem 0 0 var(--color-accent);
+  }
+
+  .service-route:hover .service-route-action span {
+    transform: translateX(0.2rem);
+  }
+
   .footer-nav a:hover,
   .nav-panel a:hover,
-  .nav-section-toggle:hover,
   .arrow-link:hover {
     color: var(--color-accent);
   }
@@ -2369,7 +2534,6 @@ textarea:focus-visible {
   .footer-contact a:hover,
   .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-list > li > a:hover,
   .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-parent > a:hover,
-  .page-home .site-header:not(.is-scrolled):not(.menu-open) .nav-section-toggle:hover,
   .service-card:nth-child(3) .arrow-link:hover,
   .communities-home .arrow-link:hover {
     color: var(--color-accent-on-dark);
@@ -2469,6 +2633,34 @@ textarea:focus-visible {
     padding: clamp(2rem, 4vw, 3.5rem);
     background: var(--color-surface-translucent);
     box-shadow: var(--shadow-layered);
+  }
+
+  .services-router-hero::after {
+    right: -8rem;
+    bottom: -20rem;
+    width: 39rem;
+  }
+
+  .service-route {
+    grid-template-columns: 4.5rem minmax(11rem, 0.55fr) minmax(0, 1fr);
+    gap: var(--space-4) var(--space-6);
+    align-items: center;
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .service-route-number {
+    grid-row: 1 / span 2;
+    font-size: 3.25rem;
+  }
+
+  .service-route-action {
+    grid-column: 2 / -1;
+  }
+
+  .services-router-approach-inner,
+  .services-router-cta-inner {
+    grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1fr);
+    gap: clamp(3rem, 8vw, 7rem);
   }
 
   .buying-roadmap {
@@ -2862,6 +3054,20 @@ textarea:focus-visible {
 }
 
 @media (min-width: 67rem) {
+  .service-route {
+    grid-template-columns: 5rem minmax(12rem, 0.55fr) minmax(18rem, 1fr) auto;
+    gap: var(--space-6);
+  }
+
+  .service-route-number {
+    grid-row: auto;
+  }
+
+  .service-route-action {
+    grid-column: auto;
+    justify-self: end;
+  }
+
   .featured-community-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -2915,16 +3121,6 @@ textarea:focus-visible {
 
   .nav-parent {
     display: flex;
-  }
-
-  .nav-section-toggle {
-    width: auto;
-    gap: 0.2rem;
-    justify-content: flex-start;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    font-weight: 750;
-    letter-spacing: 0.015em;
   }
 
   .submenu-toggle {

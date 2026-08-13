@@ -36,17 +36,11 @@ const communityLinks = [
     <nav class="nav-panel" id="primary-navigation" aria-label="Primary navigation">
       <ul class="nav-list">
         <li><a href="/" aria-current={isCurrentPage('/') ? 'page' : undefined} data-current-section={isCurrentSection('/') ? 'true' : undefined}>Home</a></li>
-        <li class="nav-group nav-group-services">
-          <div class="nav-parent nav-parent-services">
-            <button
-              class="submenu-toggle nav-section-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="services-submenu"
-              data-current-section={isCurrentSection('/services') ? 'true' : undefined}
-            >
-              <span class="nav-section-toggle-label">Services</span>
-              <span class="nav-section-toggle-icon" aria-hidden="true">+</span>
+        <li class="nav-group">
+          <div class="nav-parent">
+            <a href="/services/" aria-current={isCurrentPage('/services/') ? 'page' : undefined} data-current-section={isCurrentSection('/services/') ? 'true' : undefined}>Services</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="services-submenu" aria-label="Show Services links">
+              <span aria-hidden="true">+</span>
             </button>
           </div>
           <ul class="submenu" id="services-submenu">

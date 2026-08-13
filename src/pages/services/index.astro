@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const servicePaths = [
+  {
+    number: '01',
+    title: 'Buying',
+    description: 'Get clear on your priorities, understand each step, and move from the first questions through closing.',
+    href: '/services/buying/',
+  },
+  {
+    number: '02',
+    title: 'Selling',
+    description: 'Build a practical plan for preparing, pricing, presenting, and bringing your home to market.',
+    href: '/services/selling/',
+  },
+  {
+    number: '03',
+    title: 'Land & Acreage',
+    description: 'Work through access, utilities, boundaries, and the property-specific questions that come with more land.',
+    href: '/services/land-acreage/',
+  },
+];
+---
+
+<BaseLayout
+  title="Real Estate Services | Charity Menefee"
+  description="Find the right starting point for buying, selling, or exploring land and acreage with Charity Menefee in the Wichita area."
+>
+  <div class="services-router-page">
+    <section class="services-router-hero" aria-labelledby="services-page-title">
+      <div class="shell services-router-hero-inner" data-reveal="hero-copy">
+        <p class="eyebrow">Services</p>
+        <h1 id="services-page-title">How can I help?</h1>
+        <p>Buying, selling, and land each come with different questions. Start with the path that best fits what you're trying to do.</p>
+      </div>
+    </section>
+
+    <section class="services-router-options" aria-labelledby="service-path-title">
+      <div class="shell">
+        <div class="services-router-heading" data-reveal="left">
+          <p class="eyebrow">Choose a starting point</p>
+          <h2 id="service-path-title">Three paths, each with its own details.</h2>
+        </div>
+
+        <div class="service-route-list reveal-stagger">
+          {servicePaths.map((service) => (
+            <a class="service-route" href={service.href} data-reveal="up">
+              <span class="service-route-number" aria-hidden="true">{service.number}</span>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <span class="service-route-action">
+                Explore {service.title} <span aria-hidden="true">→</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="services-router-approach" aria-labelledby="services-approach-title">
+      <div class="shell services-router-approach-inner">
+        <div data-reveal="left">
+          <p class="eyebrow">A straightforward approach</p>
+          <h2 id="services-approach-title">You can start before you know every step.</h2>
+        </div>
+        <p data-reveal="right">I'll help you understand the decisions in front of you, what deserves your attention, and what comes next.</p>
+      </div>
+    </section>
+
+    <section class="services-router-cta" aria-labelledby="services-cta-title">
+      <div class="shell services-router-cta-inner">
+        <div data-reveal="left">
+          <p class="eyebrow eyebrow-light">A simple place to begin</p>
+          <h2 id="services-cta-title">Not sure which path fits?</h2>
+        </div>
+        <div class="services-router-cta-copy" data-reveal="right">
+          <p>That's okay. Tell me what you're considering, and we can start there.</p>
+          <a class="button button-light" href="/contact/">Contact Me <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

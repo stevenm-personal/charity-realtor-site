@@ -220,7 +220,7 @@ Avoid publishing large volumes of thin, repetitive, or lightly edited AI-generat
 
 Create intentional relationships between pages, such as:
 
-1. Homepage service overview to the individual Buying, Selling, or Land and Acreage pages.
+1. Homepage to Services to Buying, Selling, or Land and Acreage.
 2. Homepage to Communities to individual community guides.
 3. Community guide to a relevant deeper blog article.
 4. Blog article to a relevant community or service page.
