@@ -4,11 +4,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCards from '../components/ServiceCards.astro';
+import { blogPosts } from '../data/blogPosts';
 import charityPhoto from '../assets/charity/charity-headshot-sitting-cropped.jpg';
 import andoverPhoto from '../assets/communities/andover/andover-captiol-federal-ampitheater-LK-Architecture.jpg';
 import derbyPhoto from '../assets/communities/derby/derby-canoes-travelks.jpg';
 import wichitaPhoto from '../assets/communities/wichita/Wichita_Downtown.jpg';
 import valleyCenterPhoto from '../assets/communities/valley-center/valley-center-water-tower.jpg';
+
+const recentPosts = blogPosts.slice(0, 2);
 ---
 
 <BaseLayout
@@ -143,17 +146,36 @@ import valleyCenterPhoto from '../assets/communities/valley-center/valley-center
   </section>
 
   <section class="journal-preview section-space" aria-labelledby="journal-title">
-    <div class="shell journal-grid">
+    <div class="shell journal-preview-grid">
       <div class="journal-intro" data-reveal="left">
         <p class="eyebrow">From the journal</p>
-        <h2 id="journal-title">Useful guidance, without the filler.</h2>
-        <p>Articles are being prepared for a future launch. They'll focus on useful information for real decisions.</p>
+        <h2 id="journal-title">Local stories and useful guidance.</h2>
+        <p>I share local places, community happenings, and practical real estate information to help you get to know the area and make informed decisions.</p>
         <a class="arrow-link" href="/blog/">Visit the blog <span aria-hidden="true">→</span></a>
       </div>
-      <div class="future-topics reveal-stagger" aria-label="Planned article topics">
-        <article data-reveal="up"><span>Planned topic</span><h3>Buying with a clearer picture</h3><p>Practical preparation and questions worth asking.</p></article>
-        <article data-reveal="up"><span>Planned topic</span><h3>Selling with a thoughtful plan</h3><p>Useful ways to prepare before the listing begins.</p></article>
-        <article data-reveal="up"><span>Planned topic</span><h3>Land, acreage, and local life</h3><p>Grounded context for rural-property decisions.</p></article>
+
+      <div class="journal-cards reveal-stagger" aria-label="Recent journal stories">
+        {recentPosts.map((post) => (
+          <article class="journal-card" data-reveal="up">
+            <a class="journal-card-media" href={post.href} aria-label={`Read ${post.title}`}>
+              <Picture
+                class="journal-card-photo"
+                src={post.thumbnail}
+                formats={['avif', 'webp']}
+                widths={[320, 480, 640]}
+                sizes="(min-width: 67rem) 220px, (min-width: 48rem) 30vw, 100vw"
+                alt={post.thumbnailAlt}
+              />
+              {post.thumbnailCredit && <span class="journal-card-credit">{post.thumbnailCredit}</span>}
+            </a>
+            <div class="journal-card-copy">
+              <p class="journal-card-meta">{post.category} · {post.location}</p>
+              <h3><a href={post.href}>{post.title}</a></h3>
+              <p class="journal-card-excerpt">{post.excerpt}</p>
+              <a class="arrow-link" href={post.href}>Read the story <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>

@@ -1,3 +1,6 @@
+import type { ImageMetadata } from 'astro';
+import valleyCenterParkPhoto from '../assets/blog/1-local-guide-valley-center/valley-center-mclaughlin-park.jpg';
+
 export interface BlogPostSummary {
   slug: string;
   href: string;
@@ -10,6 +13,9 @@ export interface BlogPostSummary {
   publishedDate: string;
   displayDate: string;
   photoLabel: string;
+  thumbnail: ImageMetadata;
+  thumbnailAlt: string;
+  thumbnailCredit?: string;
 }
 
 export const valleyCenterFavoritesPost: BlogPostSummary = {
@@ -24,6 +30,8 @@ export const valleyCenterFavoritesPost: BlogPostSummary = {
   publishedDate: '2026-08-13',
   displayDate: 'August 13, 2026',
   photoLabel: 'Valley Center hometown favorites',
+  thumbnail: valleyCenterParkPhoto,
+  thumbnailAlt: 'Children playing in the splash pad at McLaughlin Park in Valley Center',
 };
 
 export const blogPosts: BlogPostSummary[] = [valleyCenterFavoritesPost];
