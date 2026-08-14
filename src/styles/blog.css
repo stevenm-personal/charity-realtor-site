@@ -226,15 +226,19 @@
 }
 
 .blog-intro-copy {
-  max-width: 47rem;
+  max-width: 54rem;
   margin-inline: auto;
 }
 
-.blog-intro-copy p {
+.blog-intro-label {
+  font-family: var(--font-body);
+}
+
+.blog-intro-copy > p {
   color: var(--color-text-muted);
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3.7vw, 1.9rem);
-  line-height: 1.5;
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  line-height: 1.55;
 }
 
 .blog-intro-copy p:last-child {
@@ -333,6 +337,10 @@
 .blog-festival-intro {
   max-width: 54rem;
   margin-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+.blog-entry-park .blog-entry-heading {
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
 }
 
 .blog-park-grid {
@@ -443,23 +451,18 @@
 
 .blog-guide-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4) var(--space-5);
-  align-items: center;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
   margin-top: var(--space-5);
 }
 
 .blog-contact-link {
-  display: inline-flex;
-  min-height: 2.75rem;
-  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  border-color: var(--color-accent);
   color: var(--color-accent);
-  font-size: 0.78rem;
-  font-weight: 750;
-  letter-spacing: 0.06em;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  text-transform: uppercase;
+  background: transparent;
 }
 
 @media (hover: hover) {
@@ -478,6 +481,7 @@
 
   .blog-contact-link:hover {
     color: var(--color-text);
+    background: var(--color-accent-soft);
   }
 }
 
