@@ -12,6 +12,7 @@ interface Props {
   variant?: 'default' | 'community' | 'about';
   imagePosition?: string;
   imagePositionMobile?: string;
+  imageSizes?: string;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   variant = 'default',
   imagePosition = 'center center',
   imagePositionMobile = imagePosition,
+  imageSizes = '100vw',
 } = Astro.props;
 
 const heroStyle: Record<string, string> | undefined = image
@@ -79,7 +81,7 @@ const isAboutHero = variant === 'about' && image;
           src={image}
           formats={['avif', 'webp']}
           widths={[640, 960, 1280, 1680]}
-          sizes="100vw"
+          sizes={imageSizes}
           alt={imageAlt}
           loading="eager"
           fetchpriority="high"
