@@ -2,7 +2,7 @@
 import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { blogPosts } from '../data/blogPosts';
-import purpleSpoonPhoto from '../assets/blog/1-local-guide-valley-center/valley-center-purple-spoon-facebook.jpg';
+import purpleSpoonPhoto from '../assets/blog/1-local-guide-valley-center/purple-spoon-storefront-sunset.jpg';
 import '../styles/blog.css';
 
 const [featuredPost] = blogPosts;
@@ -25,16 +25,19 @@ const [featuredPost] = blogPosts;
     <div class="shell">
       <p class="eyebrow" data-reveal="left">Latest story</p>
       <article class="blog-featured-post">
-        <a class="blog-featured-media" href={featuredPost.href} aria-label={`Read ${featuredPost.title}`} data-reveal="left-scale">
-          <Picture
-            class="blog-featured-photo"
-            src={purpleSpoonPhoto}
-            formats={['avif', 'webp']}
-            widths={[480, 720, 960, 1280, 1536]}
-            sizes="(min-width: 48rem) 50vw, 100vw"
-            alt="The Purple Spoon sign on Main Street at sunset"
-          />
-        </a>
+        <div class="blog-featured-visual" data-reveal="left-scale">
+          <a class="blog-featured-media" href={featuredPost.href} aria-label={`Read ${featuredPost.title}`}>
+            <Picture
+              class="blog-featured-photo"
+              src={purpleSpoonPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280, 1536]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="The Purple Spoon sign on Main Street at sunset"
+            />
+          </a>
+          <p class="blog-photo-credit">Photo courtesy of The Purple Spoon</p>
+        </div>
         <div class="blog-featured-copy" data-reveal="right">
           <p class="blog-card-meta">{featuredPost.category} · {featuredPost.location}</p>
           <h2 id="latest-post-title"><a href={featuredPost.href}>{featuredPost.title}</a></h2>
