@@ -391,7 +391,7 @@ Keep the two environments conceptually separate.
 - Uses the `workers.dev` preview URL.
 - Preserves `noindex` and `nofollow` controls.
 - Currently retains launch placeholders for the Privacy and Disclaimer pages.
-- May have an empty Blog until genuinely useful articles are ready.
+- Publishes Blog articles only when genuinely useful, accurate material is ready.
 - Does not yet have an approved analytics implementation.
 - Uses the temporary contact-form delivery configuration documented in `README.md`.
 - Must not emit production canonical URLs or structured business claims prematurely.

@@ -1,39 +1,48 @@
 ---
+import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CallToAction from '../components/CallToAction.astro';
-import PageHero from '../components/PageHero.astro';
+import { blogPosts } from '../data/blogPosts';
+import purpleSpoonPhoto from '../assets/blog/1-local-guide-valley-center/valley-center-purple-spoon-facebook.jpg';
+import '../styles/blog.css';
+
+const [featuredPost] = blogPosts;
 ---
 
 <BaseLayout
-  title="Real Estate Notes and Local Guides | Charity Menefee"
-  description="The future home for useful buying, selling, acreage, and Wichita-area articles from Charity Menefee."
+  title="Local Guides and Real Estate Notes | Charity Menefee"
+  description="Local places, community happenings, and practical real estate information from Charity Menefee in Valley Center, Wichita, and nearby Kansas communities."
+  pageClass="page-interior page-blog-landing"
 >
-  <PageHero
-    eyebrow="The journal"
-    title="Useful notes for real decisions."
-    intro="This will be a growing collection of practical buying, selling, land, and Wichita-area information, written to help rather than fill a search-results page."
-  />
-
-  <section class="section-space" aria-labelledby="blog-status-title">
-    <div class="shell empty-editorial" data-reveal="scale-up">
-      <span class="status-label">Articles in preparation</span>
-      <div>
-        <h2 id="blog-status-title">The shelves are being built before the library opens.</h2>
-        <p>No articles have been published yet. The blog architecture is ready for future Markdown or MDX content, but this page won't pretend placeholder headlines are finished advice.</p>
-      </div>
+  <section class="blog-landing-hero" aria-labelledby="blog-title">
+    <div class="shell blog-landing-hero-inner" data-reveal="hero-copy">
+      <p class="eyebrow">From around home</p>
+      <h1 id="blog-title">Local places, useful information, and a few things worth knowing.</h1>
+      <p>A mix of hometown favorites, community happenings, and practical real estate information from Valley Center, Wichita, and nearby communities.</p>
     </div>
   </section>
 
-  <section class="section-space section-sage" aria-labelledby="blog-topics-title">
+  <section class="blog-latest" aria-labelledby="latest-post-title">
     <div class="shell">
-      <div class="section-heading split-heading"><div data-reveal="left"><p class="eyebrow">Planned coverage</p><h2 id="blog-topics-title">A practical mix of home and place.</h2></div><p data-reveal="right">Future articles will be added only when there is something useful and accurate to say.</p></div>
-      <div class="topic-grid reveal-stagger">
-        <article data-reveal="up"><span>01</span><h3>Buying</h3><p>Preparation, process questions, property considerations, and ways to compare options.</p></article>
-        <article data-reveal="up"><span>02</span><h3>Selling</h3><p>Thoughtful preparation, presentation, and the decisions that come before a listing.</p></article>
-        <article data-reveal="up"><span>03</span><h3>Land & acreage</h3><p>Practical considerations and questions to investigate with qualified professionals.</p></article>
-        <article data-reveal="up"><span>04</span><h3>Local context</h3><p>Verified Wichita-area information and community resources for real visitors.</p></article>
-      </div>
+      <p class="eyebrow" data-reveal="left">Latest story</p>
+      <article class="blog-featured-post">
+        <a class="blog-featured-media" href={featuredPost.href} aria-label={`Read ${featuredPost.title}`} data-reveal="left-scale">
+          <Picture
+            class="blog-featured-photo"
+            src={purpleSpoonPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280, 1536]}
+            sizes="(min-width: 48rem) 50vw, 100vw"
+            alt="The Purple Spoon sign on Main Street at sunset"
+          />
+        </a>
+        <div class="blog-featured-copy" data-reveal="right">
+          <p class="blog-card-meta">{featuredPost.category} · {featuredPost.location}</p>
+          <h2 id="latest-post-title"><a href={featuredPost.href}>{featuredPost.title}</a></h2>
+          <p>{featuredPost.excerpt}</p>
+          <p class="blog-card-date"><time datetime={featuredPost.publishedDate}>{featuredPost.displayDate}</time></p>
+          <a class="arrow-link" href={featuredPost.href}>Read the story <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
     </div>
   </section>
-  <CallToAction />
 </BaseLayout>

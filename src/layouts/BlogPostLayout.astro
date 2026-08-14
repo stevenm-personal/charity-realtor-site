@@ -1,0 +1,53 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/blog.css';
+
+interface Props {
+  title: string;
+  description: string;
+  subtitle: string;
+  category: string;
+  location: string;
+  author: string;
+  publishedDate: string;
+  displayDate: string;
+}
+
+const {
+  title,
+  description,
+  subtitle,
+  category,
+  location,
+  author,
+  publishedDate,
+  displayDate,
+} = Astro.props;
+
+const hasHeroMedia = Astro.slots.has('hero-media');
+---
+
+<BaseLayout title={`${title} | Charity Menefee`} description={description} pageClass="page-interior page-blog-post">
+  <article class="blog-post">
+    <header class="blog-post-hero">
+      <div class:list={['shell', 'blog-post-hero-grid', { 'blog-post-hero-grid-text-only': !hasHeroMedia }]}>
+        <div class="blog-post-hero-copy" data-reveal="hero-copy">
+          <a class="blog-back-link" href="/blog/"><span aria-hidden="true">←</span> Back to the blog</a>
+          <p class="eyebrow">{category} · {location}</p>
+          <h1>{title}</h1>
+          <p class="blog-post-subtitle">{subtitle}</p>
+          <p class="blog-post-byline">By {author} <span aria-hidden="true">·</span> <time datetime={publishedDate}>{displayDate}</time></p>
+        </div>
+        {hasHeroMedia && (
+          <div class="blog-post-hero-media" data-reveal="right-scale">
+            <slot name="hero-media" />
+          </div>
+        )}
+      </div>
+    </header>
+
+    <div class="blog-post-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
