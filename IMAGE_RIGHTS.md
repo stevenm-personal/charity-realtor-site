@@ -53,3 +53,33 @@ Unresolved source hints should remain in place until the associated rights are r
 **Courtesy credit:** `Photo courtesy of The Purple Spoon`
 
 This record does not claim ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or any use beyond the website uses requested above.
+
+### Valley Center water tower
+
+**Website asset:** `src/assets/communities/valley-center/valley-center-water-tower.jpg`
+
+**Subject:** Valley Center water tower.
+
+**Current public use:**
+
+- Homepage Valley Center community card.
+- Communities landing-page Valley Center card.
+- Valley Center community-page hero.
+
+**Photographer/source:** Nichole P. Conard, from the photograph she posted on Facebook.
+
+**Permission:** Direct permission received via Facebook Messenger.
+
+**Permission date:** March 17, 2026.
+
+**Permission requested:** Permission to use the Valley Center water-tower photograph on Charity Menefee's Realtor website.
+
+**Permission response:** Permission granted with the explicit condition, `Yes, please give me credit`.
+
+**Evidence:** `docs/image-rights/nichole-conard-valley-center-water-tower-permission-2026-03-17.png`
+
+**Attribution requirement:** Visible photographer credit is required at each public use.
+
+**Required public credit:** `Photo courtesy of Nichole P. Conard`
+
+This image is not owner-supplied photography from Steven or Charity. This record does not claim ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or permission beyond use on the website described in the request.
