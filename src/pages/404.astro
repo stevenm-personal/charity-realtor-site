@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Charity Menefee"
+  description="The page you requested could not be found. Return to the Charity Menefee website or explore Wichita-area community guides."
+  pageClass="page-interior page-not-found"
+  robots="noindex, nofollow"
+>
+  <section class="not-found-section" aria-labelledby="not-found-title">
+    <div class="shell not-found-content" data-reveal="hero-copy">
+      <p class="eyebrow">404</p>
+      <h1 id="not-found-title">Looks like this page isn't here.</h1>
+      <p class="not-found-copy">The page may have moved, or the link may be out of date. You can head back home or keep exploring from here.</p>
+      <div class="button-row not-found-actions">
+        <a class="button button-primary" href="/">Back to home</a>
+        <a class="arrow-link" href="/communities/">Explore communities <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found-section {
+    display: grid;
+    min-height: clamp(28rem, 62svh, 38rem);
+    overflow: hidden;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    background: linear-gradient(135deg, var(--color-surface), var(--color-background));
+  }
+
+  .not-found-content {
+    max-width: var(--width-content);
+    padding-block: var(--space-8);
+  }
+
+  .not-found-content h1 {
+    max-width: 12ch;
+    margin-bottom: var(--space-5);
+    font-size: clamp(2.75rem, 10vw, 5.5rem);
+    line-height: 0.98;
+  }
+
+  .not-found-copy {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 2.3vw, 1.2rem);
+  }
+
+  .not-found-actions {
+    max-width: 30rem;
+  }
+
+  @media (min-width: 48rem) {
+    .not-found-content {
+      padding-left: clamp(0rem, 5vw, 4rem);
+    }
+  }
+</style>
