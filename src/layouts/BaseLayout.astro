@@ -8,6 +8,7 @@ interface Props {
   title: string;
   description: string;
   pageClass?: string;
+  socialTitle?: string;
   socialImage?: string;
   socialImageAlt?: string;
 }
@@ -16,6 +17,7 @@ const {
   title,
   description,
   pageClass = 'page-interior',
+  socialTitle = title,
   socialImage = '/images/static/charity-menefee-social-share.jpg',
   socialImageAlt = 'Charity Menefee, REALTOR® with Bricktown ICT Realty',
 } = Astro.props;
@@ -32,7 +34,7 @@ const socialImageUrl = Astro.site ? new URL(socialImage, Astro.site).href : soci
     <meta name="generator" content={Astro.generator} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Charity Menefee Real Estate" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={socialTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImageUrl} />
     <meta property="og:image:type" content="image/jpeg" />
@@ -40,7 +42,7 @@ const socialImageUrl = Astro.site ? new URL(socialImage, Astro.site).href : soci
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={socialTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={socialImageAlt} />

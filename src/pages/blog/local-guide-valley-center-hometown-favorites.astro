@@ -16,13 +16,15 @@ const festival = {
 
 <BlogPostLayout
   title={post.title}
-  description="A local look at The Purple Spoon, McLaughlin Park, and the Valley Center Fall Festival in Valley Center, Kansas."
+  description={post.description}
   subtitle={post.subtitle}
   category={post.category}
   location={post.location}
   author={post.author}
   publishedDate={post.publishedDate}
   displayDate={post.displayDate}
+  socialImage={post.socialImage}
+  socialImageAlt={post.socialImageAlt}
 >
   <section class="blog-article-intro shell" aria-labelledby="favorites-intro-title">
     <div class="blog-intro-copy" data-reveal="up">

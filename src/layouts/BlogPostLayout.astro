@@ -11,6 +11,8 @@ interface Props {
   author: string;
   publishedDate: string;
   displayDate: string;
+  socialImage?: string;
+  socialImageAlt?: string;
 }
 
 const {
@@ -22,12 +24,21 @@ const {
   author,
   publishedDate,
   displayDate,
+  socialImage,
+  socialImageAlt,
 } = Astro.props;
 
 const hasHeroMedia = Astro.slots.has('hero-media');
 ---
 
-<BaseLayout title={`${title} | Charity Menefee`} description={description} pageClass="page-interior page-blog-post">
+<BaseLayout
+  title={`${title} | Charity Menefee`}
+  description={description}
+  pageClass="page-interior page-blog-post"
+  socialTitle={title}
+  socialImage={socialImage}
+  socialImageAlt={socialImageAlt}
+>
   <article class="blog-post">
     <header class="blog-post-hero">
       <div class:list={['shell', 'blog-post-hero-grid', { 'blog-post-hero-grid-text-only': !hasHeroMedia }]}>
