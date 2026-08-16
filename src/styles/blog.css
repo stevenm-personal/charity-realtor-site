@@ -120,51 +120,6 @@
   margin-top: var(--space-3);
 }
 
-/* Reusable image placeholders */
-.blog-photo-placeholder {
-  display: grid;
-  overflow: hidden;
-  width: 100%;
-  min-width: 0;
-  min-height: 15rem;
-  place-content: center;
-  gap: var(--space-2);
-  padding: var(--space-5);
-  border: 1px solid var(--color-border-strong);
-  color: var(--color-text);
-  background: linear-gradient(145deg, var(--color-accent-soft), var(--color-sage-soft));
-  text-align: center;
-}
-
-.blog-photo-placeholder span {
-  color: var(--color-accent);
-  font-size: 0.67rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.blog-photo-placeholder strong {
-  width: min(100%, 20rem);
-  min-width: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 5vw, 2.25rem);
-  font-weight: 400;
-  line-height: 1.08;
-}
-
-.blog-photo-placeholder-standard {
-  aspect-ratio: 4 / 3;
-}
-
-.blog-photo-placeholder-wide {
-  aspect-ratio: 16 / 10;
-}
-
-.blog-photo-placeholder-portrait {
-  aspect-ratio: 4 / 5;
-}
-
 /* Blog article foundation */
 .blog-post {
   --blog-space-hero: clamp(2.5rem, 5vw, 3.75rem);
@@ -191,7 +146,8 @@
 .blog-post-hero-grid > *,
 .blog-entry-grid > *,
 .blog-park-grid > *,
-.blog-festival-feature > *,
+.blog-festival-story > *,
+.blog-event-card > *,
 .blog-guide-bridge-inner > * {
   min-width: 0;
 }
@@ -228,10 +184,6 @@
   flex-wrap: wrap;
   gap: var(--space-2);
   margin-bottom: 0;
-}
-
-.blog-post-hero-media .blog-photo-placeholder {
-  box-shadow: var(--shadow-layered);
 }
 
 .blog-post-body {
@@ -388,14 +340,38 @@
   margin-bottom: var(--space-4);
 }
 
-.blog-festival-feature {
+.blog-festival-story {
   display: grid;
-  gap: var(--space-5);
-  align-items: stretch;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.blog-festival-story .blog-festival-intro {
+  margin-bottom: 0;
+}
+
+.blog-festival-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.blog-festival-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-festival-media .blog-article-photo {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .blog-event-card {
+  display: grid;
+  gap: var(--space-6);
   min-width: 0;
+  margin-top: clamp(2.5rem, 7vw, 5rem);
   padding: clamp(1.75rem, 5vw, 3rem);
   color: var(--color-text-on-dark);
   background: var(--color-text);
@@ -418,6 +394,7 @@
 }
 
 .blog-event-theme {
+  margin-bottom: 0;
   color: var(--color-text-on-dark-muted);
   font-style: italic;
 }
@@ -432,23 +409,14 @@
   color: var(--color-accent-on-dark);
 }
 
-.blog-festival-feature .blog-photo-placeholder {
-  height: 100%;
-}
-
-.blog-festival-feature .blog-article-photo {
-  max-width: 37.5rem;
-  margin-inline: auto;
-}
-
-.blog-festival-feature .blog-entry-media {
-  align-self: center;
+.blog-article-closing-section {
+  background: var(--color-background);
 }
 
 .blog-article-closing {
   max-width: 47rem;
-  margin-top: clamp(2.5rem, 7vw, 4.5rem);
-  padding-top: clamp(2rem, 5vw, 3rem);
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
   border-top: 1px solid var(--color-border-strong);
 }
 
@@ -500,10 +468,6 @@
     color: var(--color-accent);
   }
 
-  .blog-featured-media:hover .blog-photo-placeholder {
-    box-shadow: var(--shadow-layered);
-  }
-
   .blog-featured-media:hover .blog-featured-photo {
     transform: scale(1.015);
   }
@@ -518,8 +482,7 @@
   .blog-featured-post,
   .blog-post-hero-grid,
   .blog-entry-grid,
-  .blog-park-grid,
-  .blog-festival-feature {
+  .blog-park-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -543,8 +506,27 @@
     grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
   }
 
-  .blog-festival-feature {
-    grid-template-columns: minmax(19rem, 0.75fr) minmax(0, 1fr);
+}
+
+@media (min-width: 60rem) {
+  .blog-festival-story {
+    grid-template-columns: minmax(0, 1.05fr) minmax(23rem, 0.95fr);
+  }
+
+  .blog-event-card {
+    grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+
+  .blog-event-details {
+    padding-left: clamp(2rem, 4vw, 3.5rem);
+    border-left: 1px solid var(--color-border-on-image);
+  }
+
+  .blog-event-card ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-6);
   }
 }
 

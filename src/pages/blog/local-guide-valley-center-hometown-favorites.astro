@@ -45,24 +45,22 @@ const festival = {
           alt="The Purple Spoon sign above Main Street at sunset"
         />
         <p class="blog-photo-credit">Photo courtesy of The Purple Spoon</p>
+        <a class="arrow-link blog-source-link" href="https://thepurplespoonvc.com/" target="_blank" rel="noopener noreferrer">Visit The Purple Spoon's official site <span aria-hidden="true">→</span></a>
       </div>
       <div class="blog-entry-copy">
         <p class="blog-entry-number">01 <span>The Purple Spoon</span></p>
         <h2 id="purple-spoon-title">Valley Center has a new reason to make an ice cream run.</h2>
-        <p>The Purple Spoon is one of the newer additions to Main Street, and it didn't take long for it to feel like it belonged here. My family and I go there, and while there are plenty of hand-scooped flavors to choose from, I always think it's worth checking the soft-serve board before deciding because the twist rotates.</p>
+        <p>The Purple Spoon is one of the newer additions to Main Street, and it didn't take long for it to feel like it belonged here. My family and I go there, and I always think it's worth checking the soft-serve board before deciding because the twist rotates.</p>
         <p>One thing I appreciate is how much it feels like Valley Center. A lot of the people behind the counter are local high school students, and we've consistently found them friendly.</p>
 
         <div class="blog-fact-list">
           <h3>Worth knowing</h3>
           <ul>
             <li>More than 24 hand-scooped flavors</li>
-            <li>A rotating soft-serve twist</li>
             <li>Fresh waffle cones made in the shop</li>
-            <li>A Main Street location</li>
+            <li>A rotating soft-serve twist</li>
           </ul>
         </div>
-
-        <a class="arrow-link blog-source-link" href="https://thepurplespoonvc.com/" target="_blank" rel="noopener noreferrer">Visit The Purple Spoon's official site <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
@@ -104,20 +102,35 @@ const festival = {
 
   <section class="blog-entry blog-entry-festival" aria-labelledby="fall-festival-title">
     <div class="shell" data-reveal="up">
-      <div class="blog-festival-intro">
-        <p class="blog-entry-number">03 <span>Valley Center Fall Festival</span></p>
-        <h2 id="fall-festival-title">A weekend when Valley Center feels especially like Valley Center.</h2>
-        <p>Fall Festival is probably the weekend when Valley Center feels most like home to me. We've been going for years.</p>
-        <p>The parade is one of my favorite parts. Main Street fills up, there's often a small plane circling overhead, and our girls have even been part of the parade over the years. Breezy, the penguin mascot from Breezy's shaved ice, and Breezy's float are familiar parade sights that have become part of Fall Fest for us. It seems like we run into someone we know every few steps.</p>
-        <p>And come hungry. There's usually plenty of festival food, but roasted corn and the root beer stand are two things I associate with Fall Fest. There's also a beer garden that's a good place to stop for a while.</p>
+      <div class="blog-festival-story">
+        <div class="blog-festival-intro">
+          <p class="blog-entry-number">03 <span>Valley Center Fall Festival</span></p>
+          <h2 id="fall-festival-title">A weekend when Valley Center feels especially like Valley Center.</h2>
+          <p>Fall Festival is probably the weekend when Valley Center feels most like home to me. We've been going for years.</p>
+          <p>The parade is one of my favorite parts. Main Street fills up, there's often a small plane circling overhead, and our girls have even been part of the parade over the years. Breezy, the penguin mascot from Breezy's shaved ice, and Breezy's float are familiar parade sights that have become part of Fall Fest for us. It seems like we run into someone we know every few steps.</p>
+          <p>And come hungry. There's usually plenty of festival food, but roasted corn and the root beer stand are two things I associate with Fall Fest. There's also a beer garden that's a good place to stop for a while.</p>
+        </div>
+
+        <div class="blog-entry-media blog-festival-media">
+          <Picture
+            class="blog-article-photo"
+            src={fallFestivalPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 60rem) 50vw, 100vw"
+            alt="Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night"
+          />
+        </div>
       </div>
 
-      <div class="blog-festival-feature">
-        <aside class="blog-event-card" aria-labelledby="festival-date-title">
+      <aside class="blog-event-card" aria-labelledby="festival-date-title">
+        <div class="blog-event-summary">
           <p class="eyebrow eyebrow-light">Save the date</p>
           <p class="blog-event-date" id="festival-date-title">{festival.dates}</p>
-          <h3>{festival.annual}</h3>
           <p class="blog-event-theme">{festival.theme}</p>
+        </div>
+        <div class="blog-event-details">
+          <h3>{festival.annual}</h3>
           <ul>
             <li>Saturday morning parade</li>
             <li>Carnival rides and activities</li>
@@ -125,19 +138,13 @@ const festival = {
             <li>Live entertainment and vendors</li>
           </ul>
           <a class="arrow-link" href={festival.detailsUrl} target="_blank" rel="noopener noreferrer">See this year's festival details <span aria-hidden="true">↗</span></a>
-        </aside>
-        <div class="blog-entry-media">
-          <Picture
-            class="blog-article-photo"
-            src={fallFestivalPhoto}
-            formats={['avif', 'webp']}
-            widths={[480, 720, 960, 1200]}
-            sizes="(min-width: 75rem) 37.5rem, (min-width: 48rem) 50vw, 100vw"
-            alt="Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night"
-          />
         </div>
-      </div>
+      </aside>
+    </div>
+  </section>
 
+  <section class="blog-article-closing-section" aria-label="Closing reflection">
+    <div class="shell">
       <div class="blog-article-closing">
         <p>That's really what these three have in common for me. One is new, one has been part of our family's life for years, and one is a tradition we look forward to every fall.</p>
         <p>They're very different pieces of Valley Center, but they're all part of what makes this feel like home.</p>

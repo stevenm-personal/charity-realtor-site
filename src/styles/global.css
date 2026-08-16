@@ -1147,31 +1147,6 @@ p {
   transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
-.services-router-approach {
-  padding-block: clamp(3.75rem, 8vw, 6rem);
-  background: var(--color-sage-soft);
-}
-
-.services-router-approach-inner {
-  display: grid;
-  gap: var(--space-6);
-}
-
-.services-router-approach h2 {
-  max-width: 14ch;
-  margin-bottom: 0;
-  font-size: clamp(2.25rem, 8vw, 4rem);
-  line-height: 1;
-}
-
-.services-router-approach-inner > p {
-  max-width: 39rem;
-  margin-bottom: 0;
-  align-self: end;
-  color: var(--color-text-muted);
-  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
-}
-
 .services-router-cta {
   color: var(--color-text-on-dark);
   background: var(--color-primary);
@@ -2720,7 +2695,6 @@ textarea:focus-visible {
     grid-column: 2 / -1;
   }
 
-  .services-router-approach-inner,
   .services-router-cta-inner {
     grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1fr);
     gap: clamp(3rem, 8vw, 7rem);
