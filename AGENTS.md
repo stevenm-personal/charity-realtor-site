@@ -43,16 +43,23 @@
 
 ## Editorial voice and point of view
 
+- Treat `BRAND.md` as the authoritative editorial source. Apply its standard of professional expertise in everyday language.
 - Treat the site as Charity Menefee's personal Realtor brand, not as brokerage or corporate copy describing one of its agents.
-- When discussing Charity's experience, approach, services, opinions, or assistance, prefer first-person singular (`I`, `me`, and `my`) over third-person phrases such as "Charity can help" or generic corporate `we` language.
+- Write the way Charity would explain the subject to a client sitting across the table from her: knowledgeable, clear, grounded, and professional without unnecessary jargon or abstract process language.
+- Use `I`, `me`, and `my` for what Charity personally does or thinks; use `you` and `your` for the visitor's needs and decisions; use `we` and `we'll` when Charity and the client are genuinely working through something together.
+- Do not use `we` or `our` as an anonymous corporate or brokerage narrator. Brokerage or team `we` is appropriate only when that brokerage or team is genuinely the subject.
+- Avoid third-person phrases such as "Charity can help" when Charity would naturally use `I`.
 - Do not force first person into every page. Match the point of view to the content and follow the page-specific guidance in `BRAND.md`.
+- Prefer concrete actions and ordinary descriptions over vague promises or abstract process terminology when a simpler phrase communicates the same idea.
+- When describing services, show Charity's actual work through specific actions such as reviewing, explaining, comparing, following up, coordinating, and bringing in the right people. Charity helps the client understand the options; the client makes the final decision.
+- Use real-estate terminology clients are likely to hear, but explain it in ordinary language when useful. Preserve professional boundaries by naming the appropriate lender, inspector, title company, surveyor, or other expert in context rather than defaulting to broad boilerplate.
+- Do not dumb the copy down, create rigid banned-word rules, or rewrite clear and natural copy merely to make it more casual.
 - On the homepage, address the visitor primarily as `you`, using first person selectively for Charity's role and approach.
 - Write the About page in Charity's natural first-person voice.
-- On Buying, Selling, and Land & Acreage pages, lead with useful visitor-focused information and use first person when Charity's involvement is relevant.
-- Keep community-page body copy neutral, factual, and informational. Do not repeat service pitches through the guide; limit personal selling language to one restrained first-person invitation near the end when appropriate.
-- Use a neutral editorial voice for informational blog content, allowing first person for genuine personal observations or firsthand experience.
+- On Buying, Selling, and Land & Acreage pages, apply the across-the-table client test most strongly. Lead with useful visitor-focused information and use first person when Charity's involvement is relevant.
+- Keep community-page body copy neutral, factual, informational, and written in ordinary human language. Do not turn it into first-person sales copy; limit personal selling language to one restrained first-person invitation near the end when appropriate.
+- Use a neutral editorial voice for informational blog content, allowing first person for genuine personal observations or firsthand experience. Let research verify the facts without making the visible copy sound institutional.
 - Use a conversational first-person voice on Contact and an appropriate neutral or formal voice for legal and disclosure content.
-- Avoid corporate `we` or `our` unless the copy genuinely refers to Charity together with her brokerage or team. Personal use is appropriate only when the shared subject is clear, such as Charity speaking about her family; never use it as a generic corporate narrator.
 - Prioritize usefulness before conversion, avoid generic Realtor marketing language, and do not add a sales pitch to every informational section.
 - Treat low-pressure service as a brand behavior, not a catchphrase. Communicate it through calm, patient, straightforward copy instead of repeatedly saying `no pressure`, `low pressure`, `without pressure`, or similar phrases.
 - Use `Contact Me` as the default primary visitor-facing CTA unless a page has a genuinely contextual reason to use different wording.

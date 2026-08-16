@@ -2130,7 +2130,9 @@ p {
 .about-home-photo,
 .about-home-photo img {
   min-height: 26rem;
+  height: clamp(26rem, 56vw, 42rem);
   object-fit: cover;
+  object-position: 58% center;
 }
 
 .empty-editorial {
@@ -2764,6 +2766,10 @@ textarea:focus-visible {
 
   .buying-stage-details {
     margin-top: 0;
+  }
+
+  .buying-stage-closing:not(.selling-stage-closing) .buying-checklist-closing {
+    max-width: 32rem;
   }
 
   .buying-stage-offer .buying-stage-body {

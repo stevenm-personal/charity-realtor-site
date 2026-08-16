@@ -204,14 +204,16 @@ Use first person when referring to Charity's assistance. Use the `Contact Me` de
 
 ## Voice and point of view
 
-Community pages are primarily informational and editorial.
+Community pages are primarily informational and editorial. The target is a knowledgeable local explaining the area clearly to someone who wants to understand it. Neutral writing should still sound natural and human, not like a municipal report, planning document, economic-development report, or researched SEO filler.
 
-- Use neutral informational language through most of the body.
+- Use neutral informational language through most of the body, expressed in ordinary descriptions of the places, roads, homes, development, utilities, landmarks, and property questions that matter.
 - Use `you` when practical information is directed to the visitor.
 - Use `I` selectively when Charity's personal help or perspective is genuinely relevant.
-- Avoid corporate `we`.
+- Use collaborative `we` only when Charity and the client are genuinely working through something together. Never use `we` as an anonymous corporate or brokerage narrator.
 - Avoid repeatedly referring to Charity by name in the third person.
-- Avoid forced personal commentary in purely informational sections.
+- Avoid forced personal commentary or added Realtor sales language in purely informational sections. Plain language is not a reason to make the community-page body more first person.
+- Let official and municipal research support factual accuracy quietly. Do not carry government, planning, or institutional phrasing into visible copy when an ordinary description would be clearer.
+- Prefer naming the actual road, neighborhood pattern, property feature, local place, or practical question over unnecessary abstractions such as `residential footprint`, `orientation lines`, or `visible public side`.
 - Prioritize usefulness first and conversion second.
 
 ## Locality standard
