@@ -54,6 +54,32 @@ Unresolved source hints should remain in place until the associated rights are r
 
 This record does not claim ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or any use beyond the website uses requested above.
 
+### Valley Center Fall Festival aerial image
+
+**Website asset:** `src/assets/blog/1-local-guide-valley-center/fall-festival.png`
+
+**Subject:** Nighttime aerial view of the Valley Center Fall Festival.
+
+**Current public use:**
+
+- Valley Center hometown-favorites blog article.
+
+**Source/person granting permission:** Ashlee Barrientos supplied the image in a Facebook comment. The evidence does not establish that she is the photographer or copyright owner.
+
+**Permission method:** Facebook comment in direct response to Steven's request for a drone photo that could be used on the Realtor website he is building for Charity.
+
+**Permission date:** The evidence shows only relative timestamps (`Yesterday at 1:05 PM` and `1d`), so the exact calendar date is not established.
+
+**Permission status:** Permission supported by Ashlee Barrientos providing the image directly in response to the website-use request.
+
+**Permitted use:** Use on the Charity Menefee Realtor website as described in Steven's request. No broader use is inferred.
+
+**Evidence:** `docs/image-rights/valley-center-fall-festival-facebook-permission.png`
+
+**Attribution requirement:** None requested in the supplied evidence.
+
+This record does not claim authorship, ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or permission beyond the website use supported by the Facebook conversation.
+
 ### Valley Center water tower
 
 **Website asset:** `src/assets/communities/valley-center/valley-center-water-tower.jpg`

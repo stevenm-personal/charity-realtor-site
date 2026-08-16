@@ -441,6 +441,10 @@
   margin-inline: auto;
 }
 
+.blog-festival-feature .blog-entry-media {
+  align-self: center;
+}
+
 .blog-article-closing {
   max-width: 47rem;
   margin-top: clamp(2.5rem, 7vw, 4.5rem);

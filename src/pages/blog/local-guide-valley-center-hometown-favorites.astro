@@ -4,7 +4,7 @@ import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
 import { valleyCenterFavoritesPost as post } from '../../data/blogPosts';
 import purpleSpoonPhoto from '../../assets/blog/1-local-guide-valley-center/purple-spoon-storefront-sunset.jpg';
 import mclaughlinParkPhoto from '../../assets/blog/1-local-guide-valley-center/valley-center-mclaughlin-park.jpg';
-import fallFestivalPhoto from "../../assets/blog/1-local-guide-valley-center/valley-center-fall-fesival'.jpeg";
+import fallFestivalPhoto from '../../assets/blog/1-local-guide-valley-center/fall-festival.png';
 
 const festival = {
   dates: 'September 25 & 26, 2026',
@@ -129,8 +129,8 @@ const festival = {
             class="blog-article-photo"
             src={fallFestivalPhoto}
             formats={['avif', 'webp']}
-            widths={[480, 600]}
-            sizes="(min-width: 48rem) 50vw, 100vw"
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 75rem) 37.5rem, (min-width: 48rem) 50vw, 100vw"
             alt="Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night"
           />
         </div>
