@@ -1,0 +1,40 @@
+<script>
+  import {
+    ANALYTICS_LEAD_EVENT,
+    GA4_MEASUREMENT_ID,
+    getContactClickMethod,
+    shouldLoadGoogleAnalytics,
+  } from '../scripts/analytics.js';
+
+  if (shouldLoadGoogleAnalytics(window.location.hostname)) {
+    type AnalyticsWindow = Window & { dataLayer?: unknown[][] };
+    const analyticsWindow = window as AnalyticsWindow;
+    const dataLayer = analyticsWindow.dataLayer ??= [];
+    const gtag = (...args: unknown[]) => dataLayer.push(args);
+
+    gtag('js', new Date());
+    gtag('config', GA4_MEASUREMENT_ID);
+
+    const googleTag = document.createElement('script');
+    googleTag.async = true;
+    googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA4_MEASUREMENT_ID)}`;
+    document.head.append(googleTag);
+
+    document.addEventListener(ANALYTICS_LEAD_EVENT, () => {
+      gtag('event', 'generate_lead', { method: 'contact_form' });
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const link = target.closest('a[href]');
+      if (!(link instanceof HTMLAnchorElement)) return;
+
+      const method = getContactClickMethod(link.getAttribute('href'));
+      if (!method) return;
+
+      gtag('event', 'contact_click', { method });
+    });
+  }
+</script>

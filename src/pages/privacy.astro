@@ -1,9 +1,138 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/PageHero.astro';
 ---
 
-<BaseLayout title="Privacy Policy | Charity Menefee" description="Privacy policy development page for the Charity Menefee real estate website.">
-  <PageHero eyebrow="Site information" title="Privacy policy" intro="The final privacy policy will be added before this website launches publicly." />
-  <section class="section-space"><div class="shell legal-placeholder prose" data-reveal="up"><h2>Development placeholder</h2><p>This site is currently noindex. A reviewed privacy policy must replace this placeholder before launch.</p><a class="arrow-link" href="/contact/">Return to contact <span aria-hidden="true">→</span></a></div></section>
+<BaseLayout
+  title="Privacy Policy | Charity Menefee"
+  description="Privacy Policy for the Charity Menefee real estate website."
+  pageClass="page-interior page-legal"
+>
+  <section class="legal-page">
+    <div class="shell legal-page-inner">
+      <header class="legal-page-header">
+        <p class="eyebrow">Site information</p>
+        <h1>Privacy Policy</h1>
+        <p class="legal-page-updated">Last updated August 16, 2026</p>
+      </header>
+
+      <div class="legal-document prose">
+        <section aria-labelledby="privacy-policy-title">
+          <h2 id="privacy-policy-title">PRIVACY POLICY</h2>
+          <p>This Privacy Policy explains how Charity Menefee collects, uses, and handles information when you visit charitymenefee.com (the “Site”) or contact me through the Site.</p>
+          <p>If you have questions about this Privacy Policy or information you have provided through the Site, you can contact me at <a href="mailto:charity@curtiscrewict.com">charity@curtiscrewict.com</a>.</p>
+        </section>
+
+        <section aria-labelledby="information-you-provide-title">
+          <h2 id="information-you-provide-title">INFORMATION YOU PROVIDE</h2>
+          <p>The primary way the Site collects personal information is through the contact form.</p>
+          <p>If you submit the form, you may provide:</p>
+          <ul>
+            <li>your name</li>
+            <li>your email address</li>
+            <li>your phone number, if you choose to provide it</li>
+            <li>the message you submit</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="information-use-title">
+          <h2 id="information-use-title">HOW I USE YOUR INFORMATION</h2>
+          <p>I may use information you provide through the Site to:</p>
+          <ul>
+            <li>respond to your inquiry</li>
+            <li>communicate with you about your real estate needs or questions</li>
+            <li>follow up with you</li>
+            <li>maintain an ongoing business or client relationship</li>
+            <li>maintain appropriate business records</li>
+            <li>send occasional real estate, market, community, event, or local information that may be relevant to you, where permitted by law</li>
+            <li>comply with applicable legal or regulatory requirements</li>
+          </ul>
+          <p>I do not consider submitting the contact form by itself to be a subscription to a newsletter or automated marketing list.</p>
+          <p>If I send promotional email communications, you may ask me to stop sending them at any time. Promotional emails sent through an email marketing service will include an appropriate way to unsubscribe.</p>
+          <p>Please do not submit sensitive personal information through the contact form unless it is necessary for your inquiry.</p>
+        </section>
+
+        <section aria-labelledby="site-processing-title">
+          <h2 id="site-processing-title">INFORMATION PROCESSED WHEN YOU USE THE SITE</h2>
+          <p>Like most websites, the technology used to operate and protect the Site may process limited technical information associated with a request, such as an IP address, browser or device information, requested pages, and similar technical data.</p>
+          <p>The Site is hosted and delivered using Cloudflare services.</p>
+          <p>Cloudflare Turnstile is used on the contact form to help distinguish legitimate visitors from automated traffic and reduce spam and abuse. Turnstile may process technical information about your browser or request as part of that security check.</p>
+          <p>The Site does not intentionally use this technical information to build advertising profiles about visitors.</p>
+        </section>
+
+        <section aria-labelledby="contact-information-handling-title">
+          <h2 id="contact-information-handling-title">HOW CONTACT FORM INFORMATION IS HANDLED</h2>
+          <p>When you submit the contact form, the information you provide is processed by the Site's Cloudflare Worker and delivered by email so that I can receive and respond to your inquiry.</p>
+          <p>The website does not intentionally maintain a separate database of contact-form submissions.</p>
+          <p>Copies of an inquiry may remain in the email system used to receive and respond to messages for as long as reasonably necessary to communicate with you, maintain appropriate business records, resolve issues, maintain an ongoing business relationship, or meet legal or regulatory obligations.</p>
+        </section>
+
+        <section aria-labelledby="service-providers-title">
+          <h2 id="service-providers-title">SERVICE PROVIDERS</h2>
+          <p>I use service providers that help operate, secure, and communicate through the Site.</p>
+          <p>These currently include Cloudflare for website hosting and delivery, contact-form processing, spam protection through Turnstile, and email-related services.</p>
+          <p>These providers may process information as necessary to perform services on my behalf and are subject to their own privacy and security practices.</p>
+          <p>The Site also uses Pushover to send a generic notification when a new contact-form inquiry is received. No visitor name, email address, phone number, message, IP address, or Turnstile information is included in the Pushover notification.</p>
+        </section>
+
+        <section aria-labelledby="cookies-analytics-title">
+          <h2 id="cookies-analytics-title">COOKIES, ANALYTICS, AND ADVERTISING</h2>
+          <p>The Site uses Google Analytics 4 (GA4) to help me understand how visitors find and use the Site and how the Site is performing.</p>
+          <p>Google Analytics may process information such as pages viewed, interactions with the Site, traffic source, approximate location, browser and device information, and identifiers used to distinguish users and sessions.</p>
+          <p>I use this information to understand website traffic, improve the Site, and evaluate which content and services are useful to visitors.</p>
+          <p>I do not intentionally send names, email addresses, phone numbers, contact-form messages, or other information submitted through the contact form to Google Analytics.</p>
+          <p>Google Analytics may use cookies or similar technologies as part of providing its analytics service. Information processed by Google is subject to Google's own privacy practices.</p>
+          <p>The Site does not currently use advertising pixels or targeted-advertising technology, and I do not sell personal information collected through the Site.</p>
+          <p>If additional analytics, advertising technology, email marketing systems, or other tracking tools are added in the future, this Privacy Policy may be updated to describe those practices.</p>
+        </section>
+
+        <section aria-labelledby="third-party-links-title">
+          <h2 id="third-party-links-title">THIRD-PARTY LINKS</h2>
+          <p>The Site contains links to third-party websites, including local businesses, organizations, events, and other resources.</p>
+          <p>Once you leave this Site, the privacy practices of the third-party website apply. I do not control how those websites collect or use information.</p>
+          <p>You should review the privacy practices of third-party websites if you have questions about how they handle your information.</p>
+        </section>
+
+        <section aria-labelledby="retention-title">
+          <h2 id="retention-title">HOW LONG INFORMATION IS KEPT</h2>
+          <p>I keep personal information only for as long as reasonably necessary for the purposes described in this Privacy Policy, including responding to inquiries, maintaining an appropriate business or client relationship, maintaining business records, complying with legal obligations, and resolving disputes.</p>
+          <p>When information is no longer reasonably needed, it may be deleted or otherwise disposed of as appropriate.</p>
+        </section>
+
+        <section aria-labelledby="information-security-title">
+          <h2 id="information-security-title">INFORMATION SECURITY</h2>
+          <p>Reasonable technical and organizational measures are used to protect information handled through the Site.</p>
+          <p>However, no website, internet transmission, email system, or electronic storage method can be guaranteed to be completely secure. You should use reasonable care when deciding what information to send through an online form or email.</p>
+        </section>
+
+        <section aria-labelledby="children-privacy-title">
+          <h2 id="children-privacy-title">CHILDREN'S PRIVACY</h2>
+          <p>The Site is intended to provide real estate and local information and is not directed toward children.</p>
+          <p>I do not knowingly use the Site to solicit personal information from children. If you believe a child has submitted personal information through the Site and would like it removed, please contact me.</p>
+        </section>
+
+        <section aria-labelledby="privacy-choices-title">
+          <h2 id="privacy-choices-title">YOUR PRIVACY CHOICES</h2>
+          <p>Depending on where you live and the law that applies, you may have rights regarding personal information you have provided, which may include requesting access to, correction of, or deletion of that information.</p>
+          <p>You may contact me at <a href="mailto:charity@curtiscrewict.com">charity@curtiscrewict.com</a> with a privacy-related request.</p>
+          <p>I may need enough information to reasonably verify the request before taking action.</p>
+          <p>You may also ask me to stop sending promotional email communications at any time.</p>
+        </section>
+
+        <section aria-labelledby="policy-changes-title">
+          <h2 id="policy-changes-title">CHANGES TO THIS PRIVACY POLICY</h2>
+          <p>This Privacy Policy may be updated from time to time as the Site, its technology, business practices, or applicable requirements change.</p>
+          <p>When the policy is updated, the “Last updated” date at the top of this page will be revised.</p>
+        </section>
+
+        <section aria-labelledby="privacy-contact-title">
+          <h2 id="privacy-contact-title">CONTACT</h2>
+          <p>For questions about this Privacy Policy or information submitted through the Site, contact:</p>
+          <address class="legal-contact">
+            Charity Menefee<br />
+            Email: <a href="mailto:charity@curtiscrewict.com">charity@curtiscrewict.com</a>
+          </address>
+        </section>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

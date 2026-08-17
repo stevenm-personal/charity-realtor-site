@@ -59,6 +59,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
         )}
 
         <button class="button button-primary" type="submit" disabled={!turnstileSiteKey}>Send Message</button>
+        <p class="contact-form-privacy">Your information will be handled according to the <a href="/privacy/">Privacy Policy</a>.</p>
 
         <div
           id="form-feedback"
@@ -77,6 +78,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
 
   <script>
     import { CONTACT_MESSAGES, getContactOutcome } from '../scripts/contact-form-state.js';
+    import { emitConfirmedLead } from '../scripts/analytics.js';
 
     const form = document.querySelector('[data-contact-form]');
 
@@ -175,6 +177,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
           form.reset();
           resetTurnstile();
           showSuccess();
+          emitConfirmedLead(outcome);
         } catch {
           showFailure();
           resetTurnstile();

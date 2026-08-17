@@ -1,9 +1,56 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/PageHero.astro';
 ---
 
-<BaseLayout title="Website Disclaimer | Charity Menefee" description="Website disclaimer development page for the Charity Menefee real estate website.">
-  <PageHero eyebrow="Site information" title="Website disclaimer" intro="Verified brokerage, licensing, and website disclaimer language will be added before public launch." />
-  <section class="section-space"><div class="shell legal-placeholder prose" data-reveal="up"><h2>Development placeholder</h2><p>The repository does not yet contain the verified license information, brokerage disclosures, or legal text needed for a final disclaimer. This page intentionally avoids inventing those details.</p><p>Community content is general information, not a representation or warranty about any property, school, crime level, market condition, or resident group. Property-specific facts should be independently verified.</p><a class="arrow-link" href="/">Return home <span aria-hidden="true">→</span></a></div></section>
+<BaseLayout
+  title="Disclaimer | Charity Menefee"
+  description="Website disclaimer for the Charity Menefee real estate website."
+  pageClass="page-interior page-legal"
+>
+  <section class="legal-page">
+    <div class="shell legal-page-inner">
+      <header class="legal-page-header">
+        <p class="eyebrow">Site information</p>
+        <h1>Disclaimer</h1>
+        <p class="legal-page-updated">Last updated August 16, 2026</p>
+      </header>
+
+      <div class="legal-document prose">
+        <section aria-labelledby="website-disclaimer-title">
+          <h2 id="website-disclaimer-title">WEBSITE DISCLAIMER</h2>
+          <p>The information provided by Charity Menefee on this website (the “Site”) is for general informational and educational purposes. I make reasonable efforts to provide accurate and useful information, but I cannot guarantee that all information on the Site will always be complete, current, or applicable to every situation.</p>
+          <p>Real estate transactions, properties, and individual circumstances can vary significantly. Information on this Site should not be relied upon as a substitute for advice or information specific to your particular situation.</p>
+          <p>Your use of the Site and reliance on information provided on the Site is at your own risk.</p>
+        </section>
+
+        <section aria-labelledby="professional-information-title">
+          <h2 id="professional-information-title">REAL ESTATE AND PROFESSIONAL INFORMATION</h2>
+          <p>The Site contains general real estate information about buying, selling, land and acreage, local communities, and related topics. This information is intended to help visitors better understand the real estate process and the areas I serve.</p>
+          <p>Some questions that come up during a real estate transaction require the knowledge of other professionals. Depending on the situation, that may include lenders, attorneys, inspectors, appraisers, surveyors, title professionals, tax professionals, contractors, or other specialists.</p>
+          <p>Information provided on this Site is not intended to replace legal, tax, financial, lending, inspection, appraisal, surveying, or other specialized professional advice. When a question requires expertise outside the scope of real estate brokerage services, you should consult the appropriate professional.</p>
+        </section>
+
+        <section aria-labelledby="agency-relationship-title">
+          <h2 id="agency-relationship-title">NO BROKERAGE OR AGENCY RELATIONSHIP</h2>
+          <p>Visiting this Site, reading its content, sending an email, or submitting the contact form does not by itself create a client, agency, brokerage, fiduciary, or other professional relationship with Charity Menefee or Bricktown ICT Realty.</p>
+          <p>Any brokerage or representation relationship will be established only through the appropriate agreements and disclosures required for that relationship.</p>
+        </section>
+
+        <section aria-labelledby="local-information-title">
+          <h2 id="local-information-title">LOCAL, PROPERTY, AND COMMUNITY INFORMATION</h2>
+          <p>The Site may include information about communities, neighborhoods, businesses, events, roads, schools, utilities, amenities, real estate, and other local topics.</p>
+          <p>This information may change over time. Businesses may open or close, event details may change, development may occur, boundaries may change, and information about a particular property may differ from general information about an area.</p>
+          <p>I make reasonable efforts to keep the Site accurate and useful, but visitors should independently verify information that is important to a real estate decision or other significant decision.</p>
+          <p>Property-specific information, including boundaries, acreage, utilities, access, restrictions, zoning, taxes, school assignments, and similar matters, should be verified through the appropriate records, authorities, or professionals when relevant.</p>
+        </section>
+
+        <section aria-labelledby="external-links-title">
+          <h2 id="external-links-title">EXTERNAL LINKS DISCLAIMER</h2>
+          <p>The Site may contain links to websites, businesses, organizations, events, or other resources operated by third parties. These links are provided for convenience or additional information.</p>
+          <p>I do not control third-party websites and am not responsible for their content, accuracy, availability, privacy practices, policies, products, or services. The inclusion of a link does not necessarily constitute an endorsement or guarantee of the information, products, or services provided by that third party.</p>
+          <p>Visitors should review the information and policies of any third-party website they choose to visit.</p>
+        </section>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
