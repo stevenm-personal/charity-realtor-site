@@ -1,4 +1,5 @@
 @import "./tokens.css";
+@import "@fontsource-variable/inter";
 
 :root {
   font-family: var(--font-body);
@@ -574,7 +575,7 @@ p {
 .page-hero {
   position: relative;
   display: grid;
-  min-height: clamp(31rem, 74svh, 48rem);
+  min-height: clamp(22rem, 52svh, 34rem);
   overflow: hidden;
   align-items: end;
 }
@@ -636,7 +637,7 @@ p {
 .page-hero-content h1 {
   max-width: 12ch;
   margin-bottom: var(--space-5);
-  font-size: clamp(3.25rem, 11vw, 7rem);
+  font-size: clamp(3rem, 9vw, 5.5rem);
   line-height: 0.94;
 }
 
@@ -685,7 +686,7 @@ p {
   z-index: 2;
   display: grid;
   gap: var(--space-7);
-  padding-block: clamp(7rem, 18vw, 9rem) clamp(3rem, 10vw, 6rem);
+  padding-block: clamp(4rem, 10vw, 5.5rem) clamp(2rem, 6vw, 3.5rem);
 }
 
 .page-hero-about .page-hero-content {
@@ -1465,7 +1466,7 @@ p {
 
 /* Buying roadmap */
 .buying-page .page-hero {
-  min-height: clamp(32rem, 68svh, 40rem);
+  min-height: clamp(23rem, 54svh, 35rem);
 }
 
 .buying-page .page-hero-content {
@@ -1662,7 +1663,7 @@ p {
 
 /* Selling roadmap */
 .selling-page .page-hero {
-  min-height: clamp(30rem, 64svh, 38rem);
+  min-height: clamp(22rem, 52svh, 34rem);
 }
 
 .selling-page .page-hero-content h1 {
@@ -1764,7 +1765,7 @@ p {
 
 /* Land and acreage evaluation roadmap */
 .land-roadmap-page .page-hero {
-  min-height: clamp(29rem, 62svh, 37rem);
+  min-height: clamp(22rem, 50svh, 33rem);
 }
 
 .land-roadmap-page .page-hero-content h1 {
@@ -3171,7 +3172,7 @@ textarea:focus-visible {
     grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.75fr);
     align-items: center;
     gap: clamp(3rem, 7vw, 6rem);
-    padding-block: clamp(7.5rem, 10vw, 9rem) clamp(4.5rem, 7vw, 6.5rem);
+    padding-block: clamp(5rem, 7vw, 6.5rem) clamp(3rem, 5vw, 4.5rem);
   }
 
   .page-hero-about-media {
