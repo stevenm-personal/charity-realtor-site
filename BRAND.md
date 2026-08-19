@@ -1,6 +1,6 @@
-# Kansas Dusk experimental brand system
+# Kansas Dusk brand system
 
-`BRAND.md` is the authoritative visual, editorial, and brand reference for Charity Menefee Real Estate. Kansas Dusk is the current experimental visual direction on this branch. Future design and copy work must follow it unless the user explicitly approves a change.
+`BRAND.md` is the authoritative visual, editorial, and brand reference for Charity Menefee Real Estate. Kansas Dusk is the site's current implemented visual direction. Future design and copy work must follow it unless the user explicitly approves a change.
 
 ## Brand idea
 
@@ -167,16 +167,16 @@ The palette lives in `src/styles/tokens.css`. Components must use semantic varia
 | Olive mist supporting surface | `--color-sage-soft` | `#DDE0D2` |
 | Clay wash supporting surface | `--color-accent-soft` | `#ECD3C7` |
 
-The Kansas Dusk palette is an experiment and is intentionally easy to revise or compare with Prairie Warmth. It should not be treated as permanently locked. Revise semantic token values centrally when the visual direction evolves; do not scatter replacement colors through components.
+Kansas Dusk superseded the site's original Prairie Warmth palette. The design tokens are intentionally centralized so the palette can keep evolving; it should not be treated as permanently locked. Revise semantic token values centrally when the visual direction evolves; do not scatter replacement colors through components.
 
 ## Typography
 
-Kansas Dusk retains the original Prairie Warmth typography treatment from the main branch:
+Kansas Dusk retains the site's original Georgia display / Inter body typography treatment:
 
 - Display text uses Georgia with Times New Roman as its fallback.
 - Body copy, navigation, labels, and controls use Inter with the original system UI fallback stack.
 
-The exact main-branch stacks are defined through `--font-display` and `--font-body` in `src/styles/tokens.css`. Do not hard-code substitute font stacks in individual components. This preserves Prairie Warmth's friendly, soft, readable, and slightly characterful typography while Kansas Dusk supplies the experimental color treatment.
+The exact font stacks are defined through `--font-display` and `--font-body` in `src/styles/tokens.css`. Do not hard-code substitute font stacks in individual components. This preserves the site's friendly, soft, readable, and slightly characterful typography while Kansas Dusk supplies its own color treatment.
 
 ## Photography and imagery
 
