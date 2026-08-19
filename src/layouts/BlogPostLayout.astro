@@ -1,6 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import '../styles/blog.css';
+import { CHARITY_NAME, CHARITY_JOB_TITLE, CHARITY_BROKERAGE, DEFAULT_SOCIAL_IMAGE } from '../data/business';
+import { resolveAbsoluteURL } from '../utils/seo';
 
 interface Props {
   title: string;
@@ -29,6 +31,28 @@ const {
 } = Astro.props;
 
 const hasHeroMedia = Astro.slots.has('hero-media');
+
+const canonicalURL = resolveAbsoluteURL(Astro.site, Astro.url.pathname);
+const absoluteSocialImage = resolveAbsoluteURL(Astro.site, socialImage ?? DEFAULT_SOCIAL_IMAGE);
+
+const blogPostingJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  image: absoluteSocialImage,
+  datePublished: publishedDate,
+  mainEntityOfPage: canonicalURL,
+  author: {
+    '@type': 'Person',
+    name: CHARITY_NAME,
+    jobTitle: CHARITY_JOB_TITLE,
+    worksFor: {
+      '@type': 'Organization',
+      name: CHARITY_BROKERAGE,
+    },
+  },
+});
 ---
 
 <BaseLayout
@@ -38,7 +62,10 @@ const hasHeroMedia = Astro.slots.has('hero-media');
   socialTitle={title}
   socialImage={socialImage}
   socialImageAlt={socialImageAlt}
+  ogType="article"
+  articlePublishedTime={publishedDate}
 >
+  <script type="application/ld+json" set:html={blogPostingJsonLd} />
   <article class="blog-post">
     <header class="blog-post-hero">
       <div class:list={['shell', 'blog-post-hero-grid', { 'blog-post-hero-grid-text-only': !hasHeroMedia }]}>

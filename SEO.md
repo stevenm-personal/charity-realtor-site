@@ -269,6 +269,8 @@ Use only schema types and properties that fit the visible content and actual bus
 
 Structured data must match information visible to visitors. Never use schema to make claims the page does not make.
 
+**Status (2026-08-19):** implemented — a site-wide `Person` entity (name, url, jobTitle, telephone, email, `worksFor` → Bricktown ICT Realty) on every page, and `BlogPosting` (headline, description, author, datePublished, image, canonical URL) on the current article. No `RealEstateAgent`/`LocalBusiness` type is used, since that would imply an address this project doesn't have and want to invent. `WebSite` and `BreadcrumbList` were deliberately left out: the site has no visible breadcrumb UI for `BreadcrumbList` to accurately reflect, and `WebSite` wouldn't add anything `Person.url` doesn't already establish.
+
 ## Business information and NAP consistency
 
 Keep Charity's name, brokerage affiliation, phone number, email address, office information, and other verified business details consistent everywhere they appear.
@@ -287,6 +289,8 @@ Canonical paths should match the preferred production URL for each page. Do not 
 
 Do not add production canonical behavior prematurely if the site's final domain or launch state has not been confirmed.
 
+**Status (2026-08-19):** implemented. `astro.config.mjs` sets `site: 'https://charitymenefee.com'`, and `BaseLayout.astro` emits one self-referencing `<link rel="canonical">` per page (and a matching `og:url`), derived from that config value plus the page's own path. This is safe alongside the current global `noindex` — a canonical tag has no effect on indexing eligibility by itself.
+
 ## Sitemap
 
 Before launch:
@@ -297,6 +301,8 @@ Before launch:
 - Exclude pages that should not be indexed.
 - Check that canonical URLs and sitemap URLs agree.
 - Do not include preview-only or development URLs.
+
+**Status (2026-08-19):** implemented via the official `@astrojs/sitemap` integration. Output is `sitemap-index.xml` + `sitemap-0.xml` in `dist/`, using the production domain. Privacy, Disclaimer, and 404 are excluded via the integration's `filter`. The sitemap's presence in the build doesn't make the site indexable — that's still controlled by `noindex` below.
 
 ## Robots and indexing
 
@@ -314,6 +320,8 @@ Before production launch, perform a deliberate indexing review:
 8. Confirm that preview and production environments do not send conflicting signals.
 
 Removing `noindex` is an explicit launch action, not a routine side effect of another task.
+
+**Status (2026-08-19):** `public/robots.txt` is already production-ready (`Allow: /`, references the production sitemap) rather than blocking crawlers outright. That's deliberate: a robots.txt `Disallow` would stop Google from ever crawling a page far enough to see its `noindex` meta tag, which is the actual protection during development. `Privacy` and `Disclaimer` are *not* separately disallowed in robots.txt for the same reason — they rely on their own permanent `robots="noindex, follow"` page directive, which requires them to stay crawlable to be honored. This means launch now reduces to one deliberate step: **remove the temporary global `noindex, nofollow` default in `BaseLayout.astro`.** `404.astro` already passes its own literal `robots="noindex, nofollow"` independent of that default, and Privacy/Disclaimer already carry their own permanent `noindex, follow` — neither needs to change at launch.
 
 ## Performance and Core Web Vitals
 
@@ -390,11 +398,11 @@ Keep the two environments conceptually separate.
 
 - Uses the `workers.dev` preview URL.
 - Preserves `noindex` and `nofollow` controls.
-- Currently retains launch placeholders for the Privacy and Disclaimer pages.
+- Privacy and Disclaimer contain working draft content, pending final human/brokerage review before launch.
 - Publishes Blog articles only when genuinely useful, accurate material is ready.
 - Does not yet have an approved analytics implementation.
 - Uses the temporary contact-form delivery configuration documented in `README.md`.
-- Must not emit production canonical URLs or structured business claims prematurely.
+- As of 2026-08-19, deliberately *does* emit production-domain canonical URLs, Open Graph metadata, a sitemap, and structured data (see the status notes above) — this was an authorized SEO-preparation task, not premature launch. Indexing itself stays blocked by the global `noindex, nofollow` default, not by domain ambiguity.
 - Should not be submitted for indexing.
 
 ### Production
@@ -405,7 +413,7 @@ Keep the two environments conceptually separate.
 - Provides a verified sitemap and appropriate robots behavior.
 - Uses only accurate structured data.
 - Displays consistent, verified business and contact information.
-- Replaces the Privacy and Disclaimer placeholders with reviewed launch content.
+- Displays Privacy and Disclaimer content that has completed final human/brokerage review.
 - Uses the approved production contact-form destination and configuration documented in `README.md`.
 - Documents any selected analytics accurately in the Privacy Policy.
 

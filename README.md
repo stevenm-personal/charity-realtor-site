@@ -83,7 +83,7 @@ Do not change the temporary Yahoo recipient before that coordinated launch task.
 - The site remains globally `noindex, nofollow`.
 - The temporary Yahoo destination remains active for form testing.
 - `https://charitymenefee.com/` is the intended production domain but is not yet fully launched.
-- Privacy and Disclaimer still require reviewed launch content.
+- Privacy and Disclaimer contain working draft content and still require final human/brokerage review before launch.
 - The Blog may remain empty until genuinely useful articles are ready.
 - Analytics has not been selected or configured.
 
