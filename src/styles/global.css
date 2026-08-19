@@ -327,6 +327,13 @@ p {
   vertical-align: baseline;
 }
 
+.registration-mark {
+  font-size: 0.62em;
+  position: relative;
+  top: -0.25em;
+  line-height: 0;
+}
+
 .brand-name small {
   display: block;
   margin-top: 0.25rem;
@@ -3135,13 +3142,6 @@ textarea:focus-visible {
     padding-left: var(--space-6);
   }
 
-  .registration-mark {
-    font-size: 0.62em;
-    position: relative;
-    top: -0.25em;
-    line-height: 0;
-  }
-
   .photo-story-reverse .photo-story-main {
     grid-column: 1;
   }
@@ -3205,7 +3205,7 @@ textarea:focus-visible {
 
 }
 
-@media (max-width: 23rem) {
+@media (max-width: 30rem) {
   .header-inner,
   .brand,
   .menu-toggle {
@@ -3227,6 +3227,25 @@ textarea:focus-visible {
   .brand-name small {
     line-height: 1.25;
     white-space: normal;
+  }
+
+  .brand-membership {
+    font-size: 0.72em;
+  }
+}
+
+@media (max-width: 21rem) {
+  .header-inner,
+  .brand {
+    gap: var(--space-1);
+  }
+
+  .brand-membership {
+    font-size: 0.48em;
+  }
+
+  .registration-mark {
+    font-size: 0.85em;
   }
 }
 
