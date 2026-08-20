@@ -641,6 +641,26 @@ p {
   padding-block: clamp(4rem, 9vw, 7.5rem);
 }
 
+.page-hero-credit {
+  position: absolute;
+  z-index: 1;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  margin: 0;
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--radius-small);
+  background: color-mix(in srgb, var(--color-text) 55%, transparent);
+  color: var(--color-soft-white);
+  font-size: 0.66rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 47.999rem) {
+  .page-hero-credit {
+    font-size: 0.6rem;
+  }
+}
+
 .page-hero-content h1 {
   max-width: 12ch;
   margin-bottom: var(--space-5);
@@ -3221,16 +3241,14 @@ textarea:focus-visible {
   }
 
   .brand-name {
+    font-size: 0.85rem;
     text-overflow: clip;
   }
 
   .brand-name small {
+    font-size: 0.56rem;
     line-height: 1.25;
     white-space: normal;
-  }
-
-  .brand-membership {
-    font-size: 0.72em;
   }
 }
 
@@ -3240,12 +3258,12 @@ textarea:focus-visible {
     gap: var(--space-1);
   }
 
-  .brand-membership {
-    font-size: 0.48em;
+  .brand-name {
+    font-size: 0.72rem;
   }
 
-  .registration-mark {
-    font-size: 0.85em;
+  .brand-name small {
+    font-size: 0.5rem;
   }
 }
 

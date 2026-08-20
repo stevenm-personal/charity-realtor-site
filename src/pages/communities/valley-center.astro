@@ -3,7 +3,7 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import heroPhoto from '../../assets/communities/valley-center/valley-center-fall-festival-sunset.jpg';
+import heroPhoto from '../../assets/communities/valley-center/valley-center-fall-festival-sunset-hero-crop.jpg';
 import recExteriorPhoto from '../../assets/communities/valley-center/valley-center-rec-center-outside-summer-cityvcfacebook.jpg';
 import recPoolPhoto from '../../assets/communities/valley-center/valley-center-rec-center-inside-pool-cityvcfacebook.jpg';
 import valleyPointPhoto from '../../assets/communities/valley-center/valley-center-valley-point-golf-course-fb.jpg';
@@ -21,9 +21,10 @@ import valleyPointPhoto from '../../assets/communities/valley-center/valley-cent
     image={heroPhoto}
     imageAlt="Aerial view of downtown Valley Center at sunset during the Fall Festival, with Main Street leading toward the setting sun"
     variant="community"
-    imagePosition="center 36%"
-    imagePositionMobile="center 46%"
+    imagePosition="0% center"
+    imagePositionMobile="42% center"
     imageSizes="(min-width: 48rem) 105rem, 92rem"
+    photoCredit="Photo © 2026 Alan Pilcher"
   />
 
   <section class="section-space" aria-labelledby="valley-overview-title">

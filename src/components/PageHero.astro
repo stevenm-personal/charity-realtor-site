@@ -13,6 +13,7 @@ interface Props {
   imagePosition?: string;
   imagePositionMobile?: string;
   imageSizes?: string;
+  photoCredit?: string;
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   imagePosition = 'center center',
   imagePositionMobile = imagePosition,
   imageSizes = '100vw',
+  photoCredit,
 } = Astro.props;
 
 const heroStyle: Record<string, string> | undefined = image
@@ -87,6 +89,7 @@ const isAboutHero = variant === 'about' && image;
           fetchpriority="high"
         />
       )}
+      {image && photoCredit && <p class="page-hero-credit">{photoCredit}</p>}
       <div class="shell page-hero-content" data-reveal="hero-copy">
         <div class="page-hero-copy">
           <p class="eyebrow">{eyebrow}</p>
