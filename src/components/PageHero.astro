@@ -13,6 +13,7 @@ interface Props {
   imagePosition?: string;
   imagePositionMobile?: string;
   imageSizes?: string;
+  imageWidths?: number[];
   photoCredit?: string;
 }
 
@@ -27,6 +28,7 @@ const {
   imagePosition = 'center center',
   imagePositionMobile = imagePosition,
   imageSizes = '100vw',
+  imageWidths = [640, 960, 1280, 1680],
   photoCredit,
 } = Astro.props;
 
@@ -82,7 +84,7 @@ const isAboutHero = variant === 'about' && image;
           class="page-hero-image"
           src={image}
           formats={['avif', 'webp']}
-          widths={[640, 960, 1280, 1680]}
+          widths={imageWidths}
           sizes={imageSizes}
           alt={imageAlt}
           loading="eager"

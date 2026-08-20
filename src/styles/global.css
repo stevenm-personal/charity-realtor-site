@@ -647,10 +647,8 @@ p {
   left: var(--space-3);
   bottom: var(--space-3);
   margin: 0;
-  padding: 0.2rem 0.45rem;
-  border-radius: var(--radius-small);
-  background: color-mix(in srgb, var(--color-text) 55%, transparent);
-  color: var(--color-soft-white);
+  color: rgba(255, 249, 242, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
   font-size: 0.66rem;
   line-height: 1.3;
 }
