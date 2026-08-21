@@ -338,10 +338,9 @@ p {
   display: block;
   margin-top: 0.25rem;
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: clamp(0.72rem, 3.096vw, 0.972rem);
   font-weight: 750;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .header-affiliations {
@@ -2539,14 +2538,14 @@ p {
 
 .footer-identity {
   display: inline-grid;
-  gap: var(--space-2);
+  gap: 0.25rem;
   text-decoration: none;
 }
 
 .footer-name {
   font-family: var(--font-display);
-  font-size: clamp(1.65rem, 5vw, 2rem);
-  line-height: 1;
+  font-size: clamp(1rem, 4.3vw, 1.35rem);
+  line-height: 1.05;
 }
 
 .footer-membership {
@@ -2559,16 +2558,17 @@ p {
 
 .footer-role {
   color: var(--color-accent-on-dark);
-  font-size: 0.72rem;
+  font-size: clamp(0.72rem, 3.096vw, 0.972rem);
+  line-height: 1.05;
   font-weight: 750;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .footer-license {
   display: block;
   color: var(--color-text-on-dark-muted);
   font-size: 0.7rem;
+  line-height: 1;
   font-weight: 650;
   letter-spacing: 0.04em;
 }
@@ -3244,9 +3244,18 @@ textarea:focus-visible {
   }
 
   .brand-name small {
-    font-size: 0.56rem;
+    font-size: 0.672rem;
     line-height: 1.25;
     white-space: normal;
+  }
+
+  .footer-name {
+    font-size: 0.85rem;
+  }
+
+  .footer-role {
+    font-size: 0.672rem;
+    line-height: 1.25;
   }
 }
 
@@ -3261,7 +3270,15 @@ textarea:focus-visible {
   }
 
   .brand-name small {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  .footer-name {
+    font-size: 0.72rem;
+  }
+
+  .footer-role {
+    font-size: 0.6rem;
   }
 }
 
