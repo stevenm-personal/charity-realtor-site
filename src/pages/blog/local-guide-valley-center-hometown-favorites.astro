@@ -36,15 +36,17 @@ const festival = {
   <section class="blog-entry blog-entry-spoon" aria-labelledby="purple-spoon-title">
     <div class="shell blog-entry-grid" data-reveal="up">
       <div class="blog-entry-media">
-        <Picture
-          class="blog-article-photo"
-          src={purpleSpoonPhoto}
-          formats={['avif', 'webp']}
-          widths={[480, 720, 960, 1280, 1536]}
-          sizes="(min-width: 48rem) 40vw, 100vw"
-          alt="The Purple Spoon sign above Main Street at sunset"
-        />
-        <p class="blog-photo-credit">Photo courtesy of The Purple Spoon</p>
+        <div class="blog-photo-frame">
+          <Picture
+            class="blog-article-photo"
+            src={purpleSpoonPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280, 1536]}
+            sizes="(min-width: 48rem) 40vw, 100vw"
+            alt="The Purple Spoon sign above Main Street at sunset"
+          />
+          <p class="blog-photo-credit">Photo courtesy of The Purple Spoon</p>
+        </div>
         <a class="arrow-link blog-source-link" href="https://thepurplespoonvc.com/" target="_blank" rel="noopener noreferrer">Visit The Purple Spoon's official site <span aria-hidden="true">→</span></a>
       </div>
       <div class="blog-entry-copy">
