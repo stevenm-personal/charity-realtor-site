@@ -64,17 +64,17 @@ This record does not claim ownership, exclusivity, transferability, unrestricted
 
 - Valley Center hometown-favorites blog article.
 
-**Source/person granting permission:** Ashlee Barrientos supplied the image in a Facebook comment. The evidence does not establish that she is the photographer or copyright owner.
+**Source/person granting permission:** Ashlee Barrientos, who supplied the image in a Facebook comment and, when directly asked, confirmed she owns it ("Is that one you own or did you get it from somewhere else?" / "I own it.").
 
-**Permission method:** Facebook comment in direct response to Steven's request for a drone photo that could be used on the Realtor website he is building for Charity.
+**Permission method:** Facebook comment in direct response to Steven's request for a drone photo that could be used on the Realtor website he is building for Charity, followed by a direct follow-up question confirming ownership.
 
-**Permission date:** The evidence shows only relative timestamps (`Yesterday at 1:05 PM` and `1d`), so the exact calendar date is not established.
+**Permission date:** The evidence shows only relative timestamps (`Yesterday at 1:05 PM` and `1d`) for the original exchange; the ownership-confirmation follow-up was received 2026-08-25.
 
-**Permission status:** Permission supported by Ashlee Barrientos providing the image directly in response to the website-use request.
+**Permission status:** Ashlee Barrientos supplied the image directly in response to the website-use request and separately confirmed, when directly asked, that she owns it.
 
 **Permitted use:** Use on the Charity Menefee Realtor website as described in Steven's request. No broader use is inferred.
 
-**Evidence:** `docs/image-rights/valley-center-fall-festival-facebook-permission.png`
+**Evidence:** `docs/image-rights/valley-center-fall-festival-facebook-permission.png`, `docs/image-rights/valley-center-fall-festival-ownership-confirmation-2026-08-25.png`
 
 **Attribution requirement:** None requested in the supplied evidence.
 
