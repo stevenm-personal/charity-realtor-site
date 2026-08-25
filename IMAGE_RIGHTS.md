@@ -80,17 +80,13 @@ This record does not claim ownership, exclusivity, transferability, unrestricted
 
 This record does not claim authorship, ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or permission beyond the website use supported by the Facebook conversation.
 
-### Valley Center water tower
+### Valley Center water tower (retired)
 
-**Website asset:** `src/assets/communities/valley-center/valley-center-water-tower.jpg`
+**Status:** Retired. No longer used anywhere on the site as of 2026-08-25. The homepage and communities-landing-page Valley Center cards now use `src/assets/communities/valley-center/valley-center-water-tower-self-owned.JPG`, an owner-supplied photo (see the top of this document). The Valley Center community-page hero was separately switched to `valley-center-fall-festival-sunset-hero-crop.jpg` in an earlier update. This record is kept for historical reference only; the attribution requirement below no longer applies to any live page.
+
+**Website asset (retired):** `src/assets/communities/valley-center/valley-center-water-tower.jpg`
 
 **Subject:** Valley Center water tower.
-
-**Current public use:**
-
-- Homepage Valley Center community card.
-- Communities landing-page Valley Center card.
-- Valley Center community-page hero.
 
 **Photographer/source:** Nichole P. Conard, from the photograph she posted on Facebook.
 
