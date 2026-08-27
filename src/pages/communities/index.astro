@@ -3,14 +3,15 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import wichitaPhoto from '../../assets/communities/wichita/Wichita_River.jpg';
+import heroPhoto from '../../assets/communities/wichita/wichita-keeper-of-the-plains-kansastourism-NoC.jpg';
+import wichitaPhoto from '../../assets/communities/wichita/wichita-river-sunset-kansastourism-Jason Lindsey.jpg';
 import valleyCenterPhoto from '../../assets/communities/valley-center/valley-center-water-tower-self-owned.jpg';
 import maizePhoto from '../../assets/communities/maize/clair-donnelly-amphitheater-city-of-maize.jpg';
 import andoverPhoto from '../../assets/communities/andover/andover-central-park-derby-informer.webp';
 import derbyPhoto from '../../assets/communities/derby/derby-high-park-facebookhighpark.jpg';
-import goddardPhoto from '../../assets/communities/goddard/goddard-lake-afton-observatory-redit.jpg';
+import goddardPhoto from '../../assets/communities/goddard/goddard-tanganyika-wildlife-park-kansastourism-2016 Ryan Donnell.jpg';
 import newtonPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
-import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-hero-kansastourism.jpg';
+import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-hero-travelks.jpg';
 ---
 
 <BaseLayout
@@ -21,8 +22,10 @@ import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-her
     eyebrow="Communities"
     title="Find the place that fits the way you want to live."
     intro="Wichita and its neighboring communities each offer a different setting. These guides are a starting point for learning the landscape without reducing a place to a sales pitch."
-    image={wichitaPhoto}
-    imageAlt="Downtown Wichita and the Arkansas River in warm evening light"
+    image={heroPhoto}
+    imageAlt="The Keeper of the Plains beside the Arkansas River in Wichita at sunset"
+    imagePosition="center 62%"
+    imagePositionMobile="72% center"
   />
 
   <section class="section-space" aria-labelledby="featured-communities-title">
@@ -33,7 +36,8 @@ import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-her
       </div>
       <div class="featured-community-grid">
         <a class="featured-community featured-community-primary" href="/communities/wichita/" data-reveal="left-scale">
-          <Picture src={wichitaPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 67rem) 50vw, (min-width: 48rem) 50vw, 100vw" alt="The Arkansas River flowing toward downtown Wichita" />
+          <Picture src={wichitaPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 67rem) 50vw, (min-width: 48rem) 50vw, 100vw" alt="The downtown Wichita skyline reflected in the Arkansas River at dusk" />
+          <p class="photo-credit photo-credit-top photo-credit-scrim">© Jason Lindsey</p>
           <span><small>Explore the guide</small>Wichita <i aria-hidden="true">→</i></span>
         </a>
         <a class="featured-community featured-community-primary" href="/communities/valley-center/" data-reveal="right">
@@ -49,7 +53,8 @@ import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-her
           <span><small>Explore the guide</small>Derby <i aria-hidden="true">→</i></span>
         </a>
         <a class="featured-community" href="/communities/goddard/" data-reveal="right">
-          <Picture src={goddardPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1280]} sizes="(min-width: 67rem) 33vw, (min-width: 48rem) 50vw, 100vw" alt="Lake Afton Observatory beneath a star-filled Kansas sky near Goddard" />
+          <Picture src={goddardPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024, 1280]} sizes="(min-width: 67rem) 33vw, (min-width: 48rem) 50vw, 100vw" alt="A Tanganyika Wildlife Park staff member and a visitor crouching in the grass beside a serval" />
+          <p class="photo-credit photo-credit-top photo-credit-scrim">© 2016 Ryan Donnell</p>
           <span><small>Explore the guide</small>Goddard <i aria-hidden="true">→</i></span>
         </a>
         <a class="featured-community" href="/communities/maize/" data-reveal="right">

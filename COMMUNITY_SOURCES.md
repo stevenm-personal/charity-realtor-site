@@ -14,6 +14,41 @@ This file records the primary sources behind community-page claims that are time
 - Checked: 2026-08-13
 - Notes: City records identify public improvements associated with Estancia, Southern Ridge, Brookfield, and Fontana additions. The page uses these as examples of how residential additions have appeared in different parts of Wichita, not as claims about current homes or lots.
 
+### Keeper of the Plains
+
+- Page section: A sense of place
+- Source: City of Wichita, Keeper of the Plains; Wikipedia
+- Source URL: https://www.wichita.gov/170/Keeper-of-the-Plains
+- Source URL: https://en.wikipedia.org/wiki/The_Keeper_of_the_Plains
+- Checked: 2026-08-26
+- Notes: Sources support the 44-foot height, the 1974 installation, Blackbear Bosin as the Kiowa-Comanche artist, and the location at the confluence of the Big and Little Arkansas rivers. The guide does not state the nightly Ring of Fire schedule, which is seasonal and changes.
+
+### Equity Bank Park and the Wichita Wind Surge
+
+- Page section: Along the west bank
+- Source: Wikipedia, Equity Bank Park
+- Source URL: https://en.wikipedia.org/wiki/Equity_Bank_Park
+- Checked: 2026-08-26
+- Notes: The ballpark opened in 2021 as Riverfront Stadium and was renamed Equity Bank Park on 2026-01-21. It stands on the former Lawrence-Dumont Stadium site on the west bank of the Arkansas River, at the edge of Delano. The Wind Surge are a Double-A Texas League affiliate of the Minnesota Twins. **The name is sponsor-based and has already changed once, so recheck it before any future edit to this section.** The guide deliberately leads with the team and the location rather than the sponsor name.
+
+### Sedgwick County Zoo and Exploration Place
+
+- Page section: What's nearby
+- Source: Wikipedia, Sedgwick County Zoo; Exploration Place, About
+- Source URL: https://en.wikipedia.org/wiki/Sedgwick_County_Zoo
+- Source URL: https://www.exploration.org/about/
+- Checked: 2026-08-26
+- Notes: Zoo sources support the August 1971 opening, 247 acres, roughly 400 species, AZA accreditation, and its standing as the most-visited outdoor attraction in Kansas. Exploration Place's own About page supports the 2000 opening and Moshe Safdie as architect of the building and grounds. Animal and species counts are approximate and drift over time, so the guide rounds rather than citing exact totals.
+
+### Wichita Riverfest
+
+- Page section: A yearly tradition
+- Source: Wichita Riverfest, History; Visit Wichita
+- Source URL: https://wichitariverfest.com/history/
+- Source URL: https://www.visitwichita.com/events/annual-events/riverfest/
+- Checked: 2026-08-26
+- Notes: Sources support the 1970 origin, the nine-day spring run along the Arkansas River downtown, and its description as the largest community event in Kansas. The guide avoids specific dates, lineups, or ticket details, which change annually.
+
 ### Riverfront and city-area context
 
 - Page section: Getting oriented; A sense of place
@@ -111,15 +146,42 @@ This file records the primary sources behind community-page claims that are time
 - Checked: 2026-08-13
 - Notes: City records document these named additions. The guide does not claim current construction, availability, or a projected number of lots.
 
-### Main Street history, Linear Park, and Prairie Sunset Trail
+### Main Street history
 
 - Page section: Local character and change
-- Source: City of Goddard, Goddard History; Public Works; Goddard Linear Park
+- Source: City of Goddard, Goddard History; Public Works
 - Source URL: https://goddardks.gov/218/Goddard-History
 - Source URL: https://www.goddardks.gov/175/Public-Works
-- Source URL: https://www.goddardks.gov/facilities/facility/details/Goddard-Linear-Park-2
 - Checked: 2026-08-13
-- Notes: The city history supports the role of Main Street and the 1910 incorporation date. Public Works and facility pages identify Linear Park and the Prairie Sunset Trail.
+- Notes: The city history supports the role of Main Street and the 1910 incorporation date.
+
+### Fall Festival
+
+- Page section: A yearly tradition
+- Source: City of Goddard, Fall Festival and Parade pages
+- Source URL: https://www.goddardks.gov/385/Fall-Festival-2025
+- Source URL: https://www.goddardks.gov/394/Parade
+- Checked: 2026-08-26
+- Notes: City pages describe the festival as a community tradition since the 1960s and support the October timing, the Main Street parade route from 23rd to 4th, carnival rides, vendor booths, food trucks near Linear Park, the outdoor movie screening, and the contests and tournaments. The guide deliberately avoids naming a specific year, dates, or the annual parade theme, since those change every year and belong in a blog post rather than an evergreen guide.
+
+### Tanganyika Wildlife Park
+
+- Page section: A local attraction
+- Source: Tanganyika Wildlife Park, About page; TravelKS listing
+- Source URL: https://twpark.com/about-tanganyika-wildlife-park-2/
+- Source URL: https://www.travelks.com/listing/tanganyika-wildlife-park/48076/
+- Checked: 2026-08-26
+- Notes: The park's own About page supports the 1985 origin as a Fouts family breeding facility, the August 2008 public opening, more than 40 exhibits, over 400 animals, Zoological Association of America accreditation, and the interactive-encounter format. The TravelKS listing confirms the 1000 S Hawkins Ln, Goddard address, which is why the guide can say the park is inside Goddard rather than merely near it. Animal counts and exhibit totals are the park's own current figures and should be rechecked if they are ever stated more precisely.
+
+### Goddard Linear Park and Prairie Sunset Trail
+
+- Page section: Everyday recreation
+- Source: City of Goddard, Goddard Linear Park and Goddard Splash Pad facility pages; Prairie Sunset Trail
+- Source URL: https://www.goddardks.gov/facilities/facility/details/Goddard-Linear-Park-2
+- Source URL: https://www.goddardks.gov/facilities/facility/details/Goddard-Splash-Pad-16
+- Source URL: https://prairiesunsettrail.org/
+- Checked: 2026-08-26
+- Notes: The city facility pages place the splash pad inside Goddard Linear Park at 108 N Main St and identify the playground with sensory and inclusive features, picnic shelter, restrooms, and community storm shelter. The trail organization supports the rail-banked Prairie Sunset Trail running roughly fifteen miles between Garden Plain, Goddard, and Wichita, the park's 2009 opening, and the 2012 dedication of the Cecile Kellenbarger Memorial Covered Bridge. The Kellenbarger detail originated from a plaque visible in a supplied photograph and was verified independently before use.
 
 ### Genesis Sports Complex
 

@@ -23,6 +23,58 @@ Unresolved source hints should remain in place until the associated rights are r
 
 ## Cleared third-party images
 
+### City of Goddard photography
+
+**Website assets:** `src/assets/communities/goddard/*-city-of-goddard.jpg`
+
+**Subject:** Goddard Fall Festival, Goddard Linear Park, Means Memorial Park, and street-level aerial views of Goddard.
+
+**Current public use:**
+
+- Goddard community-page hero (Fall Festival movie in the park).
+- Goddard community page, Fall Festival section (Ferris wheel).
+- Goddard community page, Linear Park section (splash pad).
+
+**Source/person granting permission:** Craig R. Crossette, City Manager, City of Goddard, by email from `ccrossette@goddardks.gov`.
+
+**Permission method:** Email reply to Steven's written request to use photos from the city website on Charity's Realtor website.
+
+**Permission date:** 2026-08-26.
+
+**Permission requested:** Steven's email asked, "Would it be possible to use some of those photos on her website? I'd be happy to provide photo credit or attribution if needed."
+
+**Permission response:** "We don't mind. Thank you for inquiring."
+
+**Evidence:** `docs/image-rights/city-of-goddard-permission.png`
+
+**Attribution requirement:** None requested. The site applies a courtesy `© City of Goddard` credit anyway, consistent with the default in this document.
+
+**Open question:** The permission covers photos published on the city's website. It does not independently establish that the city holds copyright in every image it publishes. If any specific image is later found to have come from a third party, that image needs its own record.
+
+### Kansas Tourism photo library
+
+**Website assets:** `src/assets/communities/**/*-kansastourism-*`
+
+**Subject:** Wichita-area attractions, events, and landmarks supplied through a Kansas Tourism image library.
+
+**Current public use:**
+
+- Communities landing-page Goddard card (Tanganyika Wildlife Park).
+- Goddard community page, Tanganyika Wildlife Park section.
+- Homepage Wichita tile and communities landing-page Wichita card (Arkansas River at dusk).
+- Communities landing-page hero (Keeper of the Plains).
+- Wichita community page: hero, Keeper of the Plains section, ballpark banner, Sedgwick County Zoo and Exploration Place cards, and Riverfest section.
+
+**Source:** Kansas Tourism, via a media image library Steven was granted access to.
+
+**Permission status:** Steven reports being granted access to the library and permission to use the images it contains. Only images actually drawn from that library carry the `-kansastourism-` marker.
+
+**Attribution requirement:** Required. The credit string is the portion of the filename after `-kansastourism-`, displayed as `© <attribution>`. Files marked `-kansastourism-NoC` require no visible credit.
+
+**Evidence:** Not yet on file. A screenshot or written confirmation of the library access and terms still needs to be saved under `docs/image-rights/` and linked here.
+
+**Important:** A `-travelks-` filename marker means the opposite of `-kansastourism-`. Those images were gathered from TravelKS before any permission existed, are **not** covered by this record, and must not be published without their own permission.
+
 ### Purple Spoon storefront / sunset
 
 **Website asset:** `src/assets/blog/1-local-guide-valley-center/purple-spoon-storefront-sunset.jpg`

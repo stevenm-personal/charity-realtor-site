@@ -1,8 +1,12 @@
 ---
+import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import observatoryPhoto from '../../assets/communities/goddard/goddard-lake-afton-observatory-redit.jpg';
+import fallFestivalPhoto from '../../assets/communities/goddard/goddard-fall-festival-movie-in-the-park-city-of-goddard.jpg';
+import ferrisWheelPhoto from '../../assets/communities/goddard/goddard-fall-festival-ferris-wheel-city-of-goddard.jpg';
+import tanganyikaPhoto from '../../assets/communities/goddard/goddard-tanganyika-wildlife-park-kansastourism-2016 Ryan Donnell.jpg';
+import linearParkPhoto from '../../assets/communities/goddard/goddard-splash-pad-with-kids-city-of-goddard.jpg';
 ---
 
 <BaseLayout
@@ -14,11 +18,12 @@ import observatoryPhoto from '../../assets/communities/goddard/goddard-lake-afto
     eyebrow="Community guide · Goddard"
     title="Small-town roots, with growth all around."
     intro="Goddard is its own city immediately west of Wichita, where an older community centered around Main Street meets substantial newer residential growth."
-    image={observatoryPhoto}
-    imageAlt="Lake Afton Observatory beneath the Milky Way near Goddard"
+    image={fallFestivalPhoto}
+    imageAlt="A crowd seated on blankets and lawn chairs watching an outdoor movie screen at dusk during the Goddard Fall Festival"
     variant="community"
-    imagePosition="center 34%"
-    imagePositionMobile="58% center"
+    imagePosition="center 60%"
+    imagePositionMobile="center 55%"
+    photoCredit="© City of Goddard"
   />
 
   <section class="section-space" aria-labelledby="goddard-overview-title">
@@ -55,8 +60,70 @@ import observatoryPhoto from '../../assets/communities/goddard/goddard-lake-afto
       </div>
       <div class="prose" data-reveal="right">
         <p>Goddard was incorporated in 1910, and Main Street historically served as the city's primary business area. That older physical core remains an important point of contrast with the newer development expanding the community's footprint.</p>
-        <p>Goddard Linear Park sits near Main Street, and the Prairie Sunset Trail passes through the park on its route east toward Wichita and west toward Garden Plain. The trail accommodates walking, running, and bicycling, adding a physical connection through the older part of the city.</p>
         <p>Along the US-54 corridor, the Genesis Sports Complex represents a newer side of Goddard's growth. Its tournament and recreation facilities extend that story beyond housing without replacing the city's older center.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space" aria-labelledby="goddard-festival-title">
+    <div class="shell photo-story-grid">
+      <div class="photo-story-copy" data-reveal="left">
+        <p class="eyebrow">A yearly tradition</p>
+        <h2 id="goddard-festival-title">Every October, Main Street turns into the Fall Festival.</h2>
+        <p>The Goddard Fall Festival has been part of the city since the 1960s. The parade runs up Main Street from 23rd to 4th, and the surrounding blocks fill with carnival rides, vendor booths, and food trucks near Linear Park. An outdoor movie screening, contests, and tournaments round out the weekend.</p>
+        <p>It's the clearest annual example of Main Street still working as the city's gathering place, which is worth knowing if you're weighing a home in the older part of town against one further out.</p>
+      </div>
+      <div class="photo-story-main photo-story-festival" data-reveal="right">
+        <Picture
+          src={ferrisWheelPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 960, 1280, 1600]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="An illuminated Ferris wheel and carnival rides against the night sky at the Goddard Fall Festival"
+        />
+        <p class="photo-credit">© City of Goddard</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-surface" aria-labelledby="goddard-tanganyika-title">
+    <div class="shell photo-story-grid photo-story-reverse">
+      <div class="photo-story-copy" data-reveal="right">
+        <p class="eyebrow">A local attraction</p>
+        <h2 id="goddard-tanganyika-title">Tanganyika Wildlife Park is here, not just nearby.</h2>
+        <p>Tanganyika Wildlife Park sits on South Hawkins Lane, inside Goddard. It grew out of a breeding facility the Fouts family started in 1985 and opened to the public in 2008. Today it holds more than 40 exhibits and over 400 animals, and it's accredited by the Zoological Association of America.</p>
+        <p>The park is built around hands-on encounters rather than viewing from a distance, including feeding stations and a walkthrough kangaroo area. It draws visitors from well outside Sedgwick County, and it's one of the things people most often associate with Goddard.</p>
+      </div>
+      <div class="photo-story-main photo-story-tanganyika" data-reveal="left">
+        <Picture
+          src={tanganyikaPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 960, 1280]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="A Tanganyika Wildlife Park staff member and a visitor crouching in the grass beside a serval"
+        />
+        <p class="photo-credit">© 2016 Ryan Donnell</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-sage" aria-labelledby="goddard-linear-park-title">
+    <div class="shell photo-story-grid">
+      <div class="photo-story-copy" data-reveal="left">
+        <p class="eyebrow">Everyday recreation</p>
+        <h2 id="goddard-linear-park-title">Goddard Linear Park follows an old rail corridor.</h2>
+        <p>Linear Park opened in 2009 along the route of a former railroad line just off Main Street. It includes a splash pad, a playground with sensory and inclusive features, a picnic shelter, restrooms, and a community storm shelter. The Cecile Kellenbarger Memorial Covered Bridge, dedicated in 2012, recognizes the effort behind converting the corridor.</p>
+        <p>The Prairie Sunset Trail runs through the park on its way east toward Wichita and west toward Garden Plain, a rail-banked path of roughly fifteen miles used for walking, running, and biking. For a property near the older part of the city, that trail is worth checking on a map.</p>
+      </div>
+      <div class="photo-story-main" data-reveal="right">
+        <Picture
+          src={linearParkPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 960, 1280, 1600]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="Water features running at the Goddard Linear Park splash pad, with a shade canopy and playground beyond"
+        />
+        <p class="photo-credit">© City of Goddard</p>
       </div>
     </div>
   </section>
