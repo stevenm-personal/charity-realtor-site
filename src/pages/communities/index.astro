@@ -3,8 +3,8 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import heroPhoto from '../../assets/communities/wichita/wichita-keeper-of-the-plains-kansastourism-NoC.jpg';
-import wichitaPhoto from '../../assets/communities/wichita/wichita-river-sunset-kansastourism-Jason Lindsey.jpg';
+import heroPhoto from '../../assets/communities/wichita/wichita-wind-surge-aerial-kansastourism-NoC.jpg';
+import wichitaPhoto from '../../assets/communities/wichita/wichita-keeper-of-the-plains-kansastourism-NoC.jpg';
 import valleyCenterPhoto from '../../assets/communities/valley-center/valley-center-water-tower-self-owned.jpg';
 import maizePhoto from '../../assets/communities/maize/clair-donnelly-amphitheater-city-of-maize.jpg';
 import andoverPhoto from '../../assets/communities/andover/andover-central-park-derby-informer.webp';
@@ -23,9 +23,9 @@ import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-her
     title="Find the place that fits the way you want to live."
     intro="Wichita and its neighboring communities each offer a different setting. These guides are a starting point for learning the landscape without reducing a place to a sales pitch."
     image={heroPhoto}
-    imageAlt="The Keeper of the Plains beside the Arkansas River in Wichita at sunset"
-    imagePosition="center 62%"
-    imagePositionMobile="72% center"
+    imageAlt="An aerial view of the Wichita Wind Surge ballpark at sunset, with the city stretching to the horizon"
+    imagePosition="center 40%"
+    imagePositionMobile="center 42%"
   />
 
   <section class="section-space" aria-labelledby="featured-communities-title">
@@ -36,8 +36,7 @@ import parkCityPhoto from '../../assets/communities/park-city/park-city-sign-her
       </div>
       <div class="featured-community-grid">
         <a class="featured-community featured-community-primary" href="/communities/wichita/" data-reveal="left-scale">
-          <Picture src={wichitaPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 67rem) 50vw, (min-width: 48rem) 50vw, 100vw" alt="The downtown Wichita skyline reflected in the Arkansas River at dusk" />
-          <p class="photo-credit photo-credit-top photo-credit-scrim">© Jason Lindsey</p>
+          <Picture src={wichitaPhoto} formats={['avif', 'webp']} widths={[480, 720, 1024]} sizes="(min-width: 67rem) 50vw, (min-width: 48rem) 50vw, 100vw" style="object-position: 84% center;" alt="The Keeper of the Plains sculpture beside the Arkansas River in Wichita" />
           <span><small>Explore the guide</small>Wichita <i aria-hidden="true">→</i></span>
         </a>
         <a class="featured-community featured-community-primary" href="/communities/valley-center/" data-reveal="right">

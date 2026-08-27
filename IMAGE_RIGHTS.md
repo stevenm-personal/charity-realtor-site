@@ -61,9 +61,10 @@ Unresolved source hints should remain in place until the associated rights are r
 
 - Communities landing-page Goddard card (Tanganyika Wildlife Park).
 - Goddard community page, Tanganyika Wildlife Park section.
-- Homepage Wichita tile and communities landing-page Wichita card (Arkansas River at dusk).
-- Communities landing-page hero (Keeper of the Plains).
-- Wichita community page: hero, Keeper of the Plains section, ballpark banner, Sedgwick County Zoo and Exploration Place cards, and Riverfest section.
+- Homepage Wichita tile and communities landing-page Wichita card (Keeper of the Plains).
+- Communities landing-page hero (Wind Surge ballpark aerial at sunset).
+- Wichita community page: hero (Wind Surge ballpark aerial), Keeper of the Plains section, ballpark banner, Sedgwick County Zoo and Exploration Place cards, and Riverfest section.
+- Newton community page, Sand Creek Station section.
 
 **Source:** Kansas Tourism, via a media image library Steven was granted access to.
 

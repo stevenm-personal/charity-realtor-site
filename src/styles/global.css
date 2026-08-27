@@ -817,12 +817,19 @@ p {
   object-position: 44% center;
 }
 
-/* The Riverfest photo is square, so it gets a narrower slot than the 4:3
-   default rather than being cropped into a letterbox. */
+/* The Riverfest photo is square, so it gets its own slot rather than being
+   cropped into a letterbox. Sized wider than a typical sidebar photo so a
+   square image comes closer in height to its copy block, which runs long
+   here; .wichita-riverfest-copy trims the shared heading size for the same
+   reason instead of leaving a tall gap beside a comparatively short photo. */
 .page-wichita .photo-story-riverfest {
   aspect-ratio: 1;
-  max-width: 30rem;
+  max-width: 34rem;
   margin-inline: auto;
+}
+
+.wichita-riverfest-copy h2 {
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
 }
 
 /* Full-bleed panoramic band. The stadium photo is a 4:1 panorama, so it runs

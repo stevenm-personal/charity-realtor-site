@@ -6,7 +6,7 @@ import PageHero from '../../components/PageHero.astro';
 import heroPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
 import backAlleyPhoto from '../../assets/communities/newton/newton-back-alley-pizza-whee.png';
 import twistedBookstorePhoto from '../../assets/communities/newton/newton-twisted-bookstore-facebook.jpg';
-import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-station_golfcourseindustry.webp';
+import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-station-kansastourism-2016 Ryan Donnell.jpg';
 ---
 
 <BaseLayout
@@ -91,14 +91,15 @@ import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-st
 
   <section class="section-space" aria-labelledby="newton-sand-creek-title">
     <div class="shell newton-sand-creek-grid">
-      <div class="newton-sand-creek-media" data-reveal="left-scale">
+      <div class="newton-sand-creek-media photo-frame" data-reveal="left-scale">
         <Picture
           src={sandCreekPhoto}
           formats={['avif', 'webp']}
           widths={[480, 720, 948]}
           sizes="(min-width: 48rem) 58vw, 100vw"
-          alt="Fairways and greens at Sand Creek Station Golf Course in Newton"
+          alt="A golfer finishing a swing on the green at Sand Creek Station Golf Course in Newton at sunset"
         />
+        <p class="photo-credit">© 2016 Ryan Donnell</p>
       </div>
       <div class="newton-sand-creek-copy" data-reveal="right">
         <p class="eyebrow">Sand Creek Station</p>
