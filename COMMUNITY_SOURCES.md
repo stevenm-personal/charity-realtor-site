@@ -118,14 +118,31 @@ This file records the primary sources behind community-page claims that are time
 
 ## Derby
 
-### High Park and Warren Riverview Park
+### High Park 2026 renovation (splash pad, playground, pickleball)
 
-- Page section: Local character
-- Source: City of Derby, Explore Derby and Warren Riverview Park facility page
-- Source URL: https://derbyks.com/Explore
-- Source URL: https://www.derbyks.com/Facilities/Facility/Details/Warren-Riverview-Park-32
-- Checked: 2026-08-13
-- Notes: City pages identify both parks and support Warren Riverview Park's setting and access along the Arkansas River.
+- Page section: Local character (High Park)
+- Source: Derby Informer, High Park ribbon-cutting coverage; AOL/local news aggregation of the same reporting
+- Source URL: https://www.derbyinformer.com/gallery/news/photos-high-park-ribbon-cutting/collection_b23cf191-f439-45c7-922b-958f1a7a1566.html
+- Source URL: https://www.aol.com/news/wichita-suburb-adding-playground-splash-093500638.html
+- Checked: 2026-08-26
+- Notes: Local news coverage supports the May 2026 opening of a new splash pad, playground, restrooms, and renovated shelter on the park's south end, and an eight-court lighted pickleball complex on the north end, as part of a roughly $4 million renovation tied to the city's Parks Master Plan. This is a dated, time-sensitive claim (a specific 2026 project) rather than a stable park fact, so it should be rechecked before reuse if this page is revisited much later.
+
+### High Park general amenities
+
+- Page section: Local character (High Park)
+- Source: City of Derby, High Park facility page
+- Source URL: https://www.derbyks.gov/Facilities/Facility/Details/7
+- Checked: 2026-08-26
+- Notes: Supports High Park as Derby's largest park (east side), with a fishing pond, amphitheater, gazebo, soccer fields, a baseball/softball complex, and more than two miles of hike-and-bike path. The page itself returned a 403 to automated fetching; this reflects a search-engine summary of its content rather than a direct read, so it's worth a manual spot-check if these specifics are relied on again.
+
+### Warren Riverview Park
+
+- Page section: Along the river
+- Source: City of Derby (via WDM Architects and PEC case studies describing the city-commissioned project); Warren Riverview Park facility page
+- Source URL: https://wdmarchitects.com/case-studies/warren-riverview-park-in-derby/
+- Source URL: https://www.derbyks.gov/facilities/facility/details/Warren-Riverview-Park-32
+- Checked: 2026-08-26
+- Notes: Supports the park's October 2018 opening, four-acre size, location on the east bank of the Arkansas River between Market Street and Washington Avenue, and its canoe/kayak launch, ropes course, accessible playground, covered shelter, and terraced limestone amphitheater/river landing. The facility page itself returned a 403 to automated fetching, so this is corroborated through the architect/engineering case studies rather than a direct city-page read.
 
 ### Long-range growth planning
 

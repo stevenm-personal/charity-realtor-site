@@ -51,6 +51,27 @@ Unresolved source hints should remain in place until the associated rights are r
 
 **Open question:** The permission covers photos published on the city's website. It does not independently establish that the city holds copyright in every image it publishes. If any specific image is later found to have come from a third party, that image needs its own record.
 
+### City of Derby photography
+
+**Website assets:** `src/assets/communities/derby/*-city-of-derby.jpg`, `*-city-of-derby.png`
+
+**Subject:** High Park (gazebo, pond, splash pad/playground, pickleball courts), Warren Riverview Park (aerials), and the Derby city sign.
+
+**Current public use:**
+
+- Derby community-page hero (High Park gazebo and footbridge).
+- Derby community page, High Park section (splash pad/playground).
+- Derby community page, Warren Riverview Park section (amphitheater aerial).
+- Homepage Derby tile and communities landing-page Derby card (city sign).
+
+**Source:** Steven reports having permission from the City of Derby to use these images.
+
+**Permission method, date, and exact scope:** Not yet documented. Steven has indicated a screenshot of the permission is forthcoming.
+
+**Evidence:** Not yet on file. Needs a screenshot or written confirmation saved under `docs/image-rights/` and linked here once available.
+
+**Attribution requirement:** Not yet confirmed. The site applies a courtesy `© City of Derby` credit in the meantime, consistent with the default in this document.
+
 ### Kansas Tourism photo library
 
 **Website assets:** `src/assets/communities/**/*-kansastourism-*`

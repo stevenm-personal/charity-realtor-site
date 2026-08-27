@@ -3,8 +3,9 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import riverviewPhoto from '../../assets/communities/derby/derby-canoes-travelks.jpg';
-import highParkPhoto from '../../assets/communities/derby/derby-high-park-facebookhighpark.jpg';
+import heroPhoto from '../../assets/communities/derby/derby-hero-city-of-derby.jpg';
+import highParkPhoto from '../../assets/communities/derby/derby-high-park-playground-splash-pad-city-of-derby.jpg';
+import warrenRiverviewPhoto from '../../assets/communities/derby/derby-warren-riverview-park-aerial2-city-of-derby.png';
 ---
 
 <BaseLayout
@@ -16,11 +17,12 @@ import highParkPhoto from '../../assets/communities/derby/derby-high-park-facebo
     eyebrow="Community guide · Derby"
     title="A growing city just south of Wichita."
     intro="Derby is closely connected to the Wichita metro while functioning as a substantial city with established neighborhoods, newer growth, commercial corridors, parks, and civic spaces of its own."
-    image={riverviewPhoto}
-    imageAlt="Kayakers entering the Arkansas River at Warren Riverview Park in Derby"
+    image={heroPhoto}
+    imageAlt="The gazebo and footbridge beside the fishing pond at High Park in Derby at sunset"
     variant="community"
-    imagePosition="center 52%"
-    imagePositionMobile="45% center"
+    imagePosition="38% center"
+    imagePositionMobile="20% center"
+    photoCredit="© City of Derby"
   />
 
   <section class="section-space" aria-labelledby="derby-overview-title">
@@ -50,13 +52,13 @@ import highParkPhoto from '../../assets/communities/derby/derby-high-park-facebo
     </div>
   </section>
 
-  <section class="photo-story section-space section-sage" aria-labelledby="derby-parks-title">
+  <section class="photo-story section-space section-sage" aria-labelledby="derby-highpark-title">
     <div class="shell photo-story-grid">
       <div class="photo-story-copy" data-reveal="left">
         <p class="eyebrow">Local character</p>
-        <h2 id="derby-parks-title">Major parks create distinct local reference points.</h2>
-        <p>High Park on Derby's east side includes recreation areas, a fishing pond, an amphitheater, trails, and event space. Its scale and range of uses make it a recognizable part of the city's park system.</p>
-        <p>Warren Riverview Park provides a different setting along the Arkansas River on Derby's west side. River access and recreation space connect that edge of the city directly to the landscape, offering a clear contrast with Derby's more developed corridors.</p>
+        <h2 id="derby-highpark-title">High Park just finished a major renovation.</h2>
+        <p>High Park, Derby's largest park on the east side of the city, reopened its south end in May 2026 after a renovation that added a new splash pad, playground, restrooms, and a renovated shelter. The north end of the park separately gained an eight-court pickleball complex with lighting.</p>
+        <p>The park also includes a fishing pond, amphitheater, gazebo, soccer fields, a baseball and softball complex, and more than two miles of hike-and-bike path, which is part of why it functions as a recognizable reference point across that side of the city.</p>
       </div>
       <div class="photo-story-main" data-reveal="right">
         <Picture
@@ -64,8 +66,30 @@ import highParkPhoto from '../../assets/communities/derby/derby-high-park-facebo
           formats={['avif', 'webp']}
           widths={[480, 720, 960, 1280, 1600]}
           sizes="(min-width: 48rem) 62vw, 100vw"
-          alt="Playground and recreation space at High Park in Derby"
+          alt="An aerial view of the new splash pad and playground at High Park in Derby"
         />
+        <p class="photo-credit">© City of Derby</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space" aria-labelledby="derby-warren-title">
+    <div class="shell photo-story-grid photo-story-reverse">
+      <div class="photo-story-copy" data-reveal="right">
+        <p class="eyebrow">Along the river</p>
+        <h2 id="derby-warren-title">Warren Riverview Park sits against the Arkansas River.</h2>
+        <p>Warren Riverview Park opened in 2018 on the east bank of the Arkansas River, between Market Street and Washington Avenue. Its four acres include a canoe and kayak launch, a ropes course, an accessible playground, a covered shelter, and a terraced amphitheater and river landing built from Kansas limestone.</p>
+        <p>It's a different kind of setting than Derby's more developed corridors, and it's a useful reference point if river access or that side of the city is part of what you're looking for.</p>
+      </div>
+      <div class="photo-story-main" data-reveal="left">
+        <Picture
+          src={warrenRiverviewPhoto}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 840]}
+          sizes="(min-width: 48rem) 62vw, 100vw"
+          alt="An aerial view of Warren Riverview Park's terraced amphitheater and river landing along the Arkansas River"
+        />
+        <p class="photo-credit">© City of Derby</p>
       </div>
     </div>
   </section>
