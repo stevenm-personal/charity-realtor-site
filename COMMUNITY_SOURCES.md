@@ -120,7 +120,7 @@ This file records the primary sources behind community-page claims that are time
 
 ### High Park 2026 renovation (splash pad, playground, pickleball)
 
-- Page section: Local character (High Park)
+- Page section: Local character (Two parks anchor opposite sides of the city)
 - Source: Derby Informer, High Park ribbon-cutting coverage; AOL/local news aggregation of the same reporting
 - Source URL: https://www.derbyinformer.com/gallery/news/photos-high-park-ribbon-cutting/collection_b23cf191-f439-45c7-922b-958f1a7a1566.html
 - Source URL: https://www.aol.com/news/wichita-suburb-adding-playground-splash-093500638.html
@@ -129,7 +129,7 @@ This file records the primary sources behind community-page claims that are time
 
 ### High Park general amenities
 
-- Page section: Local character (High Park)
+- Page section: Local character (Two parks anchor opposite sides of the city)
 - Source: City of Derby, High Park facility page
 - Source URL: https://www.derbyks.gov/Facilities/Facility/Details/7
 - Checked: 2026-08-26
@@ -137,7 +137,7 @@ This file records the primary sources behind community-page claims that are time
 
 ### Warren Riverview Park
 
-- Page section: Along the river
+- Page section: Local character (Two parks anchor opposite sides of the city)
 - Source: City of Derby (via WDM Architects and PEC case studies describing the city-commissioned project); Warren Riverview Park facility page
 - Source URL: https://wdmarchitects.com/case-studies/warren-riverview-park-in-derby/
 - Source URL: https://www.derbyks.gov/facilities/facility/details/Warren-Riverview-Park-32

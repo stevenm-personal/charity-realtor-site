@@ -60,8 +60,7 @@ Unresolved source hints should remain in place until the associated rights are r
 **Current public use:**
 
 - Derby community-page hero (High Park gazebo and footbridge).
-- Derby community page, High Park section (splash pad/playground).
-- Derby community page, Warren Riverview Park section (amphitheater aerial).
+- Derby community page, Parks section (High Park gazebo; Warren Riverview Park aerial).
 - Homepage Derby tile and communities landing-page Derby card (city sign).
 
 **Source:** Steven reports having permission from the City of Derby to use these images.
