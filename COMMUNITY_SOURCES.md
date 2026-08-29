@@ -108,15 +108,36 @@ This file records the primary sources behind community-page claims that are time
 ### Central Park, Lake George, Capitol Federal Amphitheater, and Redbud Trail
 
 - Page section: A local center
-- Source: City of Andover, Parks and Recreation; Lake George; Capitol Federal Amphitheater; Amenities
+- Source: City of Andover, Parks and Recreation; Lake George; Capitol Federal Amphitheater; Amenities; Disc Golf Course
 - Source URL: https://www.andoverks.gov/17/Parks-and-Recreation
 - Source URL: https://www.andoverks.gov/882/Lake-George
 - Source URL: https://www.andoverks.gov/871/11236/Capitol-Federal-Amphitheater?activeLiveTab=widgets
 - Source URL: https://www.andoverks.gov/611/Amenities
-- Checked: 2026-08-13
-- Notes: City pages identify these facilities and support the amphitheater's 2018 opening and the Redbud Trail connection through Andover.
+- Source URL: https://www.andoverks.gov/872/Disc-Golf-Course
+- Checked: 2026-08-28
+- Notes: City pages identify these facilities and support the amphitheater's 2018 opening, the Redbud Trail connection through Andover, and a free 18-hole disc golf course (designed by Eric McCabe, established 2021, per UDisc/PDGA course listings) running through Central Park.
+
+### Greater Andover Days
+
+- Page section: A yearly tradition (Andover Days)
+- Source: City of Andover, Greater Andover Days (GAD); Wichita By E.B.; KWCH coverage of the 58th annual festival
+- Source URL: https://www.andoverks.gov/114/Greater-Andover-Days-GAD
+- Source URL: https://www.andoverks.gov/895/About-GAD
+- Source URL: https://www.kwch.com/2025/09/26/58th-greater-andover-days-kicks-off-this-weekend/
+- Checked: 2026-08-28
+- Notes: Supports the festival's 1967 founding, its annual early-October timing, and its parade, carnival, fireworks, live music, car show, and business/craft-expo activities. Secondary coverage places the parade, carnival, and fireworks specifically at Central Park; the official city page describes the broader festival as spanning "various venues throughout the city," so the page describes Central Park as hosting "much of" the event rather than all of it.
 
 ## Derby
+
+### Field Station: Dinosaurs
+
+- Page section: A one-of-a-kind attraction
+- Source: kansasdinos.com (official site); Yelp business listing; VisitWichita listing
+- Source URL: https://kansasdinos.com/
+- Source URL: https://www.yelp.com/biz/field-station-dinosaurs-derby
+- Source URL: https://www.visitwichita.com/listing/field-station%3A-dinosaurs/31641/
+- Checked: 2026-08-28
+- Notes: Confirms the address (2999 N Rock Rd, Derby, KS 67037), more than 40 life-size dinosaur models set among native prairie grasses along a roughly 10-acre trail, live educational presentations, the Paleo Playground, and a mini-golf course (Jurassic Golf). The official site describes seasonal rather than year-round operation with hours that vary by season, so the page describes it generally rather than citing specific dates or hours.
 
 ### High Park 2026 renovation (splash pad, playground, pickleball)
 
@@ -151,6 +172,15 @@ This file records the primary sources behind community-page claims that are time
 - Source URL: https://www.derbyks.gov/710/Vision-Derby-2040-Comprehensive-Plan
 - Checked: 2026-08-13
 - Notes: The comprehensive plan supports the page's broad discussion of long-term land use, transportation, housing, and community development. Subdivision names tied to older infrastructure snapshots were removed rather than treated as current.
+
+### Rock River Rapids
+
+- Page section: A local water park (Rock River Rapids banner section)
+- Source: Derby Recreation Commission, Rock River Rapids official site; Yelp business listing
+- Source URL: https://www.rockriverrapids.com/
+- Source URL: https://www.yelp.com/biz/derby-rock-river-rapids-aquatic-park-derby
+- Checked: 2026-08-28
+- Notes: Confirms the address (1900 E James, Derby, KS 67037), operation by the Derby Recreation Commission rather than the city directly, and a seasonal opening pattern tied to Memorial Day. Supports the feature list: lazy river, four waterslides, a lap pool with diving boards and a water climbing wall, and a separate zero-depth play area topped with a tipping water bucket. Exact closing date varies by year (end of summer), so the page describes it generally as "through late summer" rather than citing a specific date.
 
 ## Goddard
 

@@ -5,8 +5,10 @@ import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
 import fallFestivalPhoto from '../../assets/communities/goddard/goddard-fall-festival-movie-in-the-park-city-of-goddard.jpg';
 import ferrisWheelPhoto from '../../assets/communities/goddard/goddard-fall-festival-ferris-wheel-city-of-goddard.jpg';
+import fireworksPhoto from '../../assets/communities/goddard/goddard-fall-festival-fireworks-city-of-goddard.jpg';
 import tanganyikaPhoto from '../../assets/communities/goddard/goddard-tanganyika-wildlife-park-kansastourism-2016 Ryan Donnell.jpg';
 import linearParkPhoto from '../../assets/communities/goddard/goddard-splash-pad-with-kids-city-of-goddard.jpg';
+import mainStreetPhoto from '../../assets/communities/goddard/goddard-street-aerial-2-city-of-goddard.jpg';
 ---
 
 <BaseLayout
@@ -52,42 +54,73 @@ import linearParkPhoto from '../../assets/communities/goddard/goddard-splash-pad
     </div>
   </section>
 
-  <section class="section-space section-sage" aria-labelledby="goddard-character-title">
-    <div class="shell editorial-grid">
-      <div data-reveal="left">
-        <p class="eyebrow">Local character and change</p>
-        <h2 id="goddard-character-title">Main Street and the US-54 corridor tell different parts of the story.</h2>
-      </div>
-      <div class="prose" data-reveal="right">
-        <p>Goddard was incorporated in 1910, and Main Street historically served as the city's primary business area. That older physical core remains an important point of contrast with the newer development expanding the community's footprint.</p>
-        <p>Along the US-54 corridor, the Genesis Sports Complex represents a newer side of Goddard's growth. Its tournament and recreation facilities extend that story beyond housing without replacing the city's older center.</p>
-      </div>
+  <section class="photo-banner section-sage" aria-labelledby="goddard-character-title">
+    <div class="photo-banner-media">
+      <Picture
+        src={mainStreetPhoto}
+        formats={['avif', 'webp']}
+        widths={[960, 1440, 1920, 2600]}
+        sizes="100vw"
+        alt="An aerial view of Main Street in Goddard, with older storefronts in the foreground and newer rooftops spreading toward the horizon"
+      />
+      <p class="photo-credit">© City of Goddard</p>
+    </div>
+    <div class="shell photo-banner-copy" data-reveal="up">
+      <p class="eyebrow">Local character and change</p>
+      <h2 id="goddard-character-title">Main Street is still the older side of a growing city.</h2>
+      <p>Goddard was incorporated in 1910, and Main Street historically served as the city's primary business area. That older physical core, visible here, remains an important point of contrast with the newer residential development spreading toward the edges of town.</p>
+      <p>Along the US-54 corridor, the Genesis Sports Complex represents a newer side of Goddard's growth. Its tournament and recreation facilities extend that story beyond housing without replacing the city's older center.</p>
     </div>
   </section>
 
-  <section class="photo-story section-space" aria-labelledby="goddard-festival-title">
-    <div class="shell photo-story-grid">
-      <div class="photo-story-copy" data-reveal="left">
-        <p class="eyebrow">A yearly tradition</p>
-        <h2 id="goddard-festival-title">Every October, Main Street turns into the Fall Festival.</h2>
-        <p>The Goddard Fall Festival has been part of the city since the 1960s. The parade runs up Main Street from 23rd to 4th, and the surrounding blocks fill with carnival rides, vendor booths, and food trucks near Linear Park. An outdoor movie screening, contests, and tournaments round out the weekend.</p>
-        <p>It's the clearest annual example of Main Street still working as the city's gathering place, which is worth knowing if you're weighing a home in the older part of town against one further out.</p>
+  <section class="section-space" aria-labelledby="goddard-festival-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">A yearly tradition</p>
+          <h2 id="goddard-festival-title">Main Street hosts the Fall Festival.</h2>
+        </div>
+        <p data-reveal="right">Every October the festival takes over Main Street, a tradition since the 1960s. It's the clearest annual example of Main Street still working as the city's gathering place, which is worth knowing if you're weighing a home in the older part of town against one further out.</p>
       </div>
-      <div class="photo-story-main photo-story-festival" data-reveal="right">
-        <Picture
-          src={ferrisWheelPhoto}
-          formats={['avif', 'webp']}
-          widths={[480, 720, 960, 1280, 1600]}
-          sizes="(min-width: 48rem) 62vw, 100vw"
-          alt="An illuminated Ferris wheel and carnival rides against the night sky at the Goddard Fall Festival"
-        />
-        <p class="photo-credit">© City of Goddard</p>
+      <div class="feature-card-grid reveal-stagger">
+        <figure class="feature-card" data-reveal="left-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={ferrisWheelPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="An illuminated Ferris wheel and carnival rides against the night sky at the Goddard Fall Festival"
+            />
+            <p class="photo-credit">© City of Goddard</p>
+          </div>
+          <figcaption>
+            <strong>Parade and carnival</strong>
+            <p>The parade runs up Main Street from 23rd to 4th, and the surrounding blocks fill with carnival rides, vendor booths, and food trucks near Linear Park.</p>
+          </figcaption>
+        </figure>
+        <figure class="feature-card" data-reveal="right-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={fireworksPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="Fireworks bursting above the stage and crowd at the Goddard Fall Festival"
+            />
+            <p class="photo-credit">© City of Goddard</p>
+          </div>
+          <figcaption>
+            <strong>Through the weekend</strong>
+            <p>An outdoor movie screening, contests, and tournaments fill out the rest of the schedule, and the festival runs into the evening with live entertainment and fireworks.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section class="photo-story section-space section-surface" aria-labelledby="goddard-tanganyika-title">
-    <div class="shell photo-story-grid photo-story-reverse">
+    <div class="shell photo-story-grid photo-story-reverse tanganyika-grid">
       <div class="photo-story-copy" data-reveal="right">
         <p class="eyebrow">A local attraction</p>
         <h2 id="goddard-tanganyika-title">Tanganyika Wildlife Park is here, not just nearby.</h2>

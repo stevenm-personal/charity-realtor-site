@@ -3,8 +3,10 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import amphitheaterPhoto from '../../assets/communities/andover/andover-captiol-federal-ampitheater-LK-Architecture.jpg';
-import centralParkPhoto from '../../assets/communities/andover/andover-central-park-derby-informer.webp';
+import heritagePlazaPhoto from '../../assets/communities/andover/city-of-andover-heritage-plaza-better.jpg';
+import amphitheaterAerialPhoto from '../../assets/communities/andover/andover-capitol-federal-amphitheater-city-of-andover.jpg';
+import discGolfPhoto from '../../assets/communities/andover/city-of-andover-central-park-disc-golf.jpg';
+import andoverDaysPhoto from '../../assets/communities/andover/city-of-andover-heritage-andover-days.jpg';
 ---
 
 <BaseLayout
@@ -16,11 +18,11 @@ import centralParkPhoto from '../../assets/communities/andover/andover-central-p
     eyebrow="Community guide · Andover"
     title="A growing city just east of Wichita."
     intro="Andover is an independent city with close physical connections to the Wichita metro and its own parks, neighborhoods, civic center, and community identity."
-    image={amphitheaterPhoto}
-    imageAlt="Capitol Federal Amphitheater in Andover Central Park"
+    image={heritagePlazaPhoto}
+    imageAlt="An aerial view of Heritage Park Plaza in Andover, with its pond, string lights, and open lawn"
     variant="community"
-    imagePosition="center 48%"
-    imagePositionMobile="58% center"
+    imagePosition="center 40%"
+    imagePositionMobile="center 35%"
   />
 
   <section class="section-space" aria-labelledby="andover-overview-title">
@@ -49,22 +51,68 @@ import centralParkPhoto from '../../assets/communities/andover/andover-central-p
     </div>
   </section>
 
-  <section class="photo-story section-space section-sage" aria-labelledby="andover-park-title">
+  <section class="section-space section-sage" aria-labelledby="andover-park-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">A local center</p>
+          <h2 id="andover-park-title">Capitol Federal Amphitheater anchors Andover Central Park.</h2>
+        </div>
+        <p data-reveal="right">Central Park is a major civic and recreation area within the city. Beyond the amphitheater, it also holds Lake George, the Redbud Trail, and a free 18-hole disc golf course, making it one of Andover's more versatile public spaces.</p>
+      </div>
+      <div class="feature-card-grid reveal-stagger">
+        <figure class="feature-card" data-reveal="left-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={amphitheaterAerialPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="An aerial view of Capitol Federal Amphitheater surrounded by the open lawns, walking paths, and a stream of Andover Central Park"
+            />
+          </div>
+          <figcaption>
+            <strong>Capitol Federal Amphitheater</strong>
+            <p>Opened in 2018, the amphitheater sits at the center of Central Park and hosts concerts, performances, and other community events throughout the year.</p>
+          </figcaption>
+        </figure>
+        <figure class="feature-card" data-reveal="right-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={discGolfPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="A disc golf basket beside the pond at Andover Central Park"
+            />
+          </div>
+          <figcaption>
+            <strong>Part of a larger park</strong>
+            <p>Central Park also includes a free 18-hole disc golf course, along with connections to Lake George and the Redbud Trail, which runs west toward the larger trail system extending into Wichita, with 13th Street Sports Park linked directly to the trail.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-story section-space section-surface" aria-labelledby="andover-days-title">
     <div class="shell photo-story-grid">
       <div class="photo-story-copy" data-reveal="left">
-        <p class="eyebrow">A local center</p>
-        <h2 id="andover-park-title">Central Park brings civic space and recreation together.</h2>
-        <p>Andover Central Park is a major civic and recreation area within the city. Lake George and Capitol Federal Amphitheater are both located there, giving concerts, performances, events, and other community activities a recognizable local setting. The amphitheater opened in 2018.</p>
-        <p>Outdoor connections extend beyond the park. The Redbud Trail runs through the Andover area and connects west toward the larger trail system extending into Wichita. It accommodates walking, running, and bicycling, and 13th Street Sports Park connects directly to the trail.</p>
+        <p class="eyebrow">A yearly tradition</p>
+        <h2 id="andover-days-title">Greater Andover Days fills Central Park each fall.</h2>
+        <p>Greater Andover Days traces back to 1967, when the festival began as a way to bring the community together. Held annually in early October, it's grown into a three-day event with a parade, carnival, fireworks, live music, a car show, and a business and craft expo, much of it centered at Central Park.</p>
       </div>
-      <div class="photo-story-main" data-reveal="right">
-        <Picture
-          src={centralParkPhoto}
-          formats={['avif', 'webp']}
-          widths={[480, 720, 940]}
-          sizes="(min-width: 48rem) 62vw, 100vw"
-          alt="An outdoor community event beside Lake George in Andover Central Park"
-        />
+      <div class="photo-story-media" data-reveal="right">
+        <div class="photo-story-main">
+          <Picture
+            src={andoverDaysPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280]}
+            sizes="(min-width: 48rem) 62vw, 100vw"
+            alt="A lit carnival ride and midway at dusk during Greater Andover Days"
+          />
+        </div>
+        <p class="photo-story-caption">It's one of the clearest examples of Central Park working as Andover's civic gathering place, worth keeping in mind alongside the amphitheater and trail system when you're weighing a home near the park against one further out.</p>
       </div>
     </div>
   </section>

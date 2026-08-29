@@ -61,15 +61,91 @@ Unresolved source hints should remain in place until the associated rights are r
 
 - Derby community-page hero (High Park gazebo and footbridge).
 - Derby community page, Parks section (High Park gazebo; Warren Riverview Park aerial).
-- Homepage Derby tile and communities landing-page Derby card (city sign).
 
 **Source:** Steven reports having permission from the City of Derby to use these images.
 
-**Permission method, date, and exact scope:** Not yet documented. Steven has indicated a screenshot of the permission is forthcoming.
+**Permission method, date, and exact scope:** Not yet documented.
 
-**Evidence:** Not yet on file. Needs a screenshot or written confirmation saved under `docs/image-rights/` and linked here once available.
+**Evidence:** `docs/image-rights/city-of-derby-image-rights-permission.png`.
 
-**Attribution requirement:** Not yet confirmed. The site applies a courtesy `© City of Derby` credit in the meantime, consistent with the default in this document.
+**Attribution requirement:** Steven has not been asked to credit the City of Derby, so no on-page credit is applied.
+
+### City of Andover photography
+
+**Website assets:** `src/assets/communities/andover/*-city-of-andover.jpg`, `city-of-andover-*.jpg`
+
+**Subject:** Capitol Federal Amphitheater (aerial), Andover Central Park (disc golf), Heritage Park Plaza, and Greater Andover Days.
+
+**Current public use:**
+
+- Andover community-page hero and Central Park/amphitheater section (Heritage Park Plaza aerial; amphitheater aerial; disc golf).
+- Andover community page, Greater Andover Days section (carnival midway at dusk).
+- Homepage Andover tile and communities landing-page Andover card (Heritage Park Plaza statue).
+
+**Source:** Steven reports having permission from the City of Andover to use these images.
+
+**Permission method, date, and exact scope:** Not yet documented.
+
+**Evidence:** Not yet on file. Needs written confirmation saved under `docs/image-rights/` and linked here once available.
+
+**Attribution requirement:** Steven has not been asked to credit the City of Andover, so no on-page credit is applied.
+
+### Field Station: Dinosaurs photography
+
+**Website assets:** `src/assets/communities/derby/*field-station-dinosaurs*`
+
+**Subject:** The walking trail (life-size dinosaur models) and a live group presentation at Field Station: Dinosaurs in Derby.
+
+**Current public use:**
+
+- Derby community page, Field Station: Dinosaurs section (trail; group presentation).
+
+**Source:** Steven reports having permission to use these images for Field Station: Dinosaurs.
+
+**Permission method, date, and exact scope:** Not yet documented.
+
+**Evidence:** `docs/image-rights/field-station-dinosaurs-image-rights-permission.png`.
+
+**Attribution requirement:** Not yet confirmed. The site applies a courtesy `© Field Station: Dinosaurs` credit in the meantime, consistent with the default in this document.
+
+### Rock River Rapids photography
+
+**Website assets:** `src/assets/communities/derby/*-rock-river-rapids.jpg`, `*-rock-river-rapids.JPG`
+
+**Subject:** Aerial and ground views of Rock River Rapids, the Derby Recreation Commission's water park.
+
+**Current public use:**
+
+- Derby community page, Rock River Rapids banner section (aerial).
+- Homepage Derby tile and communities landing-page Derby card (aerial).
+
+**Source:** Steven reports having permission to use these images for Rock River Rapids.
+
+**Permission method, date, and exact scope:** Not yet documented.
+
+**Evidence:** `docs/image-rights/rock-river-rapids-image-rights-permission.png`.
+
+**Attribution requirement:** Not yet confirmed. The site applies a courtesy `© Rock River Rapids` credit in the meantime, consistent with the default in this document.
+
+### City of Andover photography
+
+**Website assets:** `src/assets/communities/andover/city-of-andover-*`, `src/assets/communities/andover/andover-capitol-federal-amphitheater-city-of-andover.jpg`
+
+**Subject:** Capitol Federal Amphitheater and its Andover Central Park setting, and the Greater Andover Days festival.
+
+**Current public use:**
+
+- Andover community page, Capitol Federal Amphitheater section (aerial and entrance-sign photos).
+- Andover community page, Greater Andover Days section.
+- Communities landing-page Andover card (city monument sign).
+
+**Source:** Steven reports having permission to use these images from the City of Andover.
+
+**Permission method, date, and exact scope:** Not yet documented.
+
+**Evidence:** Not yet on file. Needs written confirmation saved under `docs/image-rights/` and linked here once available.
+
+**Attribution requirement:** Steven has not been asked to credit the City of Andover, so no on-page credit is applied.
 
 ### Kansas Tourism photo library
 

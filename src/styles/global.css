@@ -832,37 +832,45 @@ p {
   font-size: clamp(1.9rem, 5vw, 2.75rem);
 }
 
-/* Full-bleed panoramic band. The stadium photo is a 4:1 panorama, so it runs
-   edge to edge and the copy sits underneath rather than on top of it. */
-.wichita-banner {
+/* Full-bleed photo band: copy sits below a full-width image instead of beside
+   it. Useful when a section's copy is too long for a side-by-side photo-story
+   column to match its height without either a large gap or heavy cropping -
+   a full-width band sidesteps the height-matching problem entirely, since
+   there's no column to match. Default aspect suits an ordinary landscape
+   photo; add .photo-banner-panorama for a true panorama that should run
+   wider and shorter. */
+.photo-banner {
   padding-bottom: clamp(3rem, 7vw, 5rem);
-  background: var(--color-surface);
 }
 
-.wichita-banner-media {
+.photo-banner-media {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 1;
+  aspect-ratio: 16 / 9;
 }
 
-.wichita-banner-media img {
+.photo-banner-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.wichita-banner-copy {
+.photo-banner-copy {
   padding-top: clamp(2rem, 5vw, 3rem);
   max-width: 46rem;
 }
 
-.wichita-banner-copy > p:not(.eyebrow) {
+.photo-banner-copy > p:not(.eyebrow) {
   color: var(--color-text-muted);
+}
+
+.photo-banner-panorama .photo-banner-media {
+  aspect-ratio: 4 / 1;
 }
 
 @media (max-width: 47.999rem) {
   /* A 4:1 band collapses to a sliver on a phone; tighten the crop instead. */
-  .wichita-banner-media {
+  .photo-banner-panorama .photo-banner-media {
     aspect-ratio: 16 / 9;
   }
 }
@@ -932,23 +940,34 @@ p {
   min-height: 0;
 }
 
-/* Goddard photo slots are shaped per subject: a wide festival frame, an
-   upright frame for the portrait wildlife-park photo, and 4:3 for the park. */
-.page-goddard .photo-story-festival {
-  aspect-ratio: 16 / 9;
-}
-
+/* Goddard's wildlife-park photo is upright while its copy column runs long,
+   so a full-width photo would tower at wide viewports and a short one would
+   leave a gap at narrow ones. Capping the width keeps it at a predictable
+   size, and centring splits the leftover height evenly instead of banking it
+   all above or below the photo. The 2/3 ratio is the photo's own, so nothing
+   is cropped. */
 .page-goddard .photo-story-tanganyika {
-  aspect-ratio: 4 / 5;
-  /* Cap the width instead of the height: an upright photo at full column width
-     would tower over the rest of the page, and cropping it shorter would cut
-     the animal out of frame. */
-  max-width: 26rem;
+  aspect-ratio: 2 / 3;
+  max-width: 30rem;
   margin-inline: auto;
+  align-self: center;
 }
 
-.page-goddard .photo-story-tanganyika img {
-  object-position: center 30%;
+/* Between the 48rem two-column breakpoint and 64rem the copy column is too
+   narrow to sit beside an upright photo without the text running far taller
+   than it, so this one section stays stacked until there is room for both. */
+@media (max-width: 63.999rem) {
+  .page-goddard .tanganyika-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-goddard .tanganyika-grid .photo-story-copy,
+  .page-goddard .tanganyika-grid .photo-story-main {
+    grid-column: 1;
+    grid-row: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .page-valley-center .valley-recreation-feature,
@@ -2227,6 +2246,26 @@ p {
   color: var(--color-text-muted);
 }
 
+/* A caption below the image, used when moving a paragraph out of the copy
+   column would otherwise leave the copy column shorter than the image and
+   the row's leftover height empty instead of holding content. The media
+   wrapper groups the image and caption with flexbox so the caption sits
+   directly under the image's own bottom edge, instead of the grid's row
+   height (set by the taller copy column) leaving a gap between them. */
+.photo-story-media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.photo-story-caption {
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 .photo-story-main,
 .photo-story-secondary,
 .photo-story-main img,
@@ -3245,7 +3284,11 @@ textarea:focus-visible {
   .photo-story-grid {
     grid-template-columns: 0.62fr 1fr;
     grid-template-rows: auto auto;
-    align-items: end;
+    /* Top-align, not bottom-align: when the copy column runs much taller than
+       the image (a long wrapped heading, a width-capped portrait photo),
+       bottom-aligning the image leaves a large empty gap above it instead of
+       a smaller, less noticeable one below. */
+    align-items: start;
   }
 
   .photo-story-copy {
@@ -3263,6 +3306,15 @@ textarea:focus-visible {
   .page-derby .photo-story-main,
   .page-goddard .photo-story-main {
     grid-row: 1;
+  }
+
+  .photo-story-media {
+    grid-column: 2;
+    align-self: start;
+  }
+
+  .photo-story-reverse .photo-story-media {
+    grid-column: 1;
   }
 
   .page-valley-center .valley-recreation-feature {

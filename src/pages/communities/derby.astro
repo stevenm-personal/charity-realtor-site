@@ -6,6 +6,9 @@ import PageHero from '../../components/PageHero.astro';
 import heroPhoto from '../../assets/communities/derby/derby-hero-city-of-derby.jpg';
 import highParkPhoto from '../../assets/communities/derby/derby-high-park-gazebo-city-of-derby.jpg';
 import warrenRiverviewPhoto from '../../assets/communities/derby/derby-warren-riverview-park-city-of-derby.jpg';
+import rockRiverRapidsPhoto from '../../assets/communities/derby/rock-river-rapids-aerial-rock-river-rapids.jpg';
+import dinosaursTrailPhoto from '../../assets/communities/derby/derby-field-station-dinosaurs-kids-field-station-dinosaurs.jpg';
+import dinosaursGroupPhoto from '../../assets/communities/derby/field-station-dinosaurs-group-presentation-field-station-dinosaurs.jpg';
 ---
 
 <BaseLayout
@@ -22,7 +25,6 @@ import warrenRiverviewPhoto from '../../assets/communities/derby/derby-warren-ri
     variant="community"
     imagePosition="38% center"
     imagePositionMobile="20% center"
-    photoCredit="© City of Derby"
   />
 
   <section class="section-space" aria-labelledby="derby-overview-title">
@@ -46,8 +48,7 @@ import warrenRiverviewPhoto from '../../assets/communities/derby/derby-warren-ri
       </div>
       <div class="prose" data-reveal="right">
         <p>Derby's housing reflects several decades of expansion, with established residential areas closer to its older street network and later additions extending the city's footprint. That range makes the home's age, lot pattern, and connections to K-15 and Rock Road more useful than a subdivision name alone.</p>
-        <p>For a newer home or planned development, review the specific lot, included improvements, restrictions, and any HOA or special-assessment obligations tied to the address.</p>
-        <p>Derby has grown substantially over several decades. The City's Vision Derby 2040 comprehensive plan addresses continued growth through topics including land use, transportation, housing, and community development, keeping long-term change part of the broader city conversation.</p>
+        <p>For a newer home or planned development, review the specific lot, included improvements, restrictions, and any HOA or special-assessment obligations tied to the address. The City's Vision Derby 2040 comprehensive plan addresses that continued growth through land use, transportation, and housing.</p>
       </div>
     </div>
   </section>
@@ -71,7 +72,6 @@ import warrenRiverviewPhoto from '../../assets/communities/derby/derby-warren-ri
               sizes="(min-width: 48rem) 50vw, 100vw"
               alt="The gazebo beside the fishing pond at High Park in Derby"
             />
-            <p class="photo-credit">© City of Derby</p>
           </div>
           <figcaption>
             <strong>High Park</strong>
@@ -87,11 +87,75 @@ import warrenRiverviewPhoto from '../../assets/communities/derby/derby-warren-ri
               sizes="(min-width: 48rem) 50vw, 100vw"
               alt="An aerial view of Warren Riverview Park's terraced amphitheater and river landing along the Arkansas River"
             />
-            <p class="photo-credit">© City of Derby</p>
           </div>
           <figcaption>
             <strong>Warren Riverview Park</strong>
             <p>Opened in 2018 on the east bank of the Arkansas River, this four-acre park is a different kind of setting than Derby's more developed corridors. It includes a canoe and kayak launch, a ropes course, an accessible playground, a covered shelter, and a terraced amphitheater and river landing built from Kansas limestone.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-banner section-surface" aria-labelledby="derby-rrr-title">
+    <div class="photo-banner-media">
+      <Picture
+        src={rockRiverRapidsPhoto}
+        formats={['avif', 'webp']}
+        widths={[960, 1440, 1920, 2600]}
+        sizes="100vw"
+        alt="An aerial view of Rock River Rapids in Derby, showing the lazy river, zero-depth play pool, lap pool, and water slides"
+      />
+      <p class="photo-credit">© Rock River Rapids</p>
+    </div>
+    <div class="shell photo-banner-copy" data-reveal="up">
+      <p class="eyebrow">A local water park</p>
+      <h2 id="derby-rrr-title">The Derby Recreation Commission runs its own water park.</h2>
+      <p>Rock River Rapids is a public water park at 1900 E James Street, run by the Derby Recreation Commission rather than the city government directly. It's open seasonally, typically from Memorial Day through late summer.</p>
+      <p>The park includes a lazy river, four waterslides, and a lap pool with diving boards and a climbing wall. A separate zero-depth play area, topped by a tipping water bucket, gives younger kids their own space apart from the main slides.</p>
+    </div>
+  </section>
+
+  <section class="section-space section-sage" aria-labelledby="derby-dinosaurs-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">A one-of-a-kind attraction</p>
+          <h2 id="derby-dinosaurs-title">Field Station: Dinosaurs brings a walking trail of life-size models to Derby.</h2>
+        </div>
+        <p data-reveal="right">More than 40 life-size dinosaur models sit among native prairie grasses along a 10-acre trail, with live presentations and more rounding out the visit.</p>
+      </div>
+      <div class="feature-card-grid reveal-stagger">
+        <figure class="feature-card" data-reveal="left-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={dinosaursTrailPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="Two children walking a gravel trail toward large dinosaur models at Field Station: Dinosaurs"
+            />
+            <p class="photo-credit">© Field Station: Dinosaurs</p>
+          </div>
+          <figcaption>
+            <strong>A walking trail among the dinosaurs</strong>
+            <p>More than 40 life-size dinosaur models line a 10-acre trail through native prairie grasses at 2999 N Rock Rd, mixing regional favorites with species discovered in Kansas.</p>
+          </figcaption>
+        </figure>
+        <figure class="feature-card" data-reveal="right-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={dinosaursGroupPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="A large group of schoolchildren watching a costumed dinosaur presentation at Field Station: Dinosaurs"
+            />
+            <p class="photo-credit">© Field Station: Dinosaurs</p>
+          </div>
+          <figcaption>
+            <strong>Live shows and more to explore</strong>
+            <p>Live educational presentations run throughout a visit, and the Paleo Playground and a mini-golf course give the park more to do beyond the trail. It operates seasonally rather than year-round.</p>
           </figcaption>
         </figure>
       </div>
