@@ -2854,9 +2854,13 @@ p {
   margin-top: var(--space-5);
 }
 
-.affiliation-logo {
+.affiliation-logos a {
   display: block;
   flex: 0 0 auto;
+}
+
+.affiliation-logo {
+  display: block;
   height: auto;
   object-fit: contain;
 }

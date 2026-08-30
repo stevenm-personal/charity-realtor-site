@@ -3,10 +3,11 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import heroPhoto from '../../assets/communities/newton/newton-ks-hero-facebook.jpg';
+import heroPhoto from '../../assets/communities/newton/newton-amtrak-self-taken.jpg';
 import backAlleyPhoto from '../../assets/communities/newton/newton-back-alley-pizza-whee.png';
 import twistedBookstorePhoto from '../../assets/communities/newton/newton-twisted-bookstore-facebook.jpg';
 import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-station-kansastourism-2016 Ryan Donnell.jpg';
+import muralPhoto from '../../assets/communities/newton/newton-mural-panorama-wider-self-taken.jpg';
 ---
 
 <BaseLayout
@@ -19,7 +20,7 @@ import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-st
     title="Historic roots. Local character. Room to grow."
     intro="Newton is a historic Kansas city with a recognizable downtown, deep railroad roots, and housing that reflects several distinct chapters of the community's growth."
     image={heroPhoto}
-    imageAlt="Newton Station and its fountain surrounded by flowers in Newton, Kansas"
+    imageAlt="The historic Newton Station depot and its fountain at golden hour"
     variant="community"
     imagePosition="center 46%"
     imagePositionMobile="52% center"
@@ -72,7 +73,7 @@ import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-st
             sizes="(min-width: 48rem) 50vw, 100vw"
             alt="Back Alley Pizza storefront in downtown Newton"
           />
-          <figcaption><strong>Back Alley Pizza</strong><span>An identifiable independent business in Newton's downtown district.</span></figcaption>
+          <figcaption><strong>Back Alley Pizza</strong><span>Open in downtown Newton since 2015, Back Alley Pizza is a locally run pizzeria known for its brick-oven pizzas. I always enjoy stopping in when I'm in town.</span></figcaption>
         </figure>
         <figure class="newton-business-card" data-reveal="right-scale">
           <Picture
@@ -82,9 +83,26 @@ import sandCreekPhoto from '../../assets/communities/newton/newton-sand-creek-st
             sizes="(min-width: 48rem) 50vw, 100vw"
             alt="Twisted Bookstore storefront in downtown Newton"
           />
-          <figcaption><strong>Twisted Bookstore</strong><span>Another clearly recognizable local storefront along Newton's downtown streets.</span></figcaption>
+          <figcaption><strong>Twisted Bookstore</strong><span>A newer addition to downtown Newton, Twisted Bookstore is a locally owned independent bookshop that also hosts book clubs, author events, and workshops for the community.</span></figcaption>
         </figure>
       </div>
+    </div>
+  </section>
+
+  <section class="photo-banner photo-banner-panorama section-surface" aria-labelledby="newton-mural-title">
+    <div class="photo-banner-media">
+      <Picture
+        src={muralPhoto}
+        formats={['avif', 'webp']}
+        widths={[960, 1440, 1920, 2600, 3200]}
+        sizes="100vw"
+        alt="The Enz Auto Glass mural at 127 E 6th Street in Newton, depicting a 1937 Chevy, the Santa Fe Super Chief train, cattle, a windmill, and a sunflower field at sunset"
+      />
+    </div>
+    <div class="shell photo-banner-copy" data-reveal="up">
+      <p class="eyebrow">A downtown landmark</p>
+      <h2 id="newton-mural-title">A 6th Street mural carries Newton's railroad story forward.</h2>
+      <p>Painted on the wall of Enz Auto Glass at 127 E 6th Street, this mural is the work of local artist Kacie Schmidt. It features the Santa Fe Super Chief, the railroad's famous Chicago-to-Los Angeles passenger train that once ran through town, tying the piece directly into Newton's railroad roots.</p>
     </div>
   </section>
 

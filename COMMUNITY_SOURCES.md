@@ -259,9 +259,20 @@ This file records the primary sources behind community-page claims that are time
 - Source URL: https://www.choose-newton.com/Venues/Andersons-Book-Office-Supply
 - Source URL: https://carriagefactoryartgallery.com/our-history/
 - Source URL: https://ba.pizza/
-- Source URL: https://www.twistedbookstore.com/
-- Checked: 2026-08-13
-- Notes: These sources support the Main Street program, Anderson's 1892 history, the named downtown businesses, and the two businesses shown in page photography. The guide no longer dates the program's accreditation status.
+- Source URL: https://www.twistedbookstore.com/about
+- Checked: 2026-08-30
+- Notes: These sources support the Main Street program, Anderson's 1892 history, the named downtown businesses, and the two businesses shown in page photography. The guide no longer dates the program's accreditation status. Back Alley Pizza's own site confirms it opened in 2015 and describes brick-oven pizza (not specifically wood-fired, which could not be confirmed from available sources). Twisted Bookstore's about page confirms it's a locally owned independent bookstore that hosts book clubs, author events, and workshops; no specific opening date could be found across its own site, Yelp, the Newton Chamber, or Midwest Independent Booksellers listings, so the page describes it only as "a newer addition to downtown Newton" rather than citing a year.
+
+### Enz Auto Glass mural
+
+- Page section: A downtown landmark
+- Source: On-site fundraising/informational sign at the mural location, photographed by Steven ("The Enz Auto Glass Mural," 127 E 6th St Newton, listing artist Kacie Schmidt and contact Constance Gehring with Newton Murals & Arts Project)
+- Source URL: https://www.newtonmurals.org/ (organizing nonprofit's site; the mural itself is not yet listed on its find-a-mural page)
+- Checked: 2026-08-30
+- Notes: Steven identified this photographed mural as the Enz Auto Glass mural at 127 E 6th Street (not the Sunflower Mural at 526 N Main, which an earlier draft incorrectly described). The on-site sign is the primary source for these facts: a 10-by-80-foot mural, painted by local artist Kacie Schmidt, depicting a classic 1937 Chevy, the Santa Fe Super Chief train, and a Kansas sunset, organized through the Newton Murals & Arts Project and sponsored by the Enz family (Mike, Jim, and Kevin Enz). The sign itself was a "Coming Summer 2026" fundraising sign rather than a dated completion record, but Steven's photos show the finished mural, so the page states only the year (2026), not a specific completion date. Note: an earlier version of this entry, sourced from Harvey County Now and Facebook coverage of the project's outlining phase, incorrectly credited artist Joshua Bargdill; the on-site sign supersedes that as the authoritative, mural-specific source.
+- Additional source: Steven reports the truck depicted in the mural was conceptually modeled on the Enz family's own 1937 Chevy pickup.
+- Additional source: Steven reports Newton Murals & Arts Project posted "Tonight is the Super Chief" on Facebook while painting that section of the mural, confirming the train is specifically the Santa Fe Super Chief rather than a generic locomotive. Not independently verified via a fetchable URL (Facebook post text was not accessible without login).
+- Additional source: Steven reports, per the Harvey County Historical Museum's Santa Fe Railway collection, that the Super Chief began running through Newton on May 18, 1936 (initially once a week), became a daily stop on February 29, 1948, and made its final run through Newton on May 1, 1971. This is an offline museum-collection fact relayed by Steven rather than one independently fetched; general web sources (Wikipedia, american-rails.com) independently corroborate that the Super Chief's route ran through Newton, Kansas and that its inaugural run was in May 1936, consistent with but not identical to the specific date given, and that it was Santa Fe's flagship Chicago-to-Los Angeles passenger train.
 
 ### Sand Creek Station golf history and residential context
 

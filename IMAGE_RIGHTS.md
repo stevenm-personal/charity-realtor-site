@@ -70,26 +70,6 @@ Unresolved source hints should remain in place until the associated rights are r
 
 **Attribution requirement:** Steven has not been asked to credit the City of Derby, so no on-page credit is applied.
 
-### City of Andover photography
-
-**Website assets:** `src/assets/communities/andover/*-city-of-andover.jpg`, `city-of-andover-*.jpg`
-
-**Subject:** Capitol Federal Amphitheater (aerial), Andover Central Park (disc golf), Heritage Park Plaza, and Greater Andover Days.
-
-**Current public use:**
-
-- Andover community-page hero and Central Park/amphitheater section (Heritage Park Plaza aerial; amphitheater aerial; disc golf).
-- Andover community page, Greater Andover Days section (carnival midway at dusk).
-- Homepage Andover tile and communities landing-page Andover card (Heritage Park Plaza statue).
-
-**Source:** Steven reports having permission from the City of Andover to use these images.
-
-**Permission method, date, and exact scope:** Not yet documented.
-
-**Evidence:** Not yet on file. Needs written confirmation saved under `docs/image-rights/` and linked here once available.
-
-**Attribution requirement:** Steven has not been asked to credit the City of Andover, so no on-page credit is applied.
-
 ### Field Station: Dinosaurs photography
 
 **Website assets:** `src/assets/communities/derby/*field-station-dinosaurs*`
@@ -125,27 +105,73 @@ Unresolved source hints should remain in place until the associated rights are r
 
 **Evidence:** `docs/image-rights/rock-river-rapids-image-rights-permission.png`.
 
-**Attribution requirement:** Not yet confirmed. The site applies a courtesy `© Rock River Rapids` credit in the meantime, consistent with the default in this document.
+**Attribution requirement:** Steven has not been asked to credit Rock River Rapids, so no on-page credit is applied.
 
 ### City of Andover photography
 
 **Website assets:** `src/assets/communities/andover/city-of-andover-*`, `src/assets/communities/andover/andover-capitol-federal-amphitheater-city-of-andover.jpg`
 
-**Subject:** Capitol Federal Amphitheater and its Andover Central Park setting, and the Greater Andover Days festival.
+**Subject:** Capitol Federal Amphitheater (aerial), Andover Central Park (disc golf), Heritage Park Plaza, and Greater Andover Days.
 
 **Current public use:**
 
-- Andover community page, Capitol Federal Amphitheater section (aerial and entrance-sign photos).
-- Andover community page, Greater Andover Days section.
-- Communities landing-page Andover card (city monument sign).
+- Andover community-page hero and Central Park/amphitheater section (Heritage Park Plaza aerial; amphitheater aerial; disc golf).
+- Andover community page, Greater Andover Days section (carnival midway at dusk).
+- Homepage Andover tile and communities landing-page Andover card (Heritage Park Plaza statue).
 
-**Source:** Steven reports having permission to use these images from the City of Andover.
+**Source:** Steven reports having permission from the City of Andover to use these images.
 
 **Permission method, date, and exact scope:** Not yet documented.
 
 **Evidence:** Not yet on file. Needs written confirmation saved under `docs/image-rights/` and linked here once available.
 
 **Attribution requirement:** Steven has not been asked to credit the City of Andover, so no on-page credit is applied.
+
+### Back Alley Pizza storefront
+
+**Website asset:** `src/assets/communities/newton/newton-back-alley-pizza-whee.png`
+
+**Current public use:**
+
+- Newton community page, Downtown and local businesses section.
+
+**Source:** Back Alley Pizza, via Facebook Messenger.
+
+**Permission method:** Direct permission received via Facebook Messenger. Steven's original request is not visible in the saved evidence (the screenshot begins with the reply), only Back Alley Pizza's response.
+
+**Permission date:** 2026-08-22.
+
+**Permission response:** "Sorry for the delay Steven. Yes you canm [sic] this is a number of years old but you can use it," — granting use of the storefront photo shown in the conversation. The business noted the photo itself is several years old.
+
+**Evidence:** `docs/image-rights/back-alley-pizza-image-rights-permission.png`
+
+**Attribution requirement:** None stated.
+
+This record does not claim ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or any use beyond the website use supported by the Facebook conversation.
+
+### Twisted Bookstore storefront
+
+**Website asset:** `src/assets/communities/newton/newton-twisted-bookstore-facebook.jpg`
+
+**Current public use:**
+
+- Newton community page, Downtown and local businesses section.
+
+**Source:** Twisted Bookstore, via Facebook Messenger.
+
+**Permission method:** Direct permission received via Facebook Messenger. The saved evidence shows the tail end of Steven's request ("...potentially in the future for a blog about Newton? I didn't want to use it without permission. Thank you!"), so the full original message is not on file.
+
+**Permission date:** 2026-08-15.
+
+**Permission requested:** Use of the storefront photo shown in the conversation, on the Newton community page and potentially in a future blog post about Newton.
+
+**Permission response:** "That'd be ok with me. 👍 Thanks!"
+
+**Evidence:** `docs/image-rights/twisted-bookstore-image-rights-permission.png`
+
+**Attribution requirement:** None stated.
+
+This record does not claim ownership, exclusivity, transferability, unrestricted reuse, print rights, advertising rights, or any use beyond the website and potential-blog use described above.
 
 ### Kansas Tourism photo library
 
