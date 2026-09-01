@@ -1,5 +1,5 @@
 import type { ImageMetadata } from 'astro';
-import valleyCenterParkPhoto from '../assets/blog/1-local-guide-valley-center/valley-center-mclaughlin-park.jpg';
+import valleyCenterParkPhoto from '../assets/blog/1-local-guide-valley-center/valley-center-purple-spoon-self-owned.jpg';
 
 export interface BlogPostSummary {
   slug: string;
@@ -35,7 +35,7 @@ export const valleyCenterFavoritesPost: BlogPostSummary = {
   displayDate: 'August 13, 2026',
   photoLabel: 'Valley Center hometown favorites',
   thumbnail: valleyCenterParkPhoto,
-  thumbnailAlt: 'Children playing in the splash pad at McLaughlin Park in Valley Center',
+  thumbnailAlt: 'The Purple Spoon ice cream shop storefront and sidewalk benches on Main Street in Valley Center',
   socialImage: '/images/static/blog/valley-center-hometown-favorites-social.jpg',
   socialImageAlt: 'Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night',
 };

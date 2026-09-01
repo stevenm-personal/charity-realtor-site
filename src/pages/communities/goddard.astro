@@ -25,7 +25,6 @@ import mainStreetPhoto from '../../assets/communities/goddard/goddard-street-aer
     variant="community"
     imagePosition="center 60%"
     imagePositionMobile="center 55%"
-    photoCredit="© City of Goddard"
   />
 
   <section class="section-space" aria-labelledby="goddard-overview-title">
@@ -63,7 +62,6 @@ import mainStreetPhoto from '../../assets/communities/goddard/goddard-street-aer
         sizes="100vw"
         alt="An aerial view of Main Street in Goddard, with older storefronts in the foreground and newer rooftops spreading toward the horizon"
       />
-      <p class="photo-credit">© City of Goddard</p>
     </div>
     <div class="shell photo-banner-copy" data-reveal="up">
       <p class="eyebrow">Local character and change</p>
@@ -92,8 +90,7 @@ import mainStreetPhoto from '../../assets/communities/goddard/goddard-street-aer
               sizes="(min-width: 48rem) 50vw, 100vw"
               alt="An illuminated Ferris wheel and carnival rides against the night sky at the Goddard Fall Festival"
             />
-            <p class="photo-credit">© City of Goddard</p>
-          </div>
+                </div>
           <figcaption>
             <strong>Parade and carnival</strong>
             <p>The parade runs up Main Street from 23rd to 4th, and the surrounding blocks fill with carnival rides, vendor booths, and food trucks near Linear Park.</p>
@@ -108,8 +105,7 @@ import mainStreetPhoto from '../../assets/communities/goddard/goddard-street-aer
               sizes="(min-width: 48rem) 50vw, 100vw"
               alt="Fireworks bursting above the stage and crowd at the Goddard Fall Festival"
             />
-            <p class="photo-credit">© City of Goddard</p>
-          </div>
+                </div>
           <figcaption>
             <strong>Through the weekend</strong>
             <p>An outdoor movie screening, contests, and tournaments fill out the rest of the schedule, and the festival runs into the evening with live entertainment and fireworks.</p>
@@ -146,17 +142,18 @@ import mainStreetPhoto from '../../assets/communities/goddard/goddard-street-aer
         <p class="eyebrow">Everyday recreation</p>
         <h2 id="goddard-linear-park-title">Goddard Linear Park follows an old rail corridor.</h2>
         <p>Linear Park opened in 2009 along the route of a former railroad line just off Main Street. It includes a splash pad, a playground with sensory and inclusive features, a picnic shelter, restrooms, and a community storm shelter. The Cecile Kellenbarger Memorial Covered Bridge, dedicated in 2012, recognizes the effort behind converting the corridor.</p>
-        <p>The Prairie Sunset Trail runs through the park on its way east toward Wichita and west toward Garden Plain, a rail-banked path of roughly fifteen miles used for walking, running, and biking. For a property near the older part of the city, that trail is worth checking on a map.</p>
       </div>
-      <div class="photo-story-main" data-reveal="right">
-        <Picture
-          src={linearParkPhoto}
-          formats={['avif', 'webp']}
-          widths={[480, 720, 960, 1280, 1600]}
-          sizes="(min-width: 48rem) 62vw, 100vw"
-          alt="Water features running at the Goddard Linear Park splash pad, with a shade canopy and playground beyond"
-        />
-        <p class="photo-credit">© City of Goddard</p>
+      <div class="photo-story-media" data-reveal="right">
+        <div class="photo-story-main">
+          <Picture
+            src={linearParkPhoto}
+            formats={['avif', 'webp']}
+            widths={[480, 720, 960, 1280, 1600]}
+            sizes="(min-width: 48rem) 62vw, 100vw"
+            alt="Water features running at the Goddard Linear Park splash pad, with a shade canopy and playground beyond"
+          />
+        </div>
+        <p class="photo-story-caption">The splash pad opened along with the rest of Linear Park in 2009, part of the same rail-corridor conversion that added the nearby playground and picnic shelter.</p>
       </div>
     </div>
   </section>

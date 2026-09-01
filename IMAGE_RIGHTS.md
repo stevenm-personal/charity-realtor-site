@@ -47,7 +47,7 @@ Unresolved source hints should remain in place until the associated rights are r
 
 **Evidence:** `docs/image-rights/city-of-goddard-permission.png`
 
-**Attribution requirement:** None requested. The site applies a courtesy `© City of Goddard` credit anyway, consistent with the default in this document.
+**Attribution requirement:** None requested, and no on-page credit is applied.
 
 **Open question:** The permission covers photos published on the city's website. It does not independently establish that the city holds copyright in every image it publishes. If any specific image is later found to have come from a third party, that image needs its own record.
 
@@ -86,7 +86,7 @@ Unresolved source hints should remain in place until the associated rights are r
 
 **Evidence:** `docs/image-rights/field-station-dinosaurs-image-rights-permission.png`.
 
-**Attribution requirement:** Not yet confirmed. The site applies a courtesy `© Field Station: Dinosaurs` credit in the meantime, consistent with the default in this document.
+**Attribution requirement:** Steven has not been asked to credit Field Station: Dinosaurs, so no on-page credit is applied.
 
 ### Rock River Rapids photography
 
