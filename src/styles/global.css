@@ -527,9 +527,12 @@ p {
   height: 100%;
 }
 
+/* Anchored to the top so the sky band above the roofline always fills the
+   fixed header, no matter how wide/short the viewport gets. Vertical cover
+   overflow is therefore taken entirely off the bottom (lawn), never the sky. */
 .home-hero-media img {
   object-fit: cover;
-  object-position: 64% center;
+  object-position: 68% top;
 }
 
 .home-hero-overlay {

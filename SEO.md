@@ -400,7 +400,7 @@ Keep the two environments conceptually separate.
 - Preserves `noindex` and `nofollow` controls.
 - Privacy and Disclaimer contain working draft content, pending final human/brokerage review before launch.
 - Publishes Blog articles only when genuinely useful, accurate material is ready.
-- Does not yet have an approved analytics implementation.
+- Google Analytics 4 is implemented and hostname-gated to `charitymenefee.com` (see `README.md`), so it does not load on the `workers.dev` preview or in local development.
 - Uses the temporary contact-form delivery configuration documented in `README.md`.
 - As of 2026-08-19, deliberately *does* emit production-domain canonical URLs, Open Graph metadata, a sitemap, and structured data (see the status notes above) — this was an authorized SEO-preparation task, not premature launch. Indexing itself stays blocked by the global `noindex, nofollow` default, not by domain ambiguity.
 - Should not be submitted for indexing.

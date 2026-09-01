@@ -49,4 +49,4 @@ Design and verify mobile first, then scale up. Verify representative phone/table
 
 - Site is intentionally `noindex, nofollow` site-wide. Do not remove this as a side effect of other work — it's a deliberate pre-launch, dedicated-pass action (see `SEO.md`).
 - The contact form currently delivers to a **temporary test destination** configured in `wrangler.jsonc` and the Worker, not the real production recipient. Do not change this except as part of the explicit, coordinated launch task described in `README.md`.
-- Privacy and Disclaimer contain working draft content and still require final human/brokerage review before launch; Blog is intentionally sparse until genuinely useful posts are ready; no analytics is configured yet.
+- Privacy and Disclaimer contain working draft content and still require final human/brokerage review before launch; Blog is intentionally sparse until genuinely useful posts are ready; Google Analytics 4 is implemented but hostname-gated to `charitymenefee.com`, so it's inert on the preview URL and in local dev (see `README.md`).

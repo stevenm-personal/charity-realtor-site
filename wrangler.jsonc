@@ -15,5 +15,9 @@
       "destination_address": "stevenm621844@yahoo.com",
       "allowed_sender_addresses": ["website@charitymenefee.com"]
     }
-  ]
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
 }

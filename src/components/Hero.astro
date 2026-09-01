@@ -1,6 +1,6 @@
 ---
 import { Picture } from 'astro:assets';
-import heroImage from '../assets/homepage/hero.png';
+import heroImage from '../assets/homepage/homepage-hero.jpg';
 ---
 
 <section class="home-hero" aria-labelledby="home-hero-title">
@@ -9,7 +9,7 @@ import heroImage from '../assets/homepage/hero.png';
       class="home-hero-image"
       src={heroImage}
       formats={['avif', 'webp']}
-      widths={[640, 960, 1280, 1680]}
+      widths={[640, 960, 1280, 1920, 3000]}
       sizes="100vw"
       alt="A welcoming home overlooking open Kansas fields at sunset"
       loading="eager"

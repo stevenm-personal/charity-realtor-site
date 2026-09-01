@@ -85,6 +85,6 @@ Do not change the temporary Yahoo recipient before that coordinated launch task.
 - `https://charitymenefee.com/` is the intended production domain but is not yet fully launched.
 - Privacy and Disclaimer contain working draft content and still require final human/brokerage review before launch.
 - The Blog may remain empty until genuinely useful articles are ready.
-- Analytics has not been selected or configured.
+- Google Analytics 4 (`G-9FJH7TSK3Y`) is implemented and gated to load only on the `charitymenefee.com` hostname (see `src/scripts/analytics.js` and `src/components/Analytics.astro`), so it stays inert on the `workers.dev` preview and in local development. It tracks page views plus `generate_lead` (successful contact-form submission) and `contact_click` (tel:/mailto: link clicks) events. Documented in `privacy.astro`.
 
 Treat these as explicit launch checklist items rather than accidental implementation errors. Follow `SEO.md` for the dedicated production indexing and canonical-domain pass.
