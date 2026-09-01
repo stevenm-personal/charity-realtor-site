@@ -76,7 +76,32 @@ This file records the primary sources behind community-page claims that are time
 - Checked: 2026-08-13
 - Notes: The commission identifies the Valley Center Recreation Center, aquatic facilities, and Valley Point Golf Course among the community's recreation facilities.
 
+### Valley Rec Center
+
+- Page section: Recreation and local character
+- Source: Valley Center Recreation Commission, Valley Rec Info; Waters Edge Aquatic Design project page
+- Source URL: https://www.valleycenterrecreation.com/valley-rec-info
+- Source URL: https://wedesignpools.com/projects/valley-rec-center/
+- Checked: 2026-08-31
+- Notes: The Recreation Commission's own site confirms it operates the facility at 1050 N Meridian Ave and lists its amenities: track, fitness center, group exercise studio, kids' corner, gymnasium, aquatics center, and sauna. The aquatic designer's page confirms the February 22, 2025 grand opening and the pool details (six-lane 25-yard lap pool, one-meter diving board, climbing wall, and a zero-depth entry area with play structure and toddler slide). The opening date is a fixed past event rather than a drifting "new" claim, so it stays accurate over time.
+
+### Meridian Avenue access
+
+- Page section: Getting oriented
+- Source: General web search results on Valley Center's location and Meridian Avenue (Valley Center city offices at 121 S Meridian Ave; school district offices and both middle and high schools also sit on Meridian Ave)
+- Checked: 2026-08-30
+- Notes: Confirms Meridian Avenue as Valley Center's primary north-south corridor, connecting south through the countryside toward I-235/I-135 into Wichita.
+
 ## Maize
+
+### K-96 access
+
+- Page section: Getting oriented
+- Source: AARoads/Wikipedia coverage of K-96 in Kansas
+- Source URL: https://en.wikipedia.org/wiki/K-96_(Kansas_highway)
+- Source URL: https://www.aaroads.com/guides/ks-096-west-maize
+- Checked: 2026-08-30
+- Notes: Confirms K-96 runs directly through Maize, connecting it to northwest Wichita (the highway's eastern terminus is at US-54/400 in eastern Wichita, with Maize sitting along its northwest Wichita segment).
 
 ### The Coves, The Heights at Maize, Eagle View Estates, and Addis Woods
 
@@ -93,9 +118,28 @@ This file records the primary sources behind community-page claims that are time
 - Source URL: https://cityofmaize.org/PDF/park_board/Master_Plan_111020.pdf
 - Source URL: https://www.cityofmaize.org/PDF/planning_commission/aad_plan.pdf
 - Checked: 2026-08-13
-- Notes: City planning documents place the amphitheater in Maize City Park and describe the park's relationship to the Academy Arts District.
+- Notes: City planning documents place the amphitheater in Maize City Park and describe the park's relationship to the Academy Arts District. Steven's own photography confirms the splash pad sits in the park beneath the city water tower.
+
+### Maize Performing Arts and Aquatic Center
+
+- Page section: Local character
+- Source: Professional Engineering Consultants (PEC) project page; Schaefer Architecture project page; Maize USD 266
+- Source URL: https://www.pec1.com/project/maize-performing-arts-aquatic-center/
+- Source URL: https://schaefer-arch.com/project/maize-performing-arts-aquatic-center
+- Checked: 2026-08-31
+- Notes: Confirms a two-story USD 266 facility at 1155 W. Academy Ave combining a 1,200-seat auditorium (with balcony) and a competition natatorium with an eight-lane pool, dive well, and zero-entry access. Sources conflict slightly on completion: PEC and USD 266 say 2021, Schaefer says January 2022 — the page uses 2021 as the majority reading. Spectator-seat counts also conflict (PEC ~300 vs. one district summary of 500), so the page omits that figure. The guide describes the facility factually and does not characterize the school district itself, per the Fair Housing and schools rules in `COMMUNITY_PAGES.md`.
 
 ## Andover
+
+### Kellogg, K-96, and I-35 access
+
+- Page section: Getting oriented
+- Source: Wikipedia/AARoads coverage of K-96 and I-35 in Kansas; Kansas Turnpike exit listings
+- Source URL: https://en.wikipedia.org/wiki/K-96_(Kansas_highway)
+- Source URL: https://en.wikipedia.org/wiki/Interstate_35_in_Kansas
+- Source URL: https://turnpikeinfo.com/maps-and-exits.php?road_name=kansas-turnpike&state=kansas
+- Checked: 2026-08-30
+- Notes: Confirms K-96 terminates at US-54/400 near Andover, and that the Kansas Turnpike (I-35) has an exit near El Dorado signed for K-254/Andover, supporting the page's description of "nearby connections" to both roads rather than direct routes through the city.
 
 ### Cornerstone, Prairie Creek, and Heritage Commons
 
@@ -128,6 +172,15 @@ This file records the primary sources behind community-page claims that are time
 - Notes: Supports the festival's 1967 founding, its annual early-October timing, and its parade, carnival, fireworks, live music, car show, and business/craft-expo activities. Secondary coverage places the parade, carnival, and fireworks specifically at Central Park; the official city page describes the broader festival as spanning "various venues throughout the city," so the page describes Central Park as hosting "much of" the event rather than all of it.
 
 ## Derby
+
+### Park land and hike-and-bike path totals
+
+- Page section: Getting oriented
+- Source: City of Derby, Hike & Bike Path page and Parks/Parks & Trails pages
+- Source URL: https://www.derbyks.gov/423/Hike-Bike-Path
+- Source URL: https://www.derbyks.gov/843/Parks-Trails
+- Checked: 2026-08-30
+- Notes: Confirms Derby's citywide total of 366 acres of parkland (cited in its Playful City USA recognition) and more than 25 miles of connected hike-and-bike path, cited alongside High Park, Rock River Rapids, and Warren Riverview Park. Also independently confirmed Madison Avenue Central Park as a real city park (opened October 2016 at 512 E Madison Ave, on the former St. Mary Church/School site); it isn't named in the current page copy but is a legitimate Derby park if referenced later.
 
 ### Field Station: Dinosaurs
 
@@ -232,11 +285,12 @@ This file records the primary sources behind community-page claims that are time
 
 ### Genesis Sports Complex
 
-- Page section: Local character and change
-- Source: City of Goddard City Council agenda
+- Page section: Getting oriented; Local character and change
+- Source: City of Goddard City Council agenda; KSN and Wichita By E.B. coverage of Blast Off Bay
 - Source URL: https://www.goddardks.gov/AgendaCenter/ViewFile/Agenda/_12162024-581
-- Checked: 2026-08-13
-- Notes: City records support the complex as part of development along the US-54 corridor. The guide avoids schedules or future-phase promises.
+- Source URL: https://www.wichitabyeb.com/2023/08/blast-off-bay-goddard.html
+- Checked: 2026-08-30
+- Notes: City records support the complex as part of development along the US-54 corridor. The guide avoids schedules or future-phase promises. Coverage of Blast Off Bay confirms it as a large indoor water park (dual surf machine, lazy river, 11 slides) that opened at the complex (19800 W. Kellogg) in March 2023, alongside turf tournament fields, supporting the Getting Oriented section's reference to the sports and recreation district.
 
 ## Newton
 
@@ -248,6 +302,14 @@ This file records the primary sources behind community-page claims that are time
 - Source URL: https://www.newtonkansas.com/Departments/Public-Works/Engineering/Building-Zoning-Planning/Historic-Preservation
 - Checked: 2026-08-13
 - Notes: City sources document Newton's railroad history and its commercial and residential historic districts. Property counts were removed because the district's existence and preservation context are more useful than a static count.
+
+### Parks and bike/jogging path totals
+
+- Page section: Getting oriented
+- Source: City of Newton, Parks
+- Source URL: https://www.newtonkansas.com/Parks
+- Checked: 2026-08-30
+- Notes: Confirms the city's totals of 18 public parks and more than 8.5 miles of bike/jogging path.
 
 ### Downtown Main Street program and named businesses
 
@@ -306,11 +368,20 @@ This file records the primary sources behind community-page claims that are time
 
 ### Event venues and attractions
 
-- Page section: Entertainment and events
+- Page section: Getting oriented; Entertainment and events
 - Source: City of Park City, Attractions
 - Source URL: https://www.parkcityks.gov/1261/Attractions
 - Checked: 2026-08-13
 - Notes: The city page supports the current names of Heartland Credit Union Arena, CrossWinds Casino, Gilley's, and 81 Speedway.
+
+### K-96, K-254, and I-235 access
+
+- Page section: Getting oriented
+- Source: Wikipedia coverage of I-235, K-96, and K-254 in Kansas
+- Source URL: https://en.wikipedia.org/wiki/Interstate_235_(Kansas)
+- Source URL: https://en.wikipedia.org/wiki/K-254_(Kansas_highway)
+- Checked: 2026-08-30
+- Notes: Confirms I-235's northern terminus is a major interchange with I-135/US-81/K-15/K-96/K-254 north of Wichita, near Park City, supporting the page's description of these roads as "also nearby" rather than running directly through the city.
 
 ### Parks and incorporation
 

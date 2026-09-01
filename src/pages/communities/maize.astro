@@ -3,8 +3,9 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import PageHero from '../../components/PageHero.astro';
-import amphitheaterHero from '../../assets/communities/maize/clair-donnelly-amphitheater-city-of-maize.jpg';
-import amphitheaterWide from '../../assets/communities/maize/clair-donnelly-amphitheater.jpg';
+import heroPhoto from '../../assets/communities/maize/maize-water-tower-better-self-owned.jpg';
+import amphitheaterPhoto from '../../assets/communities/maize/maize-clair-donnelly-amphitheater-from-middle-self-owned.JPG';
+import performingArtsPhoto from '../../assets/communities/maize/maize-performing-arts-and-aquatic-center-better-self-owned.jpg';
 ---
 
 <BaseLayout
@@ -16,11 +17,11 @@ import amphitheaterWide from '../../assets/communities/maize/clair-donnelly-amph
     eyebrow="Community guide · Maize"
     title="Close to Wichita, with an identity of its own."
     intro="Maize is an independent and growing city on the northwest edge of Wichita, with its own civic identity and close connections to the wider metro."
-    image={amphitheaterHero}
-    imageAlt="Clair Donnelly Amphitheater and the Maize water tower during an evening community event"
+    image={heroPhoto}
+    imageAlt="The Maize water tower rising above the splash pad and shaded picnic tables at Maize City Park"
     variant="community"
-    imagePosition="center 48%"
-    imagePositionMobile="68% center"
+    imagePosition="center top"
+    imagePositionMobile="62% center"
   />
 
   <section class="section-space" aria-labelledby="maize-overview-title">
@@ -30,8 +31,8 @@ import amphitheaterWide from '../../assets/communities/maize/clair-donnelly-amph
         <h2 id="maize-overview-title">A separate city that meets northwest Wichita closely.</h2>
       </div>
       <div class="prose" data-reveal="right">
-        <p>Maize is an incorporated city on the northwest side of the Wichita metro. K-96 is a useful geographic and access reference for understanding this part of the area, but the municipal boundary isn't always visually obvious from the road.</p>
-        <p>In everyday driving, the transition between Maize and northwest Wichita can feel subtle. Roads, neighborhoods, shopping, and other destinations connect the area closely, while Maize still maintains its own city identity and local civic spaces.</p>
+        <p>Maize is an incorporated city on the northwest side of the Wichita metro, with K-96 providing one of the main connections to the surrounding area and northwest Wichita.</p>
+        <p>Maize combines a smaller community setting with considerable residential and commercial growth. Newer development increasingly connects it with northwest Wichita, while the city's established core, Maize City Park, and local community spaces maintain a distinct identity. This makes Maize especially convenient for those who spend much of their time on Wichita's northwest side.</p>
       </div>
     </div>
   </section>
@@ -49,21 +50,46 @@ import amphitheaterWide from '../../assets/communities/maize/clair-donnelly-amph
     </div>
   </section>
 
-  <section class="photo-story section-space section-sage" aria-labelledby="maize-character-title">
-    <div class="shell photo-story-grid">
-      <div class="photo-story-copy" data-reveal="left">
-        <p class="eyebrow">Local character</p>
-        <h2 id="maize-character-title">City Park gives Maize a recognizable gathering place.</h2>
-        <p>The Clair Donnelly Amphitheater in Maize City Park is used for concerts, performances, and community events. Together with the civic area around Academy Avenue and the Academy Arts District, it provides a visible expression of Maize's identity beyond its residential growth and close geographic connection to Wichita.</p>
+  <section class="section-space section-sage" aria-labelledby="maize-character-title">
+    <div class="shell">
+      <div class="section-heading split-heading">
+        <div data-reveal="left">
+          <p class="eyebrow">Local character</p>
+          <h2 id="maize-character-title">City Park and the arts center anchor Maize's civic side.</h2>
+        </div>
+        <p data-reveal="right">These are two of the more visible gathering places in a city otherwise known for its residential growth and close connection to northwest Wichita.</p>
       </div>
-      <div class="photo-story-main" data-reveal="right">
-        <Picture
-          src={amphitheaterWide}
-          formats={['avif', 'webp']}
-          widths={[480, 720, 960, 1280, 1600]}
-          sizes="(min-width: 48rem) 62vw, 100vw"
-          alt="Clair Donnelly Amphitheater in Maize City Park during an evening performance"
-        />
+      <div class="feature-card-grid reveal-stagger">
+        <figure class="feature-card" data-reveal="left-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={amphitheaterPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="The Clair Donnelly Amphitheater stage and canopy at Maize City Park"
+            />
+          </div>
+          <figcaption>
+            <strong>Clair Donnelly Amphitheater</strong>
+            <p>The amphitheater in Maize City Park is used for concerts, performances, and community events. The park also holds the splash pad that sits beneath the city's water tower.</p>
+          </figcaption>
+        </figure>
+        <figure class="feature-card" data-reveal="right-scale">
+          <div class="feature-card-media">
+            <Picture
+              src={performingArtsPhoto}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1280]}
+              sizes="(min-width: 48rem) 50vw, 100vw"
+              alt="The Maize Performing Arts and Aquatic Center building on Academy Avenue"
+            />
+          </div>
+          <figcaption>
+            <strong>Performing Arts and Aquatic Center</strong>
+            <p>Completed in 2021 on Academy Avenue, this Maize USD 266 facility pairs a 1,200-seat auditorium with a competition natatorium built around an eight-lane pool.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>

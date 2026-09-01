@@ -981,9 +981,6 @@ p {
 .page-valley-center .valley-recreation-main,
 .page-valley-center .valley-recreation-main picture,
 .page-valley-center .valley-recreation-main img,
-.page-valley-center .valley-recreation-secondary,
-.page-valley-center .valley-recreation-secondary picture,
-.page-valley-center .valley-recreation-secondary img,
 .page-valley-center .valley-golf-media,
 .page-valley-center .valley-golf-media picture,
 .page-valley-center .valley-golf-media img {
@@ -992,25 +989,21 @@ p {
   height: 100%;
 }
 
-.page-valley-center .valley-recreation-main,
 .page-valley-center .valley-golf-media {
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
-.page-valley-center .valley-recreation-secondary {
+/* Matches the rec-center photo's own 3:2 ratio exactly, so object-fit:cover
+   never has anything to crop. */
+.page-valley-center .valley-recreation-main {
   aspect-ratio: 3 / 2;
   overflow: hidden;
 }
 
 .page-valley-center .valley-recreation-main img,
-.page-valley-center .valley-recreation-secondary img,
 .page-valley-center .valley-golf-media img {
   object-fit: cover;
-}
-
-.page-valley-center .valley-recreation-main img {
-  object-position: 54% center;
 }
 
 .page-valley-center .valley-recreation-copy,
@@ -1134,10 +1127,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.page-park-city .park-city-venue-speedway img {
-  object-position: center 62%;
 }
 
 .page-park-city .park-city-venue-card figcaption {
@@ -3323,26 +3312,11 @@ textarea:focus-visible {
 
   .page-valley-center .valley-recreation-feature {
     grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
-    grid-template-rows: auto 1fr;
-  }
-
-  .page-valley-center .valley-recreation-main {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    min-height: 31rem;
-    aspect-ratio: auto;
+    align-items: stretch;
   }
 
   .page-valley-center .valley-recreation-copy {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .page-valley-center .valley-recreation-secondary {
-    grid-column: 2;
-    grid-row: 2;
-    min-height: 14rem;
-    aspect-ratio: auto;
+    align-self: center;
   }
 
   .page-valley-center .valley-golf-feature {
