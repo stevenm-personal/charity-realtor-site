@@ -37,7 +37,7 @@ export const valleyCenterFavoritesPost: BlogPostSummary = {
   thumbnail: valleyCenterParkPhoto,
   thumbnailAlt: 'The Purple Spoon ice cream shop storefront and sidewalk benches on Main Street in Valley Center',
   socialImage: '/images/static/blog/valley-center-hometown-favorites-social.jpg',
-  socialImageAlt: 'Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night',
+  socialImageAlt: 'The Purple Spoon ice cream shop sign glowing above Main Street at sunset in Valley Center',
 };
 
 export const blogPosts: BlogPostSummary[] = [valleyCenterFavoritesPost];

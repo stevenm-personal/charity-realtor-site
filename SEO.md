@@ -291,6 +291,32 @@ Do not add production canonical behavior prematurely if the site's final domain 
 
 **Status (2026-08-19):** implemented. `astro.config.mjs` sets `site: 'https://charitymenefee.com'`, and `BaseLayout.astro` emits one self-referencing `<link rel="canonical">` per page (and a matching `og:url`), derived from that config value plus the page's own path. This is safe alongside the current global `noindex` — a canonical tag has no effect on indexing eligibility by itself.
 
+## Social-share images (Open Graph / Twitter Card)
+
+Every page emits `og:image`/`twitter:image` via `BaseLayout.astro`'s `socialImage` prop, resolved to an absolute production URL through the same `Astro.site` / `resolveAbsoluteURL` mechanism used for canonicals. Standard social images are 1200×630.
+
+**Default:** the finalized, branded Charity Menefee card (`public/images/static/charity-menefee-social-share.jpg`) is the site-wide fallback — any page that doesn't pass its own `socialImage` prop gets this card automatically. Its typography is locked; see `BRAND.md`.
+
+**General/business pages** intentionally use the default card: homepage, About, Contact, Services index, Buying, Selling, Land & Acreage, Communities index, Blog index, Privacy, Disclaimer, 404.
+
+**Communities:** each of the eight community pages uses its own intentionally selected, rights-approved photo (`public/images/static/social/<slug>-social-share.jpg`) rather than the default card, branded with a scaled-down version of the same Charity/REALTOR® typography (see `BRAND.md`). A community only gets its own card when a genuinely strong, rights-approved photo exists for it — do not force a weak card onto a community lacking one; let it fall back to the default card instead.
+
+**Blog:** blog posts intentionally select an article-specific social image when a strong rights-approved one exists, set explicitly via `socialImage` in `src/data/blogPosts.ts` — never automatically the first image in the article. The Valley Center hometown-favorites post intentionally uses a 1200×630 derivative of the Purple Spoon storefront-sunset photo (`public/images/static/blog/valley-center-hometown-favorites-social.jpg`), not the Fall Festival photo.
+
+**Rights:** only images with documented, approved usage rights (see `IMAGE_RIGHTS.md`) may be used for a social card. Never use an image whose rights are undocumented or ambiguous, even if it's otherwise the strongest visual candidate.
+
+**Future blog workflow**, each time a new post is published:
+
+1. Intentionally choose the social image — don't default to the first inline image.
+2. Verify its usage rights are documented in `IMAGE_RIGHTS.md`.
+3. Create/crop a 1200×630 derivative.
+4. Save it following the established convention (`public/images/static/blog/<post-slug>-social.jpg`).
+5. Explicitly set `socialImage` (and `socialImageAlt`) on the post's entry in `blogPosts.ts`.
+6. Preview the final OG card before publishing.
+7. Verify the generated HTML's `og:image` after a production build.
+
+**REALTOR®:** see `BRAND.md` for the finalized trademark-mark typography (sizes, ® scale, and vertical offset) — this file intentionally doesn't duplicate those mechanics.
+
 ## Sitemap
 
 Before launch:

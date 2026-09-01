@@ -178,6 +178,30 @@ Kansas Dusk retains the site's original Georgia display / Inter body typography 
 
 The exact font stacks are defined through `--font-display` and `--font-body` in `src/styles/tokens.css`. Do not hard-code substitute font stacks in individual components. This preserves the site's friendly, soft, readable, and slightly characterful typography while Kansas Dusk supplies its own color treatment.
 
+### REALTOR® mark treatment
+
+Wherever "REALTOR" appears as part of Charity's name or title on a social-share card (the default card and all eight community cards), it must include the registered trademark symbol, styled as follows:
+
+- The ® is significantly smaller than the letters in REALTOR — not a full-size character.
+- The ® is raised from the baseline, but stays within the upper portion of REALTOR's cap height. It should not extend noticeably above the capital letters, and should not rest on the baseline either.
+- The ® must remain immediately adjacent to and visually attached to REALTOR, reading as one mark rather than REALTOR followed by a detached symbol.
+- Use the conventional NAR REALTOR® visual treatment as the conceptual alignment reference (proportion and placement only) — do not copy NAR's font, color, or layout.
+- Position the ® relative to REALTOR itself (e.g. an SVG `<tspan dy>` nested in the same text run as REALTOR), never as a separately, absolutely positioned element — so it can never drift from REALTOR's position if the surrounding text changes.
+
+**Finalized default-card typography** (`public/images/static/charity-menefee-social-share.jpg`), Georgia bold unless noted — this spec is locked; do not alter it:
+
+- Charity Menefee: 38px
+- REALTOR: 32px
+- ®: 24px, via `<tspan dy="-5">` relative to REALTOR's baseline
+- Bricktown ICT Realty: 27px (Inter bold) — 71.1% of Charity Menefee's size
+
+**Community-card branding block** (the eight `public/images/static/social/*-social-share.jpg` cards): the community name is the dominant element on these cards, so the Charity/REALTOR®/Bricktown block is scaled down as a whole from the default-card spec above, preserving every ratio exactly — REALTOR-to-Charity, ®-to-REALTOR, the ® offset relative to REALTOR's size, and Bricktown's ≥50%-of-Charity floor:
+
+- Charity Menefee: 22px
+- REALTOR: 19px
+- ®: 14px, via `<tspan dy="-3">`
+- Bricktown ICT Realty: 16px (72.7% of Charity Menefee)
+
 ## Photography and imagery
 
 Photography should ultimately emphasize:

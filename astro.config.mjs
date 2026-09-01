@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 const PRODUCTION_SITE = 'https://charitymenefee.com';
 
 // Pages that are permanently noindex and must not appear in the sitemap.
-const SITEMAP_EXCLUDED_PATHS = ['/privacy/', '/disclaimer/', '/404', '/404/', '/404.html'];
+const SITEMAP_EXCLUDED_PATHS = ['/privacy/', '/disclaimer/', '/404', '/404/', '/404.html', '/social-preview/'];
 
 export default defineConfig({
   output: 'static',
