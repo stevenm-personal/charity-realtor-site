@@ -1,40 +1,43 @@
-<script>
-  import {
-    ANALYTICS_LEAD_EVENT,
-    GA4_MEASUREMENT_ID,
-    getContactClickMethod,
-    shouldLoadGoogleAnalytics,
-  } from '../scripts/analytics.js';
+---
+import { GA4_MEASUREMENT_ID, GA4_PRODUCTION_HOSTNAME } from '../scripts/analytics.js';
+---
 
-  if (shouldLoadGoogleAnalytics(window.location.hostname)) {
-    type AnalyticsWindow = Window & { dataLayer?: unknown[][] };
-    const analyticsWindow = window as AnalyticsWindow;
-    const dataLayer = analyticsWindow.dataLayer ??= [];
-    const gtag = (...args: unknown[]) => dataLayer.push(args);
+<script is:inline define:vars={{ GA4_MEASUREMENT_ID, GA4_PRODUCTION_HOSTNAME }}>
+  if (window.location.hostname === GA4_PRODUCTION_HOSTNAME) {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
+    document.head.appendChild(gaScript);
 
-    gtag('js', new Date());
-    gtag('config', GA4_MEASUREMENT_ID);
-
-    const googleTag = document.createElement('script');
-    googleTag.async = true;
-    googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA4_MEASUREMENT_ID)}`;
-    document.head.append(googleTag);
-
-    document.addEventListener(ANALYTICS_LEAD_EVENT, () => {
-      gtag('event', 'generate_lead', { method: 'contact_form' });
-    });
-
-    document.addEventListener('click', (event) => {
-      const target = event.target;
-      if (!(target instanceof Element)) return;
-
-      const link = target.closest('a[href]');
-      if (!(link instanceof HTMLAnchorElement)) return;
-
-      const method = getContactClickMethod(link.getAttribute('href'));
-      if (!method) return;
-
-      gtag('event', 'contact_click', { method });
-    });
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', GA4_MEASUREMENT_ID);
   }
+</script>
+
+<script>
+  import { ANALYTICS_LEAD_EVENT, getContactClickMethod } from '../scripts/analytics.js';
+
+  type AnalyticsWindow = Window & { gtag?: (...args: unknown[]) => void };
+  const analyticsWindow = window as AnalyticsWindow;
+
+  document.addEventListener(ANALYTICS_LEAD_EVENT, () => {
+    analyticsWindow.gtag?.('event', 'generate_lead', { method: 'contact_form' });
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+
+    const link = target.closest('a[href]');
+    if (!(link instanceof HTMLAnchorElement)) return;
+
+    const method = getContactClickMethod(link.getAttribute('href'));
+    if (!method) return;
+
+    analyticsWindow.gtag?.('event', 'contact_click', { method });
+  });
 </script>
