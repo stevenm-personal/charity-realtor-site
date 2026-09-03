@@ -370,7 +370,11 @@
   margin-bottom: 0;
 }
 
+/* width must be explicit: with width:auto, a max-height cap would shrink the
+   box's width to preserve the aspect ratio, pulling it off the right edge on
+   wide viewports. Definite width means the cap crops height instead. */
 .blog-festival-panorama {
+  width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }

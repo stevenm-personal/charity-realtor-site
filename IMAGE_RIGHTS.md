@@ -8,6 +8,26 @@ An unresolved third-party image may temporarily retain a source hint in its file
 
 Images photographed or provided by Steven or Charity for this website normally don't require an individual rights entry. If an owner-supplied image later has special restrictions, document it separately here.
 
+### Valley Center Fall Festival parade truck
+
+**Website asset:** `src/assets/blog/1-local-guide-valley-center/valley-center-fall-festival-parade-truck-self-owned-crop.jpg`
+
+**Subject:** A decorated pickup truck float (balloons, hand-lettered "FUSION" team sign) in the Valley Center Fall Festival parade lineup.
+
+**Current public use:** Valley Center hometown-favorites blog article, Fall Festival section.
+
+**Special restriction:** The original photo (`valley-center-fall-festival-parade-truck-self-owned.jpg`, kept unmodified as the master) shows a political campaign yard sign in the background. The public asset is a cropped derivative that excludes it. Only the `-crop` derivative should ever be used publicly; if this image is re-cropped or replaced in the future, re-check that the sign (or any other background political/personal content) stays out of frame.
+
+### Valley Center Fall Festival ride photo
+
+**Website asset:** `src/assets/blog/1-local-guide-valley-center/valley-center-fall-festival-ride-girls-self-owned.jpg`
+
+**Subject:** Two children in front of a carnival ride entrance at the Valley Center Fall Festival.
+
+**Current public use:** None. Added during blog development, then removed from the published page; the file remains in the repo as an unused asset.
+
+**Special restriction:** Depicts identifiable minors. Treat as a personal/family photo rather than routine promotional imagery — confirm with Steven or Charity before using it publicly.
+
 ## Third-party image workflow
 
 1. Keep a source breadcrumb in the asset filename while permission is unresolved.
@@ -231,7 +251,7 @@ This record does not claim ownership, exclusivity, transferability, unrestricted
 
 ### Valley Center Fall Festival aerial image
 
-**Website asset:** `src/assets/blog/1-local-guide-valley-center/fall-festival.png`
+**Website asset:** `src/assets/blog/1-local-guide-valley-center/fall-festival.jpg`
 
 **Subject:** Nighttime aerial view of the Valley Center Fall Festival.
 
