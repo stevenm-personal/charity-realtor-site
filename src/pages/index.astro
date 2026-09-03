@@ -158,11 +158,19 @@ const recentPosts = blogPosts.slice(0, 2);
           <article class="journal-card" data-reveal="up">
             <a class="journal-card-media" href={post.href} aria-label={`Read ${post.title}`}>
               <Picture
-                class="journal-card-photo"
+                class="journal-card-photo journal-card-photo-mobile"
                 src={post.thumbnail}
                 formats={['avif', 'webp']}
                 widths={[320, 480, 640]}
-                sizes="(min-width: 67rem) 220px, (min-width: 48rem) 30vw, 100vw"
+                sizes="100vw"
+                alt={post.thumbnailAlt}
+              />
+              <Picture
+                class="journal-card-photo journal-card-photo-desktop"
+                src={post.thumbnailDesktop ?? post.thumbnail}
+                formats={['avif', 'webp']}
+                widths={[220, 320, 440]}
+                sizes="(min-width: 67rem) 220px, 30vw"
                 alt={post.thumbnailAlt}
               />
               {post.thumbnailCredit && <span class="journal-card-credit">{post.thumbnailCredit}</span>}

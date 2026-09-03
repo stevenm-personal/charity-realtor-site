@@ -1,5 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import valleyCenterParkPhoto from '../assets/blog/1-local-guide-valley-center/valley-center-purple-spoon-self-owned.jpg';
+import valleyCenterParkPhotoDesktopCrop from '../assets/blog/1-local-guide-valley-center/valley-center-purple-spoon-self-owned-homepage-crop.jpg';
 
 export interface BlogPostSummary {
   slug: string;
@@ -17,6 +18,11 @@ export interface BlogPostSummary {
   thumbnail: ImageMetadata;
   thumbnailAlt: string;
   thumbnailCredit?: string;
+  /** Optional tighter-cropped variant for the homepage journal card at desktop
+   * widths, where the card's narrow-but-tall box otherwise shows nearly the
+   * whole source photo with little cropping. Falls back to `thumbnail` when
+   * unset. */
+  thumbnailDesktop?: ImageMetadata;
   socialImage?: string;
   socialImageAlt?: string;
 }
@@ -36,6 +42,7 @@ export const valleyCenterFavoritesPost: BlogPostSummary = {
   photoLabel: 'Valley Center hometown favorites',
   thumbnail: valleyCenterParkPhoto,
   thumbnailAlt: 'The Purple Spoon ice cream shop storefront and sidewalk benches on Main Street in Valley Center',
+  thumbnailDesktop: valleyCenterParkPhotoDesktopCrop,
   socialImage: '/images/static/blog/valley-center-hometown-favorites-social.jpg',
   socialImageAlt: 'The Purple Spoon ice cream shop sign glowing above Main Street at sunset in Valley Center',
 };
