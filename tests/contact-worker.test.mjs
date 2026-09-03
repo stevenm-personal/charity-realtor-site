@@ -44,12 +44,12 @@ const passesTurnstile = async () => ({
   hostname: 'charity-realtor-site.chalkjhawk79.workers.dev',
 });
 
-test('accepts a valid submission and sends only to the fixed recipient', async () => {
-  let sentMessage;
+test('accepts a valid submission and sends to both recipients', async () => {
+  const sentMessages = [];
   const response = await handleRequest(
     contactRequest(),
     testEnv(async (message) => {
-      sentMessage = message;
+      sentMessages.push(message);
       return { messageId: 'test-message' };
     }),
     { verifyTurnstile: passesTurnstile },
@@ -57,12 +57,18 @@ test('accepts a valid submission and sends only to the fixed recipient', async (
 
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { success: true });
-  assert.equal(contactConfig.recipient, 'stevenm621844@yahoo.com');
-  assert.equal(sentMessage.to, contactConfig.recipient);
-  assert.equal(sentMessage.from, contactConfig.sender);
-  assert.equal(sentMessage.replyTo, validFields.email);
-  assert.match(sentMessage.subject, /Taylor Example/);
-  assert.match(sentMessage.text, /316-555-0100/);
+  assert.deepEqual(contactConfig.recipients, ['charity@curtiscrewict.com', 'stevenm621844@yahoo.com']);
+  assert.equal(sentMessages.length, 2);
+
+  const sentTo = sentMessages.map((message) => message.to).sort();
+  assert.deepEqual(sentTo, ['charity@curtiscrewict.com', 'stevenm621844@yahoo.com'].sort());
+
+  for (const sentMessage of sentMessages) {
+    assert.equal(sentMessage.from, contactConfig.sender);
+    assert.equal(sentMessage.replyTo, validFields.email);
+    assert.match(sentMessage.subject, /Taylor Example/);
+    assert.match(sentMessage.text, /316-555-0100/);
+  }
 });
 
 test('schedules a generic Pushover notification after successful email delivery', async () => {

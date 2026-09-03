@@ -1,5 +1,5 @@
 const CONTACT_PATH = '/api/contact';
-const RECIPIENT_EMAIL = 'stevenm621844@yahoo.com';
+const RECIPIENT_EMAILS = ['charity@curtiscrewict.com', 'stevenm621844@yahoo.com'];
 const SENDER_EMAIL = 'website@charitymenefee.com';
 const MAX_REQUEST_BYTES = 20000;
 const EXPECTED_TURNSTILE_ACTION = 'contact';
@@ -125,9 +125,9 @@ async function sendPushoverNotification(env, fetchImpl = fetch) {
   }
 }
 
-function buildEmail(submission) {
+function buildEmail(submission, to) {
   return {
-    to: RECIPIENT_EMAIL,
+    to,
     from: SENDER_EMAIL,
     replyTo: submission.email,
     subject: `Website inquiry from ${submission.name}`,
@@ -225,7 +225,7 @@ export async function handleRequest(request, env, dependencies = {}, ctx) {
   }
 
   try {
-    await env.EMAIL.send(buildEmail(submission));
+    await Promise.all(RECIPIENT_EMAILS.map((to) => env.EMAIL.send(buildEmail(submission, to))));
   } catch {
     console.error('Contact form email delivery error');
     return jsonResponse({ success: false, error: 'server' }, 500);
@@ -261,7 +261,7 @@ export default {
 
 export const contactConfig = {
   path: CONTACT_PATH,
-  recipient: RECIPIENT_EMAIL,
+  recipients: RECIPIENT_EMAILS,
   sender: SENDER_EMAIL,
   turnstile: {
     action: EXPECTED_TURNSTILE_ACTION,
