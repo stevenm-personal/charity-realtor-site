@@ -529,10 +529,20 @@ p {
 
 /* Anchored to the top so the sky band above the roofline always fills the
    fixed header, no matter how wide/short the viewport gets. Vertical cover
-   overflow is therefore taken entirely off the bottom (lawn), never the sky. */
+   overflow is therefore taken entirely off the bottom (lawn), never the sky.
+   Horizontal position differs by breakpoint: on mobile the box is so narrow
+   that a left-shifted position shows open field with no house at all, so
+   mobile keeps a house-forward position while desktop shifts left to clear
+   open sky/field for the hero text. */
 .home-hero-media img {
   object-fit: cover;
-  object-position: 68% top;
+  object-position: 60% top;
+}
+
+@media (min-width: 64rem) {
+  .home-hero-media img {
+    object-position: 8% top;
+  }
 }
 
 .home-hero-overlay {
