@@ -5,6 +5,7 @@ import { valleyCenterFavoritesPost as post } from '../../data/blogPosts';
 import purpleSpoonPhoto from '../../assets/blog/1-local-guide-valley-center/purple-spoon-storefront-sunset.jpg';
 import mclaughlinParkPhoto from '../../assets/blog/1-local-guide-valley-center/valley-center-mclaughlin-park-self-owned.jpg';
 import fallFestivalPhoto from '../../assets/blog/1-local-guide-valley-center/fall-festival.jpg';
+import fallFestivalParadePhoto from '../../assets/blog/1-local-guide-valley-center/valley-center-fall-festival-parade-truck-self-owned-crop.jpg';
 
 const festival = {
   dates: 'September 25 & 26, 2026',
@@ -52,8 +53,8 @@ const festival = {
       <div class="blog-entry-copy">
         <p class="blog-entry-number">01 <span>The Purple Spoon</span></p>
         <h2 id="purple-spoon-title">Valley Center has a new reason to make an ice cream run.</h2>
-        <p>The Purple Spoon is one of the newer additions to Main Street, and it didn't take long for it to feel like it belonged here. My family and I go there, and I always think it's worth checking the soft-serve board before deciding because the twist rotates.</p>
-        <p>One thing I appreciate is how much it feels like Valley Center. A lot of the people behind the counter are local high school students, and we've consistently found them friendly.</p>
+        <p>The Purple Spoon is one of the newer additions to Main Street, and it didn't take long for it to feel like it belonged here. My family and I always find a way to justify a trip there at least once a week! The soft-serve flavors rotate periodically so make sure you ask what the current flavors are.</p>
+        <p>One thing I appreciate is how much it feels like Valley Center. A lot of the people behind the counter are local high school students, and they're always friendly and welcoming!</p>
 
         <div class="blog-fact-list">
           <h3>Worth knowing</h3>
@@ -86,7 +87,7 @@ const festival = {
 
           <p>There's a splash pad, playground, and disc golf course, but one thing I like about McLaughlin is that it doesn't have to be a big outing. Sometimes it's just a walk around the pond or a place to spend an hour outside.</p>
 
-          <a class="arrow-link blog-source-link" href="https://www.valleycenterks.gov/departments/parks_and_public_buildings/parks/mclaughlin_park/index.php" target="_blank" rel="noopener noreferrer">Check the City's McLaughlin Park information <span aria-hidden="true">↗</span></a>
+          <a class="arrow-link blog-source-link" href="https://www.valleycenterks.gov/departments/parks_and_public_buildings/parks/mclaughlin_park/index.php" target="_blank" rel="noopener noreferrer">Learn more about McLaughlin Park <span aria-hidden="true">↗</span></a>
         </div>
         <div class="blog-entry-media">
           <Picture
@@ -103,24 +104,39 @@ const festival = {
   </section>
 
   <section class="blog-entry blog-entry-festival" aria-labelledby="fall-festival-title">
-    <div class="shell" data-reveal="up">
-      <div class="blog-festival-story">
-        <div class="blog-festival-intro">
-          <p class="blog-entry-number">03 <span>Valley Center Fall Festival</span></p>
-          <h2 id="fall-festival-title">A weekend when Valley Center feels especially like Valley Center.</h2>
-          <p>Fall Festival is probably the weekend when Valley Center feels most like home to me. We've been going for years.</p>
+    <div class="shell blog-festival-opening" data-reveal="up">
+      <div class="blog-festival-intro">
+        <p class="blog-entry-number">03 <span>Valley Center Fall Festival</span></p>
+        <h2 id="fall-festival-title">A weekend when Valley Center feels especially like Valley Center.</h2>
+        <p>Fall Festival is probably the weekend when Valley Center feels most like home to me. We've been going for years.</p>
+      </div>
+    </div>
+
+    <div class="blog-festival-panorama" data-reveal="up">
+      <Picture
+        class="blog-article-photo"
+        src={fallFestivalPhoto}
+        formats={['avif', 'webp']}
+        widths={[640, 960, 1280, 1672]}
+        sizes="100vw"
+        alt="Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night"
+      />
+    </div>
+
+    <div class="shell blog-festival-closing">
+      <div class="blog-festival-pairing" data-reveal="up">
+        <div class="blog-festival-pairing-copy">
           <p>The parade is one of my favorite parts. Main Street fills up, there's often a small plane circling overhead, and our girls have even been part of the parade over the years. Breezy, the penguin mascot from Breezy's shaved ice, and Breezy's float are familiar parade sights that have become part of Fall Fest for us. It seems like we run into someone we know every few steps.</p>
           <p>And come hungry. There's usually plenty of festival food, but roasted corn and the root beer stand are two things I associate with Fall Fest. There's also a beer garden that's a good place to stop for a while.</p>
         </div>
-
-        <div class="blog-entry-media blog-festival-media">
+        <div class="blog-festival-pairing-media">
           <Picture
             class="blog-article-photo"
-            src={fallFestivalPhoto}
+            src={fallFestivalParadePhoto}
             formats={['avif', 'webp']}
-            widths={[480, 720, 960, 1200]}
-            sizes="(min-width: 60rem) 50vw, 100vw"
-            alt="Aerial view of carnival rides and crowds at the Valley Center Fall Festival at night"
+            widths={[480, 640, 800, 1200]}
+            sizes="(min-width: 48rem) 32vw, 100vw"
+            alt="A decorated truck with balloons and a hand-lettered sign waiting in the Valley Center Fall Festival parade lineup"
           />
         </div>
       </div>
@@ -148,8 +164,8 @@ const festival = {
   <section class="blog-article-closing-section" aria-label="Closing reflection">
     <div class="shell">
       <div class="blog-article-closing">
-        <p>That's really what these three have in common for me. One is new, one has been part of our family's life for years, and one is a tradition we look forward to every fall.</p>
-        <p>They're very different pieces of Valley Center, but they're all part of what makes this feel like home.</p>
+        <p>What each of these Valley Center favorites has in common is that it has become part of how I think about this community. One is new, one has been part of our family's life for years, and one is a tradition we look forward to every fall.</p>
+        <p>They're very different pieces of the community, but in their own ways, they're all part of what makes this feel like home.</p>
         <p>I've already got a few more Valley Center favorites in mind for another day.</p>
       </div>
     </div>

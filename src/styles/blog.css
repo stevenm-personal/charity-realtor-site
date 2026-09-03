@@ -162,7 +162,7 @@
 .blog-post-hero-grid > *,
 .blog-entry-grid > *,
 .blog-park-grid > *,
-.blog-festival-story > *,
+.blog-festival-pairing > *,
 .blog-event-card > *,
 .blog-guide-bridge-inner > * {
   min-width: 0;
@@ -356,31 +356,49 @@
   margin-bottom: var(--space-4);
 }
 
-.blog-festival-story {
-  display: grid;
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: center;
+/* The aerial drone shot runs edge-to-edge as the article's one panoramic
+   moment; it sits outside .shell so it needs no negative-margin breakout. */
+.blog-entry-festival > .blog-festival-opening {
+  padding-bottom: clamp(2.25rem, 5vw, 3.25rem);
 }
 
-.blog-festival-story .blog-festival-intro {
+.blog-entry-festival > .blog-festival-closing {
+  padding-top: clamp(2.25rem, 5vw, 3.25rem);
+}
+
+.blog-festival-opening .blog-festival-intro {
   margin-bottom: 0;
 }
 
-.blog-festival-media {
-  aspect-ratio: 4 / 3;
+.blog-festival-panorama {
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
-.blog-festival-media picture {
+.blog-festival-panorama picture {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.blog-festival-media .blog-article-photo {
+.blog-festival-panorama .blog-article-photo {
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 45%;
+}
+
+.blog-festival-pairing {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.blog-festival-pairing-copy > p {
+  color: var(--color-text-muted);
+}
+
+.blog-festival-pairing-copy > p:last-child {
+  margin-bottom: 0;
 }
 
 .blog-event-card {
@@ -522,13 +540,17 @@
     grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
   }
 
+  .blog-festival-panorama {
+    aspect-ratio: 2.4 / 1;
+    max-height: 38rem;
+  }
+
+  .blog-festival-pairing {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.62fr);
+  }
 }
 
 @media (min-width: 60rem) {
-  .blog-festival-story {
-    grid-template-columns: minmax(0, 1.05fr) minmax(23rem, 0.95fr);
-  }
-
   .blog-event-card {
     grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
     gap: clamp(2.5rem, 6vw, 5rem);
