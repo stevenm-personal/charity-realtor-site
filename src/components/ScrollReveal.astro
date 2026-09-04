@@ -11,22 +11,37 @@
       const parallaxElements = window.matchMedia('(min-width: 48rem)').matches
         ? document.querySelectorAll('[data-parallax]')
         : [];
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+      const revealCallback = (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
 
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
-          });
-        },
-        {
-          threshold: 0.12,
-          rootMargin: '0px 0px -8% 0px',
-        },
-      );
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        });
+      };
 
-      elements.forEach((element) => observer.observe(element));
+      // Standard reveal: unchanged everywhere on the site. Elements only
+      // start animating in once they're already well into the viewport.
+      const observer = new IntersectionObserver(revealCallback, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -8% 0px',
+      });
+
+      // Blog article body content reveals early instead: a long-form
+      // article with content gated behind a "scroll first, then it
+      // appears" observer can make a reader think the page ended right as
+      // they hit a still-hidden section. Extending the root 200px past the
+      // viewport's bottom edge (plus a near-zero threshold) means the next
+      // section is already animating in before it's actually on screen.
+      const earlyObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0,
+        rootMargin: '0px 0px 200px 0px',
+      });
+
+      elements.forEach((element) => {
+        const target = element.closest('.blog-post-body') ? earlyObserver : observer;
+        target.observe(element);
+      });
 
       if (parallaxElements.length === 0) return;
 

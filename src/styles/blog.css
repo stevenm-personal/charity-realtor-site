@@ -210,8 +210,11 @@
   padding-block: var(--blog-space-intro);
 }
 
+/* padding-block, not margin, so it doesn't collapse: two adjacent entries'
+   top/bottom padding stack at their shared border. Kept modest so that
+   compounded gap stays comfortable instead of reading as empty space. */
 .blog-entry > .shell {
-  padding-block: clamp(3.5rem, 8vw, 6rem);
+  padding-block: clamp(2rem, 4.5vw, 3.5rem);
 }
 
 .blog-article-intro + .blog-entry > .shell {
