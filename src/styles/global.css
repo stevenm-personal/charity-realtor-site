@@ -2873,27 +2873,39 @@ p {
   margin-top: var(--space-5);
 }
 
+/* flex: 1 1 0 (not the previous 0 0 auto) deliberately avoids a circular
+   percentage: with 0 0 auto, an auto-sized flex item's width comes from its
+   content, but the logo's own width was a percentage of that same item,
+   which the box model resolves to the image's native intrinsic size (225px)
+   as a fallback. That made the images render small (correctly, ~71px) while
+   their anchors stayed 225px wide — the extra ~154px of each anchor was
+   invisible but still clickable, and on mobile the 3 oversized anchors
+   didn't fit the row at all, pushing the REALTOR logo off-screen. Sizing the
+   anchor itself (equal share, capped per brand below) and letting the image
+   fill it exactly keeps the two in sync at every width. */
 .affiliation-logos a {
   display: block;
-  flex: 0 0 auto;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .affiliation-logo {
   display: block;
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.affiliation-logo-bricktown {
-  width: min(5.75rem, calc((100% - 0.75rem) / 3));
+.affiliation-link-bricktown {
+  max-width: 5.75rem;
 }
 
-.affiliation-logo-curtis {
-  width: min(5.625rem, calc((100% - 0.75rem) / 3));
+.affiliation-link-curtis {
+  max-width: 5.625rem;
 }
 
-.affiliation-logo-realtor {
-  width: min(5.5rem, calc((100% - 0.75rem) / 3));
+.affiliation-link-realtor {
+  max-width: 5.5rem;
 }
 
 .footer-legal p {
@@ -3460,6 +3472,15 @@ textarea:focus-visible {
 
   .affiliation-logos {
     gap: var(--space-2);
+  }
+
+  .affiliation-logos a {
+    flex: 0 0 auto;
+    max-width: none;
+  }
+
+  .affiliation-logo {
+    width: auto;
   }
 
   .affiliation-logo-bricktown {
